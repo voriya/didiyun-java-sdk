@@ -17,8 +17,13 @@ private static final long serialVersionUID = 0L;
   }
   private ChangeSnapshotNameRequest() {
     snap_ = java.util.Collections.emptyList();
-    stopDc2_ = false;
-    startDc2_ = false;
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new ChangeSnapshotNameRequest();
   }
 
   @java.lang.Override
@@ -59,9 +64,9 @@ private static final long serialVersionUID = 0L;
             break;
           }
           case 18: {
-            if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
               snap_ = new java.util.ArrayList<com.didiyun.compute.v1.ChangeSnapshotNameRequest.Input>();
-              mutable_bitField0_ |= 0x00000002;
+              mutable_bitField0_ |= 0x00000001;
             }
             snap_.add(
                 input.readMessage(com.didiyun.compute.v1.ChangeSnapshotNameRequest.Input.parser(), extensionRegistry));
@@ -78,7 +83,7 @@ private static final long serialVersionUID = 0L;
             break;
           }
           default: {
-            if (!parseUnknownFieldProto3(
+            if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
               done = true;
             }
@@ -92,7 +97,7 @@ private static final long serialVersionUID = 0L;
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
     } finally {
-      if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+      if (((mutable_bitField0_ & 0x00000001) != 0)) {
         snap_ = java.util.Collections.unmodifiableList(snap_);
       }
       this.unknownFields = unknownFields.build();
@@ -122,6 +127,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string snapUuid = 1;</code>
+     * @return The snapUuid.
      */
     java.lang.String getSnapUuid();
     /**
@@ -130,6 +136,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string snapUuid = 1;</code>
+     * @return The bytes for snapUuid.
      */
     com.google.protobuf.ByteString
         getSnapUuidBytes();
@@ -140,6 +147,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string name = 2;</code>
+     * @return The name.
      */
     java.lang.String getName();
     /**
@@ -148,6 +156,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string name = 2;</code>
+     * @return The bytes for name.
      */
     com.google.protobuf.ByteString
         getNameBytes();
@@ -170,6 +179,13 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Input();
+    }
+
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
@@ -182,7 +198,6 @@ private static final long serialVersionUID = 0L;
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -206,7 +221,7 @@ private static final long serialVersionUID = 0L;
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -245,6 +260,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string snapUuid = 1;</code>
+     * @return The snapUuid.
      */
     public java.lang.String getSnapUuid() {
       java.lang.Object ref = snapUuid_;
@@ -264,6 +280,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string snapUuid = 1;</code>
+     * @return The bytes for snapUuid.
      */
     public com.google.protobuf.ByteString
         getSnapUuidBytes() {
@@ -287,6 +304,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string name = 2;</code>
+     * @return The name.
      */
     public java.lang.String getName() {
       java.lang.Object ref = name_;
@@ -306,6 +324,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string name = 2;</code>
+     * @return The bytes for name.
      */
     public com.google.protobuf.ByteString
         getNameBytes() {
@@ -371,13 +390,12 @@ private static final long serialVersionUID = 0L;
       }
       com.didiyun.compute.v1.ChangeSnapshotNameRequest.Input other = (com.didiyun.compute.v1.ChangeSnapshotNameRequest.Input) obj;
 
-      boolean result = true;
-      result = result && getSnapUuid()
-          .equals(other.getSnapUuid());
-      result = result && getName()
-          .equals(other.getName());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getSnapUuid()
+          .equals(other.getSnapUuid())) return false;
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -562,35 +580,35 @@ private static final long serialVersionUID = 0L;
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -648,6 +666,7 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>string snapUuid = 1;</code>
+       * @return The snapUuid.
        */
       public java.lang.String getSnapUuid() {
         java.lang.Object ref = snapUuid_;
@@ -667,6 +686,7 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>string snapUuid = 1;</code>
+       * @return The bytes for snapUuid.
        */
       public com.google.protobuf.ByteString
           getSnapUuidBytes() {
@@ -687,6 +707,8 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>string snapUuid = 1;</code>
+       * @param value The snapUuid to set.
+       * @return This builder for chaining.
        */
       public Builder setSnapUuid(
           java.lang.String value) {
@@ -704,6 +726,7 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>string snapUuid = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearSnapUuid() {
         
@@ -717,6 +740,8 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>string snapUuid = 1;</code>
+       * @param value The bytes for snapUuid to set.
+       * @return This builder for chaining.
        */
       public Builder setSnapUuidBytes(
           com.google.protobuf.ByteString value) {
@@ -737,6 +762,7 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>string name = 2;</code>
+       * @return The name.
        */
       public java.lang.String getName() {
         java.lang.Object ref = name_;
@@ -756,6 +782,7 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>string name = 2;</code>
+       * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
           getNameBytes() {
@@ -776,6 +803,8 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>string name = 2;</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
        */
       public Builder setName(
           java.lang.String value) {
@@ -793,6 +822,7 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>string name = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearName() {
         
@@ -806,6 +836,8 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>string name = 2;</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
@@ -821,7 +853,7 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -871,7 +903,6 @@ private static final long serialVersionUID = 0L;
 
   }
 
-  private int bitField0_;
   public static final int HEADER_FIELD_NUMBER = 1;
   private com.didiyun.base.v1.Header header_;
   /**
@@ -880,6 +911,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.didi.cloud.base.v1.Header header = 1;</code>
+   * @return Whether the header field is set.
    */
   public boolean hasHeader() {
     return header_ != null;
@@ -890,6 +922,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.didi.cloud.base.v1.Header header = 1;</code>
+   * @return The header.
    */
   public com.didiyun.base.v1.Header getHeader() {
     return header_ == null ? com.didiyun.base.v1.Header.getDefaultInstance() : header_;
@@ -948,6 +981,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>bool stopDc2 = 3;</code>
+   * @return The stopDc2.
    */
   public boolean getStopDc2() {
     return stopDc2_;
@@ -961,6 +995,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>bool startDc2 = 4;</code>
+   * @return The startDc2.
    */
   public boolean getStartDc2() {
     return startDc2_;
@@ -1032,20 +1067,19 @@ private static final long serialVersionUID = 0L;
     }
     com.didiyun.compute.v1.ChangeSnapshotNameRequest other = (com.didiyun.compute.v1.ChangeSnapshotNameRequest) obj;
 
-    boolean result = true;
-    result = result && (hasHeader() == other.hasHeader());
+    if (hasHeader() != other.hasHeader()) return false;
     if (hasHeader()) {
-      result = result && getHeader()
-          .equals(other.getHeader());
+      if (!getHeader()
+          .equals(other.getHeader())) return false;
     }
-    result = result && getSnapList()
-        .equals(other.getSnapList());
-    result = result && (getStopDc2()
-        == other.getStopDc2());
-    result = result && (getStartDc2()
-        == other.getStartDc2());
-    result = result && unknownFields.equals(other.unknownFields);
-    return result;
+    if (!getSnapList()
+        .equals(other.getSnapList())) return false;
+    if (getStopDc2()
+        != other.getStopDc2()) return false;
+    if (getStartDc2()
+        != other.getStartDc2()) return false;
+    if (!unknownFields.equals(other.unknownFields)) return false;
+    return true;
   }
 
   @java.lang.Override
@@ -1211,7 +1245,7 @@ private static final long serialVersionUID = 0L;
       }
       if (snapBuilder_ == null) {
         snap_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000001);
       } else {
         snapBuilder_.clear();
       }
@@ -1246,16 +1280,15 @@ private static final long serialVersionUID = 0L;
     public com.didiyun.compute.v1.ChangeSnapshotNameRequest buildPartial() {
       com.didiyun.compute.v1.ChangeSnapshotNameRequest result = new com.didiyun.compute.v1.ChangeSnapshotNameRequest(this);
       int from_bitField0_ = bitField0_;
-      int to_bitField0_ = 0;
       if (headerBuilder_ == null) {
         result.header_ = header_;
       } else {
         result.header_ = headerBuilder_.build();
       }
       if (snapBuilder_ == null) {
-        if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        if (((bitField0_ & 0x00000001) != 0)) {
           snap_ = java.util.Collections.unmodifiableList(snap_);
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00000001);
         }
         result.snap_ = snap_;
       } else {
@@ -1263,42 +1296,41 @@ private static final long serialVersionUID = 0L;
       }
       result.stopDc2_ = stopDc2_;
       result.startDc2_ = startDc2_;
-      result.bitField0_ = to_bitField0_;
       onBuilt();
       return result;
     }
 
     @java.lang.Override
     public Builder clone() {
-      return (Builder) super.clone();
+      return super.clone();
     }
     @java.lang.Override
     public Builder setField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return (Builder) super.setField(field, value);
+      return super.setField(field, value);
     }
     @java.lang.Override
     public Builder clearField(
         com.google.protobuf.Descriptors.FieldDescriptor field) {
-      return (Builder) super.clearField(field);
+      return super.clearField(field);
     }
     @java.lang.Override
     public Builder clearOneof(
         com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-      return (Builder) super.clearOneof(oneof);
+      return super.clearOneof(oneof);
     }
     @java.lang.Override
     public Builder setRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         int index, java.lang.Object value) {
-      return (Builder) super.setRepeatedField(field, index, value);
+      return super.setRepeatedField(field, index, value);
     }
     @java.lang.Override
     public Builder addRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return (Builder) super.addRepeatedField(field, value);
+      return super.addRepeatedField(field, value);
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1319,7 +1351,7 @@ private static final long serialVersionUID = 0L;
         if (!other.snap_.isEmpty()) {
           if (snap_.isEmpty()) {
             snap_ = other.snap_;
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000001);
           } else {
             ensureSnapIsMutable();
             snap_.addAll(other.snap_);
@@ -1332,7 +1364,7 @@ private static final long serialVersionUID = 0L;
             snapBuilder_.dispose();
             snapBuilder_ = null;
             snap_ = other.snap_;
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000001);
             snapBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getSnapFieldBuilder() : null;
@@ -1377,7 +1409,7 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
-    private com.didiyun.base.v1.Header header_ = null;
+    private com.didiyun.base.v1.Header header_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.didiyun.base.v1.Header, com.didiyun.base.v1.Header.Builder, com.didiyun.base.v1.HeaderOrBuilder> headerBuilder_;
     /**
@@ -1386,6 +1418,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.didi.cloud.base.v1.Header header = 1;</code>
+     * @return Whether the header field is set.
      */
     public boolean hasHeader() {
       return headerBuilder_ != null || header_ != null;
@@ -1396,6 +1429,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.didi.cloud.base.v1.Header header = 1;</code>
+     * @return The header.
      */
     public com.didiyun.base.v1.Header getHeader() {
       if (headerBuilder_ == null) {
@@ -1533,9 +1567,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.didiyun.compute.v1.ChangeSnapshotNameRequest.Input> snap_ =
       java.util.Collections.emptyList();
     private void ensureSnapIsMutable() {
-      if (!((bitField0_ & 0x00000002) == 0x00000002)) {
+      if (!((bitField0_ & 0x00000001) != 0)) {
         snap_ = new java.util.ArrayList<com.didiyun.compute.v1.ChangeSnapshotNameRequest.Input>(snap_);
-        bitField0_ |= 0x00000002;
+        bitField0_ |= 0x00000001;
        }
     }
 
@@ -1685,7 +1719,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearSnap() {
       if (snapBuilder_ == null) {
         snap_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
       } else {
         snapBuilder_.clear();
@@ -1762,7 +1796,7 @@ private static final long serialVersionUID = 0L;
         snapBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.didiyun.compute.v1.ChangeSnapshotNameRequest.Input, com.didiyun.compute.v1.ChangeSnapshotNameRequest.Input.Builder, com.didiyun.compute.v1.ChangeSnapshotNameRequest.InputOrBuilder>(
                 snap_,
-                ((bitField0_ & 0x00000002) == 0x00000002),
+                ((bitField0_ & 0x00000001) != 0),
                 getParentForChildren(),
                 isClean());
         snap_ = null;
@@ -1777,6 +1811,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>bool stopDc2 = 3;</code>
+     * @return The stopDc2.
      */
     public boolean getStopDc2() {
       return stopDc2_;
@@ -1787,6 +1822,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>bool stopDc2 = 3;</code>
+     * @param value The stopDc2 to set.
+     * @return This builder for chaining.
      */
     public Builder setStopDc2(boolean value) {
       
@@ -1800,6 +1837,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>bool stopDc2 = 3;</code>
+     * @return This builder for chaining.
      */
     public Builder clearStopDc2() {
       
@@ -1815,6 +1853,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>bool startDc2 = 4;</code>
+     * @return The startDc2.
      */
     public boolean getStartDc2() {
       return startDc2_;
@@ -1825,6 +1864,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>bool startDc2 = 4;</code>
+     * @param value The startDc2 to set.
+     * @return This builder for chaining.
      */
     public Builder setStartDc2(boolean value) {
       
@@ -1838,6 +1879,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>bool startDc2 = 4;</code>
+     * @return This builder for chaining.
      */
     public Builder clearStartDc2() {
       
@@ -1848,7 +1890,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
-      return super.setUnknownFieldsProto3(unknownFields);
+      return super.setUnknownFields(unknownFields);
     }
 
     @java.lang.Override

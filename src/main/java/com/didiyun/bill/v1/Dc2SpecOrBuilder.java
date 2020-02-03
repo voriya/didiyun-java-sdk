@@ -13,6 +13,7 @@ public interface Dc2SpecOrBuilder extends
    * </pre>
    *
    * <code>int32 cpuNum = 1;</code>
+   * @return The cpuNum.
    */
   int getCpuNum();
 
@@ -22,6 +23,7 @@ public interface Dc2SpecOrBuilder extends
    * </pre>
    *
    * <code>int32 gpuNum = 2;</code>
+   * @return The gpuNum.
    */
   int getGpuNum();
 
@@ -31,6 +33,7 @@ public interface Dc2SpecOrBuilder extends
    * </pre>
    *
    * <code>int64 memorySize = 3;</code>
+   * @return The memorySize.
    */
   long getMemorySize();
 
@@ -40,6 +43,7 @@ public interface Dc2SpecOrBuilder extends
    * </pre>
    *
    * <code>int64 diskSize = 4;</code>
+   * @return The diskSize.
    */
   long getDiskSize();
 
@@ -49,6 +53,7 @@ public interface Dc2SpecOrBuilder extends
    * </pre>
    *
    * <code>string model = 5;</code>
+   * @return The model.
    */
   java.lang.String getModel();
   /**
@@ -57,6 +62,7 @@ public interface Dc2SpecOrBuilder extends
    * </pre>
    *
    * <code>string model = 5;</code>
+   * @return The bytes for model.
    */
   com.google.protobuf.ByteString
       getModelBytes();

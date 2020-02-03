@@ -9,10 +9,12 @@ public interface ListSubnetConditionOrBuilder extends
 
   /**
    * <code>string vpcUuid = 1;</code>
+   * @return The vpcUuid.
    */
   java.lang.String getVpcUuid();
   /**
    * <code>string vpcUuid = 1;</code>
+   * @return The bytes for vpcUuid.
    */
   com.google.protobuf.ByteString
       getVpcUuidBytes();

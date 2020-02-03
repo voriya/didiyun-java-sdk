@@ -13,6 +13,7 @@ public interface EipInfoOrBuilder extends
    * </pre>
    *
    * <code>string ip = 1;</code>
+   * @return The ip.
    */
   java.lang.String getIp();
   /**
@@ -21,6 +22,7 @@ public interface EipInfoOrBuilder extends
    * </pre>
    *
    * <code>string ip = 1;</code>
+   * @return The bytes for ip.
    */
   com.google.protobuf.ByteString
       getIpBytes();
@@ -31,6 +33,7 @@ public interface EipInfoOrBuilder extends
    * </pre>
    *
    * <code>string eipUuid = 2;</code>
+   * @return The eipUuid.
    */
   java.lang.String getEipUuid();
   /**
@@ -39,6 +42,7 @@ public interface EipInfoOrBuilder extends
    * </pre>
    *
    * <code>string eipUuid = 2;</code>
+   * @return The bytes for eipUuid.
    */
   com.google.protobuf.ByteString
       getEipUuidBytes();
@@ -49,6 +53,7 @@ public interface EipInfoOrBuilder extends
    * </pre>
    *
    * <code>repeated string eipTags = 3;</code>
+   * @return A list containing the eipTags.
    */
   java.util.List<java.lang.String>
       getEipTagsList();
@@ -58,6 +63,7 @@ public interface EipInfoOrBuilder extends
    * </pre>
    *
    * <code>repeated string eipTags = 3;</code>
+   * @return The count of eipTags.
    */
   int getEipTagsCount();
   /**
@@ -66,6 +72,8 @@ public interface EipInfoOrBuilder extends
    * </pre>
    *
    * <code>repeated string eipTags = 3;</code>
+   * @param index The index of the element to return.
+   * @return The eipTags at the given index.
    */
   java.lang.String getEipTags(int index);
   /**
@@ -74,6 +82,8 @@ public interface EipInfoOrBuilder extends
    * </pre>
    *
    * <code>repeated string eipTags = 3;</code>
+   * @param index The index of the value to return.
+   * @return The bytes of the eipTags at the given index.
    */
   com.google.protobuf.ByteString
       getEipTagsBytes(int index);
@@ -84,6 +94,7 @@ public interface EipInfoOrBuilder extends
    * </pre>
    *
    * <code>string status = 4;</code>
+   * @return The status.
    */
   java.lang.String getStatus();
   /**
@@ -92,6 +103,7 @@ public interface EipInfoOrBuilder extends
    * </pre>
    *
    * <code>string status = 4;</code>
+   * @return The bytes for status.
    */
   com.google.protobuf.ByteString
       getStatusBytes();
@@ -102,6 +114,7 @@ public interface EipInfoOrBuilder extends
    * </pre>
    *
    * <code>.didi.cloud.base.v1.RegionInfo region = 5;</code>
+   * @return Whether the region field is set.
    */
   boolean hasRegion();
   /**
@@ -110,6 +123,7 @@ public interface EipInfoOrBuilder extends
    * </pre>
    *
    * <code>.didi.cloud.base.v1.RegionInfo region = 5;</code>
+   * @return The region.
    */
   com.didiyun.base.v1.RegionInfo getRegion();
   /**
@@ -127,6 +141,7 @@ public interface EipInfoOrBuilder extends
    * </pre>
    *
    * <code>int64 createTime = 6;</code>
+   * @return The createTime.
    */
   long getCreateTime();
 
@@ -136,6 +151,7 @@ public interface EipInfoOrBuilder extends
    * </pre>
    *
    * <code>int64 updateTime = 7;</code>
+   * @return The updateTime.
    */
   long getUpdateTime();
 
@@ -145,6 +161,7 @@ public interface EipInfoOrBuilder extends
    * </pre>
    *
    * <code>.didi.cloud.compute.v1.Dc2Info dc2 = 8;</code>
+   * @return Whether the dc2 field is set.
    */
   boolean hasDc2();
   /**
@@ -153,6 +170,7 @@ public interface EipInfoOrBuilder extends
    * </pre>
    *
    * <code>.didi.cloud.compute.v1.Dc2Info dc2 = 8;</code>
+   * @return The dc2.
    */
   com.didiyun.compute.v1.Dc2Info getDc2();
   /**
@@ -170,6 +188,7 @@ public interface EipInfoOrBuilder extends
    * </pre>
    *
    * <code>.didi.cloud.base.v1.JobInfo job = 9;</code>
+   * @return Whether the job field is set.
    */
   boolean hasJob();
   /**
@@ -178,6 +197,7 @@ public interface EipInfoOrBuilder extends
    * </pre>
    *
    * <code>.didi.cloud.base.v1.JobInfo job = 9;</code>
+   * @return The job.
    */
   com.didiyun.base.v1.JobInfo getJob();
   /**

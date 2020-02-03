@@ -13,6 +13,7 @@ public interface CounterDataInputOrBuilder extends
    * </pre>
    *
    * <code>string resourceType = 1;</code>
+   * @return The resourceType.
    */
   java.lang.String getResourceType();
   /**
@@ -21,6 +22,7 @@ public interface CounterDataInputOrBuilder extends
    * </pre>
    *
    * <code>string resourceType = 1;</code>
+   * @return The bytes for resourceType.
    */
   com.google.protobuf.ByteString
       getResourceTypeBytes();
@@ -31,6 +33,7 @@ public interface CounterDataInputOrBuilder extends
    * </pre>
    *
    * <code>string resourceUuid = 2;</code>
+   * @return The resourceUuid.
    */
   java.lang.String getResourceUuid();
   /**
@@ -39,6 +42,7 @@ public interface CounterDataInputOrBuilder extends
    * </pre>
    *
    * <code>string resourceUuid = 2;</code>
+   * @return The bytes for resourceUuid.
    */
   com.google.protobuf.ByteString
       getResourceUuidBytes();
@@ -49,6 +53,7 @@ public interface CounterDataInputOrBuilder extends
    * </pre>
    *
    * <code>string monitorTags = 3;</code>
+   * @return The monitorTags.
    */
   java.lang.String getMonitorTags();
   /**
@@ -57,6 +62,7 @@ public interface CounterDataInputOrBuilder extends
    * </pre>
    *
    * <code>string monitorTags = 3;</code>
+   * @return The bytes for monitorTags.
    */
   com.google.protobuf.ByteString
       getMonitorTagsBytes();
@@ -67,6 +73,7 @@ public interface CounterDataInputOrBuilder extends
    * </pre>
    *
    * <code>string metric = 4;</code>
+   * @return The metric.
    */
   java.lang.String getMetric();
   /**
@@ -75,6 +82,7 @@ public interface CounterDataInputOrBuilder extends
    * </pre>
    *
    * <code>string metric = 4;</code>
+   * @return The bytes for metric.
    */
   com.google.protobuf.ByteString
       getMetricBytes();
@@ -85,6 +93,7 @@ public interface CounterDataInputOrBuilder extends
    * </pre>
    *
    * <code>int64 startTime = 5;</code>
+   * @return The startTime.
    */
   long getStartTime();
 
@@ -94,6 +103,7 @@ public interface CounterDataInputOrBuilder extends
    * </pre>
    *
    * <code>int64 endTime = 6;</code>
+   * @return The endTime.
    */
   long getEndTime();
 }

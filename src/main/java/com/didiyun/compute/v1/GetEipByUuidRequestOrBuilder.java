@@ -13,6 +13,7 @@ public interface GetEipByUuidRequestOrBuilder extends
    * </pre>
    *
    * <code>.didi.cloud.base.v1.Header header = 1;</code>
+   * @return Whether the header field is set.
    */
   boolean hasHeader();
   /**
@@ -21,6 +22,7 @@ public interface GetEipByUuidRequestOrBuilder extends
    * </pre>
    *
    * <code>.didi.cloud.base.v1.Header header = 1;</code>
+   * @return The header.
    */
   com.didiyun.base.v1.Header getHeader();
   /**
@@ -38,6 +40,7 @@ public interface GetEipByUuidRequestOrBuilder extends
    * </pre>
    *
    * <code>string eipUuid = 2;</code>
+   * @return The eipUuid.
    */
   java.lang.String getEipUuid();
   /**
@@ -46,6 +49,7 @@ public interface GetEipByUuidRequestOrBuilder extends
    * </pre>
    *
    * <code>string eipUuid = 2;</code>
+   * @return The bytes for eipUuid.
    */
   com.google.protobuf.ByteString
       getEipUuidBytes();

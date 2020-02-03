@@ -13,6 +13,7 @@ public interface ResourceItemOutputOrBuilder extends
    * </pre>
    *
    * <code>string resourceUuid = 1;</code>
+   * @return The resourceUuid.
    */
   java.lang.String getResourceUuid();
   /**
@@ -21,6 +22,7 @@ public interface ResourceItemOutputOrBuilder extends
    * </pre>
    *
    * <code>string resourceUuid = 1;</code>
+   * @return The bytes for resourceUuid.
    */
   com.google.protobuf.ByteString
       getResourceUuidBytes();
@@ -31,6 +33,7 @@ public interface ResourceItemOutputOrBuilder extends
    * </pre>
    *
    * <code>string resourcetype = 2;</code>
+   * @return The resourcetype.
    */
   java.lang.String getResourcetype();
   /**
@@ -39,6 +42,7 @@ public interface ResourceItemOutputOrBuilder extends
    * </pre>
    *
    * <code>string resourcetype = 2;</code>
+   * @return The bytes for resourcetype.
    */
   com.google.protobuf.ByteString
       getResourcetypeBytes();
@@ -49,6 +53,7 @@ public interface ResourceItemOutputOrBuilder extends
    * </pre>
    *
    * <code>.didi.cloud.bill.v1.ResourceSpec resourceSpec = 3;</code>
+   * @return Whether the resourceSpec field is set.
    */
   boolean hasResourceSpec();
   /**
@@ -57,6 +62,7 @@ public interface ResourceItemOutputOrBuilder extends
    * </pre>
    *
    * <code>.didi.cloud.bill.v1.ResourceSpec resourceSpec = 3;</code>
+   * @return The resourceSpec.
    */
   com.didiyun.bill.v1.ResourceSpec getResourceSpec();
   /**

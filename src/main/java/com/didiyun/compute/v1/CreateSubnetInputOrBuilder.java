@@ -13,6 +13,7 @@ public interface CreateSubnetInputOrBuilder extends
    * </pre>
    *
    * <code>string name = 1;</code>
+   * @return The name.
    */
   java.lang.String getName();
   /**
@@ -21,6 +22,7 @@ public interface CreateSubnetInputOrBuilder extends
    * </pre>
    *
    * <code>string name = 1;</code>
+   * @return The bytes for name.
    */
   com.google.protobuf.ByteString
       getNameBytes();
@@ -31,6 +33,7 @@ public interface CreateSubnetInputOrBuilder extends
    * </pre>
    *
    * <code>string cidr = 2;</code>
+   * @return The cidr.
    */
   java.lang.String getCidr();
   /**
@@ -39,6 +42,7 @@ public interface CreateSubnetInputOrBuilder extends
    * </pre>
    *
    * <code>string cidr = 2;</code>
+   * @return The bytes for cidr.
    */
   com.google.protobuf.ByteString
       getCidrBytes();
@@ -49,6 +53,7 @@ public interface CreateSubnetInputOrBuilder extends
    * </pre>
    *
    * <code>string zoneId = 3;</code>
+   * @return The zoneId.
    */
   java.lang.String getZoneId();
   /**
@@ -57,6 +62,7 @@ public interface CreateSubnetInputOrBuilder extends
    * </pre>
    *
    * <code>string zoneId = 3;</code>
+   * @return The bytes for zoneId.
    */
   com.google.protobuf.ByteString
       getZoneIdBytes();

@@ -13,6 +13,7 @@ public interface BuyDetailOrBuilder extends
    * </pre>
    *
    * <code>int64 unitVolume = 1;</code>
+   * @return The unitVolume.
    */
   long getUnitVolume();
 
@@ -22,6 +23,7 @@ public interface BuyDetailOrBuilder extends
    * </pre>
    *
    * <code>string volumeUnitDescribe = 2;</code>
+   * @return The volumeUnitDescribe.
    */
   java.lang.String getVolumeUnitDescribe();
   /**
@@ -30,6 +32,7 @@ public interface BuyDetailOrBuilder extends
    * </pre>
    *
    * <code>string volumeUnitDescribe = 2;</code>
+   * @return The bytes for volumeUnitDescribe.
    */
   com.google.protobuf.ByteString
       getVolumeUnitDescribeBytes();
@@ -40,6 +43,7 @@ public interface BuyDetailOrBuilder extends
    * </pre>
    *
    * <code>repeated int64 range = 3;</code>
+   * @return A list containing the range.
    */
   java.util.List<java.lang.Long> getRangeList();
   /**
@@ -48,6 +52,7 @@ public interface BuyDetailOrBuilder extends
    * </pre>
    *
    * <code>repeated int64 range = 3;</code>
+   * @return The count of range.
    */
   int getRangeCount();
   /**
@@ -56,6 +61,8 @@ public interface BuyDetailOrBuilder extends
    * </pre>
    *
    * <code>repeated int64 range = 3;</code>
+   * @param index The index of the element to return.
+   * @return The range at the given index.
    */
   long getRange(int index);
 
@@ -65,6 +72,7 @@ public interface BuyDetailOrBuilder extends
    * </pre>
    *
    * <code>repeated int64 in = 4;</code>
+   * @return A list containing the in.
    */
   java.util.List<java.lang.Long> getInList();
   /**
@@ -73,6 +81,7 @@ public interface BuyDetailOrBuilder extends
    * </pre>
    *
    * <code>repeated int64 in = 4;</code>
+   * @return The count of in.
    */
   int getInCount();
   /**
@@ -81,6 +90,8 @@ public interface BuyDetailOrBuilder extends
    * </pre>
    *
    * <code>repeated int64 in = 4;</code>
+   * @param index The index of the element to return.
+   * @return The in at the given index.
    */
   long getIn(int index);
 
@@ -90,6 +101,7 @@ public interface BuyDetailOrBuilder extends
    * </pre>
    *
    * <code>double unitPrice = 5;</code>
+   * @return The unitPrice.
    */
   double getUnitPrice();
 
@@ -99,6 +111,7 @@ public interface BuyDetailOrBuilder extends
    * </pre>
    *
    * <code>int64 value = 6;</code>
+   * @return The value.
    */
   long getValue();
 
@@ -108,6 +121,7 @@ public interface BuyDetailOrBuilder extends
    * </pre>
    *
    * <code>double realPrice = 7;</code>
+   * @return The realPrice.
    */
   double getRealPrice();
 }

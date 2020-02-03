@@ -16,11 +16,16 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private ContinueListCondition() {
-    startTime_ = 0L;
-    endTime_ = 0L;
     resourceType_ = "";
     regionId_ = "";
     autoRenewFilter_ = "";
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new ContinueListCondition();
   }
 
   @java.lang.Override
@@ -36,7 +41,6 @@ private static final long serialVersionUID = 0L;
     if (extensionRegistry == null) {
       throw new java.lang.NullPointerException();
     }
-    int mutable_bitField0_ = 0;
     com.google.protobuf.UnknownFieldSet.Builder unknownFields =
         com.google.protobuf.UnknownFieldSet.newBuilder();
     try {
@@ -76,7 +80,7 @@ private static final long serialVersionUID = 0L;
             break;
           }
           default: {
-            if (!parseUnknownFieldProto3(
+            if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
               done = true;
             }
@@ -115,6 +119,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>int64 startTime = 1;</code>
+   * @return The startTime.
    */
   public long getStartTime() {
     return startTime_;
@@ -128,6 +133,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>int64 endTime = 2;</code>
+   * @return The endTime.
    */
   public long getEndTime() {
     return endTime_;
@@ -141,6 +147,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string resourceType = 3;</code>
+   * @return The resourceType.
    */
   public java.lang.String getResourceType() {
     java.lang.Object ref = resourceType_;
@@ -160,6 +167,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string resourceType = 3;</code>
+   * @return The bytes for resourceType.
    */
   public com.google.protobuf.ByteString
       getResourceTypeBytes() {
@@ -183,6 +191,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string regionId = 4;</code>
+   * @return The regionId.
    */
   public java.lang.String getRegionId() {
     java.lang.Object ref = regionId_;
@@ -202,6 +211,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string regionId = 4;</code>
+   * @return The bytes for regionId.
    */
   public com.google.protobuf.ByteString
       getRegionIdBytes() {
@@ -225,6 +235,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string autoRenewFilter = 5;</code>
+   * @return The autoRenewFilter.
    */
   public java.lang.String getAutoRenewFilter() {
     java.lang.Object ref = autoRenewFilter_;
@@ -244,6 +255,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string autoRenewFilter = 5;</code>
+   * @return The bytes for autoRenewFilter.
    */
   public com.google.protobuf.ByteString
       getAutoRenewFilterBytes() {
@@ -329,19 +341,18 @@ private static final long serialVersionUID = 0L;
     }
     com.didiyun.bill.v1.ContinueListCondition other = (com.didiyun.bill.v1.ContinueListCondition) obj;
 
-    boolean result = true;
-    result = result && (getStartTime()
-        == other.getStartTime());
-    result = result && (getEndTime()
-        == other.getEndTime());
-    result = result && getResourceType()
-        .equals(other.getResourceType());
-    result = result && getRegionId()
-        .equals(other.getRegionId());
-    result = result && getAutoRenewFilter()
-        .equals(other.getAutoRenewFilter());
-    result = result && unknownFields.equals(other.unknownFields);
-    return result;
+    if (getStartTime()
+        != other.getStartTime()) return false;
+    if (getEndTime()
+        != other.getEndTime()) return false;
+    if (!getResourceType()
+        .equals(other.getResourceType())) return false;
+    if (!getRegionId()
+        .equals(other.getRegionId())) return false;
+    if (!getAutoRenewFilter()
+        .equals(other.getAutoRenewFilter())) return false;
+    if (!unknownFields.equals(other.unknownFields)) return false;
+    return true;
   }
 
   @java.lang.Override
@@ -543,35 +554,35 @@ private static final long serialVersionUID = 0L;
 
     @java.lang.Override
     public Builder clone() {
-      return (Builder) super.clone();
+      return super.clone();
     }
     @java.lang.Override
     public Builder setField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return (Builder) super.setField(field, value);
+      return super.setField(field, value);
     }
     @java.lang.Override
     public Builder clearField(
         com.google.protobuf.Descriptors.FieldDescriptor field) {
-      return (Builder) super.clearField(field);
+      return super.clearField(field);
     }
     @java.lang.Override
     public Builder clearOneof(
         com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-      return (Builder) super.clearOneof(oneof);
+      return super.clearOneof(oneof);
     }
     @java.lang.Override
     public Builder setRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         int index, java.lang.Object value) {
-      return (Builder) super.setRepeatedField(field, index, value);
+      return super.setRepeatedField(field, index, value);
     }
     @java.lang.Override
     public Builder addRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return (Builder) super.addRepeatedField(field, value);
+      return super.addRepeatedField(field, value);
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -639,6 +650,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>int64 startTime = 1;</code>
+     * @return The startTime.
      */
     public long getStartTime() {
       return startTime_;
@@ -649,6 +661,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>int64 startTime = 1;</code>
+     * @param value The startTime to set.
+     * @return This builder for chaining.
      */
     public Builder setStartTime(long value) {
       
@@ -662,6 +676,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>int64 startTime = 1;</code>
+     * @return This builder for chaining.
      */
     public Builder clearStartTime() {
       
@@ -677,6 +692,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>int64 endTime = 2;</code>
+     * @return The endTime.
      */
     public long getEndTime() {
       return endTime_;
@@ -687,6 +703,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>int64 endTime = 2;</code>
+     * @param value The endTime to set.
+     * @return This builder for chaining.
      */
     public Builder setEndTime(long value) {
       
@@ -700,6 +718,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>int64 endTime = 2;</code>
+     * @return This builder for chaining.
      */
     public Builder clearEndTime() {
       
@@ -715,6 +734,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string resourceType = 3;</code>
+     * @return The resourceType.
      */
     public java.lang.String getResourceType() {
       java.lang.Object ref = resourceType_;
@@ -734,6 +754,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string resourceType = 3;</code>
+     * @return The bytes for resourceType.
      */
     public com.google.protobuf.ByteString
         getResourceTypeBytes() {
@@ -754,6 +775,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string resourceType = 3;</code>
+     * @param value The resourceType to set.
+     * @return This builder for chaining.
      */
     public Builder setResourceType(
         java.lang.String value) {
@@ -771,6 +794,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string resourceType = 3;</code>
+     * @return This builder for chaining.
      */
     public Builder clearResourceType() {
       
@@ -784,6 +808,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string resourceType = 3;</code>
+     * @param value The bytes for resourceType to set.
+     * @return This builder for chaining.
      */
     public Builder setResourceTypeBytes(
         com.google.protobuf.ByteString value) {
@@ -804,6 +830,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string regionId = 4;</code>
+     * @return The regionId.
      */
     public java.lang.String getRegionId() {
       java.lang.Object ref = regionId_;
@@ -823,6 +850,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string regionId = 4;</code>
+     * @return The bytes for regionId.
      */
     public com.google.protobuf.ByteString
         getRegionIdBytes() {
@@ -843,6 +871,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string regionId = 4;</code>
+     * @param value The regionId to set.
+     * @return This builder for chaining.
      */
     public Builder setRegionId(
         java.lang.String value) {
@@ -860,6 +890,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string regionId = 4;</code>
+     * @return This builder for chaining.
      */
     public Builder clearRegionId() {
       
@@ -873,6 +904,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string regionId = 4;</code>
+     * @param value The bytes for regionId to set.
+     * @return This builder for chaining.
      */
     public Builder setRegionIdBytes(
         com.google.protobuf.ByteString value) {
@@ -893,6 +926,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string autoRenewFilter = 5;</code>
+     * @return The autoRenewFilter.
      */
     public java.lang.String getAutoRenewFilter() {
       java.lang.Object ref = autoRenewFilter_;
@@ -912,6 +946,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string autoRenewFilter = 5;</code>
+     * @return The bytes for autoRenewFilter.
      */
     public com.google.protobuf.ByteString
         getAutoRenewFilterBytes() {
@@ -932,6 +967,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string autoRenewFilter = 5;</code>
+     * @param value The autoRenewFilter to set.
+     * @return This builder for chaining.
      */
     public Builder setAutoRenewFilter(
         java.lang.String value) {
@@ -949,6 +986,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string autoRenewFilter = 5;</code>
+     * @return This builder for chaining.
      */
     public Builder clearAutoRenewFilter() {
       
@@ -962,6 +1000,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string autoRenewFilter = 5;</code>
+     * @param value The bytes for autoRenewFilter to set.
+     * @return This builder for chaining.
      */
     public Builder setAutoRenewFilterBytes(
         com.google.protobuf.ByteString value) {
@@ -977,7 +1017,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
-      return super.setUnknownFieldsProto3(unknownFields);
+      return super.setUnknownFields(unknownFields);
     }
 
     @java.lang.Override

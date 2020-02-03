@@ -13,6 +13,7 @@ public interface ListSgConditionOrBuilder extends
    * </pre>
    *
    * <code>repeated string sgUuids = 1;</code>
+   * @return A list containing the sgUuids.
    */
   java.util.List<java.lang.String>
       getSgUuidsList();
@@ -22,6 +23,7 @@ public interface ListSgConditionOrBuilder extends
    * </pre>
    *
    * <code>repeated string sgUuids = 1;</code>
+   * @return The count of sgUuids.
    */
   int getSgUuidsCount();
   /**
@@ -30,6 +32,8 @@ public interface ListSgConditionOrBuilder extends
    * </pre>
    *
    * <code>repeated string sgUuids = 1;</code>
+   * @param index The index of the element to return.
+   * @return The sgUuids at the given index.
    */
   java.lang.String getSgUuids(int index);
   /**
@@ -38,6 +42,8 @@ public interface ListSgConditionOrBuilder extends
    * </pre>
    *
    * <code>repeated string sgUuids = 1;</code>
+   * @param index The index of the value to return.
+   * @return The bytes of the sgUuids at the given index.
    */
   com.google.protobuf.ByteString
       getSgUuidsBytes(int index);
@@ -48,6 +54,7 @@ public interface ListSgConditionOrBuilder extends
    * </pre>
    *
    * <code>string vpcUuid = 2;</code>
+   * @return The vpcUuid.
    */
   java.lang.String getVpcUuid();
   /**
@@ -56,6 +63,7 @@ public interface ListSgConditionOrBuilder extends
    * </pre>
    *
    * <code>string vpcUuid = 2;</code>
+   * @return The bytes for vpcUuid.
    */
   com.google.protobuf.ByteString
       getVpcUuidBytes();
@@ -66,6 +74,7 @@ public interface ListSgConditionOrBuilder extends
    * </pre>
    *
    * <code>string dc2Uuid = 3;</code>
+   * @return The dc2Uuid.
    */
   java.lang.String getDc2Uuid();
   /**
@@ -74,6 +83,7 @@ public interface ListSgConditionOrBuilder extends
    * </pre>
    *
    * <code>string dc2Uuid = 3;</code>
+   * @return The bytes for dc2Uuid.
    */
   com.google.protobuf.ByteString
       getDc2UuidBytes();
@@ -84,6 +94,7 @@ public interface ListSgConditionOrBuilder extends
    * </pre>
    *
    * <code>bool dc2Exclude = 4;</code>
+   * @return The dc2Exclude.
    */
   boolean getDc2Exclude();
 }

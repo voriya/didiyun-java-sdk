@@ -13,6 +13,7 @@ public interface EbsSpecOrBuilder extends
    * </pre>
    *
    * <code>int64 size = 1;</code>
+   * @return The size.
    */
   long getSize();
 
@@ -22,6 +23,7 @@ public interface EbsSpecOrBuilder extends
    * </pre>
    *
    * <code>string diskType = 2;</code>
+   * @return The diskType.
    */
   java.lang.String getDiskType();
   /**
@@ -30,6 +32,7 @@ public interface EbsSpecOrBuilder extends
    * </pre>
    *
    * <code>string diskType = 2;</code>
+   * @return The bytes for diskType.
    */
   com.google.protobuf.ByteString
       getDiskTypeBytes();

@@ -16,8 +16,13 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private ChargeInfo() {
-    endTime_ = 0L;
-    costThisMonth_ = 0D;
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new ChargeInfo();
   }
 
   @java.lang.Override
@@ -55,10 +60,10 @@ private static final long serialVersionUID = 0L;
             break;
           }
           case 26: {
-            if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
               chargeInfo_ = com.google.protobuf.MapField.newMapField(
                   ChargeInfoDefaultEntryHolder.defaultEntry);
-              mutable_bitField0_ |= 0x00000004;
+              mutable_bitField0_ |= 0x00000001;
             }
             com.google.protobuf.MapEntry<java.lang.String, com.didiyun.bill.v1.FactorRuleDetail>
             chargeInfo__ = input.readMessage(
@@ -68,7 +73,7 @@ private static final long serialVersionUID = 0L;
             break;
           }
           default: {
-            if (!parseUnknownFieldProto3(
+            if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
               done = true;
             }
@@ -111,7 +116,6 @@ private static final long serialVersionUID = 0L;
             com.didiyun.bill.v1.ChargeInfo.class, com.didiyun.bill.v1.ChargeInfo.Builder.class);
   }
 
-  private int bitField0_;
   public static final int ENDTIME_FIELD_NUMBER = 1;
   private long endTime_;
   /**
@@ -120,6 +124,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>int64 endTime = 1;</code>
+   * @return The endTime.
    */
   public long getEndTime() {
     return endTime_;
@@ -133,6 +138,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>double costThisMonth = 2;</code>
+   * @return The costThisMonth.
    */
   public double getCostThisMonth() {
     return costThisMonth_;
@@ -298,17 +304,15 @@ private static final long serialVersionUID = 0L;
     }
     com.didiyun.bill.v1.ChargeInfo other = (com.didiyun.bill.v1.ChargeInfo) obj;
 
-    boolean result = true;
-    result = result && (getEndTime()
-        == other.getEndTime());
-    result = result && (
-        java.lang.Double.doubleToLongBits(getCostThisMonth())
-        == java.lang.Double.doubleToLongBits(
-            other.getCostThisMonth()));
-    result = result && internalGetChargeInfo().equals(
-        other.internalGetChargeInfo());
-    result = result && unknownFields.equals(other.unknownFields);
-    return result;
+    if (getEndTime()
+        != other.getEndTime()) return false;
+    if (java.lang.Double.doubleToLongBits(getCostThisMonth())
+        != java.lang.Double.doubleToLongBits(
+            other.getCostThisMonth())) return false;
+    if (!internalGetChargeInfo().equals(
+        other.internalGetChargeInfo())) return false;
+    if (!unknownFields.equals(other.unknownFields)) return false;
+    return true;
   }
 
   @java.lang.Override
@@ -515,47 +519,45 @@ private static final long serialVersionUID = 0L;
     public com.didiyun.bill.v1.ChargeInfo buildPartial() {
       com.didiyun.bill.v1.ChargeInfo result = new com.didiyun.bill.v1.ChargeInfo(this);
       int from_bitField0_ = bitField0_;
-      int to_bitField0_ = 0;
       result.endTime_ = endTime_;
       result.costThisMonth_ = costThisMonth_;
       result.chargeInfo_ = internalGetChargeInfo();
       result.chargeInfo_.makeImmutable();
-      result.bitField0_ = to_bitField0_;
       onBuilt();
       return result;
     }
 
     @java.lang.Override
     public Builder clone() {
-      return (Builder) super.clone();
+      return super.clone();
     }
     @java.lang.Override
     public Builder setField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return (Builder) super.setField(field, value);
+      return super.setField(field, value);
     }
     @java.lang.Override
     public Builder clearField(
         com.google.protobuf.Descriptors.FieldDescriptor field) {
-      return (Builder) super.clearField(field);
+      return super.clearField(field);
     }
     @java.lang.Override
     public Builder clearOneof(
         com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-      return (Builder) super.clearOneof(oneof);
+      return super.clearOneof(oneof);
     }
     @java.lang.Override
     public Builder setRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         int index, java.lang.Object value) {
-      return (Builder) super.setRepeatedField(field, index, value);
+      return super.setRepeatedField(field, index, value);
     }
     @java.lang.Override
     public Builder addRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return (Builder) super.addRepeatedField(field, value);
+      return super.addRepeatedField(field, value);
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -614,6 +616,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>int64 endTime = 1;</code>
+     * @return The endTime.
      */
     public long getEndTime() {
       return endTime_;
@@ -624,6 +627,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>int64 endTime = 1;</code>
+     * @param value The endTime to set.
+     * @return This builder for chaining.
      */
     public Builder setEndTime(long value) {
       
@@ -637,6 +642,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>int64 endTime = 1;</code>
+     * @return This builder for chaining.
      */
     public Builder clearEndTime() {
       
@@ -652,6 +658,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>double costThisMonth = 2;</code>
+     * @return The costThisMonth.
      */
     public double getCostThisMonth() {
       return costThisMonth_;
@@ -662,6 +669,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>double costThisMonth = 2;</code>
+     * @param value The costThisMonth to set.
+     * @return This builder for chaining.
      */
     public Builder setCostThisMonth(double value) {
       
@@ -675,6 +684,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>double costThisMonth = 2;</code>
+     * @return This builder for chaining.
      */
     public Builder clearCostThisMonth() {
       
@@ -836,7 +846,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
-      return super.setUnknownFieldsProto3(unknownFields);
+      return super.setUnknownFields(unknownFields);
     }
 
     @java.lang.Override

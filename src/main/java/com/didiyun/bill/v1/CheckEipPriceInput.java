@@ -16,11 +16,14 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private CheckEipPriceInput() {
-    count_ = 0;
-    payPeriod_ = 0;
-    bandwidth_ = 0;
-    chargeWithFlow_ = false;
     eipUuid_ = "";
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new CheckEipPriceInput();
   }
 
   @java.lang.Override
@@ -36,7 +39,6 @@ private static final long serialVersionUID = 0L;
     if (extensionRegistry == null) {
       throw new java.lang.NullPointerException();
     }
-    int mutable_bitField0_ = 0;
     com.google.protobuf.UnknownFieldSet.Builder unknownFields =
         com.google.protobuf.UnknownFieldSet.newBuilder();
     try {
@@ -74,7 +76,7 @@ private static final long serialVersionUID = 0L;
             break;
           }
           default: {
-            if (!parseUnknownFieldProto3(
+            if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
               done = true;
             }
@@ -113,6 +115,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>int32 count = 1;</code>
+   * @return The count.
    */
   public int getCount() {
     return count_;
@@ -126,6 +129,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>int32 payPeriod = 2;</code>
+   * @return The payPeriod.
    */
   public int getPayPeriod() {
     return payPeriod_;
@@ -139,6 +143,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>int32 bandwidth = 3;</code>
+   * @return The bandwidth.
    */
   public int getBandwidth() {
     return bandwidth_;
@@ -152,6 +157,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>bool chargeWithFlow = 4;</code>
+   * @return The chargeWithFlow.
    */
   public boolean getChargeWithFlow() {
     return chargeWithFlow_;
@@ -165,6 +171,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string eipUuid = 5;</code>
+   * @return The eipUuid.
    */
   public java.lang.String getEipUuid() {
     java.lang.Object ref = eipUuid_;
@@ -184,6 +191,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string eipUuid = 5;</code>
+   * @return The bytes for eipUuid.
    */
   public com.google.protobuf.ByteString
       getEipUuidBytes() {
@@ -271,19 +279,18 @@ private static final long serialVersionUID = 0L;
     }
     com.didiyun.bill.v1.CheckEipPriceInput other = (com.didiyun.bill.v1.CheckEipPriceInput) obj;
 
-    boolean result = true;
-    result = result && (getCount()
-        == other.getCount());
-    result = result && (getPayPeriod()
-        == other.getPayPeriod());
-    result = result && (getBandwidth()
-        == other.getBandwidth());
-    result = result && (getChargeWithFlow()
-        == other.getChargeWithFlow());
-    result = result && getEipUuid()
-        .equals(other.getEipUuid());
-    result = result && unknownFields.equals(other.unknownFields);
-    return result;
+    if (getCount()
+        != other.getCount()) return false;
+    if (getPayPeriod()
+        != other.getPayPeriod()) return false;
+    if (getBandwidth()
+        != other.getBandwidth()) return false;
+    if (getChargeWithFlow()
+        != other.getChargeWithFlow()) return false;
+    if (!getEipUuid()
+        .equals(other.getEipUuid())) return false;
+    if (!unknownFields.equals(other.unknownFields)) return false;
+    return true;
   }
 
   @java.lang.Override
@@ -484,35 +491,35 @@ private static final long serialVersionUID = 0L;
 
     @java.lang.Override
     public Builder clone() {
-      return (Builder) super.clone();
+      return super.clone();
     }
     @java.lang.Override
     public Builder setField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return (Builder) super.setField(field, value);
+      return super.setField(field, value);
     }
     @java.lang.Override
     public Builder clearField(
         com.google.protobuf.Descriptors.FieldDescriptor field) {
-      return (Builder) super.clearField(field);
+      return super.clearField(field);
     }
     @java.lang.Override
     public Builder clearOneof(
         com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-      return (Builder) super.clearOneof(oneof);
+      return super.clearOneof(oneof);
     }
     @java.lang.Override
     public Builder setRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         int index, java.lang.Object value) {
-      return (Builder) super.setRepeatedField(field, index, value);
+      return super.setRepeatedField(field, index, value);
     }
     @java.lang.Override
     public Builder addRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return (Builder) super.addRepeatedField(field, value);
+      return super.addRepeatedField(field, value);
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -578,6 +585,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>int32 count = 1;</code>
+     * @return The count.
      */
     public int getCount() {
       return count_;
@@ -588,6 +596,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>int32 count = 1;</code>
+     * @param value The count to set.
+     * @return This builder for chaining.
      */
     public Builder setCount(int value) {
       
@@ -601,6 +611,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>int32 count = 1;</code>
+     * @return This builder for chaining.
      */
     public Builder clearCount() {
       
@@ -616,6 +627,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>int32 payPeriod = 2;</code>
+     * @return The payPeriod.
      */
     public int getPayPeriod() {
       return payPeriod_;
@@ -626,6 +638,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>int32 payPeriod = 2;</code>
+     * @param value The payPeriod to set.
+     * @return This builder for chaining.
      */
     public Builder setPayPeriod(int value) {
       
@@ -639,6 +653,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>int32 payPeriod = 2;</code>
+     * @return This builder for chaining.
      */
     public Builder clearPayPeriod() {
       
@@ -654,6 +669,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>int32 bandwidth = 3;</code>
+     * @return The bandwidth.
      */
     public int getBandwidth() {
       return bandwidth_;
@@ -664,6 +680,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>int32 bandwidth = 3;</code>
+     * @param value The bandwidth to set.
+     * @return This builder for chaining.
      */
     public Builder setBandwidth(int value) {
       
@@ -677,6 +695,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>int32 bandwidth = 3;</code>
+     * @return This builder for chaining.
      */
     public Builder clearBandwidth() {
       
@@ -692,6 +711,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>bool chargeWithFlow = 4;</code>
+     * @return The chargeWithFlow.
      */
     public boolean getChargeWithFlow() {
       return chargeWithFlow_;
@@ -702,6 +722,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>bool chargeWithFlow = 4;</code>
+     * @param value The chargeWithFlow to set.
+     * @return This builder for chaining.
      */
     public Builder setChargeWithFlow(boolean value) {
       
@@ -715,6 +737,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>bool chargeWithFlow = 4;</code>
+     * @return This builder for chaining.
      */
     public Builder clearChargeWithFlow() {
       
@@ -730,6 +753,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string eipUuid = 5;</code>
+     * @return The eipUuid.
      */
     public java.lang.String getEipUuid() {
       java.lang.Object ref = eipUuid_;
@@ -749,6 +773,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string eipUuid = 5;</code>
+     * @return The bytes for eipUuid.
      */
     public com.google.protobuf.ByteString
         getEipUuidBytes() {
@@ -769,6 +794,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string eipUuid = 5;</code>
+     * @param value The eipUuid to set.
+     * @return This builder for chaining.
      */
     public Builder setEipUuid(
         java.lang.String value) {
@@ -786,6 +813,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string eipUuid = 5;</code>
+     * @return This builder for chaining.
      */
     public Builder clearEipUuid() {
       
@@ -799,6 +827,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string eipUuid = 5;</code>
+     * @param value The bytes for eipUuid to set.
+     * @return This builder for chaining.
      */
     public Builder setEipUuidBytes(
         com.google.protobuf.ByteString value) {
@@ -814,7 +844,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
-      return super.setUnknownFieldsProto3(unknownFields);
+      return super.setUnknownFields(unknownFields);
     }
 
     @java.lang.Override

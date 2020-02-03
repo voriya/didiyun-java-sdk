@@ -13,6 +13,7 @@ public interface CheckEbsPriceRequestOrBuilder extends
    * </pre>
    *
    * <code>.didi.cloud.base.v1.Header header = 1;</code>
+   * @return Whether the header field is set.
    */
   boolean hasHeader();
   /**
@@ -21,6 +22,7 @@ public interface CheckEbsPriceRequestOrBuilder extends
    * </pre>
    *
    * <code>.didi.cloud.base.v1.Header header = 1;</code>
+   * @return The header.
    */
   com.didiyun.base.v1.Header getHeader();
   /**
@@ -34,20 +36,24 @@ public interface CheckEbsPriceRequestOrBuilder extends
 
   /**
    * <code>bool checkCoupon = 2;</code>
+   * @return The checkCoupon.
    */
   boolean getCheckCoupon();
 
   /**
    * <code>bool isChange = 3;</code>
+   * @return The isChange.
    */
   boolean getIsChange();
 
   /**
    * <code>.didi.cloud.bill.v1.CheckEbsPriceInput ebsGoods = 4;</code>
+   * @return Whether the ebsGoods field is set.
    */
   boolean hasEbsGoods();
   /**
    * <code>.didi.cloud.bill.v1.CheckEbsPriceInput ebsGoods = 4;</code>
+   * @return The ebsGoods.
    */
   com.didiyun.bill.v1.CheckEbsPriceInput getEbsGoods();
   /**

@@ -13,6 +13,7 @@ public interface JobInfoOrBuilder extends
    * </pre>
    *
    * <code>string jobUuid = 1;</code>
+   * @return The jobUuid.
    */
   java.lang.String getJobUuid();
   /**
@@ -21,6 +22,7 @@ public interface JobInfoOrBuilder extends
    * </pre>
    *
    * <code>string jobUuid = 1;</code>
+   * @return The bytes for jobUuid.
    */
   com.google.protobuf.ByteString
       getJobUuidBytes();
@@ -31,6 +33,7 @@ public interface JobInfoOrBuilder extends
    * </pre>
    *
    * <code>string resourceUuid = 2;</code>
+   * @return The resourceUuid.
    */
   java.lang.String getResourceUuid();
   /**
@@ -39,6 +42,7 @@ public interface JobInfoOrBuilder extends
    * </pre>
    *
    * <code>string resourceUuid = 2;</code>
+   * @return The bytes for resourceUuid.
    */
   com.google.protobuf.ByteString
       getResourceUuidBytes();
@@ -49,6 +53,7 @@ public interface JobInfoOrBuilder extends
    * </pre>
    *
    * <code>double progress = 3;</code>
+   * @return The progress.
    */
   double getProgress();
 
@@ -58,6 +63,7 @@ public interface JobInfoOrBuilder extends
    * </pre>
    *
    * <code>string type = 4;</code>
+   * @return The type.
    */
   java.lang.String getType();
   /**
@@ -66,6 +72,7 @@ public interface JobInfoOrBuilder extends
    * </pre>
    *
    * <code>string type = 4;</code>
+   * @return The bytes for type.
    */
   com.google.protobuf.ByteString
       getTypeBytes();
@@ -76,6 +83,7 @@ public interface JobInfoOrBuilder extends
    * </pre>
    *
    * <code>bool done = 5;</code>
+   * @return The done.
    */
   boolean getDone();
 
@@ -85,6 +93,7 @@ public interface JobInfoOrBuilder extends
    * </pre>
    *
    * <code>bool success = 6;</code>
+   * @return The success.
    */
   boolean getSuccess();
 
@@ -94,6 +103,7 @@ public interface JobInfoOrBuilder extends
    * </pre>
    *
    * <code>string result = 7;</code>
+   * @return The result.
    */
   java.lang.String getResult();
   /**
@@ -102,6 +112,7 @@ public interface JobInfoOrBuilder extends
    * </pre>
    *
    * <code>string result = 7;</code>
+   * @return The bytes for result.
    */
   com.google.protobuf.ByteString
       getResultBytes();

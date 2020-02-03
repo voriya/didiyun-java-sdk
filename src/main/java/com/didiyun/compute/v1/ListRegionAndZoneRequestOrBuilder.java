@@ -9,10 +9,12 @@ public interface ListRegionAndZoneRequestOrBuilder extends
 
   /**
    * <code>.didi.cloud.base.v1.Header header = 1;</code>
+   * @return Whether the header field is set.
    */
   boolean hasHeader();
   /**
    * <code>.didi.cloud.base.v1.Header header = 1;</code>
+   * @return The header.
    */
   com.didiyun.base.v1.Header getHeader();
   /**
@@ -22,10 +24,12 @@ public interface ListRegionAndZoneRequestOrBuilder extends
 
   /**
    * <code>.didi.cloud.compute.v1.ListRegionAndZoneRequest.Condition condition = 2;</code>
+   * @return Whether the condition field is set.
    */
   boolean hasCondition();
   /**
    * <code>.didi.cloud.compute.v1.ListRegionAndZoneRequest.Condition condition = 2;</code>
+   * @return The condition.
    */
   com.didiyun.compute.v1.ListRegionAndZoneRequest.Condition getCondition();
   /**

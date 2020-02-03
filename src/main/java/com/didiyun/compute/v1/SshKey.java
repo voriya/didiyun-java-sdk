@@ -20,7 +20,13 @@ private static final long serialVersionUID = 0L;
     name_ = "";
     key_ = "";
     fingerprint_ = "";
-    createTime_ = 0L;
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new SshKey();
   }
 
   @java.lang.Override
@@ -36,7 +42,6 @@ private static final long serialVersionUID = 0L;
     if (extensionRegistry == null) {
       throw new java.lang.NullPointerException();
     }
-    int mutable_bitField0_ = 0;
     com.google.protobuf.UnknownFieldSet.Builder unknownFields =
         com.google.protobuf.UnknownFieldSet.newBuilder();
     try {
@@ -77,7 +82,7 @@ private static final long serialVersionUID = 0L;
             break;
           }
           default: {
-            if (!parseUnknownFieldProto3(
+            if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
               done = true;
             }
@@ -116,6 +121,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string pubKeyUuid = 2;</code>
+   * @return The pubKeyUuid.
    */
   public java.lang.String getPubKeyUuid() {
     java.lang.Object ref = pubKeyUuid_;
@@ -135,6 +141,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string pubKeyUuid = 2;</code>
+   * @return The bytes for pubKeyUuid.
    */
   public com.google.protobuf.ByteString
       getPubKeyUuidBytes() {
@@ -158,6 +165,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string name = 3;</code>
+   * @return The name.
    */
   public java.lang.String getName() {
     java.lang.Object ref = name_;
@@ -177,6 +185,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string name = 3;</code>
+   * @return The bytes for name.
    */
   public com.google.protobuf.ByteString
       getNameBytes() {
@@ -200,6 +209,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string key = 4;</code>
+   * @return The key.
    */
   public java.lang.String getKey() {
     java.lang.Object ref = key_;
@@ -219,6 +229,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string key = 4;</code>
+   * @return The bytes for key.
    */
   public com.google.protobuf.ByteString
       getKeyBytes() {
@@ -242,6 +253,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string fingerprint = 5;</code>
+   * @return The fingerprint.
    */
   public java.lang.String getFingerprint() {
     java.lang.Object ref = fingerprint_;
@@ -261,6 +273,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string fingerprint = 5;</code>
+   * @return The bytes for fingerprint.
    */
   public com.google.protobuf.ByteString
       getFingerprintBytes() {
@@ -284,6 +297,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>int64 createTime = 6;</code>
+   * @return The createTime.
    */
   public long getCreateTime() {
     return createTime_;
@@ -358,19 +372,18 @@ private static final long serialVersionUID = 0L;
     }
     com.didiyun.compute.v1.SshKey other = (com.didiyun.compute.v1.SshKey) obj;
 
-    boolean result = true;
-    result = result && getPubKeyUuid()
-        .equals(other.getPubKeyUuid());
-    result = result && getName()
-        .equals(other.getName());
-    result = result && getKey()
-        .equals(other.getKey());
-    result = result && getFingerprint()
-        .equals(other.getFingerprint());
-    result = result && (getCreateTime()
-        == other.getCreateTime());
-    result = result && unknownFields.equals(other.unknownFields);
-    return result;
+    if (!getPubKeyUuid()
+        .equals(other.getPubKeyUuid())) return false;
+    if (!getName()
+        .equals(other.getName())) return false;
+    if (!getKey()
+        .equals(other.getKey())) return false;
+    if (!getFingerprint()
+        .equals(other.getFingerprint())) return false;
+    if (getCreateTime()
+        != other.getCreateTime()) return false;
+    if (!unknownFields.equals(other.unknownFields)) return false;
+    return true;
   }
 
   @java.lang.Override
@@ -571,35 +584,35 @@ private static final long serialVersionUID = 0L;
 
     @java.lang.Override
     public Builder clone() {
-      return (Builder) super.clone();
+      return super.clone();
     }
     @java.lang.Override
     public Builder setField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return (Builder) super.setField(field, value);
+      return super.setField(field, value);
     }
     @java.lang.Override
     public Builder clearField(
         com.google.protobuf.Descriptors.FieldDescriptor field) {
-      return (Builder) super.clearField(field);
+      return super.clearField(field);
     }
     @java.lang.Override
     public Builder clearOneof(
         com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-      return (Builder) super.clearOneof(oneof);
+      return super.clearOneof(oneof);
     }
     @java.lang.Override
     public Builder setRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         int index, java.lang.Object value) {
-      return (Builder) super.setRepeatedField(field, index, value);
+      return super.setRepeatedField(field, index, value);
     }
     @java.lang.Override
     public Builder addRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return (Builder) super.addRepeatedField(field, value);
+      return super.addRepeatedField(field, value);
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -668,6 +681,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string pubKeyUuid = 2;</code>
+     * @return The pubKeyUuid.
      */
     public java.lang.String getPubKeyUuid() {
       java.lang.Object ref = pubKeyUuid_;
@@ -687,6 +701,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string pubKeyUuid = 2;</code>
+     * @return The bytes for pubKeyUuid.
      */
     public com.google.protobuf.ByteString
         getPubKeyUuidBytes() {
@@ -707,6 +722,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string pubKeyUuid = 2;</code>
+     * @param value The pubKeyUuid to set.
+     * @return This builder for chaining.
      */
     public Builder setPubKeyUuid(
         java.lang.String value) {
@@ -724,6 +741,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string pubKeyUuid = 2;</code>
+     * @return This builder for chaining.
      */
     public Builder clearPubKeyUuid() {
       
@@ -737,6 +755,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string pubKeyUuid = 2;</code>
+     * @param value The bytes for pubKeyUuid to set.
+     * @return This builder for chaining.
      */
     public Builder setPubKeyUuidBytes(
         com.google.protobuf.ByteString value) {
@@ -757,6 +777,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string name = 3;</code>
+     * @return The name.
      */
     public java.lang.String getName() {
       java.lang.Object ref = name_;
@@ -776,6 +797,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string name = 3;</code>
+     * @return The bytes for name.
      */
     public com.google.protobuf.ByteString
         getNameBytes() {
@@ -796,6 +818,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string name = 3;</code>
+     * @param value The name to set.
+     * @return This builder for chaining.
      */
     public Builder setName(
         java.lang.String value) {
@@ -813,6 +837,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string name = 3;</code>
+     * @return This builder for chaining.
      */
     public Builder clearName() {
       
@@ -826,6 +851,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string name = 3;</code>
+     * @param value The bytes for name to set.
+     * @return This builder for chaining.
      */
     public Builder setNameBytes(
         com.google.protobuf.ByteString value) {
@@ -846,6 +873,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string key = 4;</code>
+     * @return The key.
      */
     public java.lang.String getKey() {
       java.lang.Object ref = key_;
@@ -865,6 +893,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string key = 4;</code>
+     * @return The bytes for key.
      */
     public com.google.protobuf.ByteString
         getKeyBytes() {
@@ -885,6 +914,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string key = 4;</code>
+     * @param value The key to set.
+     * @return This builder for chaining.
      */
     public Builder setKey(
         java.lang.String value) {
@@ -902,6 +933,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string key = 4;</code>
+     * @return This builder for chaining.
      */
     public Builder clearKey() {
       
@@ -915,6 +947,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string key = 4;</code>
+     * @param value The bytes for key to set.
+     * @return This builder for chaining.
      */
     public Builder setKeyBytes(
         com.google.protobuf.ByteString value) {
@@ -935,6 +969,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string fingerprint = 5;</code>
+     * @return The fingerprint.
      */
     public java.lang.String getFingerprint() {
       java.lang.Object ref = fingerprint_;
@@ -954,6 +989,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string fingerprint = 5;</code>
+     * @return The bytes for fingerprint.
      */
     public com.google.protobuf.ByteString
         getFingerprintBytes() {
@@ -974,6 +1010,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string fingerprint = 5;</code>
+     * @param value The fingerprint to set.
+     * @return This builder for chaining.
      */
     public Builder setFingerprint(
         java.lang.String value) {
@@ -991,6 +1029,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string fingerprint = 5;</code>
+     * @return This builder for chaining.
      */
     public Builder clearFingerprint() {
       
@@ -1004,6 +1043,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string fingerprint = 5;</code>
+     * @param value The bytes for fingerprint to set.
+     * @return This builder for chaining.
      */
     public Builder setFingerprintBytes(
         com.google.protobuf.ByteString value) {
@@ -1024,6 +1065,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>int64 createTime = 6;</code>
+     * @return The createTime.
      */
     public long getCreateTime() {
       return createTime_;
@@ -1034,6 +1076,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>int64 createTime = 6;</code>
+     * @param value The createTime to set.
+     * @return This builder for chaining.
      */
     public Builder setCreateTime(long value) {
       
@@ -1047,6 +1091,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>int64 createTime = 6;</code>
+     * @return This builder for chaining.
      */
     public Builder clearCreateTime() {
       
@@ -1057,7 +1102,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
-      return super.setUnknownFieldsProto3(unknownFields);
+      return super.setUnknownFields(unknownFields);
     }
 
     @java.lang.Override

@@ -20,10 +20,14 @@ private static final long serialVersionUID = 0L;
     resourceType_ = "";
     name_ = "";
     regionId_ = "";
-    endTime_ = 0L;
-    autoRenewCnt_ = 0;
-    autoSwitch_ = false;
     bindingResources_ = java.util.Collections.emptyList();
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new ContinueListItem();
   }
 
   @java.lang.Override
@@ -103,16 +107,16 @@ private static final long serialVersionUID = 0L;
             break;
           }
           case 74: {
-            if (!((mutable_bitField0_ & 0x00000100) == 0x00000100)) {
+            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
               bindingResources_ = new java.util.ArrayList<com.didiyun.bill.v1.ResourceItemOutput>();
-              mutable_bitField0_ |= 0x00000100;
+              mutable_bitField0_ |= 0x00000001;
             }
             bindingResources_.add(
                 input.readMessage(com.didiyun.bill.v1.ResourceItemOutput.parser(), extensionRegistry));
             break;
           }
           default: {
-            if (!parseUnknownFieldProto3(
+            if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
               done = true;
             }
@@ -126,7 +130,7 @@ private static final long serialVersionUID = 0L;
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
     } finally {
-      if (((mutable_bitField0_ & 0x00000100) == 0x00000100)) {
+      if (((mutable_bitField0_ & 0x00000001) != 0)) {
         bindingResources_ = java.util.Collections.unmodifiableList(bindingResources_);
       }
       this.unknownFields = unknownFields.build();
@@ -146,7 +150,6 @@ private static final long serialVersionUID = 0L;
             com.didiyun.bill.v1.ContinueListItem.class, com.didiyun.bill.v1.ContinueListItem.Builder.class);
   }
 
-  private int bitField0_;
   public static final int RESOURCEUUID_FIELD_NUMBER = 1;
   private volatile java.lang.Object resourceUuid_;
   /**
@@ -155,6 +158,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string resourceUuid = 1;</code>
+   * @return The resourceUuid.
    */
   public java.lang.String getResourceUuid() {
     java.lang.Object ref = resourceUuid_;
@@ -174,6 +178,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string resourceUuid = 1;</code>
+   * @return The bytes for resourceUuid.
    */
   public com.google.protobuf.ByteString
       getResourceUuidBytes() {
@@ -197,6 +202,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string resourceType = 2;</code>
+   * @return The resourceType.
    */
   public java.lang.String getResourceType() {
     java.lang.Object ref = resourceType_;
@@ -216,6 +222,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string resourceType = 2;</code>
+   * @return The bytes for resourceType.
    */
   public com.google.protobuf.ByteString
       getResourceTypeBytes() {
@@ -239,6 +246,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string name = 3;</code>
+   * @return The name.
    */
   public java.lang.String getName() {
     java.lang.Object ref = name_;
@@ -258,6 +266,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string name = 3;</code>
+   * @return The bytes for name.
    */
   public com.google.protobuf.ByteString
       getNameBytes() {
@@ -281,6 +290,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string regionId = 4;</code>
+   * @return The regionId.
    */
   public java.lang.String getRegionId() {
     java.lang.Object ref = regionId_;
@@ -300,6 +310,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string regionId = 4;</code>
+   * @return The bytes for regionId.
    */
   public com.google.protobuf.ByteString
       getRegionIdBytes() {
@@ -323,6 +334,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>int64 endTime = 5;</code>
+   * @return The endTime.
    */
   public long getEndTime() {
     return endTime_;
@@ -336,6 +348,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>int32 autoRenewCnt = 6;</code>
+   * @return The autoRenewCnt.
    */
   public int getAutoRenewCnt() {
     return autoRenewCnt_;
@@ -349,6 +362,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>bool autoSwitch = 7;</code>
+   * @return The autoSwitch.
    */
   public boolean getAutoSwitch() {
     return autoSwitch_;
@@ -362,6 +376,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.didi.cloud.bill.v1.ResourceSpec resourceSpec = 8;</code>
+   * @return Whether the resourceSpec field is set.
    */
   public boolean hasResourceSpec() {
     return resourceSpec_ != null;
@@ -372,6 +387,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.didi.cloud.bill.v1.ResourceSpec resourceSpec = 8;</code>
+   * @return The resourceSpec.
    */
   public com.didiyun.bill.v1.ResourceSpec getResourceSpec() {
     return resourceSpec_ == null ? com.didiyun.bill.v1.ResourceSpec.getDefaultInstance() : resourceSpec_;
@@ -539,30 +555,29 @@ private static final long serialVersionUID = 0L;
     }
     com.didiyun.bill.v1.ContinueListItem other = (com.didiyun.bill.v1.ContinueListItem) obj;
 
-    boolean result = true;
-    result = result && getResourceUuid()
-        .equals(other.getResourceUuid());
-    result = result && getResourceType()
-        .equals(other.getResourceType());
-    result = result && getName()
-        .equals(other.getName());
-    result = result && getRegionId()
-        .equals(other.getRegionId());
-    result = result && (getEndTime()
-        == other.getEndTime());
-    result = result && (getAutoRenewCnt()
-        == other.getAutoRenewCnt());
-    result = result && (getAutoSwitch()
-        == other.getAutoSwitch());
-    result = result && (hasResourceSpec() == other.hasResourceSpec());
+    if (!getResourceUuid()
+        .equals(other.getResourceUuid())) return false;
+    if (!getResourceType()
+        .equals(other.getResourceType())) return false;
+    if (!getName()
+        .equals(other.getName())) return false;
+    if (!getRegionId()
+        .equals(other.getRegionId())) return false;
+    if (getEndTime()
+        != other.getEndTime()) return false;
+    if (getAutoRenewCnt()
+        != other.getAutoRenewCnt()) return false;
+    if (getAutoSwitch()
+        != other.getAutoSwitch()) return false;
+    if (hasResourceSpec() != other.hasResourceSpec()) return false;
     if (hasResourceSpec()) {
-      result = result && getResourceSpec()
-          .equals(other.getResourceSpec());
+      if (!getResourceSpec()
+          .equals(other.getResourceSpec())) return false;
     }
-    result = result && getBindingResourcesList()
-        .equals(other.getBindingResourcesList());
-    result = result && unknownFields.equals(other.unknownFields);
-    return result;
+    if (!getBindingResourcesList()
+        .equals(other.getBindingResourcesList())) return false;
+    if (!unknownFields.equals(other.unknownFields)) return false;
+    return true;
   }
 
   @java.lang.Override
@@ -752,7 +767,7 @@ private static final long serialVersionUID = 0L;
       }
       if (bindingResourcesBuilder_ == null) {
         bindingResources_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000100);
+        bitField0_ = (bitField0_ & ~0x00000001);
       } else {
         bindingResourcesBuilder_.clear();
       }
@@ -783,7 +798,6 @@ private static final long serialVersionUID = 0L;
     public com.didiyun.bill.v1.ContinueListItem buildPartial() {
       com.didiyun.bill.v1.ContinueListItem result = new com.didiyun.bill.v1.ContinueListItem(this);
       int from_bitField0_ = bitField0_;
-      int to_bitField0_ = 0;
       result.resourceUuid_ = resourceUuid_;
       result.resourceType_ = resourceType_;
       result.name_ = name_;
@@ -797,50 +811,49 @@ private static final long serialVersionUID = 0L;
         result.resourceSpec_ = resourceSpecBuilder_.build();
       }
       if (bindingResourcesBuilder_ == null) {
-        if (((bitField0_ & 0x00000100) == 0x00000100)) {
+        if (((bitField0_ & 0x00000001) != 0)) {
           bindingResources_ = java.util.Collections.unmodifiableList(bindingResources_);
-          bitField0_ = (bitField0_ & ~0x00000100);
+          bitField0_ = (bitField0_ & ~0x00000001);
         }
         result.bindingResources_ = bindingResources_;
       } else {
         result.bindingResources_ = bindingResourcesBuilder_.build();
       }
-      result.bitField0_ = to_bitField0_;
       onBuilt();
       return result;
     }
 
     @java.lang.Override
     public Builder clone() {
-      return (Builder) super.clone();
+      return super.clone();
     }
     @java.lang.Override
     public Builder setField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return (Builder) super.setField(field, value);
+      return super.setField(field, value);
     }
     @java.lang.Override
     public Builder clearField(
         com.google.protobuf.Descriptors.FieldDescriptor field) {
-      return (Builder) super.clearField(field);
+      return super.clearField(field);
     }
     @java.lang.Override
     public Builder clearOneof(
         com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-      return (Builder) super.clearOneof(oneof);
+      return super.clearOneof(oneof);
     }
     @java.lang.Override
     public Builder setRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         int index, java.lang.Object value) {
-      return (Builder) super.setRepeatedField(field, index, value);
+      return super.setRepeatedField(field, index, value);
     }
     @java.lang.Override
     public Builder addRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return (Builder) super.addRepeatedField(field, value);
+      return super.addRepeatedField(field, value);
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -886,7 +899,7 @@ private static final long serialVersionUID = 0L;
         if (!other.bindingResources_.isEmpty()) {
           if (bindingResources_.isEmpty()) {
             bindingResources_ = other.bindingResources_;
-            bitField0_ = (bitField0_ & ~0x00000100);
+            bitField0_ = (bitField0_ & ~0x00000001);
           } else {
             ensureBindingResourcesIsMutable();
             bindingResources_.addAll(other.bindingResources_);
@@ -899,7 +912,7 @@ private static final long serialVersionUID = 0L;
             bindingResourcesBuilder_.dispose();
             bindingResourcesBuilder_ = null;
             bindingResources_ = other.bindingResources_;
-            bitField0_ = (bitField0_ & ~0x00000100);
+            bitField0_ = (bitField0_ & ~0x00000001);
             bindingResourcesBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getBindingResourcesFieldBuilder() : null;
@@ -945,6 +958,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string resourceUuid = 1;</code>
+     * @return The resourceUuid.
      */
     public java.lang.String getResourceUuid() {
       java.lang.Object ref = resourceUuid_;
@@ -964,6 +978,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string resourceUuid = 1;</code>
+     * @return The bytes for resourceUuid.
      */
     public com.google.protobuf.ByteString
         getResourceUuidBytes() {
@@ -984,6 +999,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string resourceUuid = 1;</code>
+     * @param value The resourceUuid to set.
+     * @return This builder for chaining.
      */
     public Builder setResourceUuid(
         java.lang.String value) {
@@ -1001,6 +1018,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string resourceUuid = 1;</code>
+     * @return This builder for chaining.
      */
     public Builder clearResourceUuid() {
       
@@ -1014,6 +1032,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string resourceUuid = 1;</code>
+     * @param value The bytes for resourceUuid to set.
+     * @return This builder for chaining.
      */
     public Builder setResourceUuidBytes(
         com.google.protobuf.ByteString value) {
@@ -1034,6 +1054,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string resourceType = 2;</code>
+     * @return The resourceType.
      */
     public java.lang.String getResourceType() {
       java.lang.Object ref = resourceType_;
@@ -1053,6 +1074,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string resourceType = 2;</code>
+     * @return The bytes for resourceType.
      */
     public com.google.protobuf.ByteString
         getResourceTypeBytes() {
@@ -1073,6 +1095,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string resourceType = 2;</code>
+     * @param value The resourceType to set.
+     * @return This builder for chaining.
      */
     public Builder setResourceType(
         java.lang.String value) {
@@ -1090,6 +1114,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string resourceType = 2;</code>
+     * @return This builder for chaining.
      */
     public Builder clearResourceType() {
       
@@ -1103,6 +1128,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string resourceType = 2;</code>
+     * @param value The bytes for resourceType to set.
+     * @return This builder for chaining.
      */
     public Builder setResourceTypeBytes(
         com.google.protobuf.ByteString value) {
@@ -1123,6 +1150,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string name = 3;</code>
+     * @return The name.
      */
     public java.lang.String getName() {
       java.lang.Object ref = name_;
@@ -1142,6 +1170,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string name = 3;</code>
+     * @return The bytes for name.
      */
     public com.google.protobuf.ByteString
         getNameBytes() {
@@ -1162,6 +1191,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string name = 3;</code>
+     * @param value The name to set.
+     * @return This builder for chaining.
      */
     public Builder setName(
         java.lang.String value) {
@@ -1179,6 +1210,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string name = 3;</code>
+     * @return This builder for chaining.
      */
     public Builder clearName() {
       
@@ -1192,6 +1224,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string name = 3;</code>
+     * @param value The bytes for name to set.
+     * @return This builder for chaining.
      */
     public Builder setNameBytes(
         com.google.protobuf.ByteString value) {
@@ -1212,6 +1246,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string regionId = 4;</code>
+     * @return The regionId.
      */
     public java.lang.String getRegionId() {
       java.lang.Object ref = regionId_;
@@ -1231,6 +1266,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string regionId = 4;</code>
+     * @return The bytes for regionId.
      */
     public com.google.protobuf.ByteString
         getRegionIdBytes() {
@@ -1251,6 +1287,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string regionId = 4;</code>
+     * @param value The regionId to set.
+     * @return This builder for chaining.
      */
     public Builder setRegionId(
         java.lang.String value) {
@@ -1268,6 +1306,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string regionId = 4;</code>
+     * @return This builder for chaining.
      */
     public Builder clearRegionId() {
       
@@ -1281,6 +1320,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string regionId = 4;</code>
+     * @param value The bytes for regionId to set.
+     * @return This builder for chaining.
      */
     public Builder setRegionIdBytes(
         com.google.protobuf.ByteString value) {
@@ -1301,6 +1342,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>int64 endTime = 5;</code>
+     * @return The endTime.
      */
     public long getEndTime() {
       return endTime_;
@@ -1311,6 +1353,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>int64 endTime = 5;</code>
+     * @param value The endTime to set.
+     * @return This builder for chaining.
      */
     public Builder setEndTime(long value) {
       
@@ -1324,6 +1368,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>int64 endTime = 5;</code>
+     * @return This builder for chaining.
      */
     public Builder clearEndTime() {
       
@@ -1339,6 +1384,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>int32 autoRenewCnt = 6;</code>
+     * @return The autoRenewCnt.
      */
     public int getAutoRenewCnt() {
       return autoRenewCnt_;
@@ -1349,6 +1395,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>int32 autoRenewCnt = 6;</code>
+     * @param value The autoRenewCnt to set.
+     * @return This builder for chaining.
      */
     public Builder setAutoRenewCnt(int value) {
       
@@ -1362,6 +1410,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>int32 autoRenewCnt = 6;</code>
+     * @return This builder for chaining.
      */
     public Builder clearAutoRenewCnt() {
       
@@ -1377,6 +1426,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>bool autoSwitch = 7;</code>
+     * @return The autoSwitch.
      */
     public boolean getAutoSwitch() {
       return autoSwitch_;
@@ -1387,6 +1437,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>bool autoSwitch = 7;</code>
+     * @param value The autoSwitch to set.
+     * @return This builder for chaining.
      */
     public Builder setAutoSwitch(boolean value) {
       
@@ -1400,6 +1452,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>bool autoSwitch = 7;</code>
+     * @return This builder for chaining.
      */
     public Builder clearAutoSwitch() {
       
@@ -1408,7 +1461,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private com.didiyun.bill.v1.ResourceSpec resourceSpec_ = null;
+    private com.didiyun.bill.v1.ResourceSpec resourceSpec_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.didiyun.bill.v1.ResourceSpec, com.didiyun.bill.v1.ResourceSpec.Builder, com.didiyun.bill.v1.ResourceSpecOrBuilder> resourceSpecBuilder_;
     /**
@@ -1417,6 +1470,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.didi.cloud.bill.v1.ResourceSpec resourceSpec = 8;</code>
+     * @return Whether the resourceSpec field is set.
      */
     public boolean hasResourceSpec() {
       return resourceSpecBuilder_ != null || resourceSpec_ != null;
@@ -1427,6 +1481,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.didi.cloud.bill.v1.ResourceSpec resourceSpec = 8;</code>
+     * @return The resourceSpec.
      */
     public com.didiyun.bill.v1.ResourceSpec getResourceSpec() {
       if (resourceSpecBuilder_ == null) {
@@ -1564,9 +1619,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.didiyun.bill.v1.ResourceItemOutput> bindingResources_ =
       java.util.Collections.emptyList();
     private void ensureBindingResourcesIsMutable() {
-      if (!((bitField0_ & 0x00000100) == 0x00000100)) {
+      if (!((bitField0_ & 0x00000001) != 0)) {
         bindingResources_ = new java.util.ArrayList<com.didiyun.bill.v1.ResourceItemOutput>(bindingResources_);
-        bitField0_ |= 0x00000100;
+        bitField0_ |= 0x00000001;
        }
     }
 
@@ -1760,7 +1815,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearBindingResources() {
       if (bindingResourcesBuilder_ == null) {
         bindingResources_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000100);
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
       } else {
         bindingResourcesBuilder_.clear();
@@ -1865,7 +1920,7 @@ private static final long serialVersionUID = 0L;
         bindingResourcesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.didiyun.bill.v1.ResourceItemOutput, com.didiyun.bill.v1.ResourceItemOutput.Builder, com.didiyun.bill.v1.ResourceItemOutputOrBuilder>(
                 bindingResources_,
-                ((bitField0_ & 0x00000100) == 0x00000100),
+                ((bitField0_ & 0x00000001) != 0),
                 getParentForChildren(),
                 isClean());
         bindingResources_ = null;
@@ -1875,7 +1930,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
-      return super.setUnknownFieldsProto3(unknownFields);
+      return super.setUnknownFields(unknownFields);
     }
 
     @java.lang.Override

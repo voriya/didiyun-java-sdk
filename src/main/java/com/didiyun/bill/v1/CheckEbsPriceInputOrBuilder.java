@@ -13,6 +13,7 @@ public interface CheckEbsPriceInputOrBuilder extends
    * </pre>
    *
    * <code>int32 count = 1;</code>
+   * @return The count.
    */
   int getCount();
 
@@ -22,6 +23,7 @@ public interface CheckEbsPriceInputOrBuilder extends
    * </pre>
    *
    * <code>int32 payPeriod = 2;</code>
+   * @return The payPeriod.
    */
   int getPayPeriod();
 
@@ -31,6 +33,7 @@ public interface CheckEbsPriceInputOrBuilder extends
    * </pre>
    *
    * <code>int32 size = 3;</code>
+   * @return The size.
    */
   int getSize();
 
@@ -40,6 +43,7 @@ public interface CheckEbsPriceInputOrBuilder extends
    * </pre>
    *
    * <code>string diskType = 4;</code>
+   * @return The diskType.
    */
   java.lang.String getDiskType();
   /**
@@ -48,6 +52,7 @@ public interface CheckEbsPriceInputOrBuilder extends
    * </pre>
    *
    * <code>string diskType = 4;</code>
+   * @return The bytes for diskType.
    */
   com.google.protobuf.ByteString
       getDiskTypeBytes();
@@ -58,6 +63,7 @@ public interface CheckEbsPriceInputOrBuilder extends
    * </pre>
    *
    * <code>string ebsUuid = 5;</code>
+   * @return The ebsUuid.
    */
   java.lang.String getEbsUuid();
   /**
@@ -66,6 +72,7 @@ public interface CheckEbsPriceInputOrBuilder extends
    * </pre>
    *
    * <code>string ebsUuid = 5;</code>
+   * @return The bytes for ebsUuid.
    */
   com.google.protobuf.ByteString
       getEbsUuidBytes();

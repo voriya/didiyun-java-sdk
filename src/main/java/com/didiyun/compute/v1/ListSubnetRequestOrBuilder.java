@@ -13,6 +13,7 @@ public interface ListSubnetRequestOrBuilder extends
    * </pre>
    *
    * <code>.didi.cloud.base.v1.Header header = 1;</code>
+   * @return Whether the header field is set.
    */
   boolean hasHeader();
   /**
@@ -21,6 +22,7 @@ public interface ListSubnetRequestOrBuilder extends
    * </pre>
    *
    * <code>.didi.cloud.base.v1.Header header = 1;</code>
+   * @return The header.
    */
   com.didiyun.base.v1.Header getHeader();
   /**
@@ -38,6 +40,7 @@ public interface ListSubnetRequestOrBuilder extends
    * </pre>
    *
    * <code>int32 start = 2;</code>
+   * @return The start.
    */
   int getStart();
 
@@ -47,6 +50,7 @@ public interface ListSubnetRequestOrBuilder extends
    * </pre>
    *
    * <code>int32 limit = 3;</code>
+   * @return The limit.
    */
   int getLimit();
 
@@ -56,6 +60,7 @@ public interface ListSubnetRequestOrBuilder extends
    * </pre>
    *
    * <code>bool simplify = 4;</code>
+   * @return The simplify.
    */
   boolean getSimplify();
 
@@ -65,6 +70,7 @@ public interface ListSubnetRequestOrBuilder extends
    * </pre>
    *
    * <code>.didi.cloud.compute.v1.ListSubnetCondition condition = 5;</code>
+   * @return Whether the condition field is set.
    */
   boolean hasCondition();
   /**
@@ -73,6 +79,7 @@ public interface ListSubnetRequestOrBuilder extends
    * </pre>
    *
    * <code>.didi.cloud.compute.v1.ListSubnetCondition condition = 5;</code>
+   * @return The condition.
    */
   com.didiyun.compute.v1.ListSubnetCondition getCondition();
   /**

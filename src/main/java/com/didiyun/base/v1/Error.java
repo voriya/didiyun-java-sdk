@@ -20,9 +20,15 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private Error() {
-    errno_ = 0;
     errmsg_ = "";
     requestId_ = "";
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new Error();
   }
 
   @java.lang.Override
@@ -38,7 +44,6 @@ private static final long serialVersionUID = 0L;
     if (extensionRegistry == null) {
       throw new java.lang.NullPointerException();
     }
-    int mutable_bitField0_ = 0;
     com.google.protobuf.UnknownFieldSet.Builder unknownFields =
         com.google.protobuf.UnknownFieldSet.newBuilder();
     try {
@@ -67,7 +72,7 @@ private static final long serialVersionUID = 0L;
             break;
           }
           default: {
-            if (!parseUnknownFieldProto3(
+            if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
               done = true;
             }
@@ -106,6 +111,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>int32 errno = 1;</code>
+   * @return The errno.
    */
   public int getErrno() {
     return errno_;
@@ -119,6 +125,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string errmsg = 2;</code>
+   * @return The errmsg.
    */
   public java.lang.String getErrmsg() {
     java.lang.Object ref = errmsg_;
@@ -138,6 +145,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string errmsg = 2;</code>
+   * @return The bytes for errmsg.
    */
   public com.google.protobuf.ByteString
       getErrmsgBytes() {
@@ -161,6 +169,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string requestId = 3;</code>
+   * @return The requestId.
    */
   public java.lang.String getRequestId() {
     java.lang.Object ref = requestId_;
@@ -180,6 +189,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string requestId = 3;</code>
+   * @return The bytes for requestId.
    */
   public com.google.protobuf.ByteString
       getRequestIdBytes() {
@@ -252,15 +262,14 @@ private static final long serialVersionUID = 0L;
     }
     com.didiyun.base.v1.Error other = (com.didiyun.base.v1.Error) obj;
 
-    boolean result = true;
-    result = result && (getErrno()
-        == other.getErrno());
-    result = result && getErrmsg()
-        .equals(other.getErrmsg());
-    result = result && getRequestId()
-        .equals(other.getRequestId());
-    result = result && unknownFields.equals(other.unknownFields);
-    return result;
+    if (getErrno()
+        != other.getErrno()) return false;
+    if (!getErrmsg()
+        .equals(other.getErrmsg())) return false;
+    if (!getRequestId()
+        .equals(other.getRequestId())) return false;
+    if (!unknownFields.equals(other.unknownFields)) return false;
+    return true;
   }
 
   @java.lang.Override
@@ -454,35 +463,35 @@ private static final long serialVersionUID = 0L;
 
     @java.lang.Override
     public Builder clone() {
-      return (Builder) super.clone();
+      return super.clone();
     }
     @java.lang.Override
     public Builder setField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return (Builder) super.setField(field, value);
+      return super.setField(field, value);
     }
     @java.lang.Override
     public Builder clearField(
         com.google.protobuf.Descriptors.FieldDescriptor field) {
-      return (Builder) super.clearField(field);
+      return super.clearField(field);
     }
     @java.lang.Override
     public Builder clearOneof(
         com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-      return (Builder) super.clearOneof(oneof);
+      return super.clearOneof(oneof);
     }
     @java.lang.Override
     public Builder setRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         int index, java.lang.Object value) {
-      return (Builder) super.setRepeatedField(field, index, value);
+      return super.setRepeatedField(field, index, value);
     }
     @java.lang.Override
     public Builder addRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return (Builder) super.addRepeatedField(field, value);
+      return super.addRepeatedField(field, value);
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -543,6 +552,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>int32 errno = 1;</code>
+     * @return The errno.
      */
     public int getErrno() {
       return errno_;
@@ -553,6 +563,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>int32 errno = 1;</code>
+     * @param value The errno to set.
+     * @return This builder for chaining.
      */
     public Builder setErrno(int value) {
       
@@ -566,6 +578,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>int32 errno = 1;</code>
+     * @return This builder for chaining.
      */
     public Builder clearErrno() {
       
@@ -581,6 +594,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string errmsg = 2;</code>
+     * @return The errmsg.
      */
     public java.lang.String getErrmsg() {
       java.lang.Object ref = errmsg_;
@@ -600,6 +614,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string errmsg = 2;</code>
+     * @return The bytes for errmsg.
      */
     public com.google.protobuf.ByteString
         getErrmsgBytes() {
@@ -620,6 +635,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string errmsg = 2;</code>
+     * @param value The errmsg to set.
+     * @return This builder for chaining.
      */
     public Builder setErrmsg(
         java.lang.String value) {
@@ -637,6 +654,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string errmsg = 2;</code>
+     * @return This builder for chaining.
      */
     public Builder clearErrmsg() {
       
@@ -650,6 +668,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string errmsg = 2;</code>
+     * @param value The bytes for errmsg to set.
+     * @return This builder for chaining.
      */
     public Builder setErrmsgBytes(
         com.google.protobuf.ByteString value) {
@@ -670,6 +690,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string requestId = 3;</code>
+     * @return The requestId.
      */
     public java.lang.String getRequestId() {
       java.lang.Object ref = requestId_;
@@ -689,6 +710,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string requestId = 3;</code>
+     * @return The bytes for requestId.
      */
     public com.google.protobuf.ByteString
         getRequestIdBytes() {
@@ -709,6 +731,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string requestId = 3;</code>
+     * @param value The requestId to set.
+     * @return This builder for chaining.
      */
     public Builder setRequestId(
         java.lang.String value) {
@@ -726,6 +750,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string requestId = 3;</code>
+     * @return This builder for chaining.
      */
     public Builder clearRequestId() {
       
@@ -739,6 +764,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string requestId = 3;</code>
+     * @param value The bytes for requestId to set.
+     * @return This builder for chaining.
      */
     public Builder setRequestIdBytes(
         com.google.protobuf.ByteString value) {
@@ -754,7 +781,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
-      return super.setUnknownFieldsProto3(unknownFields);
+      return super.setUnknownFields(unknownFields);
     }
 
     @java.lang.Override

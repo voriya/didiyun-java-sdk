@@ -13,6 +13,7 @@ public interface VpcAvailableCidrOrBuilder extends
    * </pre>
    *
    * <code>repeated string availableCidr = 1;</code>
+   * @return A list containing the availableCidr.
    */
   java.util.List<java.lang.String>
       getAvailableCidrList();
@@ -22,6 +23,7 @@ public interface VpcAvailableCidrOrBuilder extends
    * </pre>
    *
    * <code>repeated string availableCidr = 1;</code>
+   * @return The count of availableCidr.
    */
   int getAvailableCidrCount();
   /**
@@ -30,6 +32,8 @@ public interface VpcAvailableCidrOrBuilder extends
    * </pre>
    *
    * <code>repeated string availableCidr = 1;</code>
+   * @param index The index of the element to return.
+   * @return The availableCidr at the given index.
    */
   java.lang.String getAvailableCidr(int index);
   /**
@@ -38,6 +42,8 @@ public interface VpcAvailableCidrOrBuilder extends
    * </pre>
    *
    * <code>repeated string availableCidr = 1;</code>
+   * @param index The index of the value to return.
+   * @return The bytes of the availableCidr at the given index.
    */
   com.google.protobuf.ByteString
       getAvailableCidrBytes(int index);

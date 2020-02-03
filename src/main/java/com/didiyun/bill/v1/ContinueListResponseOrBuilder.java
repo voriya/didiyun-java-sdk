@@ -9,10 +9,12 @@ public interface ContinueListResponseOrBuilder extends
 
   /**
    * <code>.didi.cloud.base.v1.Error error = 1;</code>
+   * @return Whether the error field is set.
    */
   boolean hasError();
   /**
    * <code>.didi.cloud.base.v1.Error error = 1;</code>
+   * @return The error.
    */
   com.didiyun.base.v1.Error getError();
   /**
@@ -22,10 +24,12 @@ public interface ContinueListResponseOrBuilder extends
 
   /**
    * <code>.didi.cloud.bill.v1.ContinueListResponse.Data data = 2;</code>
+   * @return Whether the data field is set.
    */
   boolean hasData();
   /**
    * <code>.didi.cloud.bill.v1.ContinueListResponse.Data data = 2;</code>
+   * @return The data.
    */
   com.didiyun.bill.v1.ContinueListResponse.Data getData();
   /**

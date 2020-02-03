@@ -19,6 +19,13 @@ private static final long serialVersionUID = 0L;
   }
 
   @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new ListRegionAndZoneRequest();
+  }
+
+  @java.lang.Override
   public final com.google.protobuf.UnknownFieldSet
   getUnknownFields() {
     return this.unknownFields;
@@ -31,7 +38,6 @@ private static final long serialVersionUID = 0L;
     if (extensionRegistry == null) {
       throw new java.lang.NullPointerException();
     }
-    int mutable_bitField0_ = 0;
     com.google.protobuf.UnknownFieldSet.Builder unknownFields =
         com.google.protobuf.UnknownFieldSet.newBuilder();
     try {
@@ -69,7 +75,7 @@ private static final long serialVersionUID = 0L;
             break;
           }
           default: {
-            if (!parseUnknownFieldProto3(
+            if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
               done = true;
             }
@@ -110,6 +116,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string product = 1;</code>
+     * @return The product.
      */
     java.lang.String getProduct();
     /**
@@ -118,6 +125,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string product = 1;</code>
+     * @return The bytes for product.
      */
     com.google.protobuf.ByteString
         getProductBytes();
@@ -139,6 +147,13 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Condition();
+    }
+
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
@@ -151,7 +166,6 @@ private static final long serialVersionUID = 0L;
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -169,7 +183,7 @@ private static final long serialVersionUID = 0L;
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -208,6 +222,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string product = 1;</code>
+     * @return The product.
      */
     public java.lang.String getProduct() {
       java.lang.Object ref = product_;
@@ -227,6 +242,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string product = 1;</code>
+     * @return The bytes for product.
      */
     public com.google.protobuf.ByteString
         getProductBytes() {
@@ -286,11 +302,10 @@ private static final long serialVersionUID = 0L;
       }
       com.didiyun.compute.v1.ListRegionAndZoneRequest.Condition other = (com.didiyun.compute.v1.ListRegionAndZoneRequest.Condition) obj;
 
-      boolean result = true;
-      result = result && getProduct()
-          .equals(other.getProduct());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getProduct()
+          .equals(other.getProduct())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -470,35 +485,35 @@ private static final long serialVersionUID = 0L;
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -552,6 +567,7 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>string product = 1;</code>
+       * @return The product.
        */
       public java.lang.String getProduct() {
         java.lang.Object ref = product_;
@@ -571,6 +587,7 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>string product = 1;</code>
+       * @return The bytes for product.
        */
       public com.google.protobuf.ByteString
           getProductBytes() {
@@ -591,6 +608,8 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>string product = 1;</code>
+       * @param value The product to set.
+       * @return This builder for chaining.
        */
       public Builder setProduct(
           java.lang.String value) {
@@ -608,6 +627,7 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>string product = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearProduct() {
         
@@ -621,6 +641,8 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>string product = 1;</code>
+       * @param value The bytes for product to set.
+       * @return This builder for chaining.
        */
       public Builder setProductBytes(
           com.google.protobuf.ByteString value) {
@@ -636,7 +658,7 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -690,12 +712,14 @@ private static final long serialVersionUID = 0L;
   private com.didiyun.base.v1.Header header_;
   /**
    * <code>.didi.cloud.base.v1.Header header = 1;</code>
+   * @return Whether the header field is set.
    */
   public boolean hasHeader() {
     return header_ != null;
   }
   /**
    * <code>.didi.cloud.base.v1.Header header = 1;</code>
+   * @return The header.
    */
   public com.didiyun.base.v1.Header getHeader() {
     return header_ == null ? com.didiyun.base.v1.Header.getDefaultInstance() : header_;
@@ -711,12 +735,14 @@ private static final long serialVersionUID = 0L;
   private com.didiyun.compute.v1.ListRegionAndZoneRequest.Condition condition_;
   /**
    * <code>.didi.cloud.compute.v1.ListRegionAndZoneRequest.Condition condition = 2;</code>
+   * @return Whether the condition field is set.
    */
   public boolean hasCondition() {
     return condition_ != null;
   }
   /**
    * <code>.didi.cloud.compute.v1.ListRegionAndZoneRequest.Condition condition = 2;</code>
+   * @return The condition.
    */
   public com.didiyun.compute.v1.ListRegionAndZoneRequest.Condition getCondition() {
     return condition_ == null ? com.didiyun.compute.v1.ListRegionAndZoneRequest.Condition.getDefaultInstance() : condition_;
@@ -780,19 +806,18 @@ private static final long serialVersionUID = 0L;
     }
     com.didiyun.compute.v1.ListRegionAndZoneRequest other = (com.didiyun.compute.v1.ListRegionAndZoneRequest) obj;
 
-    boolean result = true;
-    result = result && (hasHeader() == other.hasHeader());
+    if (hasHeader() != other.hasHeader()) return false;
     if (hasHeader()) {
-      result = result && getHeader()
-          .equals(other.getHeader());
+      if (!getHeader()
+          .equals(other.getHeader())) return false;
     }
-    result = result && (hasCondition() == other.hasCondition());
+    if (hasCondition() != other.hasCondition()) return false;
     if (hasCondition()) {
-      result = result && getCondition()
-          .equals(other.getCondition());
+      if (!getCondition()
+          .equals(other.getCondition())) return false;
     }
-    result = result && unknownFields.equals(other.unknownFields);
-    return result;
+    if (!unknownFields.equals(other.unknownFields)) return false;
+    return true;
   }
 
   @java.lang.Override
@@ -997,35 +1022,35 @@ private static final long serialVersionUID = 0L;
 
     @java.lang.Override
     public Builder clone() {
-      return (Builder) super.clone();
+      return super.clone();
     }
     @java.lang.Override
     public Builder setField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return (Builder) super.setField(field, value);
+      return super.setField(field, value);
     }
     @java.lang.Override
     public Builder clearField(
         com.google.protobuf.Descriptors.FieldDescriptor field) {
-      return (Builder) super.clearField(field);
+      return super.clearField(field);
     }
     @java.lang.Override
     public Builder clearOneof(
         com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-      return (Builder) super.clearOneof(oneof);
+      return super.clearOneof(oneof);
     }
     @java.lang.Override
     public Builder setRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         int index, java.lang.Object value) {
-      return (Builder) super.setRepeatedField(field, index, value);
+      return super.setRepeatedField(field, index, value);
     }
     @java.lang.Override
     public Builder addRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return (Builder) super.addRepeatedField(field, value);
+      return super.addRepeatedField(field, value);
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1074,17 +1099,19 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private com.didiyun.base.v1.Header header_ = null;
+    private com.didiyun.base.v1.Header header_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.didiyun.base.v1.Header, com.didiyun.base.v1.Header.Builder, com.didiyun.base.v1.HeaderOrBuilder> headerBuilder_;
     /**
      * <code>.didi.cloud.base.v1.Header header = 1;</code>
+     * @return Whether the header field is set.
      */
     public boolean hasHeader() {
       return headerBuilder_ != null || header_ != null;
     }
     /**
      * <code>.didi.cloud.base.v1.Header header = 1;</code>
+     * @return The header.
      */
     public com.didiyun.base.v1.Header getHeader() {
       if (headerBuilder_ == null) {
@@ -1191,17 +1218,19 @@ private static final long serialVersionUID = 0L;
       return headerBuilder_;
     }
 
-    private com.didiyun.compute.v1.ListRegionAndZoneRequest.Condition condition_ = null;
+    private com.didiyun.compute.v1.ListRegionAndZoneRequest.Condition condition_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.didiyun.compute.v1.ListRegionAndZoneRequest.Condition, com.didiyun.compute.v1.ListRegionAndZoneRequest.Condition.Builder, com.didiyun.compute.v1.ListRegionAndZoneRequest.ConditionOrBuilder> conditionBuilder_;
     /**
      * <code>.didi.cloud.compute.v1.ListRegionAndZoneRequest.Condition condition = 2;</code>
+     * @return Whether the condition field is set.
      */
     public boolean hasCondition() {
       return conditionBuilder_ != null || condition_ != null;
     }
     /**
      * <code>.didi.cloud.compute.v1.ListRegionAndZoneRequest.Condition condition = 2;</code>
+     * @return The condition.
      */
     public com.didiyun.compute.v1.ListRegionAndZoneRequest.Condition getCondition() {
       if (conditionBuilder_ == null) {
@@ -1310,7 +1339,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
-      return super.setUnknownFieldsProto3(unknownFields);
+      return super.setUnknownFields(unknownFields);
     }
 
     @java.lang.Override

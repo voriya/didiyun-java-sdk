@@ -13,6 +13,7 @@ public interface FactorRuleFilterOrBuilder extends
    * </pre>
    *
    * <code>int64 min = 1;</code>
+   * @return The min.
    */
   long getMin();
 
@@ -22,6 +23,7 @@ public interface FactorRuleFilterOrBuilder extends
    * </pre>
    *
    * <code>int64 max = 2;</code>
+   * @return The max.
    */
   long getMax();
 
@@ -31,6 +33,7 @@ public interface FactorRuleFilterOrBuilder extends
    * </pre>
    *
    * <code>bool isTop = 3;</code>
+   * @return The isTop.
    */
   boolean getIsTop();
 }

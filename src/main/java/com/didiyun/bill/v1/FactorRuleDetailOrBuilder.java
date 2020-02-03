@@ -15,6 +15,7 @@ public interface FactorRuleDetailOrBuilder extends
    * </pre>
    *
    * <code>int64 autoRenewCnt = 4;</code>
+   * @return The autoRenewCnt.
    */
   long getAutoRenewCnt();
 
@@ -24,6 +25,7 @@ public interface FactorRuleDetailOrBuilder extends
    * </pre>
    *
    * <code>bool autoSwitch = 5;</code>
+   * @return The autoSwitch.
    */
   boolean getAutoSwitch();
 
@@ -33,6 +35,7 @@ public interface FactorRuleDetailOrBuilder extends
    * </pre>
    *
    * <code>string payType = 6;</code>
+   * @return The payType.
    */
   java.lang.String getPayType();
   /**
@@ -41,6 +44,7 @@ public interface FactorRuleDetailOrBuilder extends
    * </pre>
    *
    * <code>string payType = 6;</code>
+   * @return The bytes for payType.
    */
   com.google.protobuf.ByteString
       getPayTypeBytes();

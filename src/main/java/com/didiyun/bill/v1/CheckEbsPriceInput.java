@@ -16,11 +16,15 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private CheckEbsPriceInput() {
-    count_ = 0;
-    payPeriod_ = 0;
-    size_ = 0;
     diskType_ = "";
     ebsUuid_ = "";
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new CheckEbsPriceInput();
   }
 
   @java.lang.Override
@@ -36,7 +40,6 @@ private static final long serialVersionUID = 0L;
     if (extensionRegistry == null) {
       throw new java.lang.NullPointerException();
     }
-    int mutable_bitField0_ = 0;
     com.google.protobuf.UnknownFieldSet.Builder unknownFields =
         com.google.protobuf.UnknownFieldSet.newBuilder();
     try {
@@ -75,7 +78,7 @@ private static final long serialVersionUID = 0L;
             break;
           }
           default: {
-            if (!parseUnknownFieldProto3(
+            if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
               done = true;
             }
@@ -114,6 +117,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>int32 count = 1;</code>
+   * @return The count.
    */
   public int getCount() {
     return count_;
@@ -127,6 +131,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>int32 payPeriod = 2;</code>
+   * @return The payPeriod.
    */
   public int getPayPeriod() {
     return payPeriod_;
@@ -140,6 +145,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>int32 size = 3;</code>
+   * @return The size.
    */
   public int getSize() {
     return size_;
@@ -153,6 +159,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string diskType = 4;</code>
+   * @return The diskType.
    */
   public java.lang.String getDiskType() {
     java.lang.Object ref = diskType_;
@@ -172,6 +179,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string diskType = 4;</code>
+   * @return The bytes for diskType.
    */
   public com.google.protobuf.ByteString
       getDiskTypeBytes() {
@@ -195,6 +203,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string ebsUuid = 5;</code>
+   * @return The ebsUuid.
    */
   public java.lang.String getEbsUuid() {
     java.lang.Object ref = ebsUuid_;
@@ -214,6 +223,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string ebsUuid = 5;</code>
+   * @return The bytes for ebsUuid.
    */
   public com.google.protobuf.ByteString
       getEbsUuidBytes() {
@@ -300,19 +310,18 @@ private static final long serialVersionUID = 0L;
     }
     com.didiyun.bill.v1.CheckEbsPriceInput other = (com.didiyun.bill.v1.CheckEbsPriceInput) obj;
 
-    boolean result = true;
-    result = result && (getCount()
-        == other.getCount());
-    result = result && (getPayPeriod()
-        == other.getPayPeriod());
-    result = result && (getSize()
-        == other.getSize());
-    result = result && getDiskType()
-        .equals(other.getDiskType());
-    result = result && getEbsUuid()
-        .equals(other.getEbsUuid());
-    result = result && unknownFields.equals(other.unknownFields);
-    return result;
+    if (getCount()
+        != other.getCount()) return false;
+    if (getPayPeriod()
+        != other.getPayPeriod()) return false;
+    if (getSize()
+        != other.getSize()) return false;
+    if (!getDiskType()
+        .equals(other.getDiskType())) return false;
+    if (!getEbsUuid()
+        .equals(other.getEbsUuid())) return false;
+    if (!unknownFields.equals(other.unknownFields)) return false;
+    return true;
   }
 
   @java.lang.Override
@@ -512,35 +521,35 @@ private static final long serialVersionUID = 0L;
 
     @java.lang.Override
     public Builder clone() {
-      return (Builder) super.clone();
+      return super.clone();
     }
     @java.lang.Override
     public Builder setField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return (Builder) super.setField(field, value);
+      return super.setField(field, value);
     }
     @java.lang.Override
     public Builder clearField(
         com.google.protobuf.Descriptors.FieldDescriptor field) {
-      return (Builder) super.clearField(field);
+      return super.clearField(field);
     }
     @java.lang.Override
     public Builder clearOneof(
         com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-      return (Builder) super.clearOneof(oneof);
+      return super.clearOneof(oneof);
     }
     @java.lang.Override
     public Builder setRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         int index, java.lang.Object value) {
-      return (Builder) super.setRepeatedField(field, index, value);
+      return super.setRepeatedField(field, index, value);
     }
     @java.lang.Override
     public Builder addRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return (Builder) super.addRepeatedField(field, value);
+      return super.addRepeatedField(field, value);
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -607,6 +616,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>int32 count = 1;</code>
+     * @return The count.
      */
     public int getCount() {
       return count_;
@@ -617,6 +627,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>int32 count = 1;</code>
+     * @param value The count to set.
+     * @return This builder for chaining.
      */
     public Builder setCount(int value) {
       
@@ -630,6 +642,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>int32 count = 1;</code>
+     * @return This builder for chaining.
      */
     public Builder clearCount() {
       
@@ -645,6 +658,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>int32 payPeriod = 2;</code>
+     * @return The payPeriod.
      */
     public int getPayPeriod() {
       return payPeriod_;
@@ -655,6 +669,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>int32 payPeriod = 2;</code>
+     * @param value The payPeriod to set.
+     * @return This builder for chaining.
      */
     public Builder setPayPeriod(int value) {
       
@@ -668,6 +684,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>int32 payPeriod = 2;</code>
+     * @return This builder for chaining.
      */
     public Builder clearPayPeriod() {
       
@@ -683,6 +700,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>int32 size = 3;</code>
+     * @return The size.
      */
     public int getSize() {
       return size_;
@@ -693,6 +711,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>int32 size = 3;</code>
+     * @param value The size to set.
+     * @return This builder for chaining.
      */
     public Builder setSize(int value) {
       
@@ -706,6 +726,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>int32 size = 3;</code>
+     * @return This builder for chaining.
      */
     public Builder clearSize() {
       
@@ -721,6 +742,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string diskType = 4;</code>
+     * @return The diskType.
      */
     public java.lang.String getDiskType() {
       java.lang.Object ref = diskType_;
@@ -740,6 +762,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string diskType = 4;</code>
+     * @return The bytes for diskType.
      */
     public com.google.protobuf.ByteString
         getDiskTypeBytes() {
@@ -760,6 +783,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string diskType = 4;</code>
+     * @param value The diskType to set.
+     * @return This builder for chaining.
      */
     public Builder setDiskType(
         java.lang.String value) {
@@ -777,6 +802,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string diskType = 4;</code>
+     * @return This builder for chaining.
      */
     public Builder clearDiskType() {
       
@@ -790,6 +816,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string diskType = 4;</code>
+     * @param value The bytes for diskType to set.
+     * @return This builder for chaining.
      */
     public Builder setDiskTypeBytes(
         com.google.protobuf.ByteString value) {
@@ -810,6 +838,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string ebsUuid = 5;</code>
+     * @return The ebsUuid.
      */
     public java.lang.String getEbsUuid() {
       java.lang.Object ref = ebsUuid_;
@@ -829,6 +858,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string ebsUuid = 5;</code>
+     * @return The bytes for ebsUuid.
      */
     public com.google.protobuf.ByteString
         getEbsUuidBytes() {
@@ -849,6 +879,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string ebsUuid = 5;</code>
+     * @param value The ebsUuid to set.
+     * @return This builder for chaining.
      */
     public Builder setEbsUuid(
         java.lang.String value) {
@@ -866,6 +898,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string ebsUuid = 5;</code>
+     * @return This builder for chaining.
      */
     public Builder clearEbsUuid() {
       
@@ -879,6 +912,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string ebsUuid = 5;</code>
+     * @param value The bytes for ebsUuid to set.
+     * @return This builder for chaining.
      */
     public Builder setEbsUuidBytes(
         com.google.protobuf.ByteString value) {
@@ -894,7 +929,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
-      return super.setUnknownFieldsProto3(unknownFields);
+      return super.setUnknownFields(unknownFields);
     }
 
     @java.lang.Override

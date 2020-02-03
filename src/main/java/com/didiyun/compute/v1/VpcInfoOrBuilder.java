@@ -13,6 +13,7 @@ public interface VpcInfoOrBuilder extends
    * </pre>
    *
    * <code>string vpcUuid = 1;</code>
+   * @return The vpcUuid.
    */
   java.lang.String getVpcUuid();
   /**
@@ -21,6 +22,7 @@ public interface VpcInfoOrBuilder extends
    * </pre>
    *
    * <code>string vpcUuid = 1;</code>
+   * @return The bytes for vpcUuid.
    */
   com.google.protobuf.ByteString
       getVpcUuidBytes();
@@ -31,6 +33,7 @@ public interface VpcInfoOrBuilder extends
    * </pre>
    *
    * <code>string name = 2;</code>
+   * @return The name.
    */
   java.lang.String getName();
   /**
@@ -39,6 +42,7 @@ public interface VpcInfoOrBuilder extends
    * </pre>
    *
    * <code>string name = 2;</code>
+   * @return The bytes for name.
    */
   com.google.protobuf.ByteString
       getNameBytes();
@@ -49,6 +53,7 @@ public interface VpcInfoOrBuilder extends
    * </pre>
    *
    * <code>int64 createTime = 3;</code>
+   * @return The createTime.
    */
   long getCreateTime();
 
@@ -58,6 +63,7 @@ public interface VpcInfoOrBuilder extends
    * </pre>
    *
    * <code>int64 updateTime = 4;</code>
+   * @return The updateTime.
    */
   long getUpdateTime();
 
@@ -67,6 +73,7 @@ public interface VpcInfoOrBuilder extends
    * </pre>
    *
    * <code>bool isDefault = 5;</code>
+   * @return The isDefault.
    */
   boolean getIsDefault();
 
@@ -76,6 +83,7 @@ public interface VpcInfoOrBuilder extends
    * </pre>
    *
    * <code>string cidr = 6;</code>
+   * @return The cidr.
    */
   java.lang.String getCidr();
   /**
@@ -84,6 +92,7 @@ public interface VpcInfoOrBuilder extends
    * </pre>
    *
    * <code>string cidr = 6;</code>
+   * @return The bytes for cidr.
    */
   com.google.protobuf.ByteString
       getCidrBytes();
@@ -94,6 +103,7 @@ public interface VpcInfoOrBuilder extends
    * </pre>
    *
    * <code>.didi.cloud.base.v1.RegionInfo region = 7;</code>
+   * @return Whether the region field is set.
    */
   boolean hasRegion();
   /**
@@ -102,6 +112,7 @@ public interface VpcInfoOrBuilder extends
    * </pre>
    *
    * <code>.didi.cloud.base.v1.RegionInfo region = 7;</code>
+   * @return The region.
    */
   com.didiyun.base.v1.RegionInfo getRegion();
   /**
@@ -119,6 +130,7 @@ public interface VpcInfoOrBuilder extends
    * </pre>
    *
    * <code>.didi.cloud.base.v1.JobInfo job = 8;</code>
+   * @return Whether the job field is set.
    */
   boolean hasJob();
   /**
@@ -127,6 +139,7 @@ public interface VpcInfoOrBuilder extends
    * </pre>
    *
    * <code>.didi.cloud.base.v1.JobInfo job = 8;</code>
+   * @return The job.
    */
   com.didiyun.base.v1.JobInfo getJob();
   /**

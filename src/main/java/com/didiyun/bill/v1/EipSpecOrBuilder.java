@@ -13,6 +13,7 @@ public interface EipSpecOrBuilder extends
    * </pre>
    *
    * <code>int64 bandwidth = 1;</code>
+   * @return The bandwidth.
    */
   long getBandwidth();
 
@@ -22,6 +23,7 @@ public interface EipSpecOrBuilder extends
    * </pre>
    *
    * <code>string chargeType = 2;</code>
+   * @return The chargeType.
    */
   java.lang.String getChargeType();
   /**
@@ -30,6 +32,7 @@ public interface EipSpecOrBuilder extends
    * </pre>
    *
    * <code>string chargeType = 2;</code>
+   * @return The bytes for chargeType.
    */
   com.google.protobuf.ByteString
       getChargeTypeBytes();

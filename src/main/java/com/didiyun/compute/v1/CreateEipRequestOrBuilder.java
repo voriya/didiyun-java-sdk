@@ -13,6 +13,7 @@ public interface CreateEipRequestOrBuilder extends
    * </pre>
    *
    * <code>.didi.cloud.base.v1.Header header = 1;</code>
+   * @return Whether the header field is set.
    */
   boolean hasHeader();
   /**
@@ -21,6 +22,7 @@ public interface CreateEipRequestOrBuilder extends
    * </pre>
    *
    * <code>.didi.cloud.base.v1.Header header = 1;</code>
+   * @return The header.
    */
   com.didiyun.base.v1.Header getHeader();
   /**
@@ -38,6 +40,7 @@ public interface CreateEipRequestOrBuilder extends
    * </pre>
    *
    * <code>int32 payPeriod = 2;</code>
+   * @return The payPeriod.
    */
   int getPayPeriod();
 
@@ -47,6 +50,7 @@ public interface CreateEipRequestOrBuilder extends
    * </pre>
    *
    * <code>bool autoContinue = 3;</code>
+   * @return The autoContinue.
    */
   boolean getAutoContinue();
 
@@ -56,6 +60,7 @@ public interface CreateEipRequestOrBuilder extends
    * </pre>
    *
    * <code>int32 count = 4;</code>
+   * @return The count.
    */
   int getCount();
 
@@ -65,6 +70,7 @@ public interface CreateEipRequestOrBuilder extends
    * </pre>
    *
    * <code>string couponId = 5;</code>
+   * @return The couponId.
    */
   java.lang.String getCouponId();
   /**
@@ -73,6 +79,7 @@ public interface CreateEipRequestOrBuilder extends
    * </pre>
    *
    * <code>string couponId = 5;</code>
+   * @return The bytes for couponId.
    */
   com.google.protobuf.ByteString
       getCouponIdBytes();
@@ -83,6 +90,7 @@ public interface CreateEipRequestOrBuilder extends
    * </pre>
    *
    * <code>repeated string tags = 6;</code>
+   * @return A list containing the tags.
    */
   java.util.List<java.lang.String>
       getTagsList();
@@ -92,6 +100,7 @@ public interface CreateEipRequestOrBuilder extends
    * </pre>
    *
    * <code>repeated string tags = 6;</code>
+   * @return The count of tags.
    */
   int getTagsCount();
   /**
@@ -100,6 +109,8 @@ public interface CreateEipRequestOrBuilder extends
    * </pre>
    *
    * <code>repeated string tags = 6;</code>
+   * @param index The index of the element to return.
+   * @return The tags at the given index.
    */
   java.lang.String getTags(int index);
   /**
@@ -108,6 +119,8 @@ public interface CreateEipRequestOrBuilder extends
    * </pre>
    *
    * <code>repeated string tags = 6;</code>
+   * @param index The index of the value to return.
+   * @return The bytes of the tags at the given index.
    */
   com.google.protobuf.ByteString
       getTagsBytes(int index);
@@ -118,6 +131,7 @@ public interface CreateEipRequestOrBuilder extends
    * </pre>
    *
    * <code>bool chargeWithFlow = 7;</code>
+   * @return The chargeWithFlow.
    */
   boolean getChargeWithFlow();
 
@@ -127,6 +141,7 @@ public interface CreateEipRequestOrBuilder extends
    * </pre>
    *
    * <code>int32 bandwidth = 8;</code>
+   * @return The bandwidth.
    */
   int getBandwidth();
 
@@ -136,6 +151,7 @@ public interface CreateEipRequestOrBuilder extends
    * </pre>
    *
    * <code>string bindingUuid = 9;</code>
+   * @return The bindingUuid.
    */
   java.lang.String getBindingUuid();
   /**
@@ -144,7 +160,28 @@ public interface CreateEipRequestOrBuilder extends
    * </pre>
    *
    * <code>string bindingUuid = 9;</code>
+   * @return The bytes for bindingUuid.
    */
   com.google.protobuf.ByteString
       getBindingUuidBytes();
+
+  /**
+   * <pre>
+   *同时绑定的资源类型,"DC2"或"CPORT"
+   * </pre>
+   *
+   * <code>string bindingType = 10;</code>
+   * @return The bindingType.
+   */
+  java.lang.String getBindingType();
+  /**
+   * <pre>
+   *同时绑定的资源类型,"DC2"或"CPORT"
+   * </pre>
+   *
+   * <code>string bindingType = 10;</code>
+   * @return The bytes for bindingType.
+   */
+  com.google.protobuf.ByteString
+      getBindingTypeBytes();
 }

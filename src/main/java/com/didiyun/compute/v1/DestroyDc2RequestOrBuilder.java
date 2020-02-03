@@ -13,6 +13,7 @@ public interface DestroyDc2RequestOrBuilder extends
    * </pre>
    *
    * <code>.didi.cloud.base.v1.Header header = 1;</code>
+   * @return Whether the header field is set.
    */
   boolean hasHeader();
   /**
@@ -21,6 +22,7 @@ public interface DestroyDc2RequestOrBuilder extends
    * </pre>
    *
    * <code>.didi.cloud.base.v1.Header header = 1;</code>
+   * @return The header.
    */
   com.didiyun.base.v1.Header getHeader();
   /**
@@ -58,16 +60,19 @@ public interface DestroyDc2RequestOrBuilder extends
 
   /**
    * <code>bool deleteEip = 3;</code>
+   * @return The deleteEip.
    */
   boolean getDeleteEip();
 
   /**
    * <code>bool deleteEbs = 4;</code>
+   * @return The deleteEbs.
    */
   boolean getDeleteEbs();
 
   /**
    * <code>bool ignoreSlb = 5;</code>
+   * @return The ignoreSlb.
    */
   boolean getIgnoreSlb();
 }

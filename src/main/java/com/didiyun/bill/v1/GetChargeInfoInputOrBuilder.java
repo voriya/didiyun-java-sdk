@@ -13,6 +13,7 @@ public interface GetChargeInfoInputOrBuilder extends
    * </pre>
    *
    * <code>string resourceUuid = 1;</code>
+   * @return The resourceUuid.
    */
   java.lang.String getResourceUuid();
   /**
@@ -21,6 +22,7 @@ public interface GetChargeInfoInputOrBuilder extends
    * </pre>
    *
    * <code>string resourceUuid = 1;</code>
+   * @return The bytes for resourceUuid.
    */
   com.google.protobuf.ByteString
       getResourceUuidBytes();

@@ -13,6 +13,7 @@ public interface GetEbsByUuidRequestOrBuilder extends
    * </pre>
    *
    * <code>.didi.cloud.base.v1.Header header = 1;</code>
+   * @return Whether the header field is set.
    */
   boolean hasHeader();
   /**
@@ -21,6 +22,7 @@ public interface GetEbsByUuidRequestOrBuilder extends
    * </pre>
    *
    * <code>.didi.cloud.base.v1.Header header = 1;</code>
+   * @return The header.
    */
   com.didiyun.base.v1.Header getHeader();
   /**
@@ -38,6 +40,7 @@ public interface GetEbsByUuidRequestOrBuilder extends
    * </pre>
    *
    * <code>string ebsUuid = 2;</code>
+   * @return The ebsUuid.
    */
   java.lang.String getEbsUuid();
   /**
@@ -46,6 +49,7 @@ public interface GetEbsByUuidRequestOrBuilder extends
    * </pre>
    *
    * <code>string ebsUuid = 2;</code>
+   * @return The bytes for ebsUuid.
    */
   com.google.protobuf.ByteString
       getEbsUuidBytes();

@@ -13,6 +13,7 @@ public interface SubnetInfoOrBuilder extends
    * </pre>
    *
    * <code>string subnetUuid = 1;</code>
+   * @return The subnetUuid.
    */
   java.lang.String getSubnetUuid();
   /**
@@ -21,6 +22,7 @@ public interface SubnetInfoOrBuilder extends
    * </pre>
    *
    * <code>string subnetUuid = 1;</code>
+   * @return The bytes for subnetUuid.
    */
   com.google.protobuf.ByteString
       getSubnetUuidBytes();
@@ -31,6 +33,7 @@ public interface SubnetInfoOrBuilder extends
    * </pre>
    *
    * <code>string name = 2;</code>
+   * @return The name.
    */
   java.lang.String getName();
   /**
@@ -39,6 +42,7 @@ public interface SubnetInfoOrBuilder extends
    * </pre>
    *
    * <code>string name = 2;</code>
+   * @return The bytes for name.
    */
   com.google.protobuf.ByteString
       getNameBytes();
@@ -49,6 +53,7 @@ public interface SubnetInfoOrBuilder extends
    * </pre>
    *
    * <code>int64 createTime = 3;</code>
+   * @return The createTime.
    */
   long getCreateTime();
 
@@ -58,6 +63,7 @@ public interface SubnetInfoOrBuilder extends
    * </pre>
    *
    * <code>int64 updateTime = 4;</code>
+   * @return The updateTime.
    */
   long getUpdateTime();
 
@@ -67,6 +73,7 @@ public interface SubnetInfoOrBuilder extends
    * </pre>
    *
    * <code>bool isDefault = 5;</code>
+   * @return The isDefault.
    */
   boolean getIsDefault();
 
@@ -76,6 +83,7 @@ public interface SubnetInfoOrBuilder extends
    * </pre>
    *
    * <code>string cidr = 6;</code>
+   * @return The cidr.
    */
   java.lang.String getCidr();
   /**
@@ -84,6 +92,7 @@ public interface SubnetInfoOrBuilder extends
    * </pre>
    *
    * <code>string cidr = 6;</code>
+   * @return The bytes for cidr.
    */
   com.google.protobuf.ByteString
       getCidrBytes();
@@ -94,6 +103,7 @@ public interface SubnetInfoOrBuilder extends
    * </pre>
    *
    * <code>.didi.cloud.base.v1.ZoneInfo zone = 7;</code>
+   * @return Whether the zone field is set.
    */
   boolean hasZone();
   /**
@@ -102,6 +112,7 @@ public interface SubnetInfoOrBuilder extends
    * </pre>
    *
    * <code>.didi.cloud.base.v1.ZoneInfo zone = 7;</code>
+   * @return The zone.
    */
   com.didiyun.base.v1.ZoneInfo getZone();
   /**

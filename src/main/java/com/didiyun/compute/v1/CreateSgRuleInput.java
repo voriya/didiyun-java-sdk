@@ -18,9 +18,14 @@ private static final long serialVersionUID = 0L;
   private CreateSgRuleInput() {
     type_ = "";
     protocol_ = "";
-    startPort_ = 0L;
-    endPort_ = 0L;
     allowedCidr_ = "";
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new CreateSgRuleInput();
   }
 
   @java.lang.Override
@@ -36,7 +41,6 @@ private static final long serialVersionUID = 0L;
     if (extensionRegistry == null) {
       throw new java.lang.NullPointerException();
     }
-    int mutable_bitField0_ = 0;
     com.google.protobuf.UnknownFieldSet.Builder unknownFields =
         com.google.protobuf.UnknownFieldSet.newBuilder();
     try {
@@ -76,7 +80,7 @@ private static final long serialVersionUID = 0L;
             break;
           }
           default: {
-            if (!parseUnknownFieldProto3(
+            if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
               done = true;
             }
@@ -115,6 +119,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string type = 1;</code>
+   * @return The type.
    */
   public java.lang.String getType() {
     java.lang.Object ref = type_;
@@ -134,6 +139,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string type = 1;</code>
+   * @return The bytes for type.
    */
   public com.google.protobuf.ByteString
       getTypeBytes() {
@@ -157,6 +163,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string protocol = 2;</code>
+   * @return The protocol.
    */
   public java.lang.String getProtocol() {
     java.lang.Object ref = protocol_;
@@ -176,6 +183,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string protocol = 2;</code>
+   * @return The bytes for protocol.
    */
   public com.google.protobuf.ByteString
       getProtocolBytes() {
@@ -199,6 +207,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>int64 startPort = 3;</code>
+   * @return The startPort.
    */
   public long getStartPort() {
     return startPort_;
@@ -212,6 +221,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>int64 endPort = 4;</code>
+   * @return The endPort.
    */
   public long getEndPort() {
     return endPort_;
@@ -225,6 +235,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string allowedCidr = 5;</code>
+   * @return The allowedCidr.
    */
   public java.lang.String getAllowedCidr() {
     java.lang.Object ref = allowedCidr_;
@@ -244,6 +255,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string allowedCidr = 5;</code>
+   * @return The bytes for allowedCidr.
    */
   public com.google.protobuf.ByteString
       getAllowedCidrBytes() {
@@ -329,19 +341,18 @@ private static final long serialVersionUID = 0L;
     }
     com.didiyun.compute.v1.CreateSgRuleInput other = (com.didiyun.compute.v1.CreateSgRuleInput) obj;
 
-    boolean result = true;
-    result = result && getType()
-        .equals(other.getType());
-    result = result && getProtocol()
-        .equals(other.getProtocol());
-    result = result && (getStartPort()
-        == other.getStartPort());
-    result = result && (getEndPort()
-        == other.getEndPort());
-    result = result && getAllowedCidr()
-        .equals(other.getAllowedCidr());
-    result = result && unknownFields.equals(other.unknownFields);
-    return result;
+    if (!getType()
+        .equals(other.getType())) return false;
+    if (!getProtocol()
+        .equals(other.getProtocol())) return false;
+    if (getStartPort()
+        != other.getStartPort()) return false;
+    if (getEndPort()
+        != other.getEndPort()) return false;
+    if (!getAllowedCidr()
+        .equals(other.getAllowedCidr())) return false;
+    if (!unknownFields.equals(other.unknownFields)) return false;
+    return true;
   }
 
   @java.lang.Override
@@ -543,35 +554,35 @@ private static final long serialVersionUID = 0L;
 
     @java.lang.Override
     public Builder clone() {
-      return (Builder) super.clone();
+      return super.clone();
     }
     @java.lang.Override
     public Builder setField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return (Builder) super.setField(field, value);
+      return super.setField(field, value);
     }
     @java.lang.Override
     public Builder clearField(
         com.google.protobuf.Descriptors.FieldDescriptor field) {
-      return (Builder) super.clearField(field);
+      return super.clearField(field);
     }
     @java.lang.Override
     public Builder clearOneof(
         com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-      return (Builder) super.clearOneof(oneof);
+      return super.clearOneof(oneof);
     }
     @java.lang.Override
     public Builder setRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         int index, java.lang.Object value) {
-      return (Builder) super.setRepeatedField(field, index, value);
+      return super.setRepeatedField(field, index, value);
     }
     @java.lang.Override
     public Builder addRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return (Builder) super.addRepeatedField(field, value);
+      return super.addRepeatedField(field, value);
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -639,6 +650,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string type = 1;</code>
+     * @return The type.
      */
     public java.lang.String getType() {
       java.lang.Object ref = type_;
@@ -658,6 +670,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string type = 1;</code>
+     * @return The bytes for type.
      */
     public com.google.protobuf.ByteString
         getTypeBytes() {
@@ -678,6 +691,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string type = 1;</code>
+     * @param value The type to set.
+     * @return This builder for chaining.
      */
     public Builder setType(
         java.lang.String value) {
@@ -695,6 +710,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string type = 1;</code>
+     * @return This builder for chaining.
      */
     public Builder clearType() {
       
@@ -708,6 +724,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string type = 1;</code>
+     * @param value The bytes for type to set.
+     * @return This builder for chaining.
      */
     public Builder setTypeBytes(
         com.google.protobuf.ByteString value) {
@@ -728,6 +746,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string protocol = 2;</code>
+     * @return The protocol.
      */
     public java.lang.String getProtocol() {
       java.lang.Object ref = protocol_;
@@ -747,6 +766,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string protocol = 2;</code>
+     * @return The bytes for protocol.
      */
     public com.google.protobuf.ByteString
         getProtocolBytes() {
@@ -767,6 +787,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string protocol = 2;</code>
+     * @param value The protocol to set.
+     * @return This builder for chaining.
      */
     public Builder setProtocol(
         java.lang.String value) {
@@ -784,6 +806,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string protocol = 2;</code>
+     * @return This builder for chaining.
      */
     public Builder clearProtocol() {
       
@@ -797,6 +820,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string protocol = 2;</code>
+     * @param value The bytes for protocol to set.
+     * @return This builder for chaining.
      */
     public Builder setProtocolBytes(
         com.google.protobuf.ByteString value) {
@@ -817,6 +842,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>int64 startPort = 3;</code>
+     * @return The startPort.
      */
     public long getStartPort() {
       return startPort_;
@@ -827,6 +853,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>int64 startPort = 3;</code>
+     * @param value The startPort to set.
+     * @return This builder for chaining.
      */
     public Builder setStartPort(long value) {
       
@@ -840,6 +868,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>int64 startPort = 3;</code>
+     * @return This builder for chaining.
      */
     public Builder clearStartPort() {
       
@@ -855,6 +884,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>int64 endPort = 4;</code>
+     * @return The endPort.
      */
     public long getEndPort() {
       return endPort_;
@@ -865,6 +895,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>int64 endPort = 4;</code>
+     * @param value The endPort to set.
+     * @return This builder for chaining.
      */
     public Builder setEndPort(long value) {
       
@@ -878,6 +910,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>int64 endPort = 4;</code>
+     * @return This builder for chaining.
      */
     public Builder clearEndPort() {
       
@@ -893,6 +926,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string allowedCidr = 5;</code>
+     * @return The allowedCidr.
      */
     public java.lang.String getAllowedCidr() {
       java.lang.Object ref = allowedCidr_;
@@ -912,6 +946,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string allowedCidr = 5;</code>
+     * @return The bytes for allowedCidr.
      */
     public com.google.protobuf.ByteString
         getAllowedCidrBytes() {
@@ -932,6 +967,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string allowedCidr = 5;</code>
+     * @param value The allowedCidr to set.
+     * @return This builder for chaining.
      */
     public Builder setAllowedCidr(
         java.lang.String value) {
@@ -949,6 +986,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string allowedCidr = 5;</code>
+     * @return This builder for chaining.
      */
     public Builder clearAllowedCidr() {
       
@@ -962,6 +1000,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string allowedCidr = 5;</code>
+     * @param value The bytes for allowedCidr to set.
+     * @return This builder for chaining.
      */
     public Builder setAllowedCidrBytes(
         com.google.protobuf.ByteString value) {
@@ -977,7 +1017,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
-      return super.setUnknownFieldsProto3(unknownFields);
+      return super.setUnknownFields(unknownFields);
     }
 
     @java.lang.Override

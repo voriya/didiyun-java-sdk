@@ -376,20 +376,12 @@ public final class BillOuterClass {
       "\370\001\001\252\002\024Didi.Dicloud.Bill.V1\312\002\024Didi\\Diclou" +
       "d\\Bill\\V1b\006proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.didiyun.base.v1.Base.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
-        }, assigner);
+        });
     internal_static_didi_cloud_bill_v1_Dc2Spec_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_didi_cloud_bill_v1_Dc2Spec_fieldAccessorTable = new

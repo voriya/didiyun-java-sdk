@@ -17,8 +17,14 @@ private static final long serialVersionUID = 0L;
   }
   private CounterInfo() {
     dstype_ = "";
-    step_ = 0;
     monitorTags_ = "";
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new CounterInfo();
   }
 
   @java.lang.Override
@@ -34,7 +40,6 @@ private static final long serialVersionUID = 0L;
     if (extensionRegistry == null) {
       throw new java.lang.NullPointerException();
     }
-    int mutable_bitField0_ = 0;
     com.google.protobuf.UnknownFieldSet.Builder unknownFields =
         com.google.protobuf.UnknownFieldSet.newBuilder();
     try {
@@ -63,7 +68,7 @@ private static final long serialVersionUID = 0L;
             break;
           }
           default: {
-            if (!parseUnknownFieldProto3(
+            if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
               done = true;
             }
@@ -102,6 +107,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string dstype = 1;</code>
+   * @return The dstype.
    */
   public java.lang.String getDstype() {
     java.lang.Object ref = dstype_;
@@ -121,6 +127,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string dstype = 1;</code>
+   * @return The bytes for dstype.
    */
   public com.google.protobuf.ByteString
       getDstypeBytes() {
@@ -144,6 +151,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>int32 step = 2;</code>
+   * @return The step.
    */
   public int getStep() {
     return step_;
@@ -157,6 +165,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string monitorTags = 3;</code>
+   * @return The monitorTags.
    */
   public java.lang.String getMonitorTags() {
     java.lang.Object ref = monitorTags_;
@@ -176,6 +185,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string monitorTags = 3;</code>
+   * @return The bytes for monitorTags.
    */
   public com.google.protobuf.ByteString
       getMonitorTagsBytes() {
@@ -248,15 +258,14 @@ private static final long serialVersionUID = 0L;
     }
     com.didiyun.monitor.v1.CounterInfo other = (com.didiyun.monitor.v1.CounterInfo) obj;
 
-    boolean result = true;
-    result = result && getDstype()
-        .equals(other.getDstype());
-    result = result && (getStep()
-        == other.getStep());
-    result = result && getMonitorTags()
-        .equals(other.getMonitorTags());
-    result = result && unknownFields.equals(other.unknownFields);
-    return result;
+    if (!getDstype()
+        .equals(other.getDstype())) return false;
+    if (getStep()
+        != other.getStep()) return false;
+    if (!getMonitorTags()
+        .equals(other.getMonitorTags())) return false;
+    if (!unknownFields.equals(other.unknownFields)) return false;
+    return true;
   }
 
   @java.lang.Override
@@ -446,35 +455,35 @@ private static final long serialVersionUID = 0L;
 
     @java.lang.Override
     public Builder clone() {
-      return (Builder) super.clone();
+      return super.clone();
     }
     @java.lang.Override
     public Builder setField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return (Builder) super.setField(field, value);
+      return super.setField(field, value);
     }
     @java.lang.Override
     public Builder clearField(
         com.google.protobuf.Descriptors.FieldDescriptor field) {
-      return (Builder) super.clearField(field);
+      return super.clearField(field);
     }
     @java.lang.Override
     public Builder clearOneof(
         com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-      return (Builder) super.clearOneof(oneof);
+      return super.clearOneof(oneof);
     }
     @java.lang.Override
     public Builder setRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         int index, java.lang.Object value) {
-      return (Builder) super.setRepeatedField(field, index, value);
+      return super.setRepeatedField(field, index, value);
     }
     @java.lang.Override
     public Builder addRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return (Builder) super.addRepeatedField(field, value);
+      return super.addRepeatedField(field, value);
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -535,6 +544,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string dstype = 1;</code>
+     * @return The dstype.
      */
     public java.lang.String getDstype() {
       java.lang.Object ref = dstype_;
@@ -554,6 +564,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string dstype = 1;</code>
+     * @return The bytes for dstype.
      */
     public com.google.protobuf.ByteString
         getDstypeBytes() {
@@ -574,6 +585,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string dstype = 1;</code>
+     * @param value The dstype to set.
+     * @return This builder for chaining.
      */
     public Builder setDstype(
         java.lang.String value) {
@@ -591,6 +604,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string dstype = 1;</code>
+     * @return This builder for chaining.
      */
     public Builder clearDstype() {
       
@@ -604,6 +618,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string dstype = 1;</code>
+     * @param value The bytes for dstype to set.
+     * @return This builder for chaining.
      */
     public Builder setDstypeBytes(
         com.google.protobuf.ByteString value) {
@@ -624,6 +640,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>int32 step = 2;</code>
+     * @return The step.
      */
     public int getStep() {
       return step_;
@@ -634,6 +651,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>int32 step = 2;</code>
+     * @param value The step to set.
+     * @return This builder for chaining.
      */
     public Builder setStep(int value) {
       
@@ -647,6 +666,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>int32 step = 2;</code>
+     * @return This builder for chaining.
      */
     public Builder clearStep() {
       
@@ -662,6 +682,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string monitorTags = 3;</code>
+     * @return The monitorTags.
      */
     public java.lang.String getMonitorTags() {
       java.lang.Object ref = monitorTags_;
@@ -681,6 +702,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string monitorTags = 3;</code>
+     * @return The bytes for monitorTags.
      */
     public com.google.protobuf.ByteString
         getMonitorTagsBytes() {
@@ -701,6 +723,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string monitorTags = 3;</code>
+     * @param value The monitorTags to set.
+     * @return This builder for chaining.
      */
     public Builder setMonitorTags(
         java.lang.String value) {
@@ -718,6 +742,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string monitorTags = 3;</code>
+     * @return This builder for chaining.
      */
     public Builder clearMonitorTags() {
       
@@ -731,6 +756,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string monitorTags = 3;</code>
+     * @param value The bytes for monitorTags to set.
+     * @return This builder for chaining.
      */
     public Builder setMonitorTagsBytes(
         com.google.protobuf.ByteString value) {
@@ -746,7 +773,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
-      return super.setUnknownFieldsProto3(unknownFields);
+      return super.setUnknownFields(unknownFields);
     }
 
     @java.lang.Override

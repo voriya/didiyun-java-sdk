@@ -13,6 +13,7 @@ public interface ListEipConditionOrBuilder extends
    * </pre>
    *
    * <code>string eip = 1;</code>
+   * @return The eip.
    */
   java.lang.String getEip();
   /**
@@ -21,6 +22,7 @@ public interface ListEipConditionOrBuilder extends
    * </pre>
    *
    * <code>string eip = 1;</code>
+   * @return The bytes for eip.
    */
   com.google.protobuf.ByteString
       getEipBytes();
@@ -31,6 +33,7 @@ public interface ListEipConditionOrBuilder extends
    * </pre>
    *
    * <code>repeated string eipUuids = 2;</code>
+   * @return A list containing the eipUuids.
    */
   java.util.List<java.lang.String>
       getEipUuidsList();
@@ -40,6 +43,7 @@ public interface ListEipConditionOrBuilder extends
    * </pre>
    *
    * <code>repeated string eipUuids = 2;</code>
+   * @return The count of eipUuids.
    */
   int getEipUuidsCount();
   /**
@@ -48,6 +52,8 @@ public interface ListEipConditionOrBuilder extends
    * </pre>
    *
    * <code>repeated string eipUuids = 2;</code>
+   * @param index The index of the element to return.
+   * @return The eipUuids at the given index.
    */
   java.lang.String getEipUuids(int index);
   /**
@@ -56,7 +62,69 @@ public interface ListEipConditionOrBuilder extends
    * </pre>
    *
    * <code>repeated string eipUuids = 2;</code>
+   * @param index The index of the value to return.
+   * @return The bytes of the eipUuids at the given index.
    */
   com.google.protobuf.ByteString
       getEipUuidsBytes(int index);
+
+  /**
+   * <pre>
+   *查询未绑定的eip
+   * </pre>
+   *
+   * <code>bool eipNotAttached = 3;</code>
+   * @return The eipNotAttached.
+   */
+  boolean getEipNotAttached();
+
+  /**
+   * <pre>
+   *根据dc2Uuid查询
+   * </pre>
+   *
+   * <code>string dc2Uuid = 4;</code>
+   * @return The dc2Uuid.
+   */
+  java.lang.String getDc2Uuid();
+  /**
+   * <pre>
+   *根据dc2Uuid查询
+   * </pre>
+   *
+   * <code>string dc2Uuid = 4;</code>
+   * @return The bytes for dc2Uuid.
+   */
+  com.google.protobuf.ByteString
+      getDc2UuidBytes();
+
+  /**
+   * <pre>
+   *根据dc2名称查询
+   * </pre>
+   *
+   * <code>string dc2Name = 5;</code>
+   * @return The dc2Name.
+   */
+  java.lang.String getDc2Name();
+  /**
+   * <pre>
+   *根据dc2名称查询
+   * </pre>
+   *
+   * <code>string dc2Name = 5;</code>
+   * @return The bytes for dc2Name.
+   */
+  com.google.protobuf.ByteString
+      getDc2NameBytes();
+
+  /**
+   * <pre>
+   *根据出向带宽查询
+   * </pre>
+   *
+   * <code>int32 bandwidth = 6;</code>
+   * @return The bandwidth.
+   */
+  int getBandwidth();
 }

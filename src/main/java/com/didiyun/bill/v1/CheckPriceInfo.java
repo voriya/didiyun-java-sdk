@@ -17,15 +17,14 @@ private static final long serialVersionUID = 0L;
   }
   private CheckPriceInfo() {
     bestCouponId_ = "";
-    cashBalance_ = 0L;
-    couponBalance_ = 0L;
-    frozenPrice_ = 0L;
-    isClearToCreate_ = false;
-    originPrice_ = 0L;
     payType_ = "";
-    postPaidPrice_ = 0L;
-    prePaidPrice_ = 0L;
-    subPrice_ = 0L;
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new CheckPriceInfo();
   }
 
   @java.lang.Override
@@ -41,7 +40,6 @@ private static final long serialVersionUID = 0L;
     if (extensionRegistry == null) {
       throw new java.lang.NullPointerException();
     }
-    int mutable_bitField0_ = 0;
     com.google.protobuf.UnknownFieldSet.Builder unknownFields =
         com.google.protobuf.UnknownFieldSet.newBuilder();
     try {
@@ -105,7 +103,7 @@ private static final long serialVersionUID = 0L;
             break;
           }
           default: {
-            if (!parseUnknownFieldProto3(
+            if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
               done = true;
             }
@@ -144,6 +142,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string bestCouponId = 1;</code>
+   * @return The bestCouponId.
    */
   public java.lang.String getBestCouponId() {
     java.lang.Object ref = bestCouponId_;
@@ -163,6 +162,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string bestCouponId = 1;</code>
+   * @return The bytes for bestCouponId.
    */
   public com.google.protobuf.ByteString
       getBestCouponIdBytes() {
@@ -186,6 +186,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>int64 cashBalance = 2;</code>
+   * @return The cashBalance.
    */
   public long getCashBalance() {
     return cashBalance_;
@@ -199,6 +200,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>int64 couponBalance = 3;</code>
+   * @return The couponBalance.
    */
   public long getCouponBalance() {
     return couponBalance_;
@@ -212,6 +214,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>int64 frozenPrice = 4;</code>
+   * @return The frozenPrice.
    */
   public long getFrozenPrice() {
     return frozenPrice_;
@@ -225,6 +228,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>bool isClearToCreate = 5;</code>
+   * @return The isClearToCreate.
    */
   public boolean getIsClearToCreate() {
     return isClearToCreate_;
@@ -238,6 +242,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>int64 originPrice = 6;</code>
+   * @return The originPrice.
    */
   public long getOriginPrice() {
     return originPrice_;
@@ -251,6 +256,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string payType = 7;</code>
+   * @return The payType.
    */
   public java.lang.String getPayType() {
     java.lang.Object ref = payType_;
@@ -270,6 +276,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string payType = 7;</code>
+   * @return The bytes for payType.
    */
   public com.google.protobuf.ByteString
       getPayTypeBytes() {
@@ -293,6 +300,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>int64 postPaidPrice = 8;</code>
+   * @return The postPaidPrice.
    */
   public long getPostPaidPrice() {
     return postPaidPrice_;
@@ -306,6 +314,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>int64 prePaidPrice = 9;</code>
+   * @return The prePaidPrice.
    */
   public long getPrePaidPrice() {
     return prePaidPrice_;
@@ -319,6 +328,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>int64 subPrice = 10;</code>
+   * @return The subPrice.
    */
   public long getSubPrice() {
     return subPrice_;
@@ -430,29 +440,28 @@ private static final long serialVersionUID = 0L;
     }
     com.didiyun.bill.v1.CheckPriceInfo other = (com.didiyun.bill.v1.CheckPriceInfo) obj;
 
-    boolean result = true;
-    result = result && getBestCouponId()
-        .equals(other.getBestCouponId());
-    result = result && (getCashBalance()
-        == other.getCashBalance());
-    result = result && (getCouponBalance()
-        == other.getCouponBalance());
-    result = result && (getFrozenPrice()
-        == other.getFrozenPrice());
-    result = result && (getIsClearToCreate()
-        == other.getIsClearToCreate());
-    result = result && (getOriginPrice()
-        == other.getOriginPrice());
-    result = result && getPayType()
-        .equals(other.getPayType());
-    result = result && (getPostPaidPrice()
-        == other.getPostPaidPrice());
-    result = result && (getPrePaidPrice()
-        == other.getPrePaidPrice());
-    result = result && (getSubPrice()
-        == other.getSubPrice());
-    result = result && unknownFields.equals(other.unknownFields);
-    return result;
+    if (!getBestCouponId()
+        .equals(other.getBestCouponId())) return false;
+    if (getCashBalance()
+        != other.getCashBalance()) return false;
+    if (getCouponBalance()
+        != other.getCouponBalance()) return false;
+    if (getFrozenPrice()
+        != other.getFrozenPrice()) return false;
+    if (getIsClearToCreate()
+        != other.getIsClearToCreate()) return false;
+    if (getOriginPrice()
+        != other.getOriginPrice()) return false;
+    if (!getPayType()
+        .equals(other.getPayType())) return false;
+    if (getPostPaidPrice()
+        != other.getPostPaidPrice()) return false;
+    if (getPrePaidPrice()
+        != other.getPrePaidPrice()) return false;
+    if (getSubPrice()
+        != other.getSubPrice()) return false;
+    if (!unknownFields.equals(other.unknownFields)) return false;
+    return true;
   }
 
   @java.lang.Override
@@ -685,35 +694,35 @@ private static final long serialVersionUID = 0L;
 
     @java.lang.Override
     public Builder clone() {
-      return (Builder) super.clone();
+      return super.clone();
     }
     @java.lang.Override
     public Builder setField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return (Builder) super.setField(field, value);
+      return super.setField(field, value);
     }
     @java.lang.Override
     public Builder clearField(
         com.google.protobuf.Descriptors.FieldDescriptor field) {
-      return (Builder) super.clearField(field);
+      return super.clearField(field);
     }
     @java.lang.Override
     public Builder clearOneof(
         com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-      return (Builder) super.clearOneof(oneof);
+      return super.clearOneof(oneof);
     }
     @java.lang.Override
     public Builder setRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         int index, java.lang.Object value) {
-      return (Builder) super.setRepeatedField(field, index, value);
+      return super.setRepeatedField(field, index, value);
     }
     @java.lang.Override
     public Builder addRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return (Builder) super.addRepeatedField(field, value);
+      return super.addRepeatedField(field, value);
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -795,6 +804,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string bestCouponId = 1;</code>
+     * @return The bestCouponId.
      */
     public java.lang.String getBestCouponId() {
       java.lang.Object ref = bestCouponId_;
@@ -814,6 +824,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string bestCouponId = 1;</code>
+     * @return The bytes for bestCouponId.
      */
     public com.google.protobuf.ByteString
         getBestCouponIdBytes() {
@@ -834,6 +845,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string bestCouponId = 1;</code>
+     * @param value The bestCouponId to set.
+     * @return This builder for chaining.
      */
     public Builder setBestCouponId(
         java.lang.String value) {
@@ -851,6 +864,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string bestCouponId = 1;</code>
+     * @return This builder for chaining.
      */
     public Builder clearBestCouponId() {
       
@@ -864,6 +878,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string bestCouponId = 1;</code>
+     * @param value The bytes for bestCouponId to set.
+     * @return This builder for chaining.
      */
     public Builder setBestCouponIdBytes(
         com.google.protobuf.ByteString value) {
@@ -884,6 +900,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>int64 cashBalance = 2;</code>
+     * @return The cashBalance.
      */
     public long getCashBalance() {
       return cashBalance_;
@@ -894,6 +911,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>int64 cashBalance = 2;</code>
+     * @param value The cashBalance to set.
+     * @return This builder for chaining.
      */
     public Builder setCashBalance(long value) {
       
@@ -907,6 +926,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>int64 cashBalance = 2;</code>
+     * @return This builder for chaining.
      */
     public Builder clearCashBalance() {
       
@@ -922,6 +942,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>int64 couponBalance = 3;</code>
+     * @return The couponBalance.
      */
     public long getCouponBalance() {
       return couponBalance_;
@@ -932,6 +953,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>int64 couponBalance = 3;</code>
+     * @param value The couponBalance to set.
+     * @return This builder for chaining.
      */
     public Builder setCouponBalance(long value) {
       
@@ -945,6 +968,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>int64 couponBalance = 3;</code>
+     * @return This builder for chaining.
      */
     public Builder clearCouponBalance() {
       
@@ -960,6 +984,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>int64 frozenPrice = 4;</code>
+     * @return The frozenPrice.
      */
     public long getFrozenPrice() {
       return frozenPrice_;
@@ -970,6 +995,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>int64 frozenPrice = 4;</code>
+     * @param value The frozenPrice to set.
+     * @return This builder for chaining.
      */
     public Builder setFrozenPrice(long value) {
       
@@ -983,6 +1010,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>int64 frozenPrice = 4;</code>
+     * @return This builder for chaining.
      */
     public Builder clearFrozenPrice() {
       
@@ -998,6 +1026,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>bool isClearToCreate = 5;</code>
+     * @return The isClearToCreate.
      */
     public boolean getIsClearToCreate() {
       return isClearToCreate_;
@@ -1008,6 +1037,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>bool isClearToCreate = 5;</code>
+     * @param value The isClearToCreate to set.
+     * @return This builder for chaining.
      */
     public Builder setIsClearToCreate(boolean value) {
       
@@ -1021,6 +1052,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>bool isClearToCreate = 5;</code>
+     * @return This builder for chaining.
      */
     public Builder clearIsClearToCreate() {
       
@@ -1036,6 +1068,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>int64 originPrice = 6;</code>
+     * @return The originPrice.
      */
     public long getOriginPrice() {
       return originPrice_;
@@ -1046,6 +1079,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>int64 originPrice = 6;</code>
+     * @param value The originPrice to set.
+     * @return This builder for chaining.
      */
     public Builder setOriginPrice(long value) {
       
@@ -1059,6 +1094,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>int64 originPrice = 6;</code>
+     * @return This builder for chaining.
      */
     public Builder clearOriginPrice() {
       
@@ -1074,6 +1110,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string payType = 7;</code>
+     * @return The payType.
      */
     public java.lang.String getPayType() {
       java.lang.Object ref = payType_;
@@ -1093,6 +1130,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string payType = 7;</code>
+     * @return The bytes for payType.
      */
     public com.google.protobuf.ByteString
         getPayTypeBytes() {
@@ -1113,6 +1151,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string payType = 7;</code>
+     * @param value The payType to set.
+     * @return This builder for chaining.
      */
     public Builder setPayType(
         java.lang.String value) {
@@ -1130,6 +1170,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string payType = 7;</code>
+     * @return This builder for chaining.
      */
     public Builder clearPayType() {
       
@@ -1143,6 +1184,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string payType = 7;</code>
+     * @param value The bytes for payType to set.
+     * @return This builder for chaining.
      */
     public Builder setPayTypeBytes(
         com.google.protobuf.ByteString value) {
@@ -1163,6 +1206,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>int64 postPaidPrice = 8;</code>
+     * @return The postPaidPrice.
      */
     public long getPostPaidPrice() {
       return postPaidPrice_;
@@ -1173,6 +1217,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>int64 postPaidPrice = 8;</code>
+     * @param value The postPaidPrice to set.
+     * @return This builder for chaining.
      */
     public Builder setPostPaidPrice(long value) {
       
@@ -1186,6 +1232,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>int64 postPaidPrice = 8;</code>
+     * @return This builder for chaining.
      */
     public Builder clearPostPaidPrice() {
       
@@ -1201,6 +1248,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>int64 prePaidPrice = 9;</code>
+     * @return The prePaidPrice.
      */
     public long getPrePaidPrice() {
       return prePaidPrice_;
@@ -1211,6 +1259,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>int64 prePaidPrice = 9;</code>
+     * @param value The prePaidPrice to set.
+     * @return This builder for chaining.
      */
     public Builder setPrePaidPrice(long value) {
       
@@ -1224,6 +1274,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>int64 prePaidPrice = 9;</code>
+     * @return This builder for chaining.
      */
     public Builder clearPrePaidPrice() {
       
@@ -1239,6 +1290,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>int64 subPrice = 10;</code>
+     * @return The subPrice.
      */
     public long getSubPrice() {
       return subPrice_;
@@ -1249,6 +1301,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>int64 subPrice = 10;</code>
+     * @param value The subPrice to set.
+     * @return This builder for chaining.
      */
     public Builder setSubPrice(long value) {
       
@@ -1262,6 +1316,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>int64 subPrice = 10;</code>
+     * @return This builder for chaining.
      */
     public Builder clearSubPrice() {
       
@@ -1272,7 +1327,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
-      return super.setUnknownFieldsProto3(unknownFields);
+      return super.setUnknownFields(unknownFields);
     }
 
     @java.lang.Override

@@ -70,19 +70,11 @@ public final class Base {
       "idiyun-go-sdk/base/v1;base\370\001\001\252\002\022Didi.Clo" +
       "ud.Base.V1\312\002\022Didi\\Cloud\\Base\\V1b\006proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.api.AnnotationsProto.getDescriptor(),
-        }, assigner);
+        });
     internal_static_didi_cloud_base_v1_Error_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_didi_cloud_base_v1_Error_fieldAccessorTable = new

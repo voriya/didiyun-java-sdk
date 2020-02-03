@@ -13,6 +13,7 @@ public interface ChangeSnapshotNameRequestOrBuilder extends
    * </pre>
    *
    * <code>.didi.cloud.base.v1.Header header = 1;</code>
+   * @return Whether the header field is set.
    */
   boolean hasHeader();
   /**
@@ -21,6 +22,7 @@ public interface ChangeSnapshotNameRequestOrBuilder extends
    * </pre>
    *
    * <code>.didi.cloud.base.v1.Header header = 1;</code>
+   * @return The header.
    */
   com.didiyun.base.v1.Header getHeader();
   /**
@@ -62,6 +64,7 @@ public interface ChangeSnapshotNameRequestOrBuilder extends
    * </pre>
    *
    * <code>bool stopDc2 = 3;</code>
+   * @return The stopDc2.
    */
   boolean getStopDc2();
 
@@ -71,6 +74,7 @@ public interface ChangeSnapshotNameRequestOrBuilder extends
    * </pre>
    *
    * <code>bool startDc2 = 4;</code>
+   * @return The startDc2.
    */
   boolean getStartDc2();
 }

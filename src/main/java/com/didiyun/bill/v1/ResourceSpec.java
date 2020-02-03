@@ -23,6 +23,13 @@ private static final long serialVersionUID = 0L;
   }
 
   @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new ResourceSpec();
+  }
+
+  @java.lang.Override
   public final com.google.protobuf.UnknownFieldSet
   getUnknownFields() {
     return this.unknownFields;
@@ -35,7 +42,6 @@ private static final long serialVersionUID = 0L;
     if (extensionRegistry == null) {
       throw new java.lang.NullPointerException();
     }
-    int mutable_bitField0_ = 0;
     com.google.protobuf.UnknownFieldSet.Builder unknownFields =
         com.google.protobuf.UnknownFieldSet.newBuilder();
     try {
@@ -86,7 +92,7 @@ private static final long serialVersionUID = 0L;
             break;
           }
           default: {
-            if (!parseUnknownFieldProto3(
+            if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
               done = true;
             }
@@ -121,12 +127,14 @@ private static final long serialVersionUID = 0L;
   private com.didiyun.bill.v1.Dc2Spec dc2Spec_;
   /**
    * <code>.didi.cloud.bill.v1.Dc2Spec dc2Spec = 1;</code>
+   * @return Whether the dc2Spec field is set.
    */
   public boolean hasDc2Spec() {
     return dc2Spec_ != null;
   }
   /**
    * <code>.didi.cloud.bill.v1.Dc2Spec dc2Spec = 1;</code>
+   * @return The dc2Spec.
    */
   public com.didiyun.bill.v1.Dc2Spec getDc2Spec() {
     return dc2Spec_ == null ? com.didiyun.bill.v1.Dc2Spec.getDefaultInstance() : dc2Spec_;
@@ -142,12 +150,14 @@ private static final long serialVersionUID = 0L;
   private com.didiyun.bill.v1.EipSpec eipSpec_;
   /**
    * <code>.didi.cloud.bill.v1.EipSpec eipSpec = 2;</code>
+   * @return Whether the eipSpec field is set.
    */
   public boolean hasEipSpec() {
     return eipSpec_ != null;
   }
   /**
    * <code>.didi.cloud.bill.v1.EipSpec eipSpec = 2;</code>
+   * @return The eipSpec.
    */
   public com.didiyun.bill.v1.EipSpec getEipSpec() {
     return eipSpec_ == null ? com.didiyun.bill.v1.EipSpec.getDefaultInstance() : eipSpec_;
@@ -163,12 +173,14 @@ private static final long serialVersionUID = 0L;
   private com.didiyun.bill.v1.EbsSpec ebsSpec_;
   /**
    * <code>.didi.cloud.bill.v1.EbsSpec ebsSpec = 3;</code>
+   * @return Whether the ebsSpec field is set.
    */
   public boolean hasEbsSpec() {
     return ebsSpec_ != null;
   }
   /**
    * <code>.didi.cloud.bill.v1.EbsSpec ebsSpec = 3;</code>
+   * @return The ebsSpec.
    */
   public com.didiyun.bill.v1.EbsSpec getEbsSpec() {
     return ebsSpec_ == null ? com.didiyun.bill.v1.EbsSpec.getDefaultInstance() : ebsSpec_;
@@ -239,24 +251,23 @@ private static final long serialVersionUID = 0L;
     }
     com.didiyun.bill.v1.ResourceSpec other = (com.didiyun.bill.v1.ResourceSpec) obj;
 
-    boolean result = true;
-    result = result && (hasDc2Spec() == other.hasDc2Spec());
+    if (hasDc2Spec() != other.hasDc2Spec()) return false;
     if (hasDc2Spec()) {
-      result = result && getDc2Spec()
-          .equals(other.getDc2Spec());
+      if (!getDc2Spec()
+          .equals(other.getDc2Spec())) return false;
     }
-    result = result && (hasEipSpec() == other.hasEipSpec());
+    if (hasEipSpec() != other.hasEipSpec()) return false;
     if (hasEipSpec()) {
-      result = result && getEipSpec()
-          .equals(other.getEipSpec());
+      if (!getEipSpec()
+          .equals(other.getEipSpec())) return false;
     }
-    result = result && (hasEbsSpec() == other.hasEbsSpec());
+    if (hasEbsSpec() != other.hasEbsSpec()) return false;
     if (hasEbsSpec()) {
-      result = result && getEbsSpec()
-          .equals(other.getEbsSpec());
+      if (!getEbsSpec()
+          .equals(other.getEbsSpec())) return false;
     }
-    result = result && unknownFields.equals(other.unknownFields);
-    return result;
+    if (!unknownFields.equals(other.unknownFields)) return false;
+    return true;
   }
 
   @java.lang.Override
@@ -480,35 +491,35 @@ private static final long serialVersionUID = 0L;
 
     @java.lang.Override
     public Builder clone() {
-      return (Builder) super.clone();
+      return super.clone();
     }
     @java.lang.Override
     public Builder setField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return (Builder) super.setField(field, value);
+      return super.setField(field, value);
     }
     @java.lang.Override
     public Builder clearField(
         com.google.protobuf.Descriptors.FieldDescriptor field) {
-      return (Builder) super.clearField(field);
+      return super.clearField(field);
     }
     @java.lang.Override
     public Builder clearOneof(
         com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-      return (Builder) super.clearOneof(oneof);
+      return super.clearOneof(oneof);
     }
     @java.lang.Override
     public Builder setRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         int index, java.lang.Object value) {
-      return (Builder) super.setRepeatedField(field, index, value);
+      return super.setRepeatedField(field, index, value);
     }
     @java.lang.Override
     public Builder addRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return (Builder) super.addRepeatedField(field, value);
+      return super.addRepeatedField(field, value);
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -560,17 +571,19 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private com.didiyun.bill.v1.Dc2Spec dc2Spec_ = null;
+    private com.didiyun.bill.v1.Dc2Spec dc2Spec_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.didiyun.bill.v1.Dc2Spec, com.didiyun.bill.v1.Dc2Spec.Builder, com.didiyun.bill.v1.Dc2SpecOrBuilder> dc2SpecBuilder_;
     /**
      * <code>.didi.cloud.bill.v1.Dc2Spec dc2Spec = 1;</code>
+     * @return Whether the dc2Spec field is set.
      */
     public boolean hasDc2Spec() {
       return dc2SpecBuilder_ != null || dc2Spec_ != null;
     }
     /**
      * <code>.didi.cloud.bill.v1.Dc2Spec dc2Spec = 1;</code>
+     * @return The dc2Spec.
      */
     public com.didiyun.bill.v1.Dc2Spec getDc2Spec() {
       if (dc2SpecBuilder_ == null) {
@@ -677,17 +690,19 @@ private static final long serialVersionUID = 0L;
       return dc2SpecBuilder_;
     }
 
-    private com.didiyun.bill.v1.EipSpec eipSpec_ = null;
+    private com.didiyun.bill.v1.EipSpec eipSpec_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.didiyun.bill.v1.EipSpec, com.didiyun.bill.v1.EipSpec.Builder, com.didiyun.bill.v1.EipSpecOrBuilder> eipSpecBuilder_;
     /**
      * <code>.didi.cloud.bill.v1.EipSpec eipSpec = 2;</code>
+     * @return Whether the eipSpec field is set.
      */
     public boolean hasEipSpec() {
       return eipSpecBuilder_ != null || eipSpec_ != null;
     }
     /**
      * <code>.didi.cloud.bill.v1.EipSpec eipSpec = 2;</code>
+     * @return The eipSpec.
      */
     public com.didiyun.bill.v1.EipSpec getEipSpec() {
       if (eipSpecBuilder_ == null) {
@@ -794,17 +809,19 @@ private static final long serialVersionUID = 0L;
       return eipSpecBuilder_;
     }
 
-    private com.didiyun.bill.v1.EbsSpec ebsSpec_ = null;
+    private com.didiyun.bill.v1.EbsSpec ebsSpec_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.didiyun.bill.v1.EbsSpec, com.didiyun.bill.v1.EbsSpec.Builder, com.didiyun.bill.v1.EbsSpecOrBuilder> ebsSpecBuilder_;
     /**
      * <code>.didi.cloud.bill.v1.EbsSpec ebsSpec = 3;</code>
+     * @return Whether the ebsSpec field is set.
      */
     public boolean hasEbsSpec() {
       return ebsSpecBuilder_ != null || ebsSpec_ != null;
     }
     /**
      * <code>.didi.cloud.bill.v1.EbsSpec ebsSpec = 3;</code>
+     * @return The ebsSpec.
      */
     public com.didiyun.bill.v1.EbsSpec getEbsSpec() {
       if (ebsSpecBuilder_ == null) {
@@ -913,7 +930,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
-      return super.setUnknownFieldsProto3(unknownFields);
+      return super.setUnknownFields(unknownFields);
     }
 
     @java.lang.Override

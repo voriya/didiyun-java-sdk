@@ -13,6 +13,7 @@ public interface GetEbsTotalCntRequestOrBuilder extends
    * </pre>
    *
    * <code>.didi.cloud.base.v1.Header header = 1;</code>
+   * @return Whether the header field is set.
    */
   boolean hasHeader();
   /**
@@ -21,6 +22,7 @@ public interface GetEbsTotalCntRequestOrBuilder extends
    * </pre>
    *
    * <code>.didi.cloud.base.v1.Header header = 1;</code>
+   * @return The header.
    */
   com.didiyun.base.v1.Header getHeader();
   /**
@@ -38,6 +40,7 @@ public interface GetEbsTotalCntRequestOrBuilder extends
    * </pre>
    *
    * <code>repeated string dc2Uuids = 2;</code>
+   * @return A list containing the dc2Uuids.
    */
   java.util.List<java.lang.String>
       getDc2UuidsList();
@@ -47,6 +50,7 @@ public interface GetEbsTotalCntRequestOrBuilder extends
    * </pre>
    *
    * <code>repeated string dc2Uuids = 2;</code>
+   * @return The count of dc2Uuids.
    */
   int getDc2UuidsCount();
   /**
@@ -55,6 +59,8 @@ public interface GetEbsTotalCntRequestOrBuilder extends
    * </pre>
    *
    * <code>repeated string dc2Uuids = 2;</code>
+   * @param index The index of the element to return.
+   * @return The dc2Uuids at the given index.
    */
   java.lang.String getDc2Uuids(int index);
   /**
@@ -63,6 +69,8 @@ public interface GetEbsTotalCntRequestOrBuilder extends
    * </pre>
    *
    * <code>repeated string dc2Uuids = 2;</code>
+   * @param index The index of the value to return.
+   * @return The bytes of the dc2Uuids at the given index.
    */
   com.google.protobuf.ByteString
       getDc2UuidsBytes(int index);

@@ -13,6 +13,7 @@ public interface CreateDc2RequestOrBuilder extends
    * </pre>
    *
    * <code>.didi.cloud.base.v1.Header header = 1;</code>
+   * @return Whether the header field is set.
    */
   boolean hasHeader();
   /**
@@ -21,6 +22,7 @@ public interface CreateDc2RequestOrBuilder extends
    * </pre>
    *
    * <code>.didi.cloud.base.v1.Header header = 1;</code>
+   * @return The header.
    */
   com.didiyun.base.v1.Header getHeader();
   /**
@@ -38,6 +40,7 @@ public interface CreateDc2RequestOrBuilder extends
    * </pre>
    *
    * <code>int32 count = 2;</code>
+   * @return The count.
    */
   int getCount();
 
@@ -47,6 +50,7 @@ public interface CreateDc2RequestOrBuilder extends
    * </pre>
    *
    * <code>bool autoContinue = 3;</code>
+   * @return The autoContinue.
    */
   boolean getAutoContinue();
 
@@ -56,6 +60,7 @@ public interface CreateDc2RequestOrBuilder extends
    * </pre>
    *
    * <code>int32 payPeriod = 4;</code>
+   * @return The payPeriod.
    */
   int getPayPeriod();
 
@@ -65,6 +70,7 @@ public interface CreateDc2RequestOrBuilder extends
    * </pre>
    *
    * <code>string couponId = 5;</code>
+   * @return The couponId.
    */
   java.lang.String getCouponId();
   /**
@@ -73,6 +79,7 @@ public interface CreateDc2RequestOrBuilder extends
    * </pre>
    *
    * <code>string couponId = 5;</code>
+   * @return The bytes for couponId.
    */
   com.google.protobuf.ByteString
       getCouponIdBytes();
@@ -83,6 +90,7 @@ public interface CreateDc2RequestOrBuilder extends
    * </pre>
    *
    * <code>string imgUuid = 6;</code>
+   * @return The imgUuid.
    */
   java.lang.String getImgUuid();
   /**
@@ -91,6 +99,7 @@ public interface CreateDc2RequestOrBuilder extends
    * </pre>
    *
    * <code>string imgUuid = 6;</code>
+   * @return The bytes for imgUuid.
    */
   com.google.protobuf.ByteString
       getImgUuidBytes();
@@ -101,6 +110,7 @@ public interface CreateDc2RequestOrBuilder extends
    * </pre>
    *
    * <code>string snapUuid = 7;</code>
+   * @return The snapUuid.
    */
   java.lang.String getSnapUuid();
   /**
@@ -109,6 +119,7 @@ public interface CreateDc2RequestOrBuilder extends
    * </pre>
    *
    * <code>string snapUuid = 7;</code>
+   * @return The bytes for snapUuid.
    */
   com.google.protobuf.ByteString
       getSnapUuidBytes();
@@ -119,6 +130,7 @@ public interface CreateDc2RequestOrBuilder extends
    * </pre>
    *
    * <code>string subnetUuid = 8;</code>
+   * @return The subnetUuid.
    */
   java.lang.String getSubnetUuid();
   /**
@@ -127,6 +139,7 @@ public interface CreateDc2RequestOrBuilder extends
    * </pre>
    *
    * <code>string subnetUuid = 8;</code>
+   * @return The bytes for subnetUuid.
    */
   com.google.protobuf.ByteString
       getSubnetUuidBytes();
@@ -137,6 +150,7 @@ public interface CreateDc2RequestOrBuilder extends
    * </pre>
    *
    * <code>string dc2Model = 9;</code>
+   * @return The dc2Model.
    */
   java.lang.String getDc2Model();
   /**
@@ -145,6 +159,7 @@ public interface CreateDc2RequestOrBuilder extends
    * </pre>
    *
    * <code>string dc2Model = 9;</code>
+   * @return The bytes for dc2Model.
    */
   com.google.protobuf.ByteString
       getDc2ModelBytes();
@@ -155,6 +170,7 @@ public interface CreateDc2RequestOrBuilder extends
    * </pre>
    *
    * <code>repeated string pubKeyUuids = 10;</code>
+   * @return A list containing the pubKeyUuids.
    */
   java.util.List<java.lang.String>
       getPubKeyUuidsList();
@@ -164,6 +180,7 @@ public interface CreateDc2RequestOrBuilder extends
    * </pre>
    *
    * <code>repeated string pubKeyUuids = 10;</code>
+   * @return The count of pubKeyUuids.
    */
   int getPubKeyUuidsCount();
   /**
@@ -172,6 +189,8 @@ public interface CreateDc2RequestOrBuilder extends
    * </pre>
    *
    * <code>repeated string pubKeyUuids = 10;</code>
+   * @param index The index of the element to return.
+   * @return The pubKeyUuids at the given index.
    */
   java.lang.String getPubKeyUuids(int index);
   /**
@@ -180,6 +199,8 @@ public interface CreateDc2RequestOrBuilder extends
    * </pre>
    *
    * <code>repeated string pubKeyUuids = 10;</code>
+   * @param index The index of the value to return.
+   * @return The bytes of the pubKeyUuids at the given index.
    */
   com.google.protobuf.ByteString
       getPubKeyUuidsBytes(int index);
@@ -190,6 +211,7 @@ public interface CreateDc2RequestOrBuilder extends
    * </pre>
    *
    * <code>string password = 11;</code>
+   * @return The password.
    */
   java.lang.String getPassword();
   /**
@@ -198,6 +220,7 @@ public interface CreateDc2RequestOrBuilder extends
    * </pre>
    *
    * <code>string password = 11;</code>
+   * @return The bytes for password.
    */
   com.google.protobuf.ByteString
       getPasswordBytes();
@@ -208,6 +231,7 @@ public interface CreateDc2RequestOrBuilder extends
    * </pre>
    *
    * <code>int32 rootDiskSize = 12;</code>
+   * @return The rootDiskSize.
    */
   int getRootDiskSize();
 
@@ -217,6 +241,7 @@ public interface CreateDc2RequestOrBuilder extends
    * </pre>
    *
    * <code>string rootDiskType = 13;</code>
+   * @return The rootDiskType.
    */
   java.lang.String getRootDiskType();
   /**
@@ -225,6 +250,7 @@ public interface CreateDc2RequestOrBuilder extends
    * </pre>
    *
    * <code>string rootDiskType = 13;</code>
+   * @return The bytes for rootDiskType.
    */
   com.google.protobuf.ByteString
       getRootDiskTypeBytes();
@@ -235,6 +261,7 @@ public interface CreateDc2RequestOrBuilder extends
    * </pre>
    *
    * <code>repeated string sgUuids = 14;</code>
+   * @return A list containing the sgUuids.
    */
   java.util.List<java.lang.String>
       getSgUuidsList();
@@ -244,6 +271,7 @@ public interface CreateDc2RequestOrBuilder extends
    * </pre>
    *
    * <code>repeated string sgUuids = 14;</code>
+   * @return The count of sgUuids.
    */
   int getSgUuidsCount();
   /**
@@ -252,6 +280,8 @@ public interface CreateDc2RequestOrBuilder extends
    * </pre>
    *
    * <code>repeated string sgUuids = 14;</code>
+   * @param index The index of the element to return.
+   * @return The sgUuids at the given index.
    */
   java.lang.String getSgUuids(int index);
   /**
@@ -260,6 +290,8 @@ public interface CreateDc2RequestOrBuilder extends
    * </pre>
    *
    * <code>repeated string sgUuids = 14;</code>
+   * @param index The index of the value to return.
+   * @return The bytes of the sgUuids at the given index.
    */
   com.google.protobuf.ByteString
       getSgUuidsBytes(int index);
@@ -270,6 +302,7 @@ public interface CreateDc2RequestOrBuilder extends
    * </pre>
    *
    * <code>repeated string tags = 15;</code>
+   * @return A list containing the tags.
    */
   java.util.List<java.lang.String>
       getTagsList();
@@ -279,6 +312,7 @@ public interface CreateDc2RequestOrBuilder extends
    * </pre>
    *
    * <code>repeated string tags = 15;</code>
+   * @return The count of tags.
    */
   int getTagsCount();
   /**
@@ -287,6 +321,8 @@ public interface CreateDc2RequestOrBuilder extends
    * </pre>
    *
    * <code>repeated string tags = 15;</code>
+   * @param index The index of the element to return.
+   * @return The tags at the given index.
    */
   java.lang.String getTags(int index);
   /**
@@ -295,24 +331,28 @@ public interface CreateDc2RequestOrBuilder extends
    * </pre>
    *
    * <code>repeated string tags = 15;</code>
+   * @param index The index of the value to return.
+   * @return The bytes of the tags at the given index.
    */
   com.google.protobuf.ByteString
       getTagsBytes(int index);
 
   /**
    * <pre>
-   *DC2名字
+   *DC2名称，长度为1~255个字节。批量创建时，可以通过设置命名规则进行有序命名，规则形式如：{offset,bits}，offset代表序列起始值，bits代表序列字符个数（高位补0）。例如，取值为dicloud-{1,4}-web-{2,3}，则第一台DC2的名称为dicloud-0001-web-002。
    * </pre>
    *
    * <code>string name = 16;</code>
+   * @return The name.
    */
   java.lang.String getName();
   /**
    * <pre>
-   *DC2名字
+   *DC2名称，长度为1~255个字节。批量创建时，可以通过设置命名规则进行有序命名，规则形式如：{offset,bits}，offset代表序列起始值，bits代表序列字符个数（高位补0）。例如，取值为dicloud-{1,4}-web-{2,3}，则第一台DC2的名称为dicloud-0001-web-002。
    * </pre>
    *
    * <code>string name = 16;</code>
+   * @return The bytes for name.
    */
   com.google.protobuf.ByteString
       getNameBytes();
@@ -323,6 +363,7 @@ public interface CreateDc2RequestOrBuilder extends
    * </pre>
    *
    * <code>bool proSecurityAgentEnabled = 17;</code>
+   * @return The proSecurityAgentEnabled.
    */
   boolean getProSecurityAgentEnabled();
 
@@ -332,6 +373,7 @@ public interface CreateDc2RequestOrBuilder extends
    * </pre>
    *
    * <code>bool monitoringAgentEnabled = 18;</code>
+   * @return The monitoringAgentEnabled.
    */
   boolean getMonitoringAgentEnabled();
 
@@ -341,6 +383,7 @@ public interface CreateDc2RequestOrBuilder extends
    * </pre>
    *
    * <code>.didi.cloud.compute.v1.CreateDc2Request.Eip eip = 19;</code>
+   * @return Whether the eip field is set.
    */
   boolean hasEip();
   /**
@@ -349,6 +392,7 @@ public interface CreateDc2RequestOrBuilder extends
    * </pre>
    *
    * <code>.didi.cloud.compute.v1.CreateDc2Request.Eip eip = 19;</code>
+   * @return The eip.
    */
   com.didiyun.compute.v1.CreateDc2Request.Eip getEip();
   /**
@@ -410,6 +454,7 @@ public interface CreateDc2RequestOrBuilder extends
    * </pre>
    *
    * <code>string userData = 21;</code>
+   * @return The userData.
    */
   java.lang.String getUserData();
   /**
@@ -418,7 +463,28 @@ public interface CreateDc2RequestOrBuilder extends
    * </pre>
    *
    * <code>string userData = 21;</code>
+   * @return The bytes for userData.
    */
   com.google.protobuf.ByteString
       getUserDataBytes();
+
+  /**
+   * <pre>
+   *指定网卡IP（IPv4，且必须同时指定子网（subnetUuid））创建DC2。默认自动分配，当指定时，如果该IP在对应子网内已经被使用，则创建报错；如果是批量创建多台DC2，则第一个DC2分配指定IP，其他DC2依次递增分配
+   * </pre>
+   *
+   * <code>string ip = 22;</code>
+   * @return The ip.
+   */
+  java.lang.String getIp();
+  /**
+   * <pre>
+   *指定网卡IP（IPv4，且必须同时指定子网（subnetUuid））创建DC2。默认自动分配，当指定时，如果该IP在对应子网内已经被使用，则创建报错；如果是批量创建多台DC2，则第一个DC2分配指定IP，其他DC2依次递增分配
+   * </pre>
+   *
+   * <code>string ip = 22;</code>
+   * @return The bytes for ip.
+   */
+  com.google.protobuf.ByteString
+      getIpBytes();
 }

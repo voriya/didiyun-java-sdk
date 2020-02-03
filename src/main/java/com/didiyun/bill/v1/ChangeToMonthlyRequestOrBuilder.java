@@ -13,6 +13,7 @@ public interface ChangeToMonthlyRequestOrBuilder extends
    * </pre>
    *
    * <code>.didi.cloud.base.v1.Header header = 1;</code>
+   * @return Whether the header field is set.
    */
   boolean hasHeader();
   /**
@@ -21,6 +22,7 @@ public interface ChangeToMonthlyRequestOrBuilder extends
    * </pre>
    *
    * <code>.didi.cloud.base.v1.Header header = 1;</code>
+   * @return The header.
    */
   com.didiyun.base.v1.Header getHeader();
   /**
@@ -38,6 +40,7 @@ public interface ChangeToMonthlyRequestOrBuilder extends
    * </pre>
    *
    * <code>int32 payPeriod = 2;</code>
+   * @return The payPeriod.
    */
   int getPayPeriod();
 

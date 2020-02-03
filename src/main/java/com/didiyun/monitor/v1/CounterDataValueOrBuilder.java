@@ -13,6 +13,7 @@ public interface CounterDataValueOrBuilder extends
    * </pre>
    *
    * <code>int64 timestamp = 1;</code>
+   * @return The timestamp.
    */
   long getTimestamp();
 
@@ -22,6 +23,7 @@ public interface CounterDataValueOrBuilder extends
    * </pre>
    *
    * <code>double value = 2;</code>
+   * @return The value.
    */
   double getValue();
 }

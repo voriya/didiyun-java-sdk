@@ -140,8 +140,7 @@ public class ExampleDc2 {
                         .setRegionId("gz")
                         .build())
                 .addDc2(StopDc2Request.Input.newBuilder()
-                        .setDc2Uuid("953777262c9e5bd48d1a5379ca220811")
-                        .build())
+                        .setDc2Uuid("953777262c9e5bd48d1a5379ca220811").build())
                 .build();
         ManagedChannel channel = Auth.newChannel();
         Dc2Grpc.Dc2BlockingStub stub = Dc2Grpc.newBlockingStub(channel).withCallCredentials(Auth.fetchToken());

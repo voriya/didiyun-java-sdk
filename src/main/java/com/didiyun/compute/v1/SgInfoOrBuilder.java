@@ -13,6 +13,7 @@ public interface SgInfoOrBuilder extends
    * </pre>
    *
    * <code>string sgUuid = 1;</code>
+   * @return The sgUuid.
    */
   java.lang.String getSgUuid();
   /**
@@ -21,6 +22,7 @@ public interface SgInfoOrBuilder extends
    * </pre>
    *
    * <code>string sgUuid = 1;</code>
+   * @return The bytes for sgUuid.
    */
   com.google.protobuf.ByteString
       getSgUuidBytes();
@@ -31,6 +33,7 @@ public interface SgInfoOrBuilder extends
    * </pre>
    *
    * <code>string name = 2;</code>
+   * @return The name.
    */
   java.lang.String getName();
   /**
@@ -39,6 +42,7 @@ public interface SgInfoOrBuilder extends
    * </pre>
    *
    * <code>string name = 2;</code>
+   * @return The bytes for name.
    */
   com.google.protobuf.ByteString
       getNameBytes();
@@ -49,6 +53,7 @@ public interface SgInfoOrBuilder extends
    * </pre>
    *
    * <code>int64 createTime = 3;</code>
+   * @return The createTime.
    */
   long getCreateTime();
 
@@ -58,6 +63,7 @@ public interface SgInfoOrBuilder extends
    * </pre>
    *
    * <code>int64 updateTime = 4;</code>
+   * @return The updateTime.
    */
   long getUpdateTime();
 
@@ -67,6 +73,7 @@ public interface SgInfoOrBuilder extends
    * </pre>
    *
    * <code>bool isDefault = 5;</code>
+   * @return The isDefault.
    */
   boolean getIsDefault();
 
@@ -76,6 +83,7 @@ public interface SgInfoOrBuilder extends
    * </pre>
    *
    * <code>int64 dc2Cnt = 6;</code>
+   * @return The dc2Cnt.
    */
   long getDc2Cnt();
 
@@ -85,6 +93,7 @@ public interface SgInfoOrBuilder extends
    * </pre>
    *
    * <code>int64 sgRuleCnt = 7;</code>
+   * @return The sgRuleCnt.
    */
   long getSgRuleCnt();
 
@@ -94,6 +103,7 @@ public interface SgInfoOrBuilder extends
    * </pre>
    *
    * <code>.didi.cloud.compute.v1.VpcInfo vpc = 8;</code>
+   * @return Whether the vpc field is set.
    */
   boolean hasVpc();
   /**
@@ -102,6 +112,7 @@ public interface SgInfoOrBuilder extends
    * </pre>
    *
    * <code>.didi.cloud.compute.v1.VpcInfo vpc = 8;</code>
+   * @return The vpc.
    */
   com.didiyun.compute.v1.VpcInfo getVpc();
   /**
@@ -119,6 +130,7 @@ public interface SgInfoOrBuilder extends
    * </pre>
    *
    * <code>.didi.cloud.base.v1.RegionInfo region = 9;</code>
+   * @return Whether the region field is set.
    */
   boolean hasRegion();
   /**
@@ -127,6 +139,7 @@ public interface SgInfoOrBuilder extends
    * </pre>
    *
    * <code>.didi.cloud.base.v1.RegionInfo region = 9;</code>
+   * @return The region.
    */
   com.didiyun.base.v1.RegionInfo getRegion();
   /**
@@ -144,6 +157,7 @@ public interface SgInfoOrBuilder extends
    * </pre>
    *
    * <code>.didi.cloud.base.v1.JobInfo job = 10;</code>
+   * @return Whether the job field is set.
    */
   boolean hasJob();
   /**
@@ -152,6 +166,7 @@ public interface SgInfoOrBuilder extends
    * </pre>
    *
    * <code>.didi.cloud.base.v1.JobInfo job = 10;</code>
+   * @return The job.
    */
   com.didiyun.base.v1.JobInfo getJob();
   /**

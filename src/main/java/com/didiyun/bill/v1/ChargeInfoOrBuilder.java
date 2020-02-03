@@ -13,6 +13,7 @@ public interface ChargeInfoOrBuilder extends
    * </pre>
    *
    * <code>int64 endTime = 1;</code>
+   * @return The endTime.
    */
   long getEndTime();
 
@@ -22,6 +23,7 @@ public interface ChargeInfoOrBuilder extends
    * </pre>
    *
    * <code>double costThisMonth = 2;</code>
+   * @return The costThisMonth.
    */
   double getCostThisMonth();
 

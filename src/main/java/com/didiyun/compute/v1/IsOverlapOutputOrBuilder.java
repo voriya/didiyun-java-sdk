@@ -13,6 +13,7 @@ public interface IsOverlapOutputOrBuilder extends
    * </pre>
    *
    * <code>bool isOverLap = 1;</code>
+   * @return The isOverLap.
    */
   boolean getIsOverLap();
 }

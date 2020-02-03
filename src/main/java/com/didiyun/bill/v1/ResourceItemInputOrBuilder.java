@@ -13,6 +13,7 @@ public interface ResourceItemInputOrBuilder extends
    * </pre>
    *
    * <code>string resourceUuid = 1;</code>
+   * @return The resourceUuid.
    */
   java.lang.String getResourceUuid();
   /**
@@ -21,6 +22,7 @@ public interface ResourceItemInputOrBuilder extends
    * </pre>
    *
    * <code>string resourceUuid = 1;</code>
+   * @return The bytes for resourceUuid.
    */
   com.google.protobuf.ByteString
       getResourceUuidBytes();
@@ -31,6 +33,7 @@ public interface ResourceItemInputOrBuilder extends
    * </pre>
    *
    * <code>string resourceType = 2;</code>
+   * @return The resourceType.
    */
   java.lang.String getResourceType();
   /**
@@ -39,6 +42,7 @@ public interface ResourceItemInputOrBuilder extends
    * </pre>
    *
    * <code>string resourceType = 2;</code>
+   * @return The bytes for resourceType.
    */
   com.google.protobuf.ByteString
       getResourceTypeBytes();

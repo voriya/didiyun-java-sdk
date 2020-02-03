@@ -16,11 +16,14 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private Dc2Spec() {
-    cpuNum_ = 0;
-    gpuNum_ = 0;
-    memorySize_ = 0L;
-    diskSize_ = 0L;
     model_ = "";
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new Dc2Spec();
   }
 
   @java.lang.Override
@@ -36,7 +39,6 @@ private static final long serialVersionUID = 0L;
     if (extensionRegistry == null) {
       throw new java.lang.NullPointerException();
     }
-    int mutable_bitField0_ = 0;
     com.google.protobuf.UnknownFieldSet.Builder unknownFields =
         com.google.protobuf.UnknownFieldSet.newBuilder();
     try {
@@ -74,7 +76,7 @@ private static final long serialVersionUID = 0L;
             break;
           }
           default: {
-            if (!parseUnknownFieldProto3(
+            if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
               done = true;
             }
@@ -113,6 +115,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>int32 cpuNum = 1;</code>
+   * @return The cpuNum.
    */
   public int getCpuNum() {
     return cpuNum_;
@@ -126,6 +129,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>int32 gpuNum = 2;</code>
+   * @return The gpuNum.
    */
   public int getGpuNum() {
     return gpuNum_;
@@ -139,6 +143,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>int64 memorySize = 3;</code>
+   * @return The memorySize.
    */
   public long getMemorySize() {
     return memorySize_;
@@ -152,6 +157,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>int64 diskSize = 4;</code>
+   * @return The diskSize.
    */
   public long getDiskSize() {
     return diskSize_;
@@ -165,6 +171,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string model = 5;</code>
+   * @return The model.
    */
   public java.lang.String getModel() {
     java.lang.Object ref = model_;
@@ -184,6 +191,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string model = 5;</code>
+   * @return The bytes for model.
    */
   public com.google.protobuf.ByteString
       getModelBytes() {
@@ -271,19 +279,18 @@ private static final long serialVersionUID = 0L;
     }
     com.didiyun.bill.v1.Dc2Spec other = (com.didiyun.bill.v1.Dc2Spec) obj;
 
-    boolean result = true;
-    result = result && (getCpuNum()
-        == other.getCpuNum());
-    result = result && (getGpuNum()
-        == other.getGpuNum());
-    result = result && (getMemorySize()
-        == other.getMemorySize());
-    result = result && (getDiskSize()
-        == other.getDiskSize());
-    result = result && getModel()
-        .equals(other.getModel());
-    result = result && unknownFields.equals(other.unknownFields);
-    return result;
+    if (getCpuNum()
+        != other.getCpuNum()) return false;
+    if (getGpuNum()
+        != other.getGpuNum()) return false;
+    if (getMemorySize()
+        != other.getMemorySize()) return false;
+    if (getDiskSize()
+        != other.getDiskSize()) return false;
+    if (!getModel()
+        .equals(other.getModel())) return false;
+    if (!unknownFields.equals(other.unknownFields)) return false;
+    return true;
   }
 
   @java.lang.Override
@@ -485,35 +492,35 @@ private static final long serialVersionUID = 0L;
 
     @java.lang.Override
     public Builder clone() {
-      return (Builder) super.clone();
+      return super.clone();
     }
     @java.lang.Override
     public Builder setField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return (Builder) super.setField(field, value);
+      return super.setField(field, value);
     }
     @java.lang.Override
     public Builder clearField(
         com.google.protobuf.Descriptors.FieldDescriptor field) {
-      return (Builder) super.clearField(field);
+      return super.clearField(field);
     }
     @java.lang.Override
     public Builder clearOneof(
         com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-      return (Builder) super.clearOneof(oneof);
+      return super.clearOneof(oneof);
     }
     @java.lang.Override
     public Builder setRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         int index, java.lang.Object value) {
-      return (Builder) super.setRepeatedField(field, index, value);
+      return super.setRepeatedField(field, index, value);
     }
     @java.lang.Override
     public Builder addRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return (Builder) super.addRepeatedField(field, value);
+      return super.addRepeatedField(field, value);
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -579,6 +586,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>int32 cpuNum = 1;</code>
+     * @return The cpuNum.
      */
     public int getCpuNum() {
       return cpuNum_;
@@ -589,6 +597,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>int32 cpuNum = 1;</code>
+     * @param value The cpuNum to set.
+     * @return This builder for chaining.
      */
     public Builder setCpuNum(int value) {
       
@@ -602,6 +612,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>int32 cpuNum = 1;</code>
+     * @return This builder for chaining.
      */
     public Builder clearCpuNum() {
       
@@ -617,6 +628,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>int32 gpuNum = 2;</code>
+     * @return The gpuNum.
      */
     public int getGpuNum() {
       return gpuNum_;
@@ -627,6 +639,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>int32 gpuNum = 2;</code>
+     * @param value The gpuNum to set.
+     * @return This builder for chaining.
      */
     public Builder setGpuNum(int value) {
       
@@ -640,6 +654,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>int32 gpuNum = 2;</code>
+     * @return This builder for chaining.
      */
     public Builder clearGpuNum() {
       
@@ -655,6 +670,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>int64 memorySize = 3;</code>
+     * @return The memorySize.
      */
     public long getMemorySize() {
       return memorySize_;
@@ -665,6 +681,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>int64 memorySize = 3;</code>
+     * @param value The memorySize to set.
+     * @return This builder for chaining.
      */
     public Builder setMemorySize(long value) {
       
@@ -678,6 +696,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>int64 memorySize = 3;</code>
+     * @return This builder for chaining.
      */
     public Builder clearMemorySize() {
       
@@ -693,6 +712,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>int64 diskSize = 4;</code>
+     * @return The diskSize.
      */
     public long getDiskSize() {
       return diskSize_;
@@ -703,6 +723,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>int64 diskSize = 4;</code>
+     * @param value The diskSize to set.
+     * @return This builder for chaining.
      */
     public Builder setDiskSize(long value) {
       
@@ -716,6 +738,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>int64 diskSize = 4;</code>
+     * @return This builder for chaining.
      */
     public Builder clearDiskSize() {
       
@@ -731,6 +754,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string model = 5;</code>
+     * @return The model.
      */
     public java.lang.String getModel() {
       java.lang.Object ref = model_;
@@ -750,6 +774,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string model = 5;</code>
+     * @return The bytes for model.
      */
     public com.google.protobuf.ByteString
         getModelBytes() {
@@ -770,6 +795,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string model = 5;</code>
+     * @param value The model to set.
+     * @return This builder for chaining.
      */
     public Builder setModel(
         java.lang.String value) {
@@ -787,6 +814,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string model = 5;</code>
+     * @return This builder for chaining.
      */
     public Builder clearModel() {
       
@@ -800,6 +828,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string model = 5;</code>
+     * @param value The bytes for model to set.
+     * @return This builder for chaining.
      */
     public Builder setModelBytes(
         com.google.protobuf.ByteString value) {
@@ -815,7 +845,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
-      return super.setUnknownFieldsProto3(unknownFields);
+      return super.setUnknownFields(unknownFields);
     }
 
     @java.lang.Override

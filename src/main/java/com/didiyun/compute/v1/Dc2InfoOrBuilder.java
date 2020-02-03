@@ -13,6 +13,7 @@ public interface Dc2InfoOrBuilder extends
    * </pre>
    *
    * <code>string dc2Uuid = 1;</code>
+   * @return The dc2Uuid.
    */
   java.lang.String getDc2Uuid();
   /**
@@ -21,6 +22,7 @@ public interface Dc2InfoOrBuilder extends
    * </pre>
    *
    * <code>string dc2Uuid = 1;</code>
+   * @return The bytes for dc2Uuid.
    */
   com.google.protobuf.ByteString
       getDc2UuidBytes();
@@ -31,6 +33,7 @@ public interface Dc2InfoOrBuilder extends
    * </pre>
    *
    * <code>string name = 2;</code>
+   * @return The name.
    */
   java.lang.String getName();
   /**
@@ -39,6 +42,7 @@ public interface Dc2InfoOrBuilder extends
    * </pre>
    *
    * <code>string name = 2;</code>
+   * @return The bytes for name.
    */
   com.google.protobuf.ByteString
       getNameBytes();
@@ -49,6 +53,7 @@ public interface Dc2InfoOrBuilder extends
    * </pre>
    *
    * <code>int64 createTime = 3;</code>
+   * @return The createTime.
    */
   long getCreateTime();
 
@@ -58,6 +63,7 @@ public interface Dc2InfoOrBuilder extends
    * </pre>
    *
    * <code>int64 updateTime = 4;</code>
+   * @return The updateTime.
    */
   long getUpdateTime();
 
@@ -67,6 +73,7 @@ public interface Dc2InfoOrBuilder extends
    * </pre>
    *
    * <code>string ip = 5;</code>
+   * @return The ip.
    */
   java.lang.String getIp();
   /**
@@ -75,6 +82,7 @@ public interface Dc2InfoOrBuilder extends
    * </pre>
    *
    * <code>string ip = 5;</code>
+   * @return The bytes for ip.
    */
   com.google.protobuf.ByteString
       getIpBytes();
@@ -85,6 +93,7 @@ public interface Dc2InfoOrBuilder extends
    * </pre>
    *
    * <code>string status = 6;</code>
+   * @return The status.
    */
   java.lang.String getStatus();
   /**
@@ -93,6 +102,7 @@ public interface Dc2InfoOrBuilder extends
    * </pre>
    *
    * <code>string status = 6;</code>
+   * @return The bytes for status.
    */
   com.google.protobuf.ByteString
       getStatusBytes();
@@ -103,6 +113,7 @@ public interface Dc2InfoOrBuilder extends
    * </pre>
    *
    * <code>string osType = 7;</code>
+   * @return The osType.
    */
   java.lang.String getOsType();
   /**
@@ -111,6 +122,7 @@ public interface Dc2InfoOrBuilder extends
    * </pre>
    *
    * <code>string osType = 7;</code>
+   * @return The bytes for osType.
    */
   com.google.protobuf.ByteString
       getOsTypeBytes();
@@ -121,6 +133,7 @@ public interface Dc2InfoOrBuilder extends
    * </pre>
    *
    * <code>string platform = 8;</code>
+   * @return The platform.
    */
   java.lang.String getPlatform();
   /**
@@ -129,6 +142,7 @@ public interface Dc2InfoOrBuilder extends
    * </pre>
    *
    * <code>string platform = 8;</code>
+   * @return The bytes for platform.
    */
   com.google.protobuf.ByteString
       getPlatformBytes();
@@ -139,6 +153,7 @@ public interface Dc2InfoOrBuilder extends
    * </pre>
    *
    * <code>string imgUuid = 9;</code>
+   * @return The imgUuid.
    */
   java.lang.String getImgUuid();
   /**
@@ -147,6 +162,7 @@ public interface Dc2InfoOrBuilder extends
    * </pre>
    *
    * <code>string imgUuid = 9;</code>
+   * @return The bytes for imgUuid.
    */
   com.google.protobuf.ByteString
       getImgUuidBytes();
@@ -157,6 +173,7 @@ public interface Dc2InfoOrBuilder extends
    * </pre>
    *
    * <code>string imgId = 10;</code>
+   * @return The imgId.
    */
   java.lang.String getImgId();
   /**
@@ -165,6 +182,7 @@ public interface Dc2InfoOrBuilder extends
    * </pre>
    *
    * <code>string imgId = 10;</code>
+   * @return The bytes for imgId.
    */
   com.google.protobuf.ByteString
       getImgIdBytes();
@@ -175,6 +193,7 @@ public interface Dc2InfoOrBuilder extends
    * </pre>
    *
    * <code>repeated string tags = 11;</code>
+   * @return A list containing the tags.
    */
   java.util.List<java.lang.String>
       getTagsList();
@@ -184,6 +203,7 @@ public interface Dc2InfoOrBuilder extends
    * </pre>
    *
    * <code>repeated string tags = 11;</code>
+   * @return The count of tags.
    */
   int getTagsCount();
   /**
@@ -192,6 +212,8 @@ public interface Dc2InfoOrBuilder extends
    * </pre>
    *
    * <code>repeated string tags = 11;</code>
+   * @param index The index of the element to return.
+   * @return The tags at the given index.
    */
   java.lang.String getTags(int index);
   /**
@@ -200,6 +222,8 @@ public interface Dc2InfoOrBuilder extends
    * </pre>
    *
    * <code>repeated string tags = 11;</code>
+   * @param index The index of the value to return.
+   * @return The bytes of the tags at the given index.
    */
   com.google.protobuf.ByteString
       getTagsBytes(int index);
@@ -210,6 +234,7 @@ public interface Dc2InfoOrBuilder extends
    * </pre>
    *
    * <code>.didi.cloud.base.v1.JobInfo job = 12;</code>
+   * @return Whether the job field is set.
    */
   boolean hasJob();
   /**
@@ -218,6 +243,7 @@ public interface Dc2InfoOrBuilder extends
    * </pre>
    *
    * <code>.didi.cloud.base.v1.JobInfo job = 12;</code>
+   * @return The job.
    */
   com.didiyun.base.v1.JobInfo getJob();
   /**
@@ -235,6 +261,7 @@ public interface Dc2InfoOrBuilder extends
    * </pre>
    *
    * <code>.didi.cloud.compute.v1.EipInfo eip = 13;</code>
+   * @return Whether the eip field is set.
    */
   boolean hasEip();
   /**
@@ -243,6 +270,7 @@ public interface Dc2InfoOrBuilder extends
    * </pre>
    *
    * <code>.didi.cloud.compute.v1.EipInfo eip = 13;</code>
+   * @return The eip.
    */
   com.didiyun.compute.v1.EipInfo getEip();
   /**
@@ -304,6 +332,7 @@ public interface Dc2InfoOrBuilder extends
    * </pre>
    *
    * <code>.didi.cloud.base.v1.RegionInfo region = 15;</code>
+   * @return Whether the region field is set.
    */
   boolean hasRegion();
   /**
@@ -312,6 +341,7 @@ public interface Dc2InfoOrBuilder extends
    * </pre>
    *
    * <code>.didi.cloud.base.v1.RegionInfo region = 15;</code>
+   * @return The region.
    */
   com.didiyun.base.v1.RegionInfo getRegion();
   /**

@@ -20,6 +20,13 @@ private static final long serialVersionUID = 0L;
   }
 
   @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new EbsChargeInfoAndSpec();
+  }
+
+  @java.lang.Override
   public final com.google.protobuf.UnknownFieldSet
   getUnknownFields() {
     return this.unknownFields;
@@ -32,7 +39,6 @@ private static final long serialVersionUID = 0L;
     if (extensionRegistry == null) {
       throw new java.lang.NullPointerException();
     }
-    int mutable_bitField0_ = 0;
     com.google.protobuf.UnknownFieldSet.Builder unknownFields =
         com.google.protobuf.UnknownFieldSet.newBuilder();
     try {
@@ -76,7 +82,7 @@ private static final long serialVersionUID = 0L;
             break;
           }
           default: {
-            if (!parseUnknownFieldProto3(
+            if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
               done = true;
             }
@@ -115,6 +121,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string resourceUuid = 1;</code>
+   * @return The resourceUuid.
    */
   public java.lang.String getResourceUuid() {
     java.lang.Object ref = resourceUuid_;
@@ -134,6 +141,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string resourceUuid = 1;</code>
+   * @return The bytes for resourceUuid.
    */
   public com.google.protobuf.ByteString
       getResourceUuidBytes() {
@@ -153,12 +161,14 @@ private static final long serialVersionUID = 0L;
   private com.didiyun.bill.v1.ChargeInfo charge_;
   /**
    * <code>.didi.cloud.bill.v1.ChargeInfo charge = 2;</code>
+   * @return Whether the charge field is set.
    */
   public boolean hasCharge() {
     return charge_ != null;
   }
   /**
    * <code>.didi.cloud.bill.v1.ChargeInfo charge = 2;</code>
+   * @return The charge.
    */
   public com.didiyun.bill.v1.ChargeInfo getCharge() {
     return charge_ == null ? com.didiyun.bill.v1.ChargeInfo.getDefaultInstance() : charge_;
@@ -174,12 +184,14 @@ private static final long serialVersionUID = 0L;
   private com.didiyun.bill.v1.EbsSpec spec_;
   /**
    * <code>.didi.cloud.bill.v1.EbsSpec spec = 3;</code>
+   * @return Whether the spec field is set.
    */
   public boolean hasSpec() {
     return spec_ != null;
   }
   /**
    * <code>.didi.cloud.bill.v1.EbsSpec spec = 3;</code>
+   * @return The spec.
    */
   public com.didiyun.bill.v1.EbsSpec getSpec() {
     return spec_ == null ? com.didiyun.bill.v1.EbsSpec.getDefaultInstance() : spec_;
@@ -249,21 +261,20 @@ private static final long serialVersionUID = 0L;
     }
     com.didiyun.bill.v1.EbsChargeInfoAndSpec other = (com.didiyun.bill.v1.EbsChargeInfoAndSpec) obj;
 
-    boolean result = true;
-    result = result && getResourceUuid()
-        .equals(other.getResourceUuid());
-    result = result && (hasCharge() == other.hasCharge());
+    if (!getResourceUuid()
+        .equals(other.getResourceUuid())) return false;
+    if (hasCharge() != other.hasCharge()) return false;
     if (hasCharge()) {
-      result = result && getCharge()
-          .equals(other.getCharge());
+      if (!getCharge()
+          .equals(other.getCharge())) return false;
     }
-    result = result && (hasSpec() == other.hasSpec());
+    if (hasSpec() != other.hasSpec()) return false;
     if (hasSpec()) {
-      result = result && getSpec()
-          .equals(other.getSpec());
+      if (!getSpec()
+          .equals(other.getSpec())) return false;
     }
-    result = result && unknownFields.equals(other.unknownFields);
-    return result;
+    if (!unknownFields.equals(other.unknownFields)) return false;
+    return true;
   }
 
   @java.lang.Override
@@ -473,35 +484,35 @@ private static final long serialVersionUID = 0L;
 
     @java.lang.Override
     public Builder clone() {
-      return (Builder) super.clone();
+      return super.clone();
     }
     @java.lang.Override
     public Builder setField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return (Builder) super.setField(field, value);
+      return super.setField(field, value);
     }
     @java.lang.Override
     public Builder clearField(
         com.google.protobuf.Descriptors.FieldDescriptor field) {
-      return (Builder) super.clearField(field);
+      return super.clearField(field);
     }
     @java.lang.Override
     public Builder clearOneof(
         com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-      return (Builder) super.clearOneof(oneof);
+      return super.clearOneof(oneof);
     }
     @java.lang.Override
     public Builder setRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         int index, java.lang.Object value) {
-      return (Builder) super.setRepeatedField(field, index, value);
+      return super.setRepeatedField(field, index, value);
     }
     @java.lang.Override
     public Builder addRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return (Builder) super.addRepeatedField(field, value);
+      return super.addRepeatedField(field, value);
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -561,6 +572,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string resourceUuid = 1;</code>
+     * @return The resourceUuid.
      */
     public java.lang.String getResourceUuid() {
       java.lang.Object ref = resourceUuid_;
@@ -580,6 +592,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string resourceUuid = 1;</code>
+     * @return The bytes for resourceUuid.
      */
     public com.google.protobuf.ByteString
         getResourceUuidBytes() {
@@ -600,6 +613,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string resourceUuid = 1;</code>
+     * @param value The resourceUuid to set.
+     * @return This builder for chaining.
      */
     public Builder setResourceUuid(
         java.lang.String value) {
@@ -617,6 +632,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string resourceUuid = 1;</code>
+     * @return This builder for chaining.
      */
     public Builder clearResourceUuid() {
       
@@ -630,6 +646,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string resourceUuid = 1;</code>
+     * @param value The bytes for resourceUuid to set.
+     * @return This builder for chaining.
      */
     public Builder setResourceUuidBytes(
         com.google.protobuf.ByteString value) {
@@ -643,17 +661,19 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private com.didiyun.bill.v1.ChargeInfo charge_ = null;
+    private com.didiyun.bill.v1.ChargeInfo charge_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.didiyun.bill.v1.ChargeInfo, com.didiyun.bill.v1.ChargeInfo.Builder, com.didiyun.bill.v1.ChargeInfoOrBuilder> chargeBuilder_;
     /**
      * <code>.didi.cloud.bill.v1.ChargeInfo charge = 2;</code>
+     * @return Whether the charge field is set.
      */
     public boolean hasCharge() {
       return chargeBuilder_ != null || charge_ != null;
     }
     /**
      * <code>.didi.cloud.bill.v1.ChargeInfo charge = 2;</code>
+     * @return The charge.
      */
     public com.didiyun.bill.v1.ChargeInfo getCharge() {
       if (chargeBuilder_ == null) {
@@ -760,17 +780,19 @@ private static final long serialVersionUID = 0L;
       return chargeBuilder_;
     }
 
-    private com.didiyun.bill.v1.EbsSpec spec_ = null;
+    private com.didiyun.bill.v1.EbsSpec spec_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.didiyun.bill.v1.EbsSpec, com.didiyun.bill.v1.EbsSpec.Builder, com.didiyun.bill.v1.EbsSpecOrBuilder> specBuilder_;
     /**
      * <code>.didi.cloud.bill.v1.EbsSpec spec = 3;</code>
+     * @return Whether the spec field is set.
      */
     public boolean hasSpec() {
       return specBuilder_ != null || spec_ != null;
     }
     /**
      * <code>.didi.cloud.bill.v1.EbsSpec spec = 3;</code>
+     * @return The spec.
      */
     public com.didiyun.bill.v1.EbsSpec getSpec() {
       if (specBuilder_ == null) {
@@ -879,7 +901,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
-      return super.setUnknownFieldsProto3(unknownFields);
+      return super.setUnknownFields(unknownFields);
     }
 
     @java.lang.Override

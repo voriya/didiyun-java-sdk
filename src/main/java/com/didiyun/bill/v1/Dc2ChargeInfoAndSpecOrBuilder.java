@@ -13,6 +13,7 @@ public interface Dc2ChargeInfoAndSpecOrBuilder extends
    * </pre>
    *
    * <code>string resourceUuid = 1;</code>
+   * @return The resourceUuid.
    */
   java.lang.String getResourceUuid();
   /**
@@ -21,16 +22,19 @@ public interface Dc2ChargeInfoAndSpecOrBuilder extends
    * </pre>
    *
    * <code>string resourceUuid = 1;</code>
+   * @return The bytes for resourceUuid.
    */
   com.google.protobuf.ByteString
       getResourceUuidBytes();
 
   /**
    * <code>.didi.cloud.bill.v1.ChargeInfo charge = 2;</code>
+   * @return Whether the charge field is set.
    */
   boolean hasCharge();
   /**
    * <code>.didi.cloud.bill.v1.ChargeInfo charge = 2;</code>
+   * @return The charge.
    */
   com.didiyun.bill.v1.ChargeInfo getCharge();
   /**
@@ -40,10 +44,12 @@ public interface Dc2ChargeInfoAndSpecOrBuilder extends
 
   /**
    * <code>.didi.cloud.bill.v1.Dc2Spec spec = 3;</code>
+   * @return Whether the spec field is set.
    */
   boolean hasSpec();
   /**
    * <code>.didi.cloud.bill.v1.Dc2Spec spec = 3;</code>
+   * @return The spec.
    */
   com.didiyun.bill.v1.Dc2Spec getSpec();
   /**

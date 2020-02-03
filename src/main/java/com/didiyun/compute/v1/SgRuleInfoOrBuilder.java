@@ -13,6 +13,7 @@ public interface SgRuleInfoOrBuilder extends
    * </pre>
    *
    * <code>string sgRuleUuid = 1;</code>
+   * @return The sgRuleUuid.
    */
   java.lang.String getSgRuleUuid();
   /**
@@ -21,6 +22,7 @@ public interface SgRuleInfoOrBuilder extends
    * </pre>
    *
    * <code>string sgRuleUuid = 1;</code>
+   * @return The bytes for sgRuleUuid.
    */
   com.google.protobuf.ByteString
       getSgRuleUuidBytes();
@@ -31,6 +33,7 @@ public interface SgRuleInfoOrBuilder extends
    * </pre>
    *
    * <code>int64 createTime = 2;</code>
+   * @return The createTime.
    */
   long getCreateTime();
 
@@ -40,6 +43,7 @@ public interface SgRuleInfoOrBuilder extends
    * </pre>
    *
    * <code>int64 updateTime = 3;</code>
+   * @return The updateTime.
    */
   long getUpdateTime();
 
@@ -49,6 +53,7 @@ public interface SgRuleInfoOrBuilder extends
    * </pre>
    *
    * <code>string type = 4;</code>
+   * @return The type.
    */
   java.lang.String getType();
   /**
@@ -57,6 +62,7 @@ public interface SgRuleInfoOrBuilder extends
    * </pre>
    *
    * <code>string type = 4;</code>
+   * @return The bytes for type.
    */
   com.google.protobuf.ByteString
       getTypeBytes();
@@ -67,6 +73,7 @@ public interface SgRuleInfoOrBuilder extends
    * </pre>
    *
    * <code>string protocol = 5;</code>
+   * @return The protocol.
    */
   java.lang.String getProtocol();
   /**
@@ -75,6 +82,7 @@ public interface SgRuleInfoOrBuilder extends
    * </pre>
    *
    * <code>string protocol = 5;</code>
+   * @return The bytes for protocol.
    */
   com.google.protobuf.ByteString
       getProtocolBytes();
@@ -85,6 +93,7 @@ public interface SgRuleInfoOrBuilder extends
    * </pre>
    *
    * <code>int64 startPort = 6;</code>
+   * @return The startPort.
    */
   long getStartPort();
 
@@ -94,6 +103,7 @@ public interface SgRuleInfoOrBuilder extends
    * </pre>
    *
    * <code>int64 endPort = 7;</code>
+   * @return The endPort.
    */
   long getEndPort();
 
@@ -103,6 +113,7 @@ public interface SgRuleInfoOrBuilder extends
    * </pre>
    *
    * <code>string allowedCidr = 8;</code>
+   * @return The allowedCidr.
    */
   java.lang.String getAllowedCidr();
   /**
@@ -111,6 +122,7 @@ public interface SgRuleInfoOrBuilder extends
    * </pre>
    *
    * <code>string allowedCidr = 8;</code>
+   * @return The bytes for allowedCidr.
    */
   com.google.protobuf.ByteString
       getAllowedCidrBytes();
@@ -121,6 +133,7 @@ public interface SgRuleInfoOrBuilder extends
    * </pre>
    *
    * <code>bool isDefault = 9;</code>
+   * @return The isDefault.
    */
   boolean getIsDefault();
 
@@ -130,6 +143,7 @@ public interface SgRuleInfoOrBuilder extends
    * </pre>
    *
    * <code>.didi.cloud.compute.v1.SgInfo sg = 10;</code>
+   * @return Whether the sg field is set.
    */
   boolean hasSg();
   /**
@@ -138,6 +152,7 @@ public interface SgRuleInfoOrBuilder extends
    * </pre>
    *
    * <code>.didi.cloud.compute.v1.SgInfo sg = 10;</code>
+   * @return The sg.
    */
   com.didiyun.compute.v1.SgInfo getSg();
   /**
@@ -155,6 +170,7 @@ public interface SgRuleInfoOrBuilder extends
    * </pre>
    *
    * <code>.didi.cloud.compute.v1.VpcInfo vpc = 11;</code>
+   * @return Whether the vpc field is set.
    */
   boolean hasVpc();
   /**
@@ -163,6 +179,7 @@ public interface SgRuleInfoOrBuilder extends
    * </pre>
    *
    * <code>.didi.cloud.compute.v1.VpcInfo vpc = 11;</code>
+   * @return The vpc.
    */
   com.didiyun.compute.v1.VpcInfo getVpc();
   /**
@@ -180,6 +197,7 @@ public interface SgRuleInfoOrBuilder extends
    * </pre>
    *
    * <code>.didi.cloud.base.v1.JobInfo job = 12;</code>
+   * @return Whether the job field is set.
    */
   boolean hasJob();
   /**
@@ -188,6 +206,7 @@ public interface SgRuleInfoOrBuilder extends
    * </pre>
    *
    * <code>.didi.cloud.base.v1.JobInfo job = 12;</code>
+   * @return The job.
    */
   com.didiyun.base.v1.JobInfo getJob();
   /**

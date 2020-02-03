@@ -20,6 +20,13 @@ private static final long serialVersionUID = 0L;
   }
 
   @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new VpcAvailableCidr();
+  }
+
+  @java.lang.Override
   public final com.google.protobuf.UnknownFieldSet
   getUnknownFields() {
     return this.unknownFields;
@@ -45,7 +52,7 @@ private static final long serialVersionUID = 0L;
             break;
           case 10: {
             java.lang.String s = input.readStringRequireUtf8();
-            if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
               availableCidr_ = new com.google.protobuf.LazyStringArrayList();
               mutable_bitField0_ |= 0x00000001;
             }
@@ -53,7 +60,7 @@ private static final long serialVersionUID = 0L;
             break;
           }
           default: {
-            if (!parseUnknownFieldProto3(
+            if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
               done = true;
             }
@@ -67,7 +74,7 @@ private static final long serialVersionUID = 0L;
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
     } finally {
-      if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+      if (((mutable_bitField0_ & 0x00000001) != 0)) {
         availableCidr_ = availableCidr_.getUnmodifiableView();
       }
       this.unknownFields = unknownFields.build();
@@ -95,6 +102,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>repeated string availableCidr = 1;</code>
+   * @return A list containing the availableCidr.
    */
   public com.google.protobuf.ProtocolStringList
       getAvailableCidrList() {
@@ -106,6 +114,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>repeated string availableCidr = 1;</code>
+   * @return The count of availableCidr.
    */
   public int getAvailableCidrCount() {
     return availableCidr_.size();
@@ -116,6 +125,8 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>repeated string availableCidr = 1;</code>
+   * @param index The index of the element to return.
+   * @return The availableCidr at the given index.
    */
   public java.lang.String getAvailableCidr(int index) {
     return availableCidr_.get(index);
@@ -126,6 +137,8 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>repeated string availableCidr = 1;</code>
+   * @param index The index of the value to return.
+   * @return The bytes of the availableCidr at the given index.
    */
   public com.google.protobuf.ByteString
       getAvailableCidrBytes(int index) {
@@ -181,11 +194,10 @@ private static final long serialVersionUID = 0L;
     }
     com.didiyun.compute.v1.VpcAvailableCidr other = (com.didiyun.compute.v1.VpcAvailableCidr) obj;
 
-    boolean result = true;
-    result = result && getAvailableCidrList()
-        .equals(other.getAvailableCidrList());
-    result = result && unknownFields.equals(other.unknownFields);
-    return result;
+    if (!getAvailableCidrList()
+        .equals(other.getAvailableCidrList())) return false;
+    if (!unknownFields.equals(other.unknownFields)) return false;
+    return true;
   }
 
   @java.lang.Override
@@ -361,7 +373,7 @@ private static final long serialVersionUID = 0L;
     public com.didiyun.compute.v1.VpcAvailableCidr buildPartial() {
       com.didiyun.compute.v1.VpcAvailableCidr result = new com.didiyun.compute.v1.VpcAvailableCidr(this);
       int from_bitField0_ = bitField0_;
-      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         availableCidr_ = availableCidr_.getUnmodifiableView();
         bitField0_ = (bitField0_ & ~0x00000001);
       }
@@ -372,35 +384,35 @@ private static final long serialVersionUID = 0L;
 
     @java.lang.Override
     public Builder clone() {
-      return (Builder) super.clone();
+      return super.clone();
     }
     @java.lang.Override
     public Builder setField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return (Builder) super.setField(field, value);
+      return super.setField(field, value);
     }
     @java.lang.Override
     public Builder clearField(
         com.google.protobuf.Descriptors.FieldDescriptor field) {
-      return (Builder) super.clearField(field);
+      return super.clearField(field);
     }
     @java.lang.Override
     public Builder clearOneof(
         com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-      return (Builder) super.clearOneof(oneof);
+      return super.clearOneof(oneof);
     }
     @java.lang.Override
     public Builder setRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         int index, java.lang.Object value) {
-      return (Builder) super.setRepeatedField(field, index, value);
+      return super.setRepeatedField(field, index, value);
     }
     @java.lang.Override
     public Builder addRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return (Builder) super.addRepeatedField(field, value);
+      return super.addRepeatedField(field, value);
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -456,7 +468,7 @@ private static final long serialVersionUID = 0L;
 
     private com.google.protobuf.LazyStringList availableCidr_ = com.google.protobuf.LazyStringArrayList.EMPTY;
     private void ensureAvailableCidrIsMutable() {
-      if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+      if (!((bitField0_ & 0x00000001) != 0)) {
         availableCidr_ = new com.google.protobuf.LazyStringArrayList(availableCidr_);
         bitField0_ |= 0x00000001;
        }
@@ -467,6 +479,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated string availableCidr = 1;</code>
+     * @return A list containing the availableCidr.
      */
     public com.google.protobuf.ProtocolStringList
         getAvailableCidrList() {
@@ -478,6 +491,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated string availableCidr = 1;</code>
+     * @return The count of availableCidr.
      */
     public int getAvailableCidrCount() {
       return availableCidr_.size();
@@ -488,6 +502,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated string availableCidr = 1;</code>
+     * @param index The index of the element to return.
+     * @return The availableCidr at the given index.
      */
     public java.lang.String getAvailableCidr(int index) {
       return availableCidr_.get(index);
@@ -498,6 +514,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated string availableCidr = 1;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the availableCidr at the given index.
      */
     public com.google.protobuf.ByteString
         getAvailableCidrBytes(int index) {
@@ -509,6 +527,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated string availableCidr = 1;</code>
+     * @param index The index to set the value at.
+     * @param value The availableCidr to set.
+     * @return This builder for chaining.
      */
     public Builder setAvailableCidr(
         int index, java.lang.String value) {
@@ -526,6 +547,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated string availableCidr = 1;</code>
+     * @param value The availableCidr to add.
+     * @return This builder for chaining.
      */
     public Builder addAvailableCidr(
         java.lang.String value) {
@@ -543,6 +566,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated string availableCidr = 1;</code>
+     * @param values The availableCidr to add.
+     * @return This builder for chaining.
      */
     public Builder addAllAvailableCidr(
         java.lang.Iterable<java.lang.String> values) {
@@ -558,6 +583,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated string availableCidr = 1;</code>
+     * @return This builder for chaining.
      */
     public Builder clearAvailableCidr() {
       availableCidr_ = com.google.protobuf.LazyStringArrayList.EMPTY;
@@ -571,6 +597,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated string availableCidr = 1;</code>
+     * @param value The bytes of the availableCidr to add.
+     * @return This builder for chaining.
      */
     public Builder addAvailableCidrBytes(
         com.google.protobuf.ByteString value) {
@@ -586,7 +614,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
-      return super.setUnknownFieldsProto3(unknownFields);
+      return super.setUnknownFields(unknownFields);
     }
 
     @java.lang.Override

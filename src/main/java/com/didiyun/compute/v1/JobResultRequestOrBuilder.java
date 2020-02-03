@@ -9,10 +9,12 @@ public interface JobResultRequestOrBuilder extends
 
   /**
    * <code>.didi.cloud.base.v1.Header header = 1;</code>
+   * @return Whether the header field is set.
    */
   boolean hasHeader();
   /**
    * <code>.didi.cloud.base.v1.Header header = 1;</code>
+   * @return The header.
    */
   com.didiyun.base.v1.Header getHeader();
   /**
@@ -26,6 +28,7 @@ public interface JobResultRequestOrBuilder extends
    * </pre>
    *
    * <code>repeated string jobUuids = 2;</code>
+   * @return A list containing the jobUuids.
    */
   java.util.List<java.lang.String>
       getJobUuidsList();
@@ -35,6 +38,7 @@ public interface JobResultRequestOrBuilder extends
    * </pre>
    *
    * <code>repeated string jobUuids = 2;</code>
+   * @return The count of jobUuids.
    */
   int getJobUuidsCount();
   /**
@@ -43,6 +47,8 @@ public interface JobResultRequestOrBuilder extends
    * </pre>
    *
    * <code>repeated string jobUuids = 2;</code>
+   * @param index The index of the element to return.
+   * @return The jobUuids at the given index.
    */
   java.lang.String getJobUuids(int index);
   /**
@@ -51,6 +57,8 @@ public interface JobResultRequestOrBuilder extends
    * </pre>
    *
    * <code>repeated string jobUuids = 2;</code>
+   * @param index The index of the value to return.
+   * @return The bytes of the jobUuids at the given index.
    */
   com.google.protobuf.ByteString
       getJobUuidsBytes(int index);

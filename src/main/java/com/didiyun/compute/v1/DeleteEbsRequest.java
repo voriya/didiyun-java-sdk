@@ -20,6 +20,13 @@ private static final long serialVersionUID = 0L;
   }
 
   @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new DeleteEbsRequest();
+  }
+
+  @java.lang.Override
   public final com.google.protobuf.UnknownFieldSet
   getUnknownFields() {
     return this.unknownFields;
@@ -57,16 +64,16 @@ private static final long serialVersionUID = 0L;
             break;
           }
           case 18: {
-            if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
               ebs_ = new java.util.ArrayList<com.didiyun.compute.v1.DeleteEbsRequest.Input>();
-              mutable_bitField0_ |= 0x00000002;
+              mutable_bitField0_ |= 0x00000001;
             }
             ebs_.add(
                 input.readMessage(com.didiyun.compute.v1.DeleteEbsRequest.Input.parser(), extensionRegistry));
             break;
           }
           default: {
-            if (!parseUnknownFieldProto3(
+            if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
               done = true;
             }
@@ -80,7 +87,7 @@ private static final long serialVersionUID = 0L;
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
     } finally {
-      if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+      if (((mutable_bitField0_ & 0x00000001) != 0)) {
         ebs_ = java.util.Collections.unmodifiableList(ebs_);
       }
       this.unknownFields = unknownFields.build();
@@ -106,10 +113,12 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <code>string ebsUuid = 1;</code>
+     * @return The ebsUuid.
      */
     java.lang.String getEbsUuid();
     /**
      * <code>string ebsUuid = 1;</code>
+     * @return The bytes for ebsUuid.
      */
     com.google.protobuf.ByteString
         getEbsUuidBytes();
@@ -131,6 +140,13 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Input();
+    }
+
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
@@ -143,7 +159,6 @@ private static final long serialVersionUID = 0L;
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -161,7 +176,7 @@ private static final long serialVersionUID = 0L;
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -196,6 +211,7 @@ private static final long serialVersionUID = 0L;
     private volatile java.lang.Object ebsUuid_;
     /**
      * <code>string ebsUuid = 1;</code>
+     * @return The ebsUuid.
      */
     public java.lang.String getEbsUuid() {
       java.lang.Object ref = ebsUuid_;
@@ -211,6 +227,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <code>string ebsUuid = 1;</code>
+     * @return The bytes for ebsUuid.
      */
     public com.google.protobuf.ByteString
         getEbsUuidBytes() {
@@ -270,11 +287,10 @@ private static final long serialVersionUID = 0L;
       }
       com.didiyun.compute.v1.DeleteEbsRequest.Input other = (com.didiyun.compute.v1.DeleteEbsRequest.Input) obj;
 
-      boolean result = true;
-      result = result && getEbsUuid()
-          .equals(other.getEbsUuid());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getEbsUuid()
+          .equals(other.getEbsUuid())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -454,35 +470,35 @@ private static final long serialVersionUID = 0L;
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -532,6 +548,7 @@ private static final long serialVersionUID = 0L;
       private java.lang.Object ebsUuid_ = "";
       /**
        * <code>string ebsUuid = 1;</code>
+       * @return The ebsUuid.
        */
       public java.lang.String getEbsUuid() {
         java.lang.Object ref = ebsUuid_;
@@ -547,6 +564,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <code>string ebsUuid = 1;</code>
+       * @return The bytes for ebsUuid.
        */
       public com.google.protobuf.ByteString
           getEbsUuidBytes() {
@@ -563,6 +581,8 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <code>string ebsUuid = 1;</code>
+       * @param value The ebsUuid to set.
+       * @return This builder for chaining.
        */
       public Builder setEbsUuid(
           java.lang.String value) {
@@ -576,6 +596,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <code>string ebsUuid = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearEbsUuid() {
         
@@ -585,6 +606,8 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <code>string ebsUuid = 1;</code>
+       * @param value The bytes for ebsUuid to set.
+       * @return This builder for chaining.
        */
       public Builder setEbsUuidBytes(
           com.google.protobuf.ByteString value) {
@@ -600,7 +623,7 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -650,7 +673,6 @@ private static final long serialVersionUID = 0L;
 
   }
 
-  private int bitField0_;
   public static final int HEADER_FIELD_NUMBER = 1;
   private com.didiyun.base.v1.Header header_;
   /**
@@ -659,6 +681,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.didi.cloud.base.v1.Header header = 1;</code>
+   * @return Whether the header field is set.
    */
   public boolean hasHeader() {
     return header_ != null;
@@ -669,6 +692,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.didi.cloud.base.v1.Header header = 1;</code>
+   * @return The header.
    */
   public com.didiyun.base.v1.Header getHeader() {
     return header_ == null ? com.didiyun.base.v1.Header.getDefaultInstance() : header_;
@@ -771,16 +795,15 @@ private static final long serialVersionUID = 0L;
     }
     com.didiyun.compute.v1.DeleteEbsRequest other = (com.didiyun.compute.v1.DeleteEbsRequest) obj;
 
-    boolean result = true;
-    result = result && (hasHeader() == other.hasHeader());
+    if (hasHeader() != other.hasHeader()) return false;
     if (hasHeader()) {
-      result = result && getHeader()
-          .equals(other.getHeader());
+      if (!getHeader()
+          .equals(other.getHeader())) return false;
     }
-    result = result && getEbsList()
-        .equals(other.getEbsList());
-    result = result && unknownFields.equals(other.unknownFields);
-    return result;
+    if (!getEbsList()
+        .equals(other.getEbsList())) return false;
+    if (!unknownFields.equals(other.unknownFields)) return false;
+    return true;
   }
 
   @java.lang.Override
@@ -940,7 +963,7 @@ private static final long serialVersionUID = 0L;
       }
       if (ebsBuilder_ == null) {
         ebs_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000001);
       } else {
         ebsBuilder_.clear();
       }
@@ -971,57 +994,55 @@ private static final long serialVersionUID = 0L;
     public com.didiyun.compute.v1.DeleteEbsRequest buildPartial() {
       com.didiyun.compute.v1.DeleteEbsRequest result = new com.didiyun.compute.v1.DeleteEbsRequest(this);
       int from_bitField0_ = bitField0_;
-      int to_bitField0_ = 0;
       if (headerBuilder_ == null) {
         result.header_ = header_;
       } else {
         result.header_ = headerBuilder_.build();
       }
       if (ebsBuilder_ == null) {
-        if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        if (((bitField0_ & 0x00000001) != 0)) {
           ebs_ = java.util.Collections.unmodifiableList(ebs_);
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00000001);
         }
         result.ebs_ = ebs_;
       } else {
         result.ebs_ = ebsBuilder_.build();
       }
-      result.bitField0_ = to_bitField0_;
       onBuilt();
       return result;
     }
 
     @java.lang.Override
     public Builder clone() {
-      return (Builder) super.clone();
+      return super.clone();
     }
     @java.lang.Override
     public Builder setField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return (Builder) super.setField(field, value);
+      return super.setField(field, value);
     }
     @java.lang.Override
     public Builder clearField(
         com.google.protobuf.Descriptors.FieldDescriptor field) {
-      return (Builder) super.clearField(field);
+      return super.clearField(field);
     }
     @java.lang.Override
     public Builder clearOneof(
         com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-      return (Builder) super.clearOneof(oneof);
+      return super.clearOneof(oneof);
     }
     @java.lang.Override
     public Builder setRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         int index, java.lang.Object value) {
-      return (Builder) super.setRepeatedField(field, index, value);
+      return super.setRepeatedField(field, index, value);
     }
     @java.lang.Override
     public Builder addRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return (Builder) super.addRepeatedField(field, value);
+      return super.addRepeatedField(field, value);
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1042,7 +1063,7 @@ private static final long serialVersionUID = 0L;
         if (!other.ebs_.isEmpty()) {
           if (ebs_.isEmpty()) {
             ebs_ = other.ebs_;
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000001);
           } else {
             ensureEbsIsMutable();
             ebs_.addAll(other.ebs_);
@@ -1055,7 +1076,7 @@ private static final long serialVersionUID = 0L;
             ebsBuilder_.dispose();
             ebsBuilder_ = null;
             ebs_ = other.ebs_;
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000001);
             ebsBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getEbsFieldBuilder() : null;
@@ -1094,7 +1115,7 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
-    private com.didiyun.base.v1.Header header_ = null;
+    private com.didiyun.base.v1.Header header_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.didiyun.base.v1.Header, com.didiyun.base.v1.Header.Builder, com.didiyun.base.v1.HeaderOrBuilder> headerBuilder_;
     /**
@@ -1103,6 +1124,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.didi.cloud.base.v1.Header header = 1;</code>
+     * @return Whether the header field is set.
      */
     public boolean hasHeader() {
       return headerBuilder_ != null || header_ != null;
@@ -1113,6 +1135,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.didi.cloud.base.v1.Header header = 1;</code>
+     * @return The header.
      */
     public com.didiyun.base.v1.Header getHeader() {
       if (headerBuilder_ == null) {
@@ -1250,9 +1273,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.didiyun.compute.v1.DeleteEbsRequest.Input> ebs_ =
       java.util.Collections.emptyList();
     private void ensureEbsIsMutable() {
-      if (!((bitField0_ & 0x00000002) == 0x00000002)) {
+      if (!((bitField0_ & 0x00000001) != 0)) {
         ebs_ = new java.util.ArrayList<com.didiyun.compute.v1.DeleteEbsRequest.Input>(ebs_);
-        bitField0_ |= 0x00000002;
+        bitField0_ |= 0x00000001;
        }
     }
 
@@ -1402,7 +1425,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearEbs() {
       if (ebsBuilder_ == null) {
         ebs_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
       } else {
         ebsBuilder_.clear();
@@ -1479,7 +1502,7 @@ private static final long serialVersionUID = 0L;
         ebsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.didiyun.compute.v1.DeleteEbsRequest.Input, com.didiyun.compute.v1.DeleteEbsRequest.Input.Builder, com.didiyun.compute.v1.DeleteEbsRequest.InputOrBuilder>(
                 ebs_,
-                ((bitField0_ & 0x00000002) == 0x00000002),
+                ((bitField0_ & 0x00000001) != 0),
                 getParentForChildren(),
                 isClean());
         ebs_ = null;
@@ -1489,7 +1512,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
-      return super.setUnknownFieldsProto3(unknownFields);
+      return super.setUnknownFields(unknownFields);
     }
 
     @java.lang.Override

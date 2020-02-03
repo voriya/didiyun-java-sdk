@@ -13,6 +13,7 @@ public interface ListSnapshotConditionOrBuilder extends
    * </pre>
    *
    * <code>string ebsUuid = 1;</code>
+   * @return The ebsUuid.
    */
   java.lang.String getEbsUuid();
   /**
@@ -21,6 +22,7 @@ public interface ListSnapshotConditionOrBuilder extends
    * </pre>
    *
    * <code>string ebsUuid = 1;</code>
+   * @return The bytes for ebsUuid.
    */
   com.google.protobuf.ByteString
       getEbsUuidBytes();
@@ -31,6 +33,7 @@ public interface ListSnapshotConditionOrBuilder extends
    * </pre>
    *
    * <code>string snapName = 2;</code>
+   * @return The snapName.
    */
   java.lang.String getSnapName();
   /**
@@ -39,6 +42,7 @@ public interface ListSnapshotConditionOrBuilder extends
    * </pre>
    *
    * <code>string snapName = 2;</code>
+   * @return The bytes for snapName.
    */
   com.google.protobuf.ByteString
       getSnapNameBytes();
@@ -49,6 +53,7 @@ public interface ListSnapshotConditionOrBuilder extends
    * </pre>
    *
    * <code>string dc2Uuid = 3;</code>
+   * @return The dc2Uuid.
    */
   java.lang.String getDc2Uuid();
   /**
@@ -57,6 +62,7 @@ public interface ListSnapshotConditionOrBuilder extends
    * </pre>
    *
    * <code>string dc2Uuid = 3;</code>
+   * @return The bytes for dc2Uuid.
    */
   com.google.protobuf.ByteString
       getDc2UuidBytes();

@@ -22,6 +22,13 @@ private static final long serialVersionUID = 0L;
   }
 
   @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new ListSgRuleCondition();
+  }
+
+  @java.lang.Override
   public final com.google.protobuf.UnknownFieldSet
   getUnknownFields() {
     return this.unknownFields;
@@ -34,7 +41,6 @@ private static final long serialVersionUID = 0L;
     if (extensionRegistry == null) {
       throw new java.lang.NullPointerException();
     }
-    int mutable_bitField0_ = 0;
     com.google.protobuf.UnknownFieldSet.Builder unknownFields =
         com.google.protobuf.UnknownFieldSet.newBuilder();
     try {
@@ -64,7 +70,7 @@ private static final long serialVersionUID = 0L;
             break;
           }
           default: {
-            if (!parseUnknownFieldProto3(
+            if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
               done = true;
             }
@@ -103,6 +109,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string sgUuid = 1;</code>
+   * @return The sgUuid.
    */
   public java.lang.String getSgUuid() {
     java.lang.Object ref = sgUuid_;
@@ -122,6 +129,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string sgUuid = 1;</code>
+   * @return The bytes for sgUuid.
    */
   public com.google.protobuf.ByteString
       getSgUuidBytes() {
@@ -145,6 +153,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string dc2Uuid = 2;</code>
+   * @return The dc2Uuid.
    */
   public java.lang.String getDc2Uuid() {
     java.lang.Object ref = dc2Uuid_;
@@ -164,6 +173,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string dc2Uuid = 2;</code>
+   * @return The bytes for dc2Uuid.
    */
   public com.google.protobuf.ByteString
       getDc2UuidBytes() {
@@ -187,6 +197,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string type = 3;</code>
+   * @return The type.
    */
   public java.lang.String getType() {
     java.lang.Object ref = type_;
@@ -206,6 +217,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string type = 3;</code>
+   * @return The bytes for type.
    */
   public com.google.protobuf.ByteString
       getTypeBytes() {
@@ -277,15 +289,14 @@ private static final long serialVersionUID = 0L;
     }
     com.didiyun.compute.v1.ListSgRuleCondition other = (com.didiyun.compute.v1.ListSgRuleCondition) obj;
 
-    boolean result = true;
-    result = result && getSgUuid()
-        .equals(other.getSgUuid());
-    result = result && getDc2Uuid()
-        .equals(other.getDc2Uuid());
-    result = result && getType()
-        .equals(other.getType());
-    result = result && unknownFields.equals(other.unknownFields);
-    return result;
+    if (!getSgUuid()
+        .equals(other.getSgUuid())) return false;
+    if (!getDc2Uuid()
+        .equals(other.getDc2Uuid())) return false;
+    if (!getType()
+        .equals(other.getType())) return false;
+    if (!unknownFields.equals(other.unknownFields)) return false;
+    return true;
   }
 
   @java.lang.Override
@@ -475,35 +486,35 @@ private static final long serialVersionUID = 0L;
 
     @java.lang.Override
     public Builder clone() {
-      return (Builder) super.clone();
+      return super.clone();
     }
     @java.lang.Override
     public Builder setField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return (Builder) super.setField(field, value);
+      return super.setField(field, value);
     }
     @java.lang.Override
     public Builder clearField(
         com.google.protobuf.Descriptors.FieldDescriptor field) {
-      return (Builder) super.clearField(field);
+      return super.clearField(field);
     }
     @java.lang.Override
     public Builder clearOneof(
         com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-      return (Builder) super.clearOneof(oneof);
+      return super.clearOneof(oneof);
     }
     @java.lang.Override
     public Builder setRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         int index, java.lang.Object value) {
-      return (Builder) super.setRepeatedField(field, index, value);
+      return super.setRepeatedField(field, index, value);
     }
     @java.lang.Override
     public Builder addRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return (Builder) super.addRepeatedField(field, value);
+      return super.addRepeatedField(field, value);
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -565,6 +576,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string sgUuid = 1;</code>
+     * @return The sgUuid.
      */
     public java.lang.String getSgUuid() {
       java.lang.Object ref = sgUuid_;
@@ -584,6 +596,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string sgUuid = 1;</code>
+     * @return The bytes for sgUuid.
      */
     public com.google.protobuf.ByteString
         getSgUuidBytes() {
@@ -604,6 +617,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string sgUuid = 1;</code>
+     * @param value The sgUuid to set.
+     * @return This builder for chaining.
      */
     public Builder setSgUuid(
         java.lang.String value) {
@@ -621,6 +636,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string sgUuid = 1;</code>
+     * @return This builder for chaining.
      */
     public Builder clearSgUuid() {
       
@@ -634,6 +650,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string sgUuid = 1;</code>
+     * @param value The bytes for sgUuid to set.
+     * @return This builder for chaining.
      */
     public Builder setSgUuidBytes(
         com.google.protobuf.ByteString value) {
@@ -654,6 +672,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string dc2Uuid = 2;</code>
+     * @return The dc2Uuid.
      */
     public java.lang.String getDc2Uuid() {
       java.lang.Object ref = dc2Uuid_;
@@ -673,6 +692,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string dc2Uuid = 2;</code>
+     * @return The bytes for dc2Uuid.
      */
     public com.google.protobuf.ByteString
         getDc2UuidBytes() {
@@ -693,6 +713,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string dc2Uuid = 2;</code>
+     * @param value The dc2Uuid to set.
+     * @return This builder for chaining.
      */
     public Builder setDc2Uuid(
         java.lang.String value) {
@@ -710,6 +732,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string dc2Uuid = 2;</code>
+     * @return This builder for chaining.
      */
     public Builder clearDc2Uuid() {
       
@@ -723,6 +746,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string dc2Uuid = 2;</code>
+     * @param value The bytes for dc2Uuid to set.
+     * @return This builder for chaining.
      */
     public Builder setDc2UuidBytes(
         com.google.protobuf.ByteString value) {
@@ -743,6 +768,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string type = 3;</code>
+     * @return The type.
      */
     public java.lang.String getType() {
       java.lang.Object ref = type_;
@@ -762,6 +788,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string type = 3;</code>
+     * @return The bytes for type.
      */
     public com.google.protobuf.ByteString
         getTypeBytes() {
@@ -782,6 +809,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string type = 3;</code>
+     * @param value The type to set.
+     * @return This builder for chaining.
      */
     public Builder setType(
         java.lang.String value) {
@@ -799,6 +828,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string type = 3;</code>
+     * @return This builder for chaining.
      */
     public Builder clearType() {
       
@@ -812,6 +842,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string type = 3;</code>
+     * @param value The bytes for type to set.
+     * @return This builder for chaining.
      */
     public Builder setTypeBytes(
         com.google.protobuf.ByteString value) {
@@ -827,7 +859,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
-      return super.setUnknownFieldsProto3(unknownFields);
+      return super.setUnknownFields(unknownFields);
     }
 
     @java.lang.Override

@@ -16,11 +16,16 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private CheckDc2PriceInput() {
-    count_ = 0;
-    payPeriod_ = 0;
     dc2Model_ = "";
     ebs_ = java.util.Collections.emptyList();
     dc2Uuid_ = "";
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new CheckDc2PriceInput();
   }
 
   @java.lang.Override
@@ -77,9 +82,9 @@ private static final long serialVersionUID = 0L;
             break;
           }
           case 42: {
-            if (!((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
+            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
               ebs_ = new java.util.ArrayList<com.didiyun.bill.v1.CheckEbsPriceInput>();
-              mutable_bitField0_ |= 0x00000010;
+              mutable_bitField0_ |= 0x00000001;
             }
             ebs_.add(
                 input.readMessage(com.didiyun.bill.v1.CheckEbsPriceInput.parser(), extensionRegistry));
@@ -92,7 +97,7 @@ private static final long serialVersionUID = 0L;
             break;
           }
           default: {
-            if (!parseUnknownFieldProto3(
+            if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
               done = true;
             }
@@ -106,7 +111,7 @@ private static final long serialVersionUID = 0L;
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
     } finally {
-      if (((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
+      if (((mutable_bitField0_ & 0x00000001) != 0)) {
         ebs_ = java.util.Collections.unmodifiableList(ebs_);
       }
       this.unknownFields = unknownFields.build();
@@ -126,7 +131,6 @@ private static final long serialVersionUID = 0L;
             com.didiyun.bill.v1.CheckDc2PriceInput.class, com.didiyun.bill.v1.CheckDc2PriceInput.Builder.class);
   }
 
-  private int bitField0_;
   public static final int COUNT_FIELD_NUMBER = 1;
   private int count_;
   /**
@@ -135,6 +139,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>int32 count = 1;</code>
+   * @return The count.
    */
   public int getCount() {
     return count_;
@@ -148,6 +153,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>int32 payPeriod = 2;</code>
+   * @return The payPeriod.
    */
   public int getPayPeriod() {
     return payPeriod_;
@@ -161,6 +167,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string dc2Model = 3;</code>
+   * @return The dc2Model.
    */
   public java.lang.String getDc2Model() {
     java.lang.Object ref = dc2Model_;
@@ -180,6 +187,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string dc2Model = 3;</code>
+   * @return The bytes for dc2Model.
    */
   public com.google.protobuf.ByteString
       getDc2ModelBytes() {
@@ -203,6 +211,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.didi.cloud.bill.v1.CheckEipPriceInput eip = 4;</code>
+   * @return Whether the eip field is set.
    */
   public boolean hasEip() {
     return eip_ != null;
@@ -213,6 +222,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.didi.cloud.bill.v1.CheckEipPriceInput eip = 4;</code>
+   * @return The eip.
    */
   public com.didiyun.bill.v1.CheckEipPriceInput getEip() {
     return eip_ == null ? com.didiyun.bill.v1.CheckEipPriceInput.getDefaultInstance() : eip_;
@@ -291,6 +301,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string dc2Uuid = 6;</code>
+   * @return The dc2Uuid.
    */
   public java.lang.String getDc2Uuid() {
     java.lang.Object ref = dc2Uuid_;
@@ -310,6 +321,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string dc2Uuid = 6;</code>
+   * @return The bytes for dc2Uuid.
    */
   public com.google.protobuf.ByteString
       getDc2UuidBytes() {
@@ -403,24 +415,23 @@ private static final long serialVersionUID = 0L;
     }
     com.didiyun.bill.v1.CheckDc2PriceInput other = (com.didiyun.bill.v1.CheckDc2PriceInput) obj;
 
-    boolean result = true;
-    result = result && (getCount()
-        == other.getCount());
-    result = result && (getPayPeriod()
-        == other.getPayPeriod());
-    result = result && getDc2Model()
-        .equals(other.getDc2Model());
-    result = result && (hasEip() == other.hasEip());
+    if (getCount()
+        != other.getCount()) return false;
+    if (getPayPeriod()
+        != other.getPayPeriod()) return false;
+    if (!getDc2Model()
+        .equals(other.getDc2Model())) return false;
+    if (hasEip() != other.hasEip()) return false;
     if (hasEip()) {
-      result = result && getEip()
-          .equals(other.getEip());
+      if (!getEip()
+          .equals(other.getEip())) return false;
     }
-    result = result && getEbsList()
-        .equals(other.getEbsList());
-    result = result && getDc2Uuid()
-        .equals(other.getDc2Uuid());
-    result = result && unknownFields.equals(other.unknownFields);
-    return result;
+    if (!getEbsList()
+        .equals(other.getEbsList())) return false;
+    if (!getDc2Uuid()
+        .equals(other.getDc2Uuid())) return false;
+    if (!unknownFields.equals(other.unknownFields)) return false;
+    return true;
   }
 
   @java.lang.Override
@@ -594,7 +605,7 @@ private static final long serialVersionUID = 0L;
       }
       if (ebsBuilder_ == null) {
         ebs_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000010);
+        bitField0_ = (bitField0_ & ~0x00000001);
       } else {
         ebsBuilder_.clear();
       }
@@ -627,7 +638,6 @@ private static final long serialVersionUID = 0L;
     public com.didiyun.bill.v1.CheckDc2PriceInput buildPartial() {
       com.didiyun.bill.v1.CheckDc2PriceInput result = new com.didiyun.bill.v1.CheckDc2PriceInput(this);
       int from_bitField0_ = bitField0_;
-      int to_bitField0_ = 0;
       result.count_ = count_;
       result.payPeriod_ = payPeriod_;
       result.dc2Model_ = dc2Model_;
@@ -637,51 +647,50 @@ private static final long serialVersionUID = 0L;
         result.eip_ = eipBuilder_.build();
       }
       if (ebsBuilder_ == null) {
-        if (((bitField0_ & 0x00000010) == 0x00000010)) {
+        if (((bitField0_ & 0x00000001) != 0)) {
           ebs_ = java.util.Collections.unmodifiableList(ebs_);
-          bitField0_ = (bitField0_ & ~0x00000010);
+          bitField0_ = (bitField0_ & ~0x00000001);
         }
         result.ebs_ = ebs_;
       } else {
         result.ebs_ = ebsBuilder_.build();
       }
       result.dc2Uuid_ = dc2Uuid_;
-      result.bitField0_ = to_bitField0_;
       onBuilt();
       return result;
     }
 
     @java.lang.Override
     public Builder clone() {
-      return (Builder) super.clone();
+      return super.clone();
     }
     @java.lang.Override
     public Builder setField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return (Builder) super.setField(field, value);
+      return super.setField(field, value);
     }
     @java.lang.Override
     public Builder clearField(
         com.google.protobuf.Descriptors.FieldDescriptor field) {
-      return (Builder) super.clearField(field);
+      return super.clearField(field);
     }
     @java.lang.Override
     public Builder clearOneof(
         com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-      return (Builder) super.clearOneof(oneof);
+      return super.clearOneof(oneof);
     }
     @java.lang.Override
     public Builder setRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         int index, java.lang.Object value) {
-      return (Builder) super.setRepeatedField(field, index, value);
+      return super.setRepeatedField(field, index, value);
     }
     @java.lang.Override
     public Builder addRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return (Builder) super.addRepeatedField(field, value);
+      return super.addRepeatedField(field, value);
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -712,7 +721,7 @@ private static final long serialVersionUID = 0L;
         if (!other.ebs_.isEmpty()) {
           if (ebs_.isEmpty()) {
             ebs_ = other.ebs_;
-            bitField0_ = (bitField0_ & ~0x00000010);
+            bitField0_ = (bitField0_ & ~0x00000001);
           } else {
             ensureEbsIsMutable();
             ebs_.addAll(other.ebs_);
@@ -725,7 +734,7 @@ private static final long serialVersionUID = 0L;
             ebsBuilder_.dispose();
             ebsBuilder_ = null;
             ebs_ = other.ebs_;
-            bitField0_ = (bitField0_ & ~0x00000010);
+            bitField0_ = (bitField0_ & ~0x00000001);
             ebsBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getEbsFieldBuilder() : null;
@@ -775,6 +784,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>int32 count = 1;</code>
+     * @return The count.
      */
     public int getCount() {
       return count_;
@@ -785,6 +795,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>int32 count = 1;</code>
+     * @param value The count to set.
+     * @return This builder for chaining.
      */
     public Builder setCount(int value) {
       
@@ -798,6 +810,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>int32 count = 1;</code>
+     * @return This builder for chaining.
      */
     public Builder clearCount() {
       
@@ -813,6 +826,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>int32 payPeriod = 2;</code>
+     * @return The payPeriod.
      */
     public int getPayPeriod() {
       return payPeriod_;
@@ -823,6 +837,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>int32 payPeriod = 2;</code>
+     * @param value The payPeriod to set.
+     * @return This builder for chaining.
      */
     public Builder setPayPeriod(int value) {
       
@@ -836,6 +852,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>int32 payPeriod = 2;</code>
+     * @return This builder for chaining.
      */
     public Builder clearPayPeriod() {
       
@@ -851,6 +868,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string dc2Model = 3;</code>
+     * @return The dc2Model.
      */
     public java.lang.String getDc2Model() {
       java.lang.Object ref = dc2Model_;
@@ -870,6 +888,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string dc2Model = 3;</code>
+     * @return The bytes for dc2Model.
      */
     public com.google.protobuf.ByteString
         getDc2ModelBytes() {
@@ -890,6 +909,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string dc2Model = 3;</code>
+     * @param value The dc2Model to set.
+     * @return This builder for chaining.
      */
     public Builder setDc2Model(
         java.lang.String value) {
@@ -907,6 +928,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string dc2Model = 3;</code>
+     * @return This builder for chaining.
      */
     public Builder clearDc2Model() {
       
@@ -920,6 +942,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string dc2Model = 3;</code>
+     * @param value The bytes for dc2Model to set.
+     * @return This builder for chaining.
      */
     public Builder setDc2ModelBytes(
         com.google.protobuf.ByteString value) {
@@ -933,7 +957,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private com.didiyun.bill.v1.CheckEipPriceInput eip_ = null;
+    private com.didiyun.bill.v1.CheckEipPriceInput eip_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.didiyun.bill.v1.CheckEipPriceInput, com.didiyun.bill.v1.CheckEipPriceInput.Builder, com.didiyun.bill.v1.CheckEipPriceInputOrBuilder> eipBuilder_;
     /**
@@ -942,6 +966,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.didi.cloud.bill.v1.CheckEipPriceInput eip = 4;</code>
+     * @return Whether the eip field is set.
      */
     public boolean hasEip() {
       return eipBuilder_ != null || eip_ != null;
@@ -952,6 +977,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.didi.cloud.bill.v1.CheckEipPriceInput eip = 4;</code>
+     * @return The eip.
      */
     public com.didiyun.bill.v1.CheckEipPriceInput getEip() {
       if (eipBuilder_ == null) {
@@ -1089,9 +1115,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.didiyun.bill.v1.CheckEbsPriceInput> ebs_ =
       java.util.Collections.emptyList();
     private void ensureEbsIsMutable() {
-      if (!((bitField0_ & 0x00000010) == 0x00000010)) {
+      if (!((bitField0_ & 0x00000001) != 0)) {
         ebs_ = new java.util.ArrayList<com.didiyun.bill.v1.CheckEbsPriceInput>(ebs_);
-        bitField0_ |= 0x00000010;
+        bitField0_ |= 0x00000001;
        }
     }
 
@@ -1285,7 +1311,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearEbs() {
       if (ebsBuilder_ == null) {
         ebs_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000010);
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
       } else {
         ebsBuilder_.clear();
@@ -1390,7 +1416,7 @@ private static final long serialVersionUID = 0L;
         ebsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.didiyun.bill.v1.CheckEbsPriceInput, com.didiyun.bill.v1.CheckEbsPriceInput.Builder, com.didiyun.bill.v1.CheckEbsPriceInputOrBuilder>(
                 ebs_,
-                ((bitField0_ & 0x00000010) == 0x00000010),
+                ((bitField0_ & 0x00000001) != 0),
                 getParentForChildren(),
                 isClean());
         ebs_ = null;
@@ -1405,6 +1431,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string dc2Uuid = 6;</code>
+     * @return The dc2Uuid.
      */
     public java.lang.String getDc2Uuid() {
       java.lang.Object ref = dc2Uuid_;
@@ -1424,6 +1451,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string dc2Uuid = 6;</code>
+     * @return The bytes for dc2Uuid.
      */
     public com.google.protobuf.ByteString
         getDc2UuidBytes() {
@@ -1444,6 +1472,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string dc2Uuid = 6;</code>
+     * @param value The dc2Uuid to set.
+     * @return This builder for chaining.
      */
     public Builder setDc2Uuid(
         java.lang.String value) {
@@ -1461,6 +1491,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string dc2Uuid = 6;</code>
+     * @return This builder for chaining.
      */
     public Builder clearDc2Uuid() {
       
@@ -1474,6 +1505,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string dc2Uuid = 6;</code>
+     * @param value The bytes for dc2Uuid to set.
+     * @return This builder for chaining.
      */
     public Builder setDc2UuidBytes(
         com.google.protobuf.ByteString value) {
@@ -1489,7 +1522,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
-      return super.setUnknownFieldsProto3(unknownFields);
+      return super.setUnknownFields(unknownFields);
     }
 
     @java.lang.Override

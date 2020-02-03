@@ -25,6 +25,13 @@ private static final long serialVersionUID = 0L;
   }
 
   @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new CounterOutput();
+  }
+
+  @java.lang.Override
   public final com.google.protobuf.UnknownFieldSet
   getUnknownFields() {
     return this.unknownFields;
@@ -67,9 +74,9 @@ private static final long serialVersionUID = 0L;
             break;
           }
           case 34: {
-            if (!((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
               counters_ = new java.util.ArrayList<com.didiyun.monitor.v1.CounterInfo>();
-              mutable_bitField0_ |= 0x00000008;
+              mutable_bitField0_ |= 0x00000001;
             }
             counters_.add(
                 input.readMessage(com.didiyun.monitor.v1.CounterInfo.parser(), extensionRegistry));
@@ -88,7 +95,7 @@ private static final long serialVersionUID = 0L;
             break;
           }
           default: {
-            if (!parseUnknownFieldProto3(
+            if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
               done = true;
             }
@@ -102,7 +109,7 @@ private static final long serialVersionUID = 0L;
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
     } finally {
-      if (((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+      if (((mutable_bitField0_ & 0x00000001) != 0)) {
         counters_ = java.util.Collections.unmodifiableList(counters_);
       }
       this.unknownFields = unknownFields.build();
@@ -122,7 +129,6 @@ private static final long serialVersionUID = 0L;
             com.didiyun.monitor.v1.CounterOutput.class, com.didiyun.monitor.v1.CounterOutput.Builder.class);
   }
 
-  private int bitField0_;
   public static final int RESOURCEUUID_FIELD_NUMBER = 1;
   private volatile java.lang.Object resourceUuid_;
   /**
@@ -131,6 +137,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string resourceUuid = 1;</code>
+   * @return The resourceUuid.
    */
   public java.lang.String getResourceUuid() {
     java.lang.Object ref = resourceUuid_;
@@ -150,6 +157,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string resourceUuid = 1;</code>
+   * @return The bytes for resourceUuid.
    */
   public com.google.protobuf.ByteString
       getResourceUuidBytes() {
@@ -173,6 +181,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string resourceType = 2;</code>
+   * @return The resourceType.
    */
   public java.lang.String getResourceType() {
     java.lang.Object ref = resourceType_;
@@ -192,6 +201,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string resourceType = 2;</code>
+   * @return The bytes for resourceType.
    */
   public com.google.protobuf.ByteString
       getResourceTypeBytes() {
@@ -215,6 +225,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string alias = 3;</code>
+   * @return The alias.
    */
   public java.lang.String getAlias() {
     java.lang.Object ref = alias_;
@@ -234,6 +245,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string alias = 3;</code>
+   * @return The bytes for alias.
    */
   public com.google.protobuf.ByteString
       getAliasBytes() {
@@ -312,6 +324,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string metric = 5;</code>
+   * @return The metric.
    */
   public java.lang.String getMetric() {
     java.lang.Object ref = metric_;
@@ -331,6 +344,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string metric = 5;</code>
+   * @return The bytes for metric.
    */
   public com.google.protobuf.ByteString
       getMetricBytes() {
@@ -354,6 +368,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string metricAlias = 6;</code>
+   * @return The metricAlias.
    */
   public java.lang.String getMetricAlias() {
     java.lang.Object ref = metricAlias_;
@@ -373,6 +388,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string metricAlias = 6;</code>
+   * @return The bytes for metricAlias.
    */
   public com.google.protobuf.ByteString
       getMetricAliasBytes() {
@@ -463,21 +479,20 @@ private static final long serialVersionUID = 0L;
     }
     com.didiyun.monitor.v1.CounterOutput other = (com.didiyun.monitor.v1.CounterOutput) obj;
 
-    boolean result = true;
-    result = result && getResourceUuid()
-        .equals(other.getResourceUuid());
-    result = result && getResourceType()
-        .equals(other.getResourceType());
-    result = result && getAlias()
-        .equals(other.getAlias());
-    result = result && getCountersList()
-        .equals(other.getCountersList());
-    result = result && getMetric()
-        .equals(other.getMetric());
-    result = result && getMetricAlias()
-        .equals(other.getMetricAlias());
-    result = result && unknownFields.equals(other.unknownFields);
-    return result;
+    if (!getResourceUuid()
+        .equals(other.getResourceUuid())) return false;
+    if (!getResourceType()
+        .equals(other.getResourceType())) return false;
+    if (!getAlias()
+        .equals(other.getAlias())) return false;
+    if (!getCountersList()
+        .equals(other.getCountersList())) return false;
+    if (!getMetric()
+        .equals(other.getMetric())) return false;
+    if (!getMetricAlias()
+        .equals(other.getMetricAlias())) return false;
+    if (!unknownFields.equals(other.unknownFields)) return false;
+    return true;
   }
 
   @java.lang.Override
@@ -643,7 +658,7 @@ private static final long serialVersionUID = 0L;
 
       if (countersBuilder_ == null) {
         counters_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000008);
+        bitField0_ = (bitField0_ & ~0x00000001);
       } else {
         countersBuilder_.clear();
       }
@@ -678,14 +693,13 @@ private static final long serialVersionUID = 0L;
     public com.didiyun.monitor.v1.CounterOutput buildPartial() {
       com.didiyun.monitor.v1.CounterOutput result = new com.didiyun.monitor.v1.CounterOutput(this);
       int from_bitField0_ = bitField0_;
-      int to_bitField0_ = 0;
       result.resourceUuid_ = resourceUuid_;
       result.resourceType_ = resourceType_;
       result.alias_ = alias_;
       if (countersBuilder_ == null) {
-        if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        if (((bitField0_ & 0x00000001) != 0)) {
           counters_ = java.util.Collections.unmodifiableList(counters_);
-          bitField0_ = (bitField0_ & ~0x00000008);
+          bitField0_ = (bitField0_ & ~0x00000001);
         }
         result.counters_ = counters_;
       } else {
@@ -693,42 +707,41 @@ private static final long serialVersionUID = 0L;
       }
       result.metric_ = metric_;
       result.metricAlias_ = metricAlias_;
-      result.bitField0_ = to_bitField0_;
       onBuilt();
       return result;
     }
 
     @java.lang.Override
     public Builder clone() {
-      return (Builder) super.clone();
+      return super.clone();
     }
     @java.lang.Override
     public Builder setField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return (Builder) super.setField(field, value);
+      return super.setField(field, value);
     }
     @java.lang.Override
     public Builder clearField(
         com.google.protobuf.Descriptors.FieldDescriptor field) {
-      return (Builder) super.clearField(field);
+      return super.clearField(field);
     }
     @java.lang.Override
     public Builder clearOneof(
         com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-      return (Builder) super.clearOneof(oneof);
+      return super.clearOneof(oneof);
     }
     @java.lang.Override
     public Builder setRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         int index, java.lang.Object value) {
-      return (Builder) super.setRepeatedField(field, index, value);
+      return super.setRepeatedField(field, index, value);
     }
     @java.lang.Override
     public Builder addRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return (Builder) super.addRepeatedField(field, value);
+      return super.addRepeatedField(field, value);
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -758,7 +771,7 @@ private static final long serialVersionUID = 0L;
         if (!other.counters_.isEmpty()) {
           if (counters_.isEmpty()) {
             counters_ = other.counters_;
-            bitField0_ = (bitField0_ & ~0x00000008);
+            bitField0_ = (bitField0_ & ~0x00000001);
           } else {
             ensureCountersIsMutable();
             counters_.addAll(other.counters_);
@@ -771,7 +784,7 @@ private static final long serialVersionUID = 0L;
             countersBuilder_.dispose();
             countersBuilder_ = null;
             counters_ = other.counters_;
-            bitField0_ = (bitField0_ & ~0x00000008);
+            bitField0_ = (bitField0_ & ~0x00000001);
             countersBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getCountersFieldBuilder() : null;
@@ -825,6 +838,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string resourceUuid = 1;</code>
+     * @return The resourceUuid.
      */
     public java.lang.String getResourceUuid() {
       java.lang.Object ref = resourceUuid_;
@@ -844,6 +858,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string resourceUuid = 1;</code>
+     * @return The bytes for resourceUuid.
      */
     public com.google.protobuf.ByteString
         getResourceUuidBytes() {
@@ -864,6 +879,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string resourceUuid = 1;</code>
+     * @param value The resourceUuid to set.
+     * @return This builder for chaining.
      */
     public Builder setResourceUuid(
         java.lang.String value) {
@@ -881,6 +898,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string resourceUuid = 1;</code>
+     * @return This builder for chaining.
      */
     public Builder clearResourceUuid() {
       
@@ -894,6 +912,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string resourceUuid = 1;</code>
+     * @param value The bytes for resourceUuid to set.
+     * @return This builder for chaining.
      */
     public Builder setResourceUuidBytes(
         com.google.protobuf.ByteString value) {
@@ -914,6 +934,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string resourceType = 2;</code>
+     * @return The resourceType.
      */
     public java.lang.String getResourceType() {
       java.lang.Object ref = resourceType_;
@@ -933,6 +954,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string resourceType = 2;</code>
+     * @return The bytes for resourceType.
      */
     public com.google.protobuf.ByteString
         getResourceTypeBytes() {
@@ -953,6 +975,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string resourceType = 2;</code>
+     * @param value The resourceType to set.
+     * @return This builder for chaining.
      */
     public Builder setResourceType(
         java.lang.String value) {
@@ -970,6 +994,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string resourceType = 2;</code>
+     * @return This builder for chaining.
      */
     public Builder clearResourceType() {
       
@@ -983,6 +1008,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string resourceType = 2;</code>
+     * @param value The bytes for resourceType to set.
+     * @return This builder for chaining.
      */
     public Builder setResourceTypeBytes(
         com.google.protobuf.ByteString value) {
@@ -1003,6 +1030,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string alias = 3;</code>
+     * @return The alias.
      */
     public java.lang.String getAlias() {
       java.lang.Object ref = alias_;
@@ -1022,6 +1050,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string alias = 3;</code>
+     * @return The bytes for alias.
      */
     public com.google.protobuf.ByteString
         getAliasBytes() {
@@ -1042,6 +1071,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string alias = 3;</code>
+     * @param value The alias to set.
+     * @return This builder for chaining.
      */
     public Builder setAlias(
         java.lang.String value) {
@@ -1059,6 +1090,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string alias = 3;</code>
+     * @return This builder for chaining.
      */
     public Builder clearAlias() {
       
@@ -1072,6 +1104,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string alias = 3;</code>
+     * @param value The bytes for alias to set.
+     * @return This builder for chaining.
      */
     public Builder setAliasBytes(
         com.google.protobuf.ByteString value) {
@@ -1088,9 +1122,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.didiyun.monitor.v1.CounterInfo> counters_ =
       java.util.Collections.emptyList();
     private void ensureCountersIsMutable() {
-      if (!((bitField0_ & 0x00000008) == 0x00000008)) {
+      if (!((bitField0_ & 0x00000001) != 0)) {
         counters_ = new java.util.ArrayList<com.didiyun.monitor.v1.CounterInfo>(counters_);
-        bitField0_ |= 0x00000008;
+        bitField0_ |= 0x00000001;
        }
     }
 
@@ -1284,7 +1318,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearCounters() {
       if (countersBuilder_ == null) {
         counters_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000008);
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
       } else {
         countersBuilder_.clear();
@@ -1389,7 +1423,7 @@ private static final long serialVersionUID = 0L;
         countersBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.didiyun.monitor.v1.CounterInfo, com.didiyun.monitor.v1.CounterInfo.Builder, com.didiyun.monitor.v1.CounterInfoOrBuilder>(
                 counters_,
-                ((bitField0_ & 0x00000008) == 0x00000008),
+                ((bitField0_ & 0x00000001) != 0),
                 getParentForChildren(),
                 isClean());
         counters_ = null;
@@ -1404,6 +1438,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string metric = 5;</code>
+     * @return The metric.
      */
     public java.lang.String getMetric() {
       java.lang.Object ref = metric_;
@@ -1423,6 +1458,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string metric = 5;</code>
+     * @return The bytes for metric.
      */
     public com.google.protobuf.ByteString
         getMetricBytes() {
@@ -1443,6 +1479,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string metric = 5;</code>
+     * @param value The metric to set.
+     * @return This builder for chaining.
      */
     public Builder setMetric(
         java.lang.String value) {
@@ -1460,6 +1498,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string metric = 5;</code>
+     * @return This builder for chaining.
      */
     public Builder clearMetric() {
       
@@ -1473,6 +1512,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string metric = 5;</code>
+     * @param value The bytes for metric to set.
+     * @return This builder for chaining.
      */
     public Builder setMetricBytes(
         com.google.protobuf.ByteString value) {
@@ -1493,6 +1534,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string metricAlias = 6;</code>
+     * @return The metricAlias.
      */
     public java.lang.String getMetricAlias() {
       java.lang.Object ref = metricAlias_;
@@ -1512,6 +1554,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string metricAlias = 6;</code>
+     * @return The bytes for metricAlias.
      */
     public com.google.protobuf.ByteString
         getMetricAliasBytes() {
@@ -1532,6 +1575,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string metricAlias = 6;</code>
+     * @param value The metricAlias to set.
+     * @return This builder for chaining.
      */
     public Builder setMetricAlias(
         java.lang.String value) {
@@ -1549,6 +1594,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string metricAlias = 6;</code>
+     * @return This builder for chaining.
      */
     public Builder clearMetricAlias() {
       
@@ -1562,6 +1608,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string metricAlias = 6;</code>
+     * @param value The bytes for metricAlias to set.
+     * @return This builder for chaining.
      */
     public Builder setMetricAliasBytes(
         com.google.protobuf.ByteString value) {
@@ -1577,7 +1625,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
-      return super.setUnknownFieldsProto3(unknownFields);
+      return super.setUnknownFields(unknownFields);
     }
 
     @java.lang.Override

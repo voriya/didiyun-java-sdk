@@ -13,6 +13,7 @@ public interface ErrorOrBuilder extends
    * </pre>
    *
    * <code>int32 errno = 1;</code>
+   * @return The errno.
    */
   int getErrno();
 
@@ -22,6 +23,7 @@ public interface ErrorOrBuilder extends
    * </pre>
    *
    * <code>string errmsg = 2;</code>
+   * @return The errmsg.
    */
   java.lang.String getErrmsg();
   /**
@@ -30,6 +32,7 @@ public interface ErrorOrBuilder extends
    * </pre>
    *
    * <code>string errmsg = 2;</code>
+   * @return The bytes for errmsg.
    */
   com.google.protobuf.ByteString
       getErrmsgBytes();
@@ -40,6 +43,7 @@ public interface ErrorOrBuilder extends
    * </pre>
    *
    * <code>string requestId = 3;</code>
+   * @return The requestId.
    */
   java.lang.String getRequestId();
   /**
@@ -48,6 +52,7 @@ public interface ErrorOrBuilder extends
    * </pre>
    *
    * <code>string requestId = 3;</code>
+   * @return The bytes for requestId.
    */
   com.google.protobuf.ByteString
       getRequestIdBytes();

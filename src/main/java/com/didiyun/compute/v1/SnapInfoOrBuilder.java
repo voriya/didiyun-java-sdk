@@ -13,6 +13,7 @@ public interface SnapInfoOrBuilder extends
    * </pre>
    *
    * <code>string snapUuid = 1;</code>
+   * @return The snapUuid.
    */
   java.lang.String getSnapUuid();
   /**
@@ -21,6 +22,7 @@ public interface SnapInfoOrBuilder extends
    * </pre>
    *
    * <code>string snapUuid = 1;</code>
+   * @return The bytes for snapUuid.
    */
   com.google.protobuf.ByteString
       getSnapUuidBytes();
@@ -31,6 +33,7 @@ public interface SnapInfoOrBuilder extends
    * </pre>
    *
    * <code>string name = 2;</code>
+   * @return The name.
    */
   java.lang.String getName();
   /**
@@ -39,6 +42,7 @@ public interface SnapInfoOrBuilder extends
    * </pre>
    *
    * <code>string name = 2;</code>
+   * @return The bytes for name.
    */
   com.google.protobuf.ByteString
       getNameBytes();
@@ -49,6 +53,7 @@ public interface SnapInfoOrBuilder extends
    * </pre>
    *
    * <code>bool canBeReverted = 3;</code>
+   * @return The canBeReverted.
    */
   boolean getCanBeReverted();
 
@@ -58,6 +63,7 @@ public interface SnapInfoOrBuilder extends
    * </pre>
    *
    * <code>bool isGeneral = 4;</code>
+   * @return The isGeneral.
    */
   boolean getIsGeneral();
 
@@ -67,6 +73,7 @@ public interface SnapInfoOrBuilder extends
    * </pre>
    *
    * <code>int64 createTime = 5;</code>
+   * @return The createTime.
    */
   long getCreateTime();
 
@@ -76,6 +83,7 @@ public interface SnapInfoOrBuilder extends
    * </pre>
    *
    * <code>int64 updateTime = 6;</code>
+   * @return The updateTime.
    */
   long getUpdateTime();
 
@@ -85,6 +93,7 @@ public interface SnapInfoOrBuilder extends
    * </pre>
    *
    * <code>int64 size = 7;</code>
+   * @return The size.
    */
   long getSize();
 
@@ -94,6 +103,7 @@ public interface SnapInfoOrBuilder extends
    * </pre>
    *
    * <code>string type = 8;</code>
+   * @return The type.
    */
   java.lang.String getType();
   /**
@@ -102,6 +112,7 @@ public interface SnapInfoOrBuilder extends
    * </pre>
    *
    * <code>string type = 8;</code>
+   * @return The bytes for type.
    */
   com.google.protobuf.ByteString
       getTypeBytes();
@@ -112,6 +123,7 @@ public interface SnapInfoOrBuilder extends
    * </pre>
    *
    * <code>.didi.cloud.compute.v1.Dc2Info dc2 = 9;</code>
+   * @return Whether the dc2 field is set.
    */
   boolean hasDc2();
   /**
@@ -120,6 +132,7 @@ public interface SnapInfoOrBuilder extends
    * </pre>
    *
    * <code>.didi.cloud.compute.v1.Dc2Info dc2 = 9;</code>
+   * @return The dc2.
    */
   com.didiyun.compute.v1.Dc2Info getDc2();
   /**
@@ -137,6 +150,7 @@ public interface SnapInfoOrBuilder extends
    * </pre>
    *
    * <code>.didi.cloud.compute.v1.EbsInfo ebs = 10;</code>
+   * @return Whether the ebs field is set.
    */
   boolean hasEbs();
   /**
@@ -145,6 +159,7 @@ public interface SnapInfoOrBuilder extends
    * </pre>
    *
    * <code>.didi.cloud.compute.v1.EbsInfo ebs = 10;</code>
+   * @return The ebs.
    */
   com.didiyun.compute.v1.EbsInfo getEbs();
   /**
@@ -162,6 +177,7 @@ public interface SnapInfoOrBuilder extends
    * </pre>
    *
    * <code>.didi.cloud.base.v1.RegionInfo region = 11;</code>
+   * @return Whether the region field is set.
    */
   boolean hasRegion();
   /**
@@ -170,6 +186,7 @@ public interface SnapInfoOrBuilder extends
    * </pre>
    *
    * <code>.didi.cloud.base.v1.RegionInfo region = 11;</code>
+   * @return The region.
    */
   com.didiyun.base.v1.RegionInfo getRegion();
   /**
@@ -187,6 +204,7 @@ public interface SnapInfoOrBuilder extends
    * </pre>
    *
    * <code>.didi.cloud.base.v1.JobInfo job = 12;</code>
+   * @return Whether the job field is set.
    */
   boolean hasJob();
   /**
@@ -195,6 +213,7 @@ public interface SnapInfoOrBuilder extends
    * </pre>
    *
    * <code>.didi.cloud.base.v1.JobInfo job = 12;</code>
+   * @return The job.
    */
   com.didiyun.base.v1.JobInfo getJob();
   /**

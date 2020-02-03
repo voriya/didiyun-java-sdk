@@ -13,6 +13,7 @@ public interface GetSnapshotTotalCntRequestOrBuilder extends
    * </pre>
    *
    * <code>.didi.cloud.base.v1.Header header = 1;</code>
+   * @return Whether the header field is set.
    */
   boolean hasHeader();
   /**
@@ -21,6 +22,7 @@ public interface GetSnapshotTotalCntRequestOrBuilder extends
    * </pre>
    *
    * <code>.didi.cloud.base.v1.Header header = 1;</code>
+   * @return The header.
    */
   com.didiyun.base.v1.Header getHeader();
   /**
@@ -38,6 +40,7 @@ public interface GetSnapshotTotalCntRequestOrBuilder extends
    * </pre>
    *
    * <code>string ebsUuid = 2;</code>
+   * @return The ebsUuid.
    */
   java.lang.String getEbsUuid();
   /**
@@ -46,6 +49,7 @@ public interface GetSnapshotTotalCntRequestOrBuilder extends
    * </pre>
    *
    * <code>string ebsUuid = 2;</code>
+   * @return The bytes for ebsUuid.
    */
   com.google.protobuf.ByteString
       getEbsUuidBytes();
@@ -56,6 +60,7 @@ public interface GetSnapshotTotalCntRequestOrBuilder extends
    * </pre>
    *
    * <code>string snapName = 3;</code>
+   * @return The snapName.
    */
   java.lang.String getSnapName();
   /**
@@ -64,6 +69,7 @@ public interface GetSnapshotTotalCntRequestOrBuilder extends
    * </pre>
    *
    * <code>string snapName = 3;</code>
+   * @return The bytes for snapName.
    */
   com.google.protobuf.ByteString
       getSnapNameBytes();
@@ -74,6 +80,7 @@ public interface GetSnapshotTotalCntRequestOrBuilder extends
    * </pre>
    *
    * <code>string dc2Uuid = 4;</code>
+   * @return The dc2Uuid.
    */
   java.lang.String getDc2Uuid();
   /**
@@ -82,6 +89,7 @@ public interface GetSnapshotTotalCntRequestOrBuilder extends
    * </pre>
    *
    * <code>string dc2Uuid = 4;</code>
+   * @return The bytes for dc2Uuid.
    */
   com.google.protobuf.ByteString
       getDc2UuidBytes();

@@ -13,6 +13,7 @@ public interface CreateVpcRequestOrBuilder extends
    * </pre>
    *
    * <code>.didi.cloud.base.v1.Header header = 1;</code>
+   * @return Whether the header field is set.
    */
   boolean hasHeader();
   /**
@@ -21,6 +22,7 @@ public interface CreateVpcRequestOrBuilder extends
    * </pre>
    *
    * <code>.didi.cloud.base.v1.Header header = 1;</code>
+   * @return The header.
    */
   com.didiyun.base.v1.Header getHeader();
   /**
@@ -38,6 +40,7 @@ public interface CreateVpcRequestOrBuilder extends
    * </pre>
    *
    * <code>string name = 2;</code>
+   * @return The name.
    */
   java.lang.String getName();
   /**
@@ -46,6 +49,7 @@ public interface CreateVpcRequestOrBuilder extends
    * </pre>
    *
    * <code>string name = 2;</code>
+   * @return The bytes for name.
    */
   com.google.protobuf.ByteString
       getNameBytes();
@@ -56,6 +60,7 @@ public interface CreateVpcRequestOrBuilder extends
    * </pre>
    *
    * <code>string cidr = 3;</code>
+   * @return The cidr.
    */
   java.lang.String getCidr();
   /**
@@ -64,6 +69,7 @@ public interface CreateVpcRequestOrBuilder extends
    * </pre>
    *
    * <code>string cidr = 3;</code>
+   * @return The bytes for cidr.
    */
   com.google.protobuf.ByteString
       getCidrBytes();

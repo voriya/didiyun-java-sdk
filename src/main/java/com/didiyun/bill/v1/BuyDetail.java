@@ -16,13 +16,16 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private BuyDetail() {
-    unitVolume_ = 0L;
     volumeUnitDescribe_ = "";
-    range_ = java.util.Collections.emptyList();
-    in_ = java.util.Collections.emptyList();
-    unitPrice_ = 0D;
-    value_ = 0L;
-    realPrice_ = 0D;
+    range_ = emptyLongList();
+    in_ = emptyLongList();
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new BuyDetail();
   }
 
   @java.lang.Override
@@ -61,43 +64,43 @@ private static final long serialVersionUID = 0L;
             break;
           }
           case 24: {
-            if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
-              range_ = new java.util.ArrayList<java.lang.Long>();
-              mutable_bitField0_ |= 0x00000004;
+            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+              range_ = newLongList();
+              mutable_bitField0_ |= 0x00000001;
             }
-            range_.add(input.readInt64());
+            range_.addLong(input.readInt64());
             break;
           }
           case 26: {
             int length = input.readRawVarint32();
             int limit = input.pushLimit(length);
-            if (!((mutable_bitField0_ & 0x00000004) == 0x00000004) && input.getBytesUntilLimit() > 0) {
-              range_ = new java.util.ArrayList<java.lang.Long>();
-              mutable_bitField0_ |= 0x00000004;
+            if (!((mutable_bitField0_ & 0x00000001) != 0) && input.getBytesUntilLimit() > 0) {
+              range_ = newLongList();
+              mutable_bitField0_ |= 0x00000001;
             }
             while (input.getBytesUntilLimit() > 0) {
-              range_.add(input.readInt64());
+              range_.addLong(input.readInt64());
             }
             input.popLimit(limit);
             break;
           }
           case 32: {
-            if (!((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
-              in_ = new java.util.ArrayList<java.lang.Long>();
-              mutable_bitField0_ |= 0x00000008;
+            if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+              in_ = newLongList();
+              mutable_bitField0_ |= 0x00000002;
             }
-            in_.add(input.readInt64());
+            in_.addLong(input.readInt64());
             break;
           }
           case 34: {
             int length = input.readRawVarint32();
             int limit = input.pushLimit(length);
-            if (!((mutable_bitField0_ & 0x00000008) == 0x00000008) && input.getBytesUntilLimit() > 0) {
-              in_ = new java.util.ArrayList<java.lang.Long>();
-              mutable_bitField0_ |= 0x00000008;
+            if (!((mutable_bitField0_ & 0x00000002) != 0) && input.getBytesUntilLimit() > 0) {
+              in_ = newLongList();
+              mutable_bitField0_ |= 0x00000002;
             }
             while (input.getBytesUntilLimit() > 0) {
-              in_.add(input.readInt64());
+              in_.addLong(input.readInt64());
             }
             input.popLimit(limit);
             break;
@@ -118,7 +121,7 @@ private static final long serialVersionUID = 0L;
             break;
           }
           default: {
-            if (!parseUnknownFieldProto3(
+            if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
               done = true;
             }
@@ -132,11 +135,11 @@ private static final long serialVersionUID = 0L;
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
     } finally {
-      if (((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
-        range_ = java.util.Collections.unmodifiableList(range_);
+      if (((mutable_bitField0_ & 0x00000001) != 0)) {
+        range_.makeImmutable(); // C
       }
-      if (((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
-        in_ = java.util.Collections.unmodifiableList(in_);
+      if (((mutable_bitField0_ & 0x00000002) != 0)) {
+        in_.makeImmutable(); // C
       }
       this.unknownFields = unknownFields.build();
       makeExtensionsImmutable();
@@ -155,7 +158,6 @@ private static final long serialVersionUID = 0L;
             com.didiyun.bill.v1.BuyDetail.class, com.didiyun.bill.v1.BuyDetail.Builder.class);
   }
 
-  private int bitField0_;
   public static final int UNITVOLUME_FIELD_NUMBER = 1;
   private long unitVolume_;
   /**
@@ -164,6 +166,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>int64 unitVolume = 1;</code>
+   * @return The unitVolume.
    */
   public long getUnitVolume() {
     return unitVolume_;
@@ -177,6 +180,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string volumeUnitDescribe = 2;</code>
+   * @return The volumeUnitDescribe.
    */
   public java.lang.String getVolumeUnitDescribe() {
     java.lang.Object ref = volumeUnitDescribe_;
@@ -196,6 +200,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string volumeUnitDescribe = 2;</code>
+   * @return The bytes for volumeUnitDescribe.
    */
   public com.google.protobuf.ByteString
       getVolumeUnitDescribeBytes() {
@@ -212,13 +217,14 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int RANGE_FIELD_NUMBER = 3;
-  private java.util.List<java.lang.Long> range_;
+  private com.google.protobuf.Internal.LongList range_;
   /**
    * <pre>
    *value的取值范围 value * unitvolume为此factor的规格描述
    * </pre>
    *
    * <code>repeated int64 range = 3;</code>
+   * @return A list containing the range.
    */
   public java.util.List<java.lang.Long>
       getRangeList() {
@@ -230,6 +236,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>repeated int64 range = 3;</code>
+   * @return The count of range.
    */
   public int getRangeCount() {
     return range_.size();
@@ -240,20 +247,23 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>repeated int64 range = 3;</code>
+   * @param index The index of the element to return.
+   * @return The range at the given index.
    */
   public long getRange(int index) {
-    return range_.get(index);
+    return range_.getLong(index);
   }
   private int rangeMemoizedSerializedSize = -1;
 
   public static final int IN_FIELD_NUMBER = 4;
-  private java.util.List<java.lang.Long> in_;
+  private com.google.protobuf.Internal.LongList in_;
   /**
    * <pre>
    *与range互斥，range的离散表示
    * </pre>
    *
    * <code>repeated int64 in = 4;</code>
+   * @return A list containing the in.
    */
   public java.util.List<java.lang.Long>
       getInList() {
@@ -265,6 +275,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>repeated int64 in = 4;</code>
+   * @return The count of in.
    */
   public int getInCount() {
     return in_.size();
@@ -275,9 +286,11 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>repeated int64 in = 4;</code>
+   * @param index The index of the element to return.
+   * @return The in at the given index.
    */
   public long getIn(int index) {
-    return in_.get(index);
+    return in_.getLong(index);
   }
   private int inMemoizedSerializedSize = -1;
 
@@ -289,6 +302,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>double unitPrice = 5;</code>
+   * @return The unitPrice.
    */
   public double getUnitPrice() {
     return unitPrice_;
@@ -302,6 +316,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>int64 value = 6;</code>
+   * @return The value.
    */
   public long getValue() {
     return value_;
@@ -315,6 +330,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>double realPrice = 7;</code>
+   * @return The realPrice.
    */
   public double getRealPrice() {
     return realPrice_;
@@ -346,14 +362,14 @@ private static final long serialVersionUID = 0L;
       output.writeUInt32NoTag(rangeMemoizedSerializedSize);
     }
     for (int i = 0; i < range_.size(); i++) {
-      output.writeInt64NoTag(range_.get(i));
+      output.writeInt64NoTag(range_.getLong(i));
     }
     if (getInList().size() > 0) {
       output.writeUInt32NoTag(34);
       output.writeUInt32NoTag(inMemoizedSerializedSize);
     }
     for (int i = 0; i < in_.size(); i++) {
-      output.writeInt64NoTag(in_.get(i));
+      output.writeInt64NoTag(in_.getLong(i));
     }
     if (unitPrice_ != 0D) {
       output.writeDouble(5, unitPrice_);
@@ -384,7 +400,7 @@ private static final long serialVersionUID = 0L;
       int dataSize = 0;
       for (int i = 0; i < range_.size(); i++) {
         dataSize += com.google.protobuf.CodedOutputStream
-          .computeInt64SizeNoTag(range_.get(i));
+          .computeInt64SizeNoTag(range_.getLong(i));
       }
       size += dataSize;
       if (!getRangeList().isEmpty()) {
@@ -398,7 +414,7 @@ private static final long serialVersionUID = 0L;
       int dataSize = 0;
       for (int i = 0; i < in_.size(); i++) {
         dataSize += com.google.protobuf.CodedOutputStream
-          .computeInt64SizeNoTag(in_.get(i));
+          .computeInt64SizeNoTag(in_.getLong(i));
       }
       size += dataSize;
       if (!getInList().isEmpty()) {
@@ -435,27 +451,24 @@ private static final long serialVersionUID = 0L;
     }
     com.didiyun.bill.v1.BuyDetail other = (com.didiyun.bill.v1.BuyDetail) obj;
 
-    boolean result = true;
-    result = result && (getUnitVolume()
-        == other.getUnitVolume());
-    result = result && getVolumeUnitDescribe()
-        .equals(other.getVolumeUnitDescribe());
-    result = result && getRangeList()
-        .equals(other.getRangeList());
-    result = result && getInList()
-        .equals(other.getInList());
-    result = result && (
-        java.lang.Double.doubleToLongBits(getUnitPrice())
-        == java.lang.Double.doubleToLongBits(
-            other.getUnitPrice()));
-    result = result && (getValue()
-        == other.getValue());
-    result = result && (
-        java.lang.Double.doubleToLongBits(getRealPrice())
-        == java.lang.Double.doubleToLongBits(
-            other.getRealPrice()));
-    result = result && unknownFields.equals(other.unknownFields);
-    return result;
+    if (getUnitVolume()
+        != other.getUnitVolume()) return false;
+    if (!getVolumeUnitDescribe()
+        .equals(other.getVolumeUnitDescribe())) return false;
+    if (!getRangeList()
+        .equals(other.getRangeList())) return false;
+    if (!getInList()
+        .equals(other.getInList())) return false;
+    if (java.lang.Double.doubleToLongBits(getUnitPrice())
+        != java.lang.Double.doubleToLongBits(
+            other.getUnitPrice())) return false;
+    if (getValue()
+        != other.getValue()) return false;
+    if (java.lang.Double.doubleToLongBits(getRealPrice())
+        != java.lang.Double.doubleToLongBits(
+            other.getRealPrice())) return false;
+    if (!unknownFields.equals(other.unknownFields)) return false;
+    return true;
   }
 
   @java.lang.Override
@@ -624,10 +637,10 @@ private static final long serialVersionUID = 0L;
 
       volumeUnitDescribe_ = "";
 
-      range_ = java.util.Collections.emptyList();
-      bitField0_ = (bitField0_ & ~0x00000004);
-      in_ = java.util.Collections.emptyList();
-      bitField0_ = (bitField0_ & ~0x00000008);
+      range_ = emptyLongList();
+      bitField0_ = (bitField0_ & ~0x00000001);
+      in_ = emptyLongList();
+      bitField0_ = (bitField0_ & ~0x00000002);
       unitPrice_ = 0D;
 
       value_ = 0L;
@@ -661,58 +674,56 @@ private static final long serialVersionUID = 0L;
     public com.didiyun.bill.v1.BuyDetail buildPartial() {
       com.didiyun.bill.v1.BuyDetail result = new com.didiyun.bill.v1.BuyDetail(this);
       int from_bitField0_ = bitField0_;
-      int to_bitField0_ = 0;
       result.unitVolume_ = unitVolume_;
       result.volumeUnitDescribe_ = volumeUnitDescribe_;
-      if (((bitField0_ & 0x00000004) == 0x00000004)) {
-        range_ = java.util.Collections.unmodifiableList(range_);
-        bitField0_ = (bitField0_ & ~0x00000004);
+      if (((bitField0_ & 0x00000001) != 0)) {
+        range_.makeImmutable();
+        bitField0_ = (bitField0_ & ~0x00000001);
       }
       result.range_ = range_;
-      if (((bitField0_ & 0x00000008) == 0x00000008)) {
-        in_ = java.util.Collections.unmodifiableList(in_);
-        bitField0_ = (bitField0_ & ~0x00000008);
+      if (((bitField0_ & 0x00000002) != 0)) {
+        in_.makeImmutable();
+        bitField0_ = (bitField0_ & ~0x00000002);
       }
       result.in_ = in_;
       result.unitPrice_ = unitPrice_;
       result.value_ = value_;
       result.realPrice_ = realPrice_;
-      result.bitField0_ = to_bitField0_;
       onBuilt();
       return result;
     }
 
     @java.lang.Override
     public Builder clone() {
-      return (Builder) super.clone();
+      return super.clone();
     }
     @java.lang.Override
     public Builder setField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return (Builder) super.setField(field, value);
+      return super.setField(field, value);
     }
     @java.lang.Override
     public Builder clearField(
         com.google.protobuf.Descriptors.FieldDescriptor field) {
-      return (Builder) super.clearField(field);
+      return super.clearField(field);
     }
     @java.lang.Override
     public Builder clearOneof(
         com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-      return (Builder) super.clearOneof(oneof);
+      return super.clearOneof(oneof);
     }
     @java.lang.Override
     public Builder setRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         int index, java.lang.Object value) {
-      return (Builder) super.setRepeatedField(field, index, value);
+      return super.setRepeatedField(field, index, value);
     }
     @java.lang.Override
     public Builder addRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return (Builder) super.addRepeatedField(field, value);
+      return super.addRepeatedField(field, value);
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -736,7 +747,7 @@ private static final long serialVersionUID = 0L;
       if (!other.range_.isEmpty()) {
         if (range_.isEmpty()) {
           range_ = other.range_;
-          bitField0_ = (bitField0_ & ~0x00000004);
+          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
           ensureRangeIsMutable();
           range_.addAll(other.range_);
@@ -746,7 +757,7 @@ private static final long serialVersionUID = 0L;
       if (!other.in_.isEmpty()) {
         if (in_.isEmpty()) {
           in_ = other.in_;
-          bitField0_ = (bitField0_ & ~0x00000008);
+          bitField0_ = (bitField0_ & ~0x00000002);
         } else {
           ensureInIsMutable();
           in_.addAll(other.in_);
@@ -799,6 +810,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>int64 unitVolume = 1;</code>
+     * @return The unitVolume.
      */
     public long getUnitVolume() {
       return unitVolume_;
@@ -809,6 +821,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>int64 unitVolume = 1;</code>
+     * @param value The unitVolume to set.
+     * @return This builder for chaining.
      */
     public Builder setUnitVolume(long value) {
       
@@ -822,6 +836,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>int64 unitVolume = 1;</code>
+     * @return This builder for chaining.
      */
     public Builder clearUnitVolume() {
       
@@ -837,6 +852,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string volumeUnitDescribe = 2;</code>
+     * @return The volumeUnitDescribe.
      */
     public java.lang.String getVolumeUnitDescribe() {
       java.lang.Object ref = volumeUnitDescribe_;
@@ -856,6 +872,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string volumeUnitDescribe = 2;</code>
+     * @return The bytes for volumeUnitDescribe.
      */
     public com.google.protobuf.ByteString
         getVolumeUnitDescribeBytes() {
@@ -876,6 +893,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string volumeUnitDescribe = 2;</code>
+     * @param value The volumeUnitDescribe to set.
+     * @return This builder for chaining.
      */
     public Builder setVolumeUnitDescribe(
         java.lang.String value) {
@@ -893,6 +912,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string volumeUnitDescribe = 2;</code>
+     * @return This builder for chaining.
      */
     public Builder clearVolumeUnitDescribe() {
       
@@ -906,6 +926,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string volumeUnitDescribe = 2;</code>
+     * @param value The bytes for volumeUnitDescribe to set.
+     * @return This builder for chaining.
      */
     public Builder setVolumeUnitDescribeBytes(
         com.google.protobuf.ByteString value) {
@@ -919,11 +941,11 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private java.util.List<java.lang.Long> range_ = java.util.Collections.emptyList();
+    private com.google.protobuf.Internal.LongList range_ = emptyLongList();
     private void ensureRangeIsMutable() {
-      if (!((bitField0_ & 0x00000004) == 0x00000004)) {
-        range_ = new java.util.ArrayList<java.lang.Long>(range_);
-        bitField0_ |= 0x00000004;
+      if (!((bitField0_ & 0x00000001) != 0)) {
+        range_ = mutableCopy(range_);
+        bitField0_ |= 0x00000001;
        }
     }
     /**
@@ -932,10 +954,12 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated int64 range = 3;</code>
+     * @return A list containing the range.
      */
     public java.util.List<java.lang.Long>
         getRangeList() {
-      return java.util.Collections.unmodifiableList(range_);
+      return ((bitField0_ & 0x00000001) != 0) ?
+               java.util.Collections.unmodifiableList(range_) : range_;
     }
     /**
      * <pre>
@@ -943,6 +967,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated int64 range = 3;</code>
+     * @return The count of range.
      */
     public int getRangeCount() {
       return range_.size();
@@ -953,9 +978,11 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated int64 range = 3;</code>
+     * @param index The index of the element to return.
+     * @return The range at the given index.
      */
     public long getRange(int index) {
-      return range_.get(index);
+      return range_.getLong(index);
     }
     /**
      * <pre>
@@ -963,11 +990,14 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated int64 range = 3;</code>
+     * @param index The index to set the value at.
+     * @param value The range to set.
+     * @return This builder for chaining.
      */
     public Builder setRange(
         int index, long value) {
       ensureRangeIsMutable();
-      range_.set(index, value);
+      range_.setLong(index, value);
       onChanged();
       return this;
     }
@@ -977,10 +1007,12 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated int64 range = 3;</code>
+     * @param value The range to add.
+     * @return This builder for chaining.
      */
     public Builder addRange(long value) {
       ensureRangeIsMutable();
-      range_.add(value);
+      range_.addLong(value);
       onChanged();
       return this;
     }
@@ -990,6 +1022,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated int64 range = 3;</code>
+     * @param values The range to add.
+     * @return This builder for chaining.
      */
     public Builder addAllRange(
         java.lang.Iterable<? extends java.lang.Long> values) {
@@ -1005,19 +1039,20 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated int64 range = 3;</code>
+     * @return This builder for chaining.
      */
     public Builder clearRange() {
-      range_ = java.util.Collections.emptyList();
-      bitField0_ = (bitField0_ & ~0x00000004);
+      range_ = emptyLongList();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
 
-    private java.util.List<java.lang.Long> in_ = java.util.Collections.emptyList();
+    private com.google.protobuf.Internal.LongList in_ = emptyLongList();
     private void ensureInIsMutable() {
-      if (!((bitField0_ & 0x00000008) == 0x00000008)) {
-        in_ = new java.util.ArrayList<java.lang.Long>(in_);
-        bitField0_ |= 0x00000008;
+      if (!((bitField0_ & 0x00000002) != 0)) {
+        in_ = mutableCopy(in_);
+        bitField0_ |= 0x00000002;
        }
     }
     /**
@@ -1026,10 +1061,12 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated int64 in = 4;</code>
+     * @return A list containing the in.
      */
     public java.util.List<java.lang.Long>
         getInList() {
-      return java.util.Collections.unmodifiableList(in_);
+      return ((bitField0_ & 0x00000002) != 0) ?
+               java.util.Collections.unmodifiableList(in_) : in_;
     }
     /**
      * <pre>
@@ -1037,6 +1074,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated int64 in = 4;</code>
+     * @return The count of in.
      */
     public int getInCount() {
       return in_.size();
@@ -1047,9 +1085,11 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated int64 in = 4;</code>
+     * @param index The index of the element to return.
+     * @return The in at the given index.
      */
     public long getIn(int index) {
-      return in_.get(index);
+      return in_.getLong(index);
     }
     /**
      * <pre>
@@ -1057,11 +1097,14 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated int64 in = 4;</code>
+     * @param index The index to set the value at.
+     * @param value The in to set.
+     * @return This builder for chaining.
      */
     public Builder setIn(
         int index, long value) {
       ensureInIsMutable();
-      in_.set(index, value);
+      in_.setLong(index, value);
       onChanged();
       return this;
     }
@@ -1071,10 +1114,12 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated int64 in = 4;</code>
+     * @param value The in to add.
+     * @return This builder for chaining.
      */
     public Builder addIn(long value) {
       ensureInIsMutable();
-      in_.add(value);
+      in_.addLong(value);
       onChanged();
       return this;
     }
@@ -1084,6 +1129,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated int64 in = 4;</code>
+     * @param values The in to add.
+     * @return This builder for chaining.
      */
     public Builder addAllIn(
         java.lang.Iterable<? extends java.lang.Long> values) {
@@ -1099,10 +1146,11 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated int64 in = 4;</code>
+     * @return This builder for chaining.
      */
     public Builder clearIn() {
-      in_ = java.util.Collections.emptyList();
-      bitField0_ = (bitField0_ & ~0x00000008);
+      in_ = emptyLongList();
+      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
@@ -1114,6 +1162,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>double unitPrice = 5;</code>
+     * @return The unitPrice.
      */
     public double getUnitPrice() {
       return unitPrice_;
@@ -1124,6 +1173,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>double unitPrice = 5;</code>
+     * @param value The unitPrice to set.
+     * @return This builder for chaining.
      */
     public Builder setUnitPrice(double value) {
       
@@ -1137,6 +1188,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>double unitPrice = 5;</code>
+     * @return This builder for chaining.
      */
     public Builder clearUnitPrice() {
       
@@ -1152,6 +1204,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>int64 value = 6;</code>
+     * @return The value.
      */
     public long getValue() {
       return value_;
@@ -1162,6 +1215,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>int64 value = 6;</code>
+     * @param value The value to set.
+     * @return This builder for chaining.
      */
     public Builder setValue(long value) {
       
@@ -1175,6 +1230,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>int64 value = 6;</code>
+     * @return This builder for chaining.
      */
     public Builder clearValue() {
       
@@ -1190,6 +1246,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>double realPrice = 7;</code>
+     * @return The realPrice.
      */
     public double getRealPrice() {
       return realPrice_;
@@ -1200,6 +1257,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>double realPrice = 7;</code>
+     * @param value The realPrice to set.
+     * @return This builder for chaining.
      */
     public Builder setRealPrice(double value) {
       
@@ -1213,6 +1272,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>double realPrice = 7;</code>
+     * @return This builder for chaining.
      */
     public Builder clearRealPrice() {
       
@@ -1223,7 +1283,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
-      return super.setUnknownFieldsProto3(unknownFields);
+      return super.setUnknownFields(unknownFields);
     }
 
     @java.lang.Override

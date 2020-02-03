@@ -13,6 +13,7 @@ public interface ChangeExpireStrategyRequestOrBuilder extends
    * </pre>
    *
    * <code>.didi.cloud.base.v1.Header header = 1;</code>
+   * @return Whether the header field is set.
    */
   boolean hasHeader();
   /**
@@ -21,6 +22,7 @@ public interface ChangeExpireStrategyRequestOrBuilder extends
    * </pre>
    *
    * <code>.didi.cloud.base.v1.Header header = 1;</code>
+   * @return The header.
    */
   com.didiyun.base.v1.Header getHeader();
   /**
@@ -38,6 +40,7 @@ public interface ChangeExpireStrategyRequestOrBuilder extends
    * </pre>
    *
    * <code>int32 autoRenewCnt = 2;</code>
+   * @return The autoRenewCnt.
    */
   int getAutoRenewCnt();
 
@@ -47,6 +50,7 @@ public interface ChangeExpireStrategyRequestOrBuilder extends
    * </pre>
    *
    * <code>bool autoSwitch = 3;</code>
+   * @return The autoSwitch.
    */
   boolean getAutoSwitch();
 

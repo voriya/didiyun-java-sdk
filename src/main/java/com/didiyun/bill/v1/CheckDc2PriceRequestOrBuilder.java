@@ -13,6 +13,7 @@ public interface CheckDc2PriceRequestOrBuilder extends
    * </pre>
    *
    * <code>.didi.cloud.base.v1.Header header = 1;</code>
+   * @return Whether the header field is set.
    */
   boolean hasHeader();
   /**
@@ -21,6 +22,7 @@ public interface CheckDc2PriceRequestOrBuilder extends
    * </pre>
    *
    * <code>.didi.cloud.base.v1.Header header = 1;</code>
+   * @return The header.
    */
   com.didiyun.base.v1.Header getHeader();
   /**
@@ -34,20 +36,24 @@ public interface CheckDc2PriceRequestOrBuilder extends
 
   /**
    * <code>bool checkCoupon = 2;</code>
+   * @return The checkCoupon.
    */
   boolean getCheckCoupon();
 
   /**
    * <code>bool isChange = 3;</code>
+   * @return The isChange.
    */
   boolean getIsChange();
 
   /**
    * <code>.didi.cloud.bill.v1.CheckDc2PriceInput dc2Goods = 4;</code>
+   * @return Whether the dc2Goods field is set.
    */
   boolean hasDc2Goods();
   /**
    * <code>.didi.cloud.bill.v1.CheckDc2PriceInput dc2Goods = 4;</code>
+   * @return The dc2Goods.
    */
   com.didiyun.bill.v1.CheckDc2PriceInput getDc2Goods();
   /**

@@ -13,6 +13,7 @@ public interface CheckEipPriceInputOrBuilder extends
    * </pre>
    *
    * <code>int32 count = 1;</code>
+   * @return The count.
    */
   int getCount();
 
@@ -22,6 +23,7 @@ public interface CheckEipPriceInputOrBuilder extends
    * </pre>
    *
    * <code>int32 payPeriod = 2;</code>
+   * @return The payPeriod.
    */
   int getPayPeriod();
 
@@ -31,6 +33,7 @@ public interface CheckEipPriceInputOrBuilder extends
    * </pre>
    *
    * <code>int32 bandwidth = 3;</code>
+   * @return The bandwidth.
    */
   int getBandwidth();
 
@@ -40,6 +43,7 @@ public interface CheckEipPriceInputOrBuilder extends
    * </pre>
    *
    * <code>bool chargeWithFlow = 4;</code>
+   * @return The chargeWithFlow.
    */
   boolean getChargeWithFlow();
 
@@ -49,6 +53,7 @@ public interface CheckEipPriceInputOrBuilder extends
    * </pre>
    *
    * <code>string eipUuid = 5;</code>
+   * @return The eipUuid.
    */
   java.lang.String getEipUuid();
   /**
@@ -57,6 +62,7 @@ public interface CheckEipPriceInputOrBuilder extends
    * </pre>
    *
    * <code>string eipUuid = 5;</code>
+   * @return The bytes for eipUuid.
    */
   com.google.protobuf.ByteString
       getEipUuidBytes();

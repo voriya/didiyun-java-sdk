@@ -22,6 +22,13 @@ private static final long serialVersionUID = 0L;
   }
 
   @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new CounterResource();
+  }
+
+  @java.lang.Override
   public final com.google.protobuf.UnknownFieldSet
   getUnknownFields() {
     return this.unknownFields;
@@ -47,7 +54,7 @@ private static final long serialVersionUID = 0L;
             break;
           case 10: {
             java.lang.String s = input.readStringRequireUtf8();
-            if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
               resourceUuids_ = new com.google.protobuf.LazyStringArrayList();
               mutable_bitField0_ |= 0x00000001;
             }
@@ -62,15 +69,15 @@ private static final long serialVersionUID = 0L;
           }
           case 26: {
             java.lang.String s = input.readStringRequireUtf8();
-            if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+            if (!((mutable_bitField0_ & 0x00000002) != 0)) {
               metric_ = new com.google.protobuf.LazyStringArrayList();
-              mutable_bitField0_ |= 0x00000004;
+              mutable_bitField0_ |= 0x00000002;
             }
             metric_.add(s);
             break;
           }
           default: {
-            if (!parseUnknownFieldProto3(
+            if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
               done = true;
             }
@@ -84,10 +91,10 @@ private static final long serialVersionUID = 0L;
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
     } finally {
-      if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+      if (((mutable_bitField0_ & 0x00000001) != 0)) {
         resourceUuids_ = resourceUuids_.getUnmodifiableView();
       }
-      if (((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+      if (((mutable_bitField0_ & 0x00000002) != 0)) {
         metric_ = metric_.getUnmodifiableView();
       }
       this.unknownFields = unknownFields.build();
@@ -107,7 +114,6 @@ private static final long serialVersionUID = 0L;
             com.didiyun.monitor.v1.CounterResource.class, com.didiyun.monitor.v1.CounterResource.Builder.class);
   }
 
-  private int bitField0_;
   public static final int RESOURCEUUIDS_FIELD_NUMBER = 1;
   private com.google.protobuf.LazyStringList resourceUuids_;
   /**
@@ -116,6 +122,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>repeated string resourceUuids = 1;</code>
+   * @return A list containing the resourceUuids.
    */
   public com.google.protobuf.ProtocolStringList
       getResourceUuidsList() {
@@ -127,6 +134,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>repeated string resourceUuids = 1;</code>
+   * @return The count of resourceUuids.
    */
   public int getResourceUuidsCount() {
     return resourceUuids_.size();
@@ -137,6 +145,8 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>repeated string resourceUuids = 1;</code>
+   * @param index The index of the element to return.
+   * @return The resourceUuids at the given index.
    */
   public java.lang.String getResourceUuids(int index) {
     return resourceUuids_.get(index);
@@ -147,6 +157,8 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>repeated string resourceUuids = 1;</code>
+   * @param index The index of the value to return.
+   * @return The bytes of the resourceUuids at the given index.
    */
   public com.google.protobuf.ByteString
       getResourceUuidsBytes(int index) {
@@ -161,6 +173,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string resourceType = 2;</code>
+   * @return The resourceType.
    */
   public java.lang.String getResourceType() {
     java.lang.Object ref = resourceType_;
@@ -180,6 +193,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string resourceType = 2;</code>
+   * @return The bytes for resourceType.
    */
   public com.google.protobuf.ByteString
       getResourceTypeBytes() {
@@ -203,6 +217,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>repeated string metric = 3;</code>
+   * @return A list containing the metric.
    */
   public com.google.protobuf.ProtocolStringList
       getMetricList() {
@@ -214,6 +229,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>repeated string metric = 3;</code>
+   * @return The count of metric.
    */
   public int getMetricCount() {
     return metric_.size();
@@ -224,6 +240,8 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>repeated string metric = 3;</code>
+   * @param index The index of the element to return.
+   * @return The metric at the given index.
    */
   public java.lang.String getMetric(int index) {
     return metric_.get(index);
@@ -234,6 +252,8 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>repeated string metric = 3;</code>
+   * @param index The index of the value to return.
+   * @return The bytes of the metric at the given index.
    */
   public com.google.protobuf.ByteString
       getMetricBytes(int index) {
@@ -306,15 +326,14 @@ private static final long serialVersionUID = 0L;
     }
     com.didiyun.monitor.v1.CounterResource other = (com.didiyun.monitor.v1.CounterResource) obj;
 
-    boolean result = true;
-    result = result && getResourceUuidsList()
-        .equals(other.getResourceUuidsList());
-    result = result && getResourceType()
-        .equals(other.getResourceType());
-    result = result && getMetricList()
-        .equals(other.getMetricList());
-    result = result && unknownFields.equals(other.unknownFields);
-    return result;
+    if (!getResourceUuidsList()
+        .equals(other.getResourceUuidsList())) return false;
+    if (!getResourceType()
+        .equals(other.getResourceType())) return false;
+    if (!getMetricList()
+        .equals(other.getMetricList())) return false;
+    if (!unknownFields.equals(other.unknownFields)) return false;
+    return true;
   }
 
   @java.lang.Override
@@ -472,7 +491,7 @@ private static final long serialVersionUID = 0L;
       resourceType_ = "";
 
       metric_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000004);
+      bitField0_ = (bitField0_ & ~0x00000002);
       return this;
     }
 
@@ -500,54 +519,52 @@ private static final long serialVersionUID = 0L;
     public com.didiyun.monitor.v1.CounterResource buildPartial() {
       com.didiyun.monitor.v1.CounterResource result = new com.didiyun.monitor.v1.CounterResource(this);
       int from_bitField0_ = bitField0_;
-      int to_bitField0_ = 0;
-      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         resourceUuids_ = resourceUuids_.getUnmodifiableView();
         bitField0_ = (bitField0_ & ~0x00000001);
       }
       result.resourceUuids_ = resourceUuids_;
       result.resourceType_ = resourceType_;
-      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         metric_ = metric_.getUnmodifiableView();
-        bitField0_ = (bitField0_ & ~0x00000004);
+        bitField0_ = (bitField0_ & ~0x00000002);
       }
       result.metric_ = metric_;
-      result.bitField0_ = to_bitField0_;
       onBuilt();
       return result;
     }
 
     @java.lang.Override
     public Builder clone() {
-      return (Builder) super.clone();
+      return super.clone();
     }
     @java.lang.Override
     public Builder setField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return (Builder) super.setField(field, value);
+      return super.setField(field, value);
     }
     @java.lang.Override
     public Builder clearField(
         com.google.protobuf.Descriptors.FieldDescriptor field) {
-      return (Builder) super.clearField(field);
+      return super.clearField(field);
     }
     @java.lang.Override
     public Builder clearOneof(
         com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-      return (Builder) super.clearOneof(oneof);
+      return super.clearOneof(oneof);
     }
     @java.lang.Override
     public Builder setRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         int index, java.lang.Object value) {
-      return (Builder) super.setRepeatedField(field, index, value);
+      return super.setRepeatedField(field, index, value);
     }
     @java.lang.Override
     public Builder addRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return (Builder) super.addRepeatedField(field, value);
+      return super.addRepeatedField(field, value);
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -578,7 +595,7 @@ private static final long serialVersionUID = 0L;
       if (!other.metric_.isEmpty()) {
         if (metric_.isEmpty()) {
           metric_ = other.metric_;
-          bitField0_ = (bitField0_ & ~0x00000004);
+          bitField0_ = (bitField0_ & ~0x00000002);
         } else {
           ensureMetricIsMutable();
           metric_.addAll(other.metric_);
@@ -617,7 +634,7 @@ private static final long serialVersionUID = 0L;
 
     private com.google.protobuf.LazyStringList resourceUuids_ = com.google.protobuf.LazyStringArrayList.EMPTY;
     private void ensureResourceUuidsIsMutable() {
-      if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+      if (!((bitField0_ & 0x00000001) != 0)) {
         resourceUuids_ = new com.google.protobuf.LazyStringArrayList(resourceUuids_);
         bitField0_ |= 0x00000001;
        }
@@ -628,6 +645,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated string resourceUuids = 1;</code>
+     * @return A list containing the resourceUuids.
      */
     public com.google.protobuf.ProtocolStringList
         getResourceUuidsList() {
@@ -639,6 +657,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated string resourceUuids = 1;</code>
+     * @return The count of resourceUuids.
      */
     public int getResourceUuidsCount() {
       return resourceUuids_.size();
@@ -649,6 +668,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated string resourceUuids = 1;</code>
+     * @param index The index of the element to return.
+     * @return The resourceUuids at the given index.
      */
     public java.lang.String getResourceUuids(int index) {
       return resourceUuids_.get(index);
@@ -659,6 +680,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated string resourceUuids = 1;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the resourceUuids at the given index.
      */
     public com.google.protobuf.ByteString
         getResourceUuidsBytes(int index) {
@@ -670,6 +693,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated string resourceUuids = 1;</code>
+     * @param index The index to set the value at.
+     * @param value The resourceUuids to set.
+     * @return This builder for chaining.
      */
     public Builder setResourceUuids(
         int index, java.lang.String value) {
@@ -687,6 +713,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated string resourceUuids = 1;</code>
+     * @param value The resourceUuids to add.
+     * @return This builder for chaining.
      */
     public Builder addResourceUuids(
         java.lang.String value) {
@@ -704,6 +732,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated string resourceUuids = 1;</code>
+     * @param values The resourceUuids to add.
+     * @return This builder for chaining.
      */
     public Builder addAllResourceUuids(
         java.lang.Iterable<java.lang.String> values) {
@@ -719,6 +749,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated string resourceUuids = 1;</code>
+     * @return This builder for chaining.
      */
     public Builder clearResourceUuids() {
       resourceUuids_ = com.google.protobuf.LazyStringArrayList.EMPTY;
@@ -732,6 +763,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated string resourceUuids = 1;</code>
+     * @param value The bytes of the resourceUuids to add.
+     * @return This builder for chaining.
      */
     public Builder addResourceUuidsBytes(
         com.google.protobuf.ByteString value) {
@@ -752,6 +785,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string resourceType = 2;</code>
+     * @return The resourceType.
      */
     public java.lang.String getResourceType() {
       java.lang.Object ref = resourceType_;
@@ -771,6 +805,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string resourceType = 2;</code>
+     * @return The bytes for resourceType.
      */
     public com.google.protobuf.ByteString
         getResourceTypeBytes() {
@@ -791,6 +826,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string resourceType = 2;</code>
+     * @param value The resourceType to set.
+     * @return This builder for chaining.
      */
     public Builder setResourceType(
         java.lang.String value) {
@@ -808,6 +845,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string resourceType = 2;</code>
+     * @return This builder for chaining.
      */
     public Builder clearResourceType() {
       
@@ -821,6 +859,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string resourceType = 2;</code>
+     * @param value The bytes for resourceType to set.
+     * @return This builder for chaining.
      */
     public Builder setResourceTypeBytes(
         com.google.protobuf.ByteString value) {
@@ -836,9 +876,9 @@ private static final long serialVersionUID = 0L;
 
     private com.google.protobuf.LazyStringList metric_ = com.google.protobuf.LazyStringArrayList.EMPTY;
     private void ensureMetricIsMutable() {
-      if (!((bitField0_ & 0x00000004) == 0x00000004)) {
+      if (!((bitField0_ & 0x00000002) != 0)) {
         metric_ = new com.google.protobuf.LazyStringArrayList(metric_);
-        bitField0_ |= 0x00000004;
+        bitField0_ |= 0x00000002;
        }
     }
     /**
@@ -847,6 +887,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated string metric = 3;</code>
+     * @return A list containing the metric.
      */
     public com.google.protobuf.ProtocolStringList
         getMetricList() {
@@ -858,6 +899,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated string metric = 3;</code>
+     * @return The count of metric.
      */
     public int getMetricCount() {
       return metric_.size();
@@ -868,6 +910,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated string metric = 3;</code>
+     * @param index The index of the element to return.
+     * @return The metric at the given index.
      */
     public java.lang.String getMetric(int index) {
       return metric_.get(index);
@@ -878,6 +922,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated string metric = 3;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the metric at the given index.
      */
     public com.google.protobuf.ByteString
         getMetricBytes(int index) {
@@ -889,6 +935,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated string metric = 3;</code>
+     * @param index The index to set the value at.
+     * @param value The metric to set.
+     * @return This builder for chaining.
      */
     public Builder setMetric(
         int index, java.lang.String value) {
@@ -906,6 +955,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated string metric = 3;</code>
+     * @param value The metric to add.
+     * @return This builder for chaining.
      */
     public Builder addMetric(
         java.lang.String value) {
@@ -923,6 +974,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated string metric = 3;</code>
+     * @param values The metric to add.
+     * @return This builder for chaining.
      */
     public Builder addAllMetric(
         java.lang.Iterable<java.lang.String> values) {
@@ -938,10 +991,11 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated string metric = 3;</code>
+     * @return This builder for chaining.
      */
     public Builder clearMetric() {
       metric_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000004);
+      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
@@ -951,6 +1005,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated string metric = 3;</code>
+     * @param value The bytes of the metric to add.
+     * @return This builder for chaining.
      */
     public Builder addMetricBytes(
         com.google.protobuf.ByteString value) {
@@ -966,7 +1022,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
-      return super.setUnknownFieldsProto3(unknownFields);
+      return super.setUnknownFields(unknownFields);
     }
 
     @java.lang.Override

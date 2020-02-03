@@ -13,6 +13,7 @@ public interface CounterDataOutputOrBuilder extends
    * </pre>
    *
    * <code>string resourceType = 1;</code>
+   * @return The resourceType.
    */
   java.lang.String getResourceType();
   /**
@@ -21,6 +22,7 @@ public interface CounterDataOutputOrBuilder extends
    * </pre>
    *
    * <code>string resourceType = 1;</code>
+   * @return The bytes for resourceType.
    */
   com.google.protobuf.ByteString
       getResourceTypeBytes();
@@ -31,6 +33,7 @@ public interface CounterDataOutputOrBuilder extends
    * </pre>
    *
    * <code>string monitorTags = 2;</code>
+   * @return The monitorTags.
    */
   java.lang.String getMonitorTags();
   /**
@@ -39,6 +42,7 @@ public interface CounterDataOutputOrBuilder extends
    * </pre>
    *
    * <code>string monitorTags = 2;</code>
+   * @return The bytes for monitorTags.
    */
   com.google.protobuf.ByteString
       getMonitorTagsBytes();
@@ -49,6 +53,7 @@ public interface CounterDataOutputOrBuilder extends
    * </pre>
    *
    * <code>string metric = 3;</code>
+   * @return The metric.
    */
   java.lang.String getMetric();
   /**
@@ -57,6 +62,7 @@ public interface CounterDataOutputOrBuilder extends
    * </pre>
    *
    * <code>string metric = 3;</code>
+   * @return The bytes for metric.
    */
   com.google.protobuf.ByteString
       getMetricBytes();
@@ -67,6 +73,7 @@ public interface CounterDataOutputOrBuilder extends
    * </pre>
    *
    * <code>string metricAlias = 4;</code>
+   * @return The metricAlias.
    */
   java.lang.String getMetricAlias();
   /**
@@ -75,6 +82,7 @@ public interface CounterDataOutputOrBuilder extends
    * </pre>
    *
    * <code>string metricAlias = 4;</code>
+   * @return The bytes for metricAlias.
    */
   com.google.protobuf.ByteString
       getMetricAliasBytes();

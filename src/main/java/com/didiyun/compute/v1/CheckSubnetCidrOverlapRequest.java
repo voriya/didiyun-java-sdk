@@ -21,6 +21,13 @@ private static final long serialVersionUID = 0L;
   }
 
   @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new CheckSubnetCidrOverlapRequest();
+  }
+
+  @java.lang.Override
   public final com.google.protobuf.UnknownFieldSet
   getUnknownFields() {
     return this.unknownFields;
@@ -33,7 +40,6 @@ private static final long serialVersionUID = 0L;
     if (extensionRegistry == null) {
       throw new java.lang.NullPointerException();
     }
-    int mutable_bitField0_ = 0;
     com.google.protobuf.UnknownFieldSet.Builder unknownFields =
         com.google.protobuf.UnknownFieldSet.newBuilder();
     try {
@@ -70,7 +76,7 @@ private static final long serialVersionUID = 0L;
             break;
           }
           default: {
-            if (!parseUnknownFieldProto3(
+            if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
               done = true;
             }
@@ -109,6 +115,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.didi.cloud.base.v1.Header header = 1;</code>
+   * @return Whether the header field is set.
    */
   public boolean hasHeader() {
     return header_ != null;
@@ -119,6 +126,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.didi.cloud.base.v1.Header header = 1;</code>
+   * @return The header.
    */
   public com.didiyun.base.v1.Header getHeader() {
     return header_ == null ? com.didiyun.base.v1.Header.getDefaultInstance() : header_;
@@ -142,6 +150,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string vpcUuid = 2;</code>
+   * @return The vpcUuid.
    */
   public java.lang.String getVpcUuid() {
     java.lang.Object ref = vpcUuid_;
@@ -161,6 +170,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string vpcUuid = 2;</code>
+   * @return The bytes for vpcUuid.
    */
   public com.google.protobuf.ByteString
       getVpcUuidBytes() {
@@ -184,6 +194,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string cidr = 3;</code>
+   * @return The cidr.
    */
   public java.lang.String getCidr() {
     java.lang.Object ref = cidr_;
@@ -203,6 +214,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string cidr = 3;</code>
+   * @return The bytes for cidr.
    */
   public com.google.protobuf.ByteString
       getCidrBytes() {
@@ -275,18 +287,17 @@ private static final long serialVersionUID = 0L;
     }
     com.didiyun.compute.v1.CheckSubnetCidrOverlapRequest other = (com.didiyun.compute.v1.CheckSubnetCidrOverlapRequest) obj;
 
-    boolean result = true;
-    result = result && (hasHeader() == other.hasHeader());
+    if (hasHeader() != other.hasHeader()) return false;
     if (hasHeader()) {
-      result = result && getHeader()
-          .equals(other.getHeader());
+      if (!getHeader()
+          .equals(other.getHeader())) return false;
     }
-    result = result && getVpcUuid()
-        .equals(other.getVpcUuid());
-    result = result && getCidr()
-        .equals(other.getCidr());
-    result = result && unknownFields.equals(other.unknownFields);
-    return result;
+    if (!getVpcUuid()
+        .equals(other.getVpcUuid())) return false;
+    if (!getCidr()
+        .equals(other.getCidr())) return false;
+    if (!unknownFields.equals(other.unknownFields)) return false;
+    return true;
   }
 
   @java.lang.Override
@@ -486,35 +497,35 @@ private static final long serialVersionUID = 0L;
 
     @java.lang.Override
     public Builder clone() {
-      return (Builder) super.clone();
+      return super.clone();
     }
     @java.lang.Override
     public Builder setField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return (Builder) super.setField(field, value);
+      return super.setField(field, value);
     }
     @java.lang.Override
     public Builder clearField(
         com.google.protobuf.Descriptors.FieldDescriptor field) {
-      return (Builder) super.clearField(field);
+      return super.clearField(field);
     }
     @java.lang.Override
     public Builder clearOneof(
         com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-      return (Builder) super.clearOneof(oneof);
+      return super.clearOneof(oneof);
     }
     @java.lang.Override
     public Builder setRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         int index, java.lang.Object value) {
-      return (Builder) super.setRepeatedField(field, index, value);
+      return super.setRepeatedField(field, index, value);
     }
     @java.lang.Override
     public Builder addRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return (Builder) super.addRepeatedField(field, value);
+      return super.addRepeatedField(field, value);
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -568,7 +579,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private com.didiyun.base.v1.Header header_ = null;
+    private com.didiyun.base.v1.Header header_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.didiyun.base.v1.Header, com.didiyun.base.v1.Header.Builder, com.didiyun.base.v1.HeaderOrBuilder> headerBuilder_;
     /**
@@ -577,6 +588,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.didi.cloud.base.v1.Header header = 1;</code>
+     * @return Whether the header field is set.
      */
     public boolean hasHeader() {
       return headerBuilder_ != null || header_ != null;
@@ -587,6 +599,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.didi.cloud.base.v1.Header header = 1;</code>
+     * @return The header.
      */
     public com.didiyun.base.v1.Header getHeader() {
       if (headerBuilder_ == null) {
@@ -728,6 +741,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string vpcUuid = 2;</code>
+     * @return The vpcUuid.
      */
     public java.lang.String getVpcUuid() {
       java.lang.Object ref = vpcUuid_;
@@ -747,6 +761,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string vpcUuid = 2;</code>
+     * @return The bytes for vpcUuid.
      */
     public com.google.protobuf.ByteString
         getVpcUuidBytes() {
@@ -767,6 +782,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string vpcUuid = 2;</code>
+     * @param value The vpcUuid to set.
+     * @return This builder for chaining.
      */
     public Builder setVpcUuid(
         java.lang.String value) {
@@ -784,6 +801,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string vpcUuid = 2;</code>
+     * @return This builder for chaining.
      */
     public Builder clearVpcUuid() {
       
@@ -797,6 +815,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string vpcUuid = 2;</code>
+     * @param value The bytes for vpcUuid to set.
+     * @return This builder for chaining.
      */
     public Builder setVpcUuidBytes(
         com.google.protobuf.ByteString value) {
@@ -817,6 +837,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string cidr = 3;</code>
+     * @return The cidr.
      */
     public java.lang.String getCidr() {
       java.lang.Object ref = cidr_;
@@ -836,6 +857,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string cidr = 3;</code>
+     * @return The bytes for cidr.
      */
     public com.google.protobuf.ByteString
         getCidrBytes() {
@@ -856,6 +878,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string cidr = 3;</code>
+     * @param value The cidr to set.
+     * @return This builder for chaining.
      */
     public Builder setCidr(
         java.lang.String value) {
@@ -873,6 +897,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string cidr = 3;</code>
+     * @return This builder for chaining.
      */
     public Builder clearCidr() {
       
@@ -886,6 +911,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string cidr = 3;</code>
+     * @param value The bytes for cidr to set.
+     * @return This builder for chaining.
      */
     public Builder setCidrBytes(
         com.google.protobuf.ByteString value) {
@@ -901,7 +928,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
-      return super.setUnknownFieldsProto3(unknownFields);
+      return super.setUnknownFields(unknownFields);
     }
 
     @java.lang.Override

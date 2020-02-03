@@ -13,6 +13,7 @@ public interface CheckPriceInfoOrBuilder extends
    * </pre>
    *
    * <code>string bestCouponId = 1;</code>
+   * @return The bestCouponId.
    */
   java.lang.String getBestCouponId();
   /**
@@ -21,6 +22,7 @@ public interface CheckPriceInfoOrBuilder extends
    * </pre>
    *
    * <code>string bestCouponId = 1;</code>
+   * @return The bytes for bestCouponId.
    */
   com.google.protobuf.ByteString
       getBestCouponIdBytes();
@@ -31,6 +33,7 @@ public interface CheckPriceInfoOrBuilder extends
    * </pre>
    *
    * <code>int64 cashBalance = 2;</code>
+   * @return The cashBalance.
    */
   long getCashBalance();
 
@@ -40,6 +43,7 @@ public interface CheckPriceInfoOrBuilder extends
    * </pre>
    *
    * <code>int64 couponBalance = 3;</code>
+   * @return The couponBalance.
    */
   long getCouponBalance();
 
@@ -49,6 +53,7 @@ public interface CheckPriceInfoOrBuilder extends
    * </pre>
    *
    * <code>int64 frozenPrice = 4;</code>
+   * @return The frozenPrice.
    */
   long getFrozenPrice();
 
@@ -58,6 +63,7 @@ public interface CheckPriceInfoOrBuilder extends
    * </pre>
    *
    * <code>bool isClearToCreate = 5;</code>
+   * @return The isClearToCreate.
    */
   boolean getIsClearToCreate();
 
@@ -67,6 +73,7 @@ public interface CheckPriceInfoOrBuilder extends
    * </pre>
    *
    * <code>int64 originPrice = 6;</code>
+   * @return The originPrice.
    */
   long getOriginPrice();
 
@@ -76,6 +83,7 @@ public interface CheckPriceInfoOrBuilder extends
    * </pre>
    *
    * <code>string payType = 7;</code>
+   * @return The payType.
    */
   java.lang.String getPayType();
   /**
@@ -84,6 +92,7 @@ public interface CheckPriceInfoOrBuilder extends
    * </pre>
    *
    * <code>string payType = 7;</code>
+   * @return The bytes for payType.
    */
   com.google.protobuf.ByteString
       getPayTypeBytes();
@@ -94,6 +103,7 @@ public interface CheckPriceInfoOrBuilder extends
    * </pre>
    *
    * <code>int64 postPaidPrice = 8;</code>
+   * @return The postPaidPrice.
    */
   long getPostPaidPrice();
 
@@ -103,6 +113,7 @@ public interface CheckPriceInfoOrBuilder extends
    * </pre>
    *
    * <code>int64 prePaidPrice = 9;</code>
+   * @return The prePaidPrice.
    */
   long getPrePaidPrice();
 
@@ -112,6 +123,7 @@ public interface CheckPriceInfoOrBuilder extends
    * </pre>
    *
    * <code>int64 subPrice = 10;</code>
+   * @return The subPrice.
    */
   long getSubPrice();
 }

@@ -20,6 +20,13 @@ private static final long serialVersionUID = 0L;
   }
 
   @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new ListImageResponse();
+  }
+
+  @java.lang.Override
   public final com.google.protobuf.UnknownFieldSet
   getUnknownFields() {
     return this.unknownFields;
@@ -57,16 +64,16 @@ private static final long serialVersionUID = 0L;
             break;
           }
           case 26: {
-            if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
               data_ = new java.util.ArrayList<com.didiyun.compute.v1.ListImageResponse.Image>();
-              mutable_bitField0_ |= 0x00000002;
+              mutable_bitField0_ |= 0x00000001;
             }
             data_.add(
                 input.readMessage(com.didiyun.compute.v1.ListImageResponse.Image.parser(), extensionRegistry));
             break;
           }
           default: {
-            if (!parseUnknownFieldProto3(
+            if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
               done = true;
             }
@@ -80,7 +87,7 @@ private static final long serialVersionUID = 0L;
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
     } finally {
-      if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+      if (((mutable_bitField0_ & 0x00000001) != 0)) {
         data_ = java.util.Collections.unmodifiableList(data_);
       }
       this.unknownFields = unknownFields.build();
@@ -110,6 +117,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string imgUuid = 1;</code>
+     * @return The imgUuid.
      */
     java.lang.String getImgUuid();
     /**
@@ -118,6 +126,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string imgUuid = 1;</code>
+     * @return The bytes for imgUuid.
      */
     com.google.protobuf.ByteString
         getImgUuidBytes();
@@ -128,6 +137,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string name = 2;</code>
+     * @return The name.
      */
     java.lang.String getName();
     /**
@@ -136,6 +146,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string name = 2;</code>
+     * @return The bytes for name.
      */
     com.google.protobuf.ByteString
         getNameBytes();
@@ -146,6 +157,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string osFamily = 3;</code>
+     * @return The osFamily.
      */
     java.lang.String getOsFamily();
     /**
@@ -154,6 +166,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string osFamily = 3;</code>
+     * @return The bytes for osFamily.
      */
     com.google.protobuf.ByteString
         getOsFamilyBytes();
@@ -164,6 +177,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string osVersion = 4;</code>
+     * @return The osVersion.
      */
     java.lang.String getOsVersion();
     /**
@@ -172,6 +186,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string osVersion = 4;</code>
+     * @return The bytes for osVersion.
      */
     com.google.protobuf.ByteString
         getOsVersionBytes();
@@ -182,6 +197,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string platform = 5;</code>
+     * @return The platform.
      */
     java.lang.String getPlatform();
     /**
@@ -190,6 +206,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string platform = 5;</code>
+     * @return The bytes for platform.
      */
     com.google.protobuf.ByteString
         getPlatformBytes();
@@ -200,6 +217,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string type = 6;</code>
+     * @return The type.
      */
     java.lang.String getType();
     /**
@@ -208,6 +226,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string type = 6;</code>
+     * @return The bytes for type.
      */
     com.google.protobuf.ByteString
         getTypeBytes();
@@ -218,6 +237,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated string scenes = 7;</code>
+     * @return A list containing the scenes.
      */
     java.util.List<java.lang.String>
         getScenesList();
@@ -227,6 +247,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated string scenes = 7;</code>
+     * @return The count of scenes.
      */
     int getScenesCount();
     /**
@@ -235,6 +256,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated string scenes = 7;</code>
+     * @param index The index of the element to return.
+     * @return The scenes at the given index.
      */
     java.lang.String getScenes(int index);
     /**
@@ -243,6 +266,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated string scenes = 7;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the scenes at the given index.
      */
     com.google.protobuf.ByteString
         getScenesBytes(int index);
@@ -253,6 +278,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.didi.cloud.compute.v1.ListImageResponse.Image.Requirement requirement = 8;</code>
+     * @return Whether the requirement field is set.
      */
     boolean hasRequirement();
     /**
@@ -261,6 +287,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.didi.cloud.compute.v1.ListImageResponse.Image.Requirement requirement = 8;</code>
+     * @return The requirement.
      */
     com.didiyun.compute.v1.ListImageResponse.Image.Requirement getRequirement();
     /**
@@ -292,6 +319,13 @@ private static final long serialVersionUID = 0L;
       platform_ = "";
       type_ = "";
       scenes_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Image();
     }
 
     @java.lang.Override
@@ -356,9 +390,9 @@ private static final long serialVersionUID = 0L;
             }
             case 58: {
               java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000040) == 0x00000040)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 scenes_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00000040;
+                mutable_bitField0_ |= 0x00000001;
               }
               scenes_.add(s);
               break;
@@ -377,7 +411,7 @@ private static final long serialVersionUID = 0L;
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -391,7 +425,7 @@ private static final long serialVersionUID = 0L;
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000040) == 0x00000040)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           scenes_ = scenes_.getUnmodifiableView();
         }
         this.unknownFields = unknownFields.build();
@@ -421,6 +455,7 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>int32 minCpuNum = 1;</code>
+       * @return The minCpuNum.
        */
       int getMinCpuNum();
 
@@ -430,6 +465,7 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>int64 minDiskSize = 2;</code>
+       * @return The minDiskSize.
        */
       long getMinDiskSize();
 
@@ -439,6 +475,7 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>int64 minMemorySize = 3;</code>
+       * @return The minMemorySize.
        */
       long getMinMemorySize();
     }
@@ -455,9 +492,13 @@ private static final long serialVersionUID = 0L;
         super(builder);
       }
       private Requirement() {
-        minCpuNum_ = 0;
-        minDiskSize_ = 0L;
-        minMemorySize_ = 0L;
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new Requirement();
       }
 
       @java.lang.Override
@@ -473,7 +514,6 @@ private static final long serialVersionUID = 0L;
         if (extensionRegistry == null) {
           throw new java.lang.NullPointerException();
         }
-        int mutable_bitField0_ = 0;
         com.google.protobuf.UnknownFieldSet.Builder unknownFields =
             com.google.protobuf.UnknownFieldSet.newBuilder();
         try {
@@ -500,7 +540,7 @@ private static final long serialVersionUID = 0L;
                 break;
               }
               default: {
-                if (!parseUnknownFieldProto3(
+                if (!parseUnknownField(
                     input, unknownFields, extensionRegistry, tag)) {
                   done = true;
                 }
@@ -539,6 +579,7 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>int32 minCpuNum = 1;</code>
+       * @return The minCpuNum.
        */
       public int getMinCpuNum() {
         return minCpuNum_;
@@ -552,6 +593,7 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>int64 minDiskSize = 2;</code>
+       * @return The minDiskSize.
        */
       public long getMinDiskSize() {
         return minDiskSize_;
@@ -565,6 +607,7 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>int64 minMemorySize = 3;</code>
+       * @return The minMemorySize.
        */
       public long getMinMemorySize() {
         return minMemorySize_;
@@ -629,15 +672,14 @@ private static final long serialVersionUID = 0L;
         }
         com.didiyun.compute.v1.ListImageResponse.Image.Requirement other = (com.didiyun.compute.v1.ListImageResponse.Image.Requirement) obj;
 
-        boolean result = true;
-        result = result && (getMinCpuNum()
-            == other.getMinCpuNum());
-        result = result && (getMinDiskSize()
-            == other.getMinDiskSize());
-        result = result && (getMinMemorySize()
-            == other.getMinMemorySize());
-        result = result && unknownFields.equals(other.unknownFields);
-        return result;
+        if (getMinCpuNum()
+            != other.getMinCpuNum()) return false;
+        if (getMinDiskSize()
+            != other.getMinDiskSize()) return false;
+        if (getMinMemorySize()
+            != other.getMinMemorySize()) return false;
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
       }
 
       @java.lang.Override
@@ -829,35 +871,35 @@ private static final long serialVersionUID = 0L;
 
         @java.lang.Override
         public Builder clone() {
-          return (Builder) super.clone();
+          return super.clone();
         }
         @java.lang.Override
         public Builder setField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.setField(field, value);
+          return super.setField(field, value);
         }
         @java.lang.Override
         public Builder clearField(
             com.google.protobuf.Descriptors.FieldDescriptor field) {
-          return (Builder) super.clearField(field);
+          return super.clearField(field);
         }
         @java.lang.Override
         public Builder clearOneof(
             com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-          return (Builder) super.clearOneof(oneof);
+          return super.clearOneof(oneof);
         }
         @java.lang.Override
         public Builder setRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             int index, java.lang.Object value) {
-          return (Builder) super.setRepeatedField(field, index, value);
+          return super.setRepeatedField(field, index, value);
         }
         @java.lang.Override
         public Builder addRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.addRepeatedField(field, value);
+          return super.addRepeatedField(field, value);
         }
         @java.lang.Override
         public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -916,6 +958,7 @@ private static final long serialVersionUID = 0L;
          * </pre>
          *
          * <code>int32 minCpuNum = 1;</code>
+         * @return The minCpuNum.
          */
         public int getMinCpuNum() {
           return minCpuNum_;
@@ -926,6 +969,8 @@ private static final long serialVersionUID = 0L;
          * </pre>
          *
          * <code>int32 minCpuNum = 1;</code>
+         * @param value The minCpuNum to set.
+         * @return This builder for chaining.
          */
         public Builder setMinCpuNum(int value) {
           
@@ -939,6 +984,7 @@ private static final long serialVersionUID = 0L;
          * </pre>
          *
          * <code>int32 minCpuNum = 1;</code>
+         * @return This builder for chaining.
          */
         public Builder clearMinCpuNum() {
           
@@ -954,6 +1000,7 @@ private static final long serialVersionUID = 0L;
          * </pre>
          *
          * <code>int64 minDiskSize = 2;</code>
+         * @return The minDiskSize.
          */
         public long getMinDiskSize() {
           return minDiskSize_;
@@ -964,6 +1011,8 @@ private static final long serialVersionUID = 0L;
          * </pre>
          *
          * <code>int64 minDiskSize = 2;</code>
+         * @param value The minDiskSize to set.
+         * @return This builder for chaining.
          */
         public Builder setMinDiskSize(long value) {
           
@@ -977,6 +1026,7 @@ private static final long serialVersionUID = 0L;
          * </pre>
          *
          * <code>int64 minDiskSize = 2;</code>
+         * @return This builder for chaining.
          */
         public Builder clearMinDiskSize() {
           
@@ -992,6 +1042,7 @@ private static final long serialVersionUID = 0L;
          * </pre>
          *
          * <code>int64 minMemorySize = 3;</code>
+         * @return The minMemorySize.
          */
         public long getMinMemorySize() {
           return minMemorySize_;
@@ -1002,6 +1053,8 @@ private static final long serialVersionUID = 0L;
          * </pre>
          *
          * <code>int64 minMemorySize = 3;</code>
+         * @param value The minMemorySize to set.
+         * @return This builder for chaining.
          */
         public Builder setMinMemorySize(long value) {
           
@@ -1015,6 +1068,7 @@ private static final long serialVersionUID = 0L;
          * </pre>
          *
          * <code>int64 minMemorySize = 3;</code>
+         * @return This builder for chaining.
          */
         public Builder clearMinMemorySize() {
           
@@ -1025,7 +1079,7 @@ private static final long serialVersionUID = 0L;
         @java.lang.Override
         public final Builder setUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
-          return super.setUnknownFieldsProto3(unknownFields);
+          return super.setUnknownFields(unknownFields);
         }
 
         @java.lang.Override
@@ -1075,7 +1129,6 @@ private static final long serialVersionUID = 0L;
 
     }
 
-    private int bitField0_;
     public static final int IMGUUID_FIELD_NUMBER = 1;
     private volatile java.lang.Object imgUuid_;
     /**
@@ -1084,6 +1137,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string imgUuid = 1;</code>
+     * @return The imgUuid.
      */
     public java.lang.String getImgUuid() {
       java.lang.Object ref = imgUuid_;
@@ -1103,6 +1157,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string imgUuid = 1;</code>
+     * @return The bytes for imgUuid.
      */
     public com.google.protobuf.ByteString
         getImgUuidBytes() {
@@ -1126,6 +1181,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string name = 2;</code>
+     * @return The name.
      */
     public java.lang.String getName() {
       java.lang.Object ref = name_;
@@ -1145,6 +1201,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string name = 2;</code>
+     * @return The bytes for name.
      */
     public com.google.protobuf.ByteString
         getNameBytes() {
@@ -1168,6 +1225,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string osFamily = 3;</code>
+     * @return The osFamily.
      */
     public java.lang.String getOsFamily() {
       java.lang.Object ref = osFamily_;
@@ -1187,6 +1245,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string osFamily = 3;</code>
+     * @return The bytes for osFamily.
      */
     public com.google.protobuf.ByteString
         getOsFamilyBytes() {
@@ -1210,6 +1269,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string osVersion = 4;</code>
+     * @return The osVersion.
      */
     public java.lang.String getOsVersion() {
       java.lang.Object ref = osVersion_;
@@ -1229,6 +1289,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string osVersion = 4;</code>
+     * @return The bytes for osVersion.
      */
     public com.google.protobuf.ByteString
         getOsVersionBytes() {
@@ -1252,6 +1313,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string platform = 5;</code>
+     * @return The platform.
      */
     public java.lang.String getPlatform() {
       java.lang.Object ref = platform_;
@@ -1271,6 +1333,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string platform = 5;</code>
+     * @return The bytes for platform.
      */
     public com.google.protobuf.ByteString
         getPlatformBytes() {
@@ -1294,6 +1357,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string type = 6;</code>
+     * @return The type.
      */
     public java.lang.String getType() {
       java.lang.Object ref = type_;
@@ -1313,6 +1377,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string type = 6;</code>
+     * @return The bytes for type.
      */
     public com.google.protobuf.ByteString
         getTypeBytes() {
@@ -1336,6 +1401,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated string scenes = 7;</code>
+     * @return A list containing the scenes.
      */
     public com.google.protobuf.ProtocolStringList
         getScenesList() {
@@ -1347,6 +1413,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated string scenes = 7;</code>
+     * @return The count of scenes.
      */
     public int getScenesCount() {
       return scenes_.size();
@@ -1357,6 +1424,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated string scenes = 7;</code>
+     * @param index The index of the element to return.
+     * @return The scenes at the given index.
      */
     public java.lang.String getScenes(int index) {
       return scenes_.get(index);
@@ -1367,6 +1436,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated string scenes = 7;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the scenes at the given index.
      */
     public com.google.protobuf.ByteString
         getScenesBytes(int index) {
@@ -1381,6 +1452,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.didi.cloud.compute.v1.ListImageResponse.Image.Requirement requirement = 8;</code>
+     * @return Whether the requirement field is set.
      */
     public boolean hasRequirement() {
       return requirement_ != null;
@@ -1391,6 +1463,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.didi.cloud.compute.v1.ListImageResponse.Image.Requirement requirement = 8;</code>
+     * @return The requirement.
      */
     public com.didiyun.compute.v1.ListImageResponse.Image.Requirement getRequirement() {
       return requirement_ == null ? com.didiyun.compute.v1.ListImageResponse.Image.Requirement.getDefaultInstance() : requirement_;
@@ -1498,28 +1571,27 @@ private static final long serialVersionUID = 0L;
       }
       com.didiyun.compute.v1.ListImageResponse.Image other = (com.didiyun.compute.v1.ListImageResponse.Image) obj;
 
-      boolean result = true;
-      result = result && getImgUuid()
-          .equals(other.getImgUuid());
-      result = result && getName()
-          .equals(other.getName());
-      result = result && getOsFamily()
-          .equals(other.getOsFamily());
-      result = result && getOsVersion()
-          .equals(other.getOsVersion());
-      result = result && getPlatform()
-          .equals(other.getPlatform());
-      result = result && getType()
-          .equals(other.getType());
-      result = result && getScenesList()
-          .equals(other.getScenesList());
-      result = result && (hasRequirement() == other.hasRequirement());
+      if (!getImgUuid()
+          .equals(other.getImgUuid())) return false;
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (!getOsFamily()
+          .equals(other.getOsFamily())) return false;
+      if (!getOsVersion()
+          .equals(other.getOsVersion())) return false;
+      if (!getPlatform()
+          .equals(other.getPlatform())) return false;
+      if (!getType()
+          .equals(other.getType())) return false;
+      if (!getScenesList()
+          .equals(other.getScenesList())) return false;
+      if (hasRequirement() != other.hasRequirement()) return false;
       if (hasRequirement()) {
-        result = result && getRequirement()
-            .equals(other.getRequirement());
+        if (!getRequirement()
+            .equals(other.getRequirement())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -1695,7 +1767,7 @@ private static final long serialVersionUID = 0L;
         type_ = "";
 
         scenes_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000040);
+        bitField0_ = (bitField0_ & ~0x00000001);
         if (requirementBuilder_ == null) {
           requirement_ = null;
         } else {
@@ -1729,16 +1801,15 @@ private static final long serialVersionUID = 0L;
       public com.didiyun.compute.v1.ListImageResponse.Image buildPartial() {
         com.didiyun.compute.v1.ListImageResponse.Image result = new com.didiyun.compute.v1.ListImageResponse.Image(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         result.imgUuid_ = imgUuid_;
         result.name_ = name_;
         result.osFamily_ = osFamily_;
         result.osVersion_ = osVersion_;
         result.platform_ = platform_;
         result.type_ = type_;
-        if (((bitField0_ & 0x00000040) == 0x00000040)) {
+        if (((bitField0_ & 0x00000001) != 0)) {
           scenes_ = scenes_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000040);
+          bitField0_ = (bitField0_ & ~0x00000001);
         }
         result.scenes_ = scenes_;
         if (requirementBuilder_ == null) {
@@ -1746,42 +1817,41 @@ private static final long serialVersionUID = 0L;
         } else {
           result.requirement_ = requirementBuilder_.build();
         }
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1822,7 +1892,7 @@ private static final long serialVersionUID = 0L;
         if (!other.scenes_.isEmpty()) {
           if (scenes_.isEmpty()) {
             scenes_ = other.scenes_;
-            bitField0_ = (bitField0_ & ~0x00000040);
+            bitField0_ = (bitField0_ & ~0x00000001);
           } else {
             ensureScenesIsMutable();
             scenes_.addAll(other.scenes_);
@@ -1869,6 +1939,7 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>string imgUuid = 1;</code>
+       * @return The imgUuid.
        */
       public java.lang.String getImgUuid() {
         java.lang.Object ref = imgUuid_;
@@ -1888,6 +1959,7 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>string imgUuid = 1;</code>
+       * @return The bytes for imgUuid.
        */
       public com.google.protobuf.ByteString
           getImgUuidBytes() {
@@ -1908,6 +1980,8 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>string imgUuid = 1;</code>
+       * @param value The imgUuid to set.
+       * @return This builder for chaining.
        */
       public Builder setImgUuid(
           java.lang.String value) {
@@ -1925,6 +1999,7 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>string imgUuid = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearImgUuid() {
         
@@ -1938,6 +2013,8 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>string imgUuid = 1;</code>
+       * @param value The bytes for imgUuid to set.
+       * @return This builder for chaining.
        */
       public Builder setImgUuidBytes(
           com.google.protobuf.ByteString value) {
@@ -1958,6 +2035,7 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>string name = 2;</code>
+       * @return The name.
        */
       public java.lang.String getName() {
         java.lang.Object ref = name_;
@@ -1977,6 +2055,7 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>string name = 2;</code>
+       * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
           getNameBytes() {
@@ -1997,6 +2076,8 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>string name = 2;</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
        */
       public Builder setName(
           java.lang.String value) {
@@ -2014,6 +2095,7 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>string name = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearName() {
         
@@ -2027,6 +2109,8 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>string name = 2;</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
@@ -2047,6 +2131,7 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>string osFamily = 3;</code>
+       * @return The osFamily.
        */
       public java.lang.String getOsFamily() {
         java.lang.Object ref = osFamily_;
@@ -2066,6 +2151,7 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>string osFamily = 3;</code>
+       * @return The bytes for osFamily.
        */
       public com.google.protobuf.ByteString
           getOsFamilyBytes() {
@@ -2086,6 +2172,8 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>string osFamily = 3;</code>
+       * @param value The osFamily to set.
+       * @return This builder for chaining.
        */
       public Builder setOsFamily(
           java.lang.String value) {
@@ -2103,6 +2191,7 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>string osFamily = 3;</code>
+       * @return This builder for chaining.
        */
       public Builder clearOsFamily() {
         
@@ -2116,6 +2205,8 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>string osFamily = 3;</code>
+       * @param value The bytes for osFamily to set.
+       * @return This builder for chaining.
        */
       public Builder setOsFamilyBytes(
           com.google.protobuf.ByteString value) {
@@ -2136,6 +2227,7 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>string osVersion = 4;</code>
+       * @return The osVersion.
        */
       public java.lang.String getOsVersion() {
         java.lang.Object ref = osVersion_;
@@ -2155,6 +2247,7 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>string osVersion = 4;</code>
+       * @return The bytes for osVersion.
        */
       public com.google.protobuf.ByteString
           getOsVersionBytes() {
@@ -2175,6 +2268,8 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>string osVersion = 4;</code>
+       * @param value The osVersion to set.
+       * @return This builder for chaining.
        */
       public Builder setOsVersion(
           java.lang.String value) {
@@ -2192,6 +2287,7 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>string osVersion = 4;</code>
+       * @return This builder for chaining.
        */
       public Builder clearOsVersion() {
         
@@ -2205,6 +2301,8 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>string osVersion = 4;</code>
+       * @param value The bytes for osVersion to set.
+       * @return This builder for chaining.
        */
       public Builder setOsVersionBytes(
           com.google.protobuf.ByteString value) {
@@ -2225,6 +2323,7 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>string platform = 5;</code>
+       * @return The platform.
        */
       public java.lang.String getPlatform() {
         java.lang.Object ref = platform_;
@@ -2244,6 +2343,7 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>string platform = 5;</code>
+       * @return The bytes for platform.
        */
       public com.google.protobuf.ByteString
           getPlatformBytes() {
@@ -2264,6 +2364,8 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>string platform = 5;</code>
+       * @param value The platform to set.
+       * @return This builder for chaining.
        */
       public Builder setPlatform(
           java.lang.String value) {
@@ -2281,6 +2383,7 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>string platform = 5;</code>
+       * @return This builder for chaining.
        */
       public Builder clearPlatform() {
         
@@ -2294,6 +2397,8 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>string platform = 5;</code>
+       * @param value The bytes for platform to set.
+       * @return This builder for chaining.
        */
       public Builder setPlatformBytes(
           com.google.protobuf.ByteString value) {
@@ -2314,6 +2419,7 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>string type = 6;</code>
+       * @return The type.
        */
       public java.lang.String getType() {
         java.lang.Object ref = type_;
@@ -2333,6 +2439,7 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>string type = 6;</code>
+       * @return The bytes for type.
        */
       public com.google.protobuf.ByteString
           getTypeBytes() {
@@ -2353,6 +2460,8 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>string type = 6;</code>
+       * @param value The type to set.
+       * @return This builder for chaining.
        */
       public Builder setType(
           java.lang.String value) {
@@ -2370,6 +2479,7 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>string type = 6;</code>
+       * @return This builder for chaining.
        */
       public Builder clearType() {
         
@@ -2383,6 +2493,8 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>string type = 6;</code>
+       * @param value The bytes for type to set.
+       * @return This builder for chaining.
        */
       public Builder setTypeBytes(
           com.google.protobuf.ByteString value) {
@@ -2398,9 +2510,9 @@ private static final long serialVersionUID = 0L;
 
       private com.google.protobuf.LazyStringList scenes_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       private void ensureScenesIsMutable() {
-        if (!((bitField0_ & 0x00000040) == 0x00000040)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           scenes_ = new com.google.protobuf.LazyStringArrayList(scenes_);
-          bitField0_ |= 0x00000040;
+          bitField0_ |= 0x00000001;
          }
       }
       /**
@@ -2409,6 +2521,7 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>repeated string scenes = 7;</code>
+       * @return A list containing the scenes.
        */
       public com.google.protobuf.ProtocolStringList
           getScenesList() {
@@ -2420,6 +2533,7 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>repeated string scenes = 7;</code>
+       * @return The count of scenes.
        */
       public int getScenesCount() {
         return scenes_.size();
@@ -2430,6 +2544,8 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>repeated string scenes = 7;</code>
+       * @param index The index of the element to return.
+       * @return The scenes at the given index.
        */
       public java.lang.String getScenes(int index) {
         return scenes_.get(index);
@@ -2440,6 +2556,8 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>repeated string scenes = 7;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the scenes at the given index.
        */
       public com.google.protobuf.ByteString
           getScenesBytes(int index) {
@@ -2451,6 +2569,9 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>repeated string scenes = 7;</code>
+       * @param index The index to set the value at.
+       * @param value The scenes to set.
+       * @return This builder for chaining.
        */
       public Builder setScenes(
           int index, java.lang.String value) {
@@ -2468,6 +2589,8 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>repeated string scenes = 7;</code>
+       * @param value The scenes to add.
+       * @return This builder for chaining.
        */
       public Builder addScenes(
           java.lang.String value) {
@@ -2485,6 +2608,8 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>repeated string scenes = 7;</code>
+       * @param values The scenes to add.
+       * @return This builder for chaining.
        */
       public Builder addAllScenes(
           java.lang.Iterable<java.lang.String> values) {
@@ -2500,10 +2625,11 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>repeated string scenes = 7;</code>
+       * @return This builder for chaining.
        */
       public Builder clearScenes() {
         scenes_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000040);
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -2513,6 +2639,8 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>repeated string scenes = 7;</code>
+       * @param value The bytes of the scenes to add.
+       * @return This builder for chaining.
        */
       public Builder addScenesBytes(
           com.google.protobuf.ByteString value) {
@@ -2526,7 +2654,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
 
-      private com.didiyun.compute.v1.ListImageResponse.Image.Requirement requirement_ = null;
+      private com.didiyun.compute.v1.ListImageResponse.Image.Requirement requirement_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.didiyun.compute.v1.ListImageResponse.Image.Requirement, com.didiyun.compute.v1.ListImageResponse.Image.Requirement.Builder, com.didiyun.compute.v1.ListImageResponse.Image.RequirementOrBuilder> requirementBuilder_;
       /**
@@ -2535,6 +2663,7 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>.didi.cloud.compute.v1.ListImageResponse.Image.Requirement requirement = 8;</code>
+       * @return Whether the requirement field is set.
        */
       public boolean hasRequirement() {
         return requirementBuilder_ != null || requirement_ != null;
@@ -2545,6 +2674,7 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>.didi.cloud.compute.v1.ListImageResponse.Image.Requirement requirement = 8;</code>
+       * @return The requirement.
        */
       public com.didiyun.compute.v1.ListImageResponse.Image.Requirement getRequirement() {
         if (requirementBuilder_ == null) {
@@ -2681,7 +2811,7 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -2731,17 +2861,18 @@ private static final long serialVersionUID = 0L;
 
   }
 
-  private int bitField0_;
   public static final int ERROR_FIELD_NUMBER = 1;
   private com.didiyun.base.v1.Error error_;
   /**
    * <code>.didi.cloud.base.v1.Error error = 1;</code>
+   * @return Whether the error field is set.
    */
   public boolean hasError() {
     return error_ != null;
   }
   /**
    * <code>.didi.cloud.base.v1.Error error = 1;</code>
+   * @return The error.
    */
   public com.didiyun.base.v1.Error getError() {
     return error_ == null ? com.didiyun.base.v1.Error.getDefaultInstance() : error_;
@@ -2860,16 +2991,15 @@ private static final long serialVersionUID = 0L;
     }
     com.didiyun.compute.v1.ListImageResponse other = (com.didiyun.compute.v1.ListImageResponse) obj;
 
-    boolean result = true;
-    result = result && (hasError() == other.hasError());
+    if (hasError() != other.hasError()) return false;
     if (hasError()) {
-      result = result && getError()
-          .equals(other.getError());
+      if (!getError()
+          .equals(other.getError())) return false;
     }
-    result = result && getDataList()
-        .equals(other.getDataList());
-    result = result && unknownFields.equals(other.unknownFields);
-    return result;
+    if (!getDataList()
+        .equals(other.getDataList())) return false;
+    if (!unknownFields.equals(other.unknownFields)) return false;
+    return true;
   }
 
   @java.lang.Override
@@ -3029,7 +3159,7 @@ private static final long serialVersionUID = 0L;
       }
       if (dataBuilder_ == null) {
         data_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000001);
       } else {
         dataBuilder_.clear();
       }
@@ -3060,57 +3190,55 @@ private static final long serialVersionUID = 0L;
     public com.didiyun.compute.v1.ListImageResponse buildPartial() {
       com.didiyun.compute.v1.ListImageResponse result = new com.didiyun.compute.v1.ListImageResponse(this);
       int from_bitField0_ = bitField0_;
-      int to_bitField0_ = 0;
       if (errorBuilder_ == null) {
         result.error_ = error_;
       } else {
         result.error_ = errorBuilder_.build();
       }
       if (dataBuilder_ == null) {
-        if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        if (((bitField0_ & 0x00000001) != 0)) {
           data_ = java.util.Collections.unmodifiableList(data_);
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00000001);
         }
         result.data_ = data_;
       } else {
         result.data_ = dataBuilder_.build();
       }
-      result.bitField0_ = to_bitField0_;
       onBuilt();
       return result;
     }
 
     @java.lang.Override
     public Builder clone() {
-      return (Builder) super.clone();
+      return super.clone();
     }
     @java.lang.Override
     public Builder setField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return (Builder) super.setField(field, value);
+      return super.setField(field, value);
     }
     @java.lang.Override
     public Builder clearField(
         com.google.protobuf.Descriptors.FieldDescriptor field) {
-      return (Builder) super.clearField(field);
+      return super.clearField(field);
     }
     @java.lang.Override
     public Builder clearOneof(
         com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-      return (Builder) super.clearOneof(oneof);
+      return super.clearOneof(oneof);
     }
     @java.lang.Override
     public Builder setRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         int index, java.lang.Object value) {
-      return (Builder) super.setRepeatedField(field, index, value);
+      return super.setRepeatedField(field, index, value);
     }
     @java.lang.Override
     public Builder addRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return (Builder) super.addRepeatedField(field, value);
+      return super.addRepeatedField(field, value);
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -3131,7 +3259,7 @@ private static final long serialVersionUID = 0L;
         if (!other.data_.isEmpty()) {
           if (data_.isEmpty()) {
             data_ = other.data_;
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000001);
           } else {
             ensureDataIsMutable();
             data_.addAll(other.data_);
@@ -3144,7 +3272,7 @@ private static final long serialVersionUID = 0L;
             dataBuilder_.dispose();
             dataBuilder_ = null;
             data_ = other.data_;
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000001);
             dataBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getDataFieldBuilder() : null;
@@ -3183,17 +3311,19 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
-    private com.didiyun.base.v1.Error error_ = null;
+    private com.didiyun.base.v1.Error error_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.didiyun.base.v1.Error, com.didiyun.base.v1.Error.Builder, com.didiyun.base.v1.ErrorOrBuilder> errorBuilder_;
     /**
      * <code>.didi.cloud.base.v1.Error error = 1;</code>
+     * @return Whether the error field is set.
      */
     public boolean hasError() {
       return errorBuilder_ != null || error_ != null;
     }
     /**
      * <code>.didi.cloud.base.v1.Error error = 1;</code>
+     * @return The error.
      */
     public com.didiyun.base.v1.Error getError() {
       if (errorBuilder_ == null) {
@@ -3303,9 +3433,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.didiyun.compute.v1.ListImageResponse.Image> data_ =
       java.util.Collections.emptyList();
     private void ensureDataIsMutable() {
-      if (!((bitField0_ & 0x00000002) == 0x00000002)) {
+      if (!((bitField0_ & 0x00000001) != 0)) {
         data_ = new java.util.ArrayList<com.didiyun.compute.v1.ListImageResponse.Image>(data_);
-        bitField0_ |= 0x00000002;
+        bitField0_ |= 0x00000001;
        }
     }
 
@@ -3499,7 +3629,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearData() {
       if (dataBuilder_ == null) {
         data_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
       } else {
         dataBuilder_.clear();
@@ -3604,7 +3734,7 @@ private static final long serialVersionUID = 0L;
         dataBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.didiyun.compute.v1.ListImageResponse.Image, com.didiyun.compute.v1.ListImageResponse.Image.Builder, com.didiyun.compute.v1.ListImageResponse.ImageOrBuilder>(
                 data_,
-                ((bitField0_ & 0x00000002) == 0x00000002),
+                ((bitField0_ & 0x00000001) != 0),
                 getParentForChildren(),
                 isClean());
         data_ = null;
@@ -3614,7 +3744,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
-      return super.setUnknownFieldsProto3(unknownFields);
+      return super.setUnknownFields(unknownFields);
     }
 
     @java.lang.Override

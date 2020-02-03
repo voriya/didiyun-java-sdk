@@ -19,6 +19,13 @@ private static final long serialVersionUID = 0L;
   }
 
   @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new ContinueListResponse();
+  }
+
+  @java.lang.Override
   public final com.google.protobuf.UnknownFieldSet
   getUnknownFields() {
     return this.unknownFields;
@@ -31,7 +38,6 @@ private static final long serialVersionUID = 0L;
     if (extensionRegistry == null) {
       throw new java.lang.NullPointerException();
     }
-    int mutable_bitField0_ = 0;
     com.google.protobuf.UnknownFieldSet.Builder unknownFields =
         com.google.protobuf.UnknownFieldSet.newBuilder();
     try {
@@ -69,7 +75,7 @@ private static final long serialVersionUID = 0L;
             break;
           }
           default: {
-            if (!parseUnknownFieldProto3(
+            if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
               done = true;
             }
@@ -130,6 +136,7 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <code>int32 total = 2;</code>
+     * @return The total.
      */
     int getTotal();
   }
@@ -147,7 +154,13 @@ private static final long serialVersionUID = 0L;
     }
     private Data() {
       continueList_ = java.util.Collections.emptyList();
-      total_ = 0;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Data();
     }
 
     @java.lang.Override
@@ -175,7 +188,7 @@ private static final long serialVersionUID = 0L;
               done = true;
               break;
             case 10: {
-              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 continueList_ = new java.util.ArrayList<com.didiyun.bill.v1.ContinueListItem>();
                 mutable_bitField0_ |= 0x00000001;
               }
@@ -189,7 +202,7 @@ private static final long serialVersionUID = 0L;
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -203,7 +216,7 @@ private static final long serialVersionUID = 0L;
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           continueList_ = java.util.Collections.unmodifiableList(continueList_);
         }
         this.unknownFields = unknownFields.build();
@@ -223,7 +236,6 @@ private static final long serialVersionUID = 0L;
               com.didiyun.bill.v1.ContinueListResponse.Data.class, com.didiyun.bill.v1.ContinueListResponse.Data.Builder.class);
     }
 
-    private int bitField0_;
     public static final int CONTINUELIST_FIELD_NUMBER = 1;
     private java.util.List<com.didiyun.bill.v1.ContinueListItem> continueList_;
     /**
@@ -263,6 +275,7 @@ private static final long serialVersionUID = 0L;
     private int total_;
     /**
      * <code>int32 total = 2;</code>
+     * @return The total.
      */
     public int getTotal() {
       return total_;
@@ -320,13 +333,12 @@ private static final long serialVersionUID = 0L;
       }
       com.didiyun.bill.v1.ContinueListResponse.Data other = (com.didiyun.bill.v1.ContinueListResponse.Data) obj;
 
-      boolean result = true;
-      result = result && getContinueListList()
-          .equals(other.getContinueListList());
-      result = result && (getTotal()
-          == other.getTotal());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getContinueListList()
+          .equals(other.getContinueListList())) return false;
+      if (getTotal()
+          != other.getTotal()) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -511,9 +523,8 @@ private static final long serialVersionUID = 0L;
       public com.didiyun.bill.v1.ContinueListResponse.Data buildPartial() {
         com.didiyun.bill.v1.ContinueListResponse.Data result = new com.didiyun.bill.v1.ContinueListResponse.Data(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (continueListBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             continueList_ = java.util.Collections.unmodifiableList(continueList_);
             bitField0_ = (bitField0_ & ~0x00000001);
           }
@@ -522,42 +533,41 @@ private static final long serialVersionUID = 0L;
           result.continueList_ = continueListBuilder_.build();
         }
         result.total_ = total_;
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -633,7 +643,7 @@ private static final long serialVersionUID = 0L;
       private java.util.List<com.didiyun.bill.v1.ContinueListItem> continueList_ =
         java.util.Collections.emptyList();
       private void ensureContinueListIsMutable() {
-        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           continueList_ = new java.util.ArrayList<com.didiyun.bill.v1.ContinueListItem>(continueList_);
           bitField0_ |= 0x00000001;
          }
@@ -862,7 +872,7 @@ private static final long serialVersionUID = 0L;
           continueListBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               com.didiyun.bill.v1.ContinueListItem, com.didiyun.bill.v1.ContinueListItem.Builder, com.didiyun.bill.v1.ContinueListItemOrBuilder>(
                   continueList_,
-                  ((bitField0_ & 0x00000001) == 0x00000001),
+                  ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           continueList_ = null;
@@ -873,12 +883,15 @@ private static final long serialVersionUID = 0L;
       private int total_ ;
       /**
        * <code>int32 total = 2;</code>
+       * @return The total.
        */
       public int getTotal() {
         return total_;
       }
       /**
        * <code>int32 total = 2;</code>
+       * @param value The total to set.
+       * @return This builder for chaining.
        */
       public Builder setTotal(int value) {
         
@@ -888,6 +901,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <code>int32 total = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearTotal() {
         
@@ -898,7 +912,7 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -952,12 +966,14 @@ private static final long serialVersionUID = 0L;
   private com.didiyun.base.v1.Error error_;
   /**
    * <code>.didi.cloud.base.v1.Error error = 1;</code>
+   * @return Whether the error field is set.
    */
   public boolean hasError() {
     return error_ != null;
   }
   /**
    * <code>.didi.cloud.base.v1.Error error = 1;</code>
+   * @return The error.
    */
   public com.didiyun.base.v1.Error getError() {
     return error_ == null ? com.didiyun.base.v1.Error.getDefaultInstance() : error_;
@@ -973,12 +989,14 @@ private static final long serialVersionUID = 0L;
   private com.didiyun.bill.v1.ContinueListResponse.Data data_;
   /**
    * <code>.didi.cloud.bill.v1.ContinueListResponse.Data data = 2;</code>
+   * @return Whether the data field is set.
    */
   public boolean hasData() {
     return data_ != null;
   }
   /**
    * <code>.didi.cloud.bill.v1.ContinueListResponse.Data data = 2;</code>
+   * @return The data.
    */
   public com.didiyun.bill.v1.ContinueListResponse.Data getData() {
     return data_ == null ? com.didiyun.bill.v1.ContinueListResponse.Data.getDefaultInstance() : data_;
@@ -1042,19 +1060,18 @@ private static final long serialVersionUID = 0L;
     }
     com.didiyun.bill.v1.ContinueListResponse other = (com.didiyun.bill.v1.ContinueListResponse) obj;
 
-    boolean result = true;
-    result = result && (hasError() == other.hasError());
+    if (hasError() != other.hasError()) return false;
     if (hasError()) {
-      result = result && getError()
-          .equals(other.getError());
+      if (!getError()
+          .equals(other.getError())) return false;
     }
-    result = result && (hasData() == other.hasData());
+    if (hasData() != other.hasData()) return false;
     if (hasData()) {
-      result = result && getData()
-          .equals(other.getData());
+      if (!getData()
+          .equals(other.getData())) return false;
     }
-    result = result && unknownFields.equals(other.unknownFields);
-    return result;
+    if (!unknownFields.equals(other.unknownFields)) return false;
+    return true;
   }
 
   @java.lang.Override
@@ -1259,35 +1276,35 @@ private static final long serialVersionUID = 0L;
 
     @java.lang.Override
     public Builder clone() {
-      return (Builder) super.clone();
+      return super.clone();
     }
     @java.lang.Override
     public Builder setField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return (Builder) super.setField(field, value);
+      return super.setField(field, value);
     }
     @java.lang.Override
     public Builder clearField(
         com.google.protobuf.Descriptors.FieldDescriptor field) {
-      return (Builder) super.clearField(field);
+      return super.clearField(field);
     }
     @java.lang.Override
     public Builder clearOneof(
         com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-      return (Builder) super.clearOneof(oneof);
+      return super.clearOneof(oneof);
     }
     @java.lang.Override
     public Builder setRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         int index, java.lang.Object value) {
-      return (Builder) super.setRepeatedField(field, index, value);
+      return super.setRepeatedField(field, index, value);
     }
     @java.lang.Override
     public Builder addRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return (Builder) super.addRepeatedField(field, value);
+      return super.addRepeatedField(field, value);
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1336,17 +1353,19 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private com.didiyun.base.v1.Error error_ = null;
+    private com.didiyun.base.v1.Error error_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.didiyun.base.v1.Error, com.didiyun.base.v1.Error.Builder, com.didiyun.base.v1.ErrorOrBuilder> errorBuilder_;
     /**
      * <code>.didi.cloud.base.v1.Error error = 1;</code>
+     * @return Whether the error field is set.
      */
     public boolean hasError() {
       return errorBuilder_ != null || error_ != null;
     }
     /**
      * <code>.didi.cloud.base.v1.Error error = 1;</code>
+     * @return The error.
      */
     public com.didiyun.base.v1.Error getError() {
       if (errorBuilder_ == null) {
@@ -1453,17 +1472,19 @@ private static final long serialVersionUID = 0L;
       return errorBuilder_;
     }
 
-    private com.didiyun.bill.v1.ContinueListResponse.Data data_ = null;
+    private com.didiyun.bill.v1.ContinueListResponse.Data data_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.didiyun.bill.v1.ContinueListResponse.Data, com.didiyun.bill.v1.ContinueListResponse.Data.Builder, com.didiyun.bill.v1.ContinueListResponse.DataOrBuilder> dataBuilder_;
     /**
      * <code>.didi.cloud.bill.v1.ContinueListResponse.Data data = 2;</code>
+     * @return Whether the data field is set.
      */
     public boolean hasData() {
       return dataBuilder_ != null || data_ != null;
     }
     /**
      * <code>.didi.cloud.bill.v1.ContinueListResponse.Data data = 2;</code>
+     * @return The data.
      */
     public com.didiyun.bill.v1.ContinueListResponse.Data getData() {
       if (dataBuilder_ == null) {
@@ -1572,7 +1593,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
-      return super.setUnknownFieldsProto3(unknownFields);
+      return super.setUnknownFields(unknownFields);
     }
 
     @java.lang.Override

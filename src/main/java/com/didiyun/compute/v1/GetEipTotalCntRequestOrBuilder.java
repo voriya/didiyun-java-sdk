@@ -13,6 +13,7 @@ public interface GetEipTotalCntRequestOrBuilder extends
    * </pre>
    *
    * <code>.didi.cloud.base.v1.Header header = 1;</code>
+   * @return Whether the header field is set.
    */
   boolean hasHeader();
   /**
@@ -21,6 +22,7 @@ public interface GetEipTotalCntRequestOrBuilder extends
    * </pre>
    *
    * <code>.didi.cloud.base.v1.Header header = 1;</code>
+   * @return The header.
    */
   com.didiyun.base.v1.Header getHeader();
   /**
@@ -38,6 +40,7 @@ public interface GetEipTotalCntRequestOrBuilder extends
    * </pre>
    *
    * <code>string eip = 2;</code>
+   * @return The eip.
    */
   java.lang.String getEip();
   /**
@@ -46,6 +49,7 @@ public interface GetEipTotalCntRequestOrBuilder extends
    * </pre>
    *
    * <code>string eip = 2;</code>
+   * @return The bytes for eip.
    */
   com.google.protobuf.ByteString
       getEipBytes();
@@ -56,6 +60,7 @@ public interface GetEipTotalCntRequestOrBuilder extends
    * </pre>
    *
    * <code>repeated string eipUuids = 3;</code>
+   * @return A list containing the eipUuids.
    */
   java.util.List<java.lang.String>
       getEipUuidsList();
@@ -65,6 +70,7 @@ public interface GetEipTotalCntRequestOrBuilder extends
    * </pre>
    *
    * <code>repeated string eipUuids = 3;</code>
+   * @return The count of eipUuids.
    */
   int getEipUuidsCount();
   /**
@@ -73,6 +79,8 @@ public interface GetEipTotalCntRequestOrBuilder extends
    * </pre>
    *
    * <code>repeated string eipUuids = 3;</code>
+   * @param index The index of the element to return.
+   * @return The eipUuids at the given index.
    */
   java.lang.String getEipUuids(int index);
   /**
@@ -81,6 +89,8 @@ public interface GetEipTotalCntRequestOrBuilder extends
    * </pre>
    *
    * <code>repeated string eipUuids = 3;</code>
+   * @param index The index of the value to return.
+   * @return The bytes of the eipUuids at the given index.
    */
   com.google.protobuf.ByteString
       getEipUuidsBytes(int index);

@@ -13,6 +13,7 @@ public interface CheckDc2PriceInputOrBuilder extends
    * </pre>
    *
    * <code>int32 count = 1;</code>
+   * @return The count.
    */
   int getCount();
 
@@ -22,6 +23,7 @@ public interface CheckDc2PriceInputOrBuilder extends
    * </pre>
    *
    * <code>int32 payPeriod = 2;</code>
+   * @return The payPeriod.
    */
   int getPayPeriod();
 
@@ -31,6 +33,7 @@ public interface CheckDc2PriceInputOrBuilder extends
    * </pre>
    *
    * <code>string dc2Model = 3;</code>
+   * @return The dc2Model.
    */
   java.lang.String getDc2Model();
   /**
@@ -39,6 +42,7 @@ public interface CheckDc2PriceInputOrBuilder extends
    * </pre>
    *
    * <code>string dc2Model = 3;</code>
+   * @return The bytes for dc2Model.
    */
   com.google.protobuf.ByteString
       getDc2ModelBytes();
@@ -49,6 +53,7 @@ public interface CheckDc2PriceInputOrBuilder extends
    * </pre>
    *
    * <code>.didi.cloud.bill.v1.CheckEipPriceInput eip = 4;</code>
+   * @return Whether the eip field is set.
    */
   boolean hasEip();
   /**
@@ -57,6 +62,7 @@ public interface CheckDc2PriceInputOrBuilder extends
    * </pre>
    *
    * <code>.didi.cloud.bill.v1.CheckEipPriceInput eip = 4;</code>
+   * @return The eip.
    */
   com.didiyun.bill.v1.CheckEipPriceInput getEip();
   /**
@@ -118,6 +124,7 @@ public interface CheckDc2PriceInputOrBuilder extends
    * </pre>
    *
    * <code>string dc2Uuid = 6;</code>
+   * @return The dc2Uuid.
    */
   java.lang.String getDc2Uuid();
   /**
@@ -126,6 +133,7 @@ public interface CheckDc2PriceInputOrBuilder extends
    * </pre>
    *
    * <code>string dc2Uuid = 6;</code>
+   * @return The bytes for dc2Uuid.
    */
   com.google.protobuf.ByteString
       getDc2UuidBytes();

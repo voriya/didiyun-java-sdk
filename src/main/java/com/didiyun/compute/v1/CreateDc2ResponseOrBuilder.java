@@ -9,10 +9,12 @@ public interface CreateDc2ResponseOrBuilder extends
 
   /**
    * <code>.didi.cloud.base.v1.Error error = 1;</code>
+   * @return Whether the error field is set.
    */
   boolean hasError();
   /**
    * <code>.didi.cloud.base.v1.Error error = 1;</code>
+   * @return The error.
    */
   com.didiyun.base.v1.Error getError();
   /**

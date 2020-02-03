@@ -13,6 +13,7 @@ public interface ContinueListConditionOrBuilder extends
    * </pre>
    *
    * <code>int64 startTime = 1;</code>
+   * @return The startTime.
    */
   long getStartTime();
 
@@ -22,6 +23,7 @@ public interface ContinueListConditionOrBuilder extends
    * </pre>
    *
    * <code>int64 endTime = 2;</code>
+   * @return The endTime.
    */
   long getEndTime();
 
@@ -31,6 +33,7 @@ public interface ContinueListConditionOrBuilder extends
    * </pre>
    *
    * <code>string resourceType = 3;</code>
+   * @return The resourceType.
    */
   java.lang.String getResourceType();
   /**
@@ -39,6 +42,7 @@ public interface ContinueListConditionOrBuilder extends
    * </pre>
    *
    * <code>string resourceType = 3;</code>
+   * @return The bytes for resourceType.
    */
   com.google.protobuf.ByteString
       getResourceTypeBytes();
@@ -49,6 +53,7 @@ public interface ContinueListConditionOrBuilder extends
    * </pre>
    *
    * <code>string regionId = 4;</code>
+   * @return The regionId.
    */
   java.lang.String getRegionId();
   /**
@@ -57,6 +62,7 @@ public interface ContinueListConditionOrBuilder extends
    * </pre>
    *
    * <code>string regionId = 4;</code>
+   * @return The bytes for regionId.
    */
   com.google.protobuf.ByteString
       getRegionIdBytes();
@@ -67,6 +73,7 @@ public interface ContinueListConditionOrBuilder extends
    * </pre>
    *
    * <code>string autoRenewFilter = 5;</code>
+   * @return The autoRenewFilter.
    */
   java.lang.String getAutoRenewFilter();
   /**
@@ -75,6 +82,7 @@ public interface ContinueListConditionOrBuilder extends
    * </pre>
    *
    * <code>string autoRenewFilter = 5;</code>
+   * @return The bytes for autoRenewFilter.
    */
   com.google.protobuf.ByteString
       getAutoRenewFilterBytes();

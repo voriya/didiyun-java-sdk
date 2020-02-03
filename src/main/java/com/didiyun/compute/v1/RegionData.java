@@ -23,6 +23,13 @@ private static final long serialVersionUID = 0L;
   }
 
   @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new RegionData();
+  }
+
+  @java.lang.Override
   public final com.google.protobuf.UnknownFieldSet
   getUnknownFields() {
     return this.unknownFields;
@@ -65,16 +72,16 @@ private static final long serialVersionUID = 0L;
             break;
           }
           case 34: {
-            if (!((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
               zone_ = new java.util.ArrayList<com.didiyun.base.v1.ZoneInfo>();
-              mutable_bitField0_ |= 0x00000008;
+              mutable_bitField0_ |= 0x00000001;
             }
             zone_.add(
                 input.readMessage(com.didiyun.base.v1.ZoneInfo.parser(), extensionRegistry));
             break;
           }
           default: {
-            if (!parseUnknownFieldProto3(
+            if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
               done = true;
             }
@@ -88,7 +95,7 @@ private static final long serialVersionUID = 0L;
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
     } finally {
-      if (((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+      if (((mutable_bitField0_ & 0x00000001) != 0)) {
         zone_ = java.util.Collections.unmodifiableList(zone_);
       }
       this.unknownFields = unknownFields.build();
@@ -108,7 +115,6 @@ private static final long serialVersionUID = 0L;
             com.didiyun.compute.v1.RegionData.class, com.didiyun.compute.v1.RegionData.Builder.class);
   }
 
-  private int bitField0_;
   public static final int AREANAME_FIELD_NUMBER = 1;
   private volatile java.lang.Object areaName_;
   /**
@@ -117,6 +123,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string areaName = 1;</code>
+   * @return The areaName.
    */
   public java.lang.String getAreaName() {
     java.lang.Object ref = areaName_;
@@ -136,6 +143,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string areaName = 1;</code>
+   * @return The bytes for areaName.
    */
   public com.google.protobuf.ByteString
       getAreaNameBytes() {
@@ -159,6 +167,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string id = 2;</code>
+   * @return The id.
    */
   public java.lang.String getId() {
     java.lang.Object ref = id_;
@@ -178,6 +187,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string id = 2;</code>
+   * @return The bytes for id.
    */
   public com.google.protobuf.ByteString
       getIdBytes() {
@@ -201,6 +211,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string name = 3;</code>
+   * @return The name.
    */
   public java.lang.String getName() {
     java.lang.Object ref = name_;
@@ -220,6 +231,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string name = 3;</code>
+   * @return The bytes for name.
    */
   public com.google.protobuf.ByteString
       getNameBytes() {
@@ -353,17 +365,16 @@ private static final long serialVersionUID = 0L;
     }
     com.didiyun.compute.v1.RegionData other = (com.didiyun.compute.v1.RegionData) obj;
 
-    boolean result = true;
-    result = result && getAreaName()
-        .equals(other.getAreaName());
-    result = result && getId()
-        .equals(other.getId());
-    result = result && getName()
-        .equals(other.getName());
-    result = result && getZoneList()
-        .equals(other.getZoneList());
-    result = result && unknownFields.equals(other.unknownFields);
-    return result;
+    if (!getAreaName()
+        .equals(other.getAreaName())) return false;
+    if (!getId()
+        .equals(other.getId())) return false;
+    if (!getName()
+        .equals(other.getName())) return false;
+    if (!getZoneList()
+        .equals(other.getZoneList())) return false;
+    if (!unknownFields.equals(other.unknownFields)) return false;
+    return true;
   }
 
   @java.lang.Override
@@ -525,7 +536,7 @@ private static final long serialVersionUID = 0L;
 
       if (zoneBuilder_ == null) {
         zone_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000008);
+        bitField0_ = (bitField0_ & ~0x00000001);
       } else {
         zoneBuilder_.clear();
       }
@@ -556,55 +567,53 @@ private static final long serialVersionUID = 0L;
     public com.didiyun.compute.v1.RegionData buildPartial() {
       com.didiyun.compute.v1.RegionData result = new com.didiyun.compute.v1.RegionData(this);
       int from_bitField0_ = bitField0_;
-      int to_bitField0_ = 0;
       result.areaName_ = areaName_;
       result.id_ = id_;
       result.name_ = name_;
       if (zoneBuilder_ == null) {
-        if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        if (((bitField0_ & 0x00000001) != 0)) {
           zone_ = java.util.Collections.unmodifiableList(zone_);
-          bitField0_ = (bitField0_ & ~0x00000008);
+          bitField0_ = (bitField0_ & ~0x00000001);
         }
         result.zone_ = zone_;
       } else {
         result.zone_ = zoneBuilder_.build();
       }
-      result.bitField0_ = to_bitField0_;
       onBuilt();
       return result;
     }
 
     @java.lang.Override
     public Builder clone() {
-      return (Builder) super.clone();
+      return super.clone();
     }
     @java.lang.Override
     public Builder setField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return (Builder) super.setField(field, value);
+      return super.setField(field, value);
     }
     @java.lang.Override
     public Builder clearField(
         com.google.protobuf.Descriptors.FieldDescriptor field) {
-      return (Builder) super.clearField(field);
+      return super.clearField(field);
     }
     @java.lang.Override
     public Builder clearOneof(
         com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-      return (Builder) super.clearOneof(oneof);
+      return super.clearOneof(oneof);
     }
     @java.lang.Override
     public Builder setRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         int index, java.lang.Object value) {
-      return (Builder) super.setRepeatedField(field, index, value);
+      return super.setRepeatedField(field, index, value);
     }
     @java.lang.Override
     public Builder addRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return (Builder) super.addRepeatedField(field, value);
+      return super.addRepeatedField(field, value);
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -634,7 +643,7 @@ private static final long serialVersionUID = 0L;
         if (!other.zone_.isEmpty()) {
           if (zone_.isEmpty()) {
             zone_ = other.zone_;
-            bitField0_ = (bitField0_ & ~0x00000008);
+            bitField0_ = (bitField0_ & ~0x00000001);
           } else {
             ensureZoneIsMutable();
             zone_.addAll(other.zone_);
@@ -647,7 +656,7 @@ private static final long serialVersionUID = 0L;
             zoneBuilder_.dispose();
             zoneBuilder_ = null;
             zone_ = other.zone_;
-            bitField0_ = (bitField0_ & ~0x00000008);
+            bitField0_ = (bitField0_ & ~0x00000001);
             zoneBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getZoneFieldBuilder() : null;
@@ -693,6 +702,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string areaName = 1;</code>
+     * @return The areaName.
      */
     public java.lang.String getAreaName() {
       java.lang.Object ref = areaName_;
@@ -712,6 +722,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string areaName = 1;</code>
+     * @return The bytes for areaName.
      */
     public com.google.protobuf.ByteString
         getAreaNameBytes() {
@@ -732,6 +743,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string areaName = 1;</code>
+     * @param value The areaName to set.
+     * @return This builder for chaining.
      */
     public Builder setAreaName(
         java.lang.String value) {
@@ -749,6 +762,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string areaName = 1;</code>
+     * @return This builder for chaining.
      */
     public Builder clearAreaName() {
       
@@ -762,6 +776,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string areaName = 1;</code>
+     * @param value The bytes for areaName to set.
+     * @return This builder for chaining.
      */
     public Builder setAreaNameBytes(
         com.google.protobuf.ByteString value) {
@@ -782,6 +798,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string id = 2;</code>
+     * @return The id.
      */
     public java.lang.String getId() {
       java.lang.Object ref = id_;
@@ -801,6 +818,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string id = 2;</code>
+     * @return The bytes for id.
      */
     public com.google.protobuf.ByteString
         getIdBytes() {
@@ -821,6 +839,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string id = 2;</code>
+     * @param value The id to set.
+     * @return This builder for chaining.
      */
     public Builder setId(
         java.lang.String value) {
@@ -838,6 +858,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string id = 2;</code>
+     * @return This builder for chaining.
      */
     public Builder clearId() {
       
@@ -851,6 +872,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string id = 2;</code>
+     * @param value The bytes for id to set.
+     * @return This builder for chaining.
      */
     public Builder setIdBytes(
         com.google.protobuf.ByteString value) {
@@ -871,6 +894,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string name = 3;</code>
+     * @return The name.
      */
     public java.lang.String getName() {
       java.lang.Object ref = name_;
@@ -890,6 +914,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string name = 3;</code>
+     * @return The bytes for name.
      */
     public com.google.protobuf.ByteString
         getNameBytes() {
@@ -910,6 +935,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string name = 3;</code>
+     * @param value The name to set.
+     * @return This builder for chaining.
      */
     public Builder setName(
         java.lang.String value) {
@@ -927,6 +954,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string name = 3;</code>
+     * @return This builder for chaining.
      */
     public Builder clearName() {
       
@@ -940,6 +968,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string name = 3;</code>
+     * @param value The bytes for name to set.
+     * @return This builder for chaining.
      */
     public Builder setNameBytes(
         com.google.protobuf.ByteString value) {
@@ -956,9 +986,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.didiyun.base.v1.ZoneInfo> zone_ =
       java.util.Collections.emptyList();
     private void ensureZoneIsMutable() {
-      if (!((bitField0_ & 0x00000008) == 0x00000008)) {
+      if (!((bitField0_ & 0x00000001) != 0)) {
         zone_ = new java.util.ArrayList<com.didiyun.base.v1.ZoneInfo>(zone_);
-        bitField0_ |= 0x00000008;
+        bitField0_ |= 0x00000001;
        }
     }
 
@@ -1152,7 +1182,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearZone() {
       if (zoneBuilder_ == null) {
         zone_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000008);
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
       } else {
         zoneBuilder_.clear();
@@ -1257,7 +1287,7 @@ private static final long serialVersionUID = 0L;
         zoneBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.didiyun.base.v1.ZoneInfo, com.didiyun.base.v1.ZoneInfo.Builder, com.didiyun.base.v1.ZoneInfoOrBuilder>(
                 zone_,
-                ((bitField0_ & 0x00000008) == 0x00000008),
+                ((bitField0_ & 0x00000001) != 0),
                 getParentForChildren(),
                 isClean());
         zone_ = null;
@@ -1267,7 +1297,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
-      return super.setUnknownFieldsProto3(unknownFields);
+      return super.setUnknownFields(unknownFields);
     }
 
     @java.lang.Override

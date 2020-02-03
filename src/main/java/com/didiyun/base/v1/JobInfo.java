@@ -22,11 +22,15 @@ private static final long serialVersionUID = 0L;
   private JobInfo() {
     jobUuid_ = "";
     resourceUuid_ = "";
-    progress_ = 0D;
     type_ = "";
-    done_ = false;
-    success_ = false;
     result_ = "";
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new JobInfo();
   }
 
   @java.lang.Override
@@ -42,7 +46,6 @@ private static final long serialVersionUID = 0L;
     if (extensionRegistry == null) {
       throw new java.lang.NullPointerException();
     }
-    int mutable_bitField0_ = 0;
     com.google.protobuf.UnknownFieldSet.Builder unknownFields =
         com.google.protobuf.UnknownFieldSet.newBuilder();
     try {
@@ -93,7 +96,7 @@ private static final long serialVersionUID = 0L;
             break;
           }
           default: {
-            if (!parseUnknownFieldProto3(
+            if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
               done = true;
             }
@@ -132,6 +135,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string jobUuid = 1;</code>
+   * @return The jobUuid.
    */
   public java.lang.String getJobUuid() {
     java.lang.Object ref = jobUuid_;
@@ -151,6 +155,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string jobUuid = 1;</code>
+   * @return The bytes for jobUuid.
    */
   public com.google.protobuf.ByteString
       getJobUuidBytes() {
@@ -174,6 +179,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string resourceUuid = 2;</code>
+   * @return The resourceUuid.
    */
   public java.lang.String getResourceUuid() {
     java.lang.Object ref = resourceUuid_;
@@ -193,6 +199,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string resourceUuid = 2;</code>
+   * @return The bytes for resourceUuid.
    */
   public com.google.protobuf.ByteString
       getResourceUuidBytes() {
@@ -216,6 +223,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>double progress = 3;</code>
+   * @return The progress.
    */
   public double getProgress() {
     return progress_;
@@ -229,6 +237,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string type = 4;</code>
+   * @return The type.
    */
   public java.lang.String getType() {
     java.lang.Object ref = type_;
@@ -248,6 +257,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string type = 4;</code>
+   * @return The bytes for type.
    */
   public com.google.protobuf.ByteString
       getTypeBytes() {
@@ -271,6 +281,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>bool done = 5;</code>
+   * @return The done.
    */
   public boolean getDone() {
     return done_;
@@ -284,6 +295,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>bool success = 6;</code>
+   * @return The success.
    */
   public boolean getSuccess() {
     return success_;
@@ -297,6 +309,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string result = 7;</code>
+   * @return The result.
    */
   public java.lang.String getResult() {
     java.lang.Object ref = result_;
@@ -316,6 +329,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string result = 7;</code>
+   * @return The bytes for result.
    */
   public com.google.protobuf.ByteString
       getResultBytes() {
@@ -414,25 +428,23 @@ private static final long serialVersionUID = 0L;
     }
     com.didiyun.base.v1.JobInfo other = (com.didiyun.base.v1.JobInfo) obj;
 
-    boolean result = true;
-    result = result && getJobUuid()
-        .equals(other.getJobUuid());
-    result = result && getResourceUuid()
-        .equals(other.getResourceUuid());
-    result = result && (
-        java.lang.Double.doubleToLongBits(getProgress())
-        == java.lang.Double.doubleToLongBits(
-            other.getProgress()));
-    result = result && getType()
-        .equals(other.getType());
-    result = result && (getDone()
-        == other.getDone());
-    result = result && (getSuccess()
-        == other.getSuccess());
-    result = result && getResult()
-        .equals(other.getResult());
-    result = result && unknownFields.equals(other.unknownFields);
-    return result;
+    if (!getJobUuid()
+        .equals(other.getJobUuid())) return false;
+    if (!getResourceUuid()
+        .equals(other.getResourceUuid())) return false;
+    if (java.lang.Double.doubleToLongBits(getProgress())
+        != java.lang.Double.doubleToLongBits(
+            other.getProgress())) return false;
+    if (!getType()
+        .equals(other.getType())) return false;
+    if (getDone()
+        != other.getDone()) return false;
+    if (getSuccess()
+        != other.getSuccess()) return false;
+    if (!getResult()
+        .equals(other.getResult())) return false;
+    if (!unknownFields.equals(other.unknownFields)) return false;
+    return true;
   }
 
   @java.lang.Override
@@ -649,35 +661,35 @@ private static final long serialVersionUID = 0L;
 
     @java.lang.Override
     public Builder clone() {
-      return (Builder) super.clone();
+      return super.clone();
     }
     @java.lang.Override
     public Builder setField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return (Builder) super.setField(field, value);
+      return super.setField(field, value);
     }
     @java.lang.Override
     public Builder clearField(
         com.google.protobuf.Descriptors.FieldDescriptor field) {
-      return (Builder) super.clearField(field);
+      return super.clearField(field);
     }
     @java.lang.Override
     public Builder clearOneof(
         com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-      return (Builder) super.clearOneof(oneof);
+      return super.clearOneof(oneof);
     }
     @java.lang.Override
     public Builder setRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         int index, java.lang.Object value) {
-      return (Builder) super.setRepeatedField(field, index, value);
+      return super.setRepeatedField(field, index, value);
     }
     @java.lang.Override
     public Builder addRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return (Builder) super.addRepeatedField(field, value);
+      return super.addRepeatedField(field, value);
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -752,6 +764,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string jobUuid = 1;</code>
+     * @return The jobUuid.
      */
     public java.lang.String getJobUuid() {
       java.lang.Object ref = jobUuid_;
@@ -771,6 +784,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string jobUuid = 1;</code>
+     * @return The bytes for jobUuid.
      */
     public com.google.protobuf.ByteString
         getJobUuidBytes() {
@@ -791,6 +805,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string jobUuid = 1;</code>
+     * @param value The jobUuid to set.
+     * @return This builder for chaining.
      */
     public Builder setJobUuid(
         java.lang.String value) {
@@ -808,6 +824,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string jobUuid = 1;</code>
+     * @return This builder for chaining.
      */
     public Builder clearJobUuid() {
       
@@ -821,6 +838,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string jobUuid = 1;</code>
+     * @param value The bytes for jobUuid to set.
+     * @return This builder for chaining.
      */
     public Builder setJobUuidBytes(
         com.google.protobuf.ByteString value) {
@@ -841,6 +860,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string resourceUuid = 2;</code>
+     * @return The resourceUuid.
      */
     public java.lang.String getResourceUuid() {
       java.lang.Object ref = resourceUuid_;
@@ -860,6 +880,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string resourceUuid = 2;</code>
+     * @return The bytes for resourceUuid.
      */
     public com.google.protobuf.ByteString
         getResourceUuidBytes() {
@@ -880,6 +901,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string resourceUuid = 2;</code>
+     * @param value The resourceUuid to set.
+     * @return This builder for chaining.
      */
     public Builder setResourceUuid(
         java.lang.String value) {
@@ -897,6 +920,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string resourceUuid = 2;</code>
+     * @return This builder for chaining.
      */
     public Builder clearResourceUuid() {
       
@@ -910,6 +934,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string resourceUuid = 2;</code>
+     * @param value The bytes for resourceUuid to set.
+     * @return This builder for chaining.
      */
     public Builder setResourceUuidBytes(
         com.google.protobuf.ByteString value) {
@@ -930,6 +956,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>double progress = 3;</code>
+     * @return The progress.
      */
     public double getProgress() {
       return progress_;
@@ -940,6 +967,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>double progress = 3;</code>
+     * @param value The progress to set.
+     * @return This builder for chaining.
      */
     public Builder setProgress(double value) {
       
@@ -953,6 +982,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>double progress = 3;</code>
+     * @return This builder for chaining.
      */
     public Builder clearProgress() {
       
@@ -968,6 +998,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string type = 4;</code>
+     * @return The type.
      */
     public java.lang.String getType() {
       java.lang.Object ref = type_;
@@ -987,6 +1018,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string type = 4;</code>
+     * @return The bytes for type.
      */
     public com.google.protobuf.ByteString
         getTypeBytes() {
@@ -1007,6 +1039,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string type = 4;</code>
+     * @param value The type to set.
+     * @return This builder for chaining.
      */
     public Builder setType(
         java.lang.String value) {
@@ -1024,6 +1058,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string type = 4;</code>
+     * @return This builder for chaining.
      */
     public Builder clearType() {
       
@@ -1037,6 +1072,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string type = 4;</code>
+     * @param value The bytes for type to set.
+     * @return This builder for chaining.
      */
     public Builder setTypeBytes(
         com.google.protobuf.ByteString value) {
@@ -1057,6 +1094,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>bool done = 5;</code>
+     * @return The done.
      */
     public boolean getDone() {
       return done_;
@@ -1067,6 +1105,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>bool done = 5;</code>
+     * @param value The done to set.
+     * @return This builder for chaining.
      */
     public Builder setDone(boolean value) {
       
@@ -1080,6 +1120,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>bool done = 5;</code>
+     * @return This builder for chaining.
      */
     public Builder clearDone() {
       
@@ -1095,6 +1136,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>bool success = 6;</code>
+     * @return The success.
      */
     public boolean getSuccess() {
       return success_;
@@ -1105,6 +1147,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>bool success = 6;</code>
+     * @param value The success to set.
+     * @return This builder for chaining.
      */
     public Builder setSuccess(boolean value) {
       
@@ -1118,6 +1162,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>bool success = 6;</code>
+     * @return This builder for chaining.
      */
     public Builder clearSuccess() {
       
@@ -1133,6 +1178,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string result = 7;</code>
+     * @return The result.
      */
     public java.lang.String getResult() {
       java.lang.Object ref = result_;
@@ -1152,6 +1198,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string result = 7;</code>
+     * @return The bytes for result.
      */
     public com.google.protobuf.ByteString
         getResultBytes() {
@@ -1172,6 +1219,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string result = 7;</code>
+     * @param value The result to set.
+     * @return This builder for chaining.
      */
     public Builder setResult(
         java.lang.String value) {
@@ -1189,6 +1238,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string result = 7;</code>
+     * @return This builder for chaining.
      */
     public Builder clearResult() {
       
@@ -1202,6 +1252,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string result = 7;</code>
+     * @param value The bytes for result to set.
+     * @return This builder for chaining.
      */
     public Builder setResultBytes(
         com.google.protobuf.ByteString value) {
@@ -1217,7 +1269,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
-      return super.setUnknownFieldsProto3(unknownFields);
+      return super.setUnknownFields(unknownFields);
     }
 
     @java.lang.Override

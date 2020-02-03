@@ -13,6 +13,7 @@ public interface GetSgRuleTotalCntRequestOrBuilder extends
    * </pre>
    *
    * <code>.didi.cloud.base.v1.Header header = 1;</code>
+   * @return Whether the header field is set.
    */
   boolean hasHeader();
   /**
@@ -21,6 +22,7 @@ public interface GetSgRuleTotalCntRequestOrBuilder extends
    * </pre>
    *
    * <code>.didi.cloud.base.v1.Header header = 1;</code>
+   * @return The header.
    */
   com.didiyun.base.v1.Header getHeader();
   /**
@@ -38,6 +40,7 @@ public interface GetSgRuleTotalCntRequestOrBuilder extends
    * </pre>
    *
    * <code>string sgUuid = 2;</code>
+   * @return The sgUuid.
    */
   java.lang.String getSgUuid();
   /**
@@ -46,6 +49,7 @@ public interface GetSgRuleTotalCntRequestOrBuilder extends
    * </pre>
    *
    * <code>string sgUuid = 2;</code>
+   * @return The bytes for sgUuid.
    */
   com.google.protobuf.ByteString
       getSgUuidBytes();
@@ -56,6 +60,7 @@ public interface GetSgRuleTotalCntRequestOrBuilder extends
    * </pre>
    *
    * <code>string dc2Uuid = 3;</code>
+   * @return The dc2Uuid.
    */
   java.lang.String getDc2Uuid();
   /**
@@ -64,6 +69,7 @@ public interface GetSgRuleTotalCntRequestOrBuilder extends
    * </pre>
    *
    * <code>string dc2Uuid = 3;</code>
+   * @return The bytes for dc2Uuid.
    */
   com.google.protobuf.ByteString
       getDc2UuidBytes();
@@ -74,6 +80,7 @@ public interface GetSgRuleTotalCntRequestOrBuilder extends
    * </pre>
    *
    * <code>string type = 4;</code>
+   * @return The type.
    */
   java.lang.String getType();
   /**
@@ -82,6 +89,7 @@ public interface GetSgRuleTotalCntRequestOrBuilder extends
    * </pre>
    *
    * <code>string type = 4;</code>
+   * @return The bytes for type.
    */
   com.google.protobuf.ByteString
       getTypeBytes();

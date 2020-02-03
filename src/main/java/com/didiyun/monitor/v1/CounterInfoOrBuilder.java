@@ -13,6 +13,7 @@ public interface CounterInfoOrBuilder extends
    * </pre>
    *
    * <code>string dstype = 1;</code>
+   * @return The dstype.
    */
   java.lang.String getDstype();
   /**
@@ -21,6 +22,7 @@ public interface CounterInfoOrBuilder extends
    * </pre>
    *
    * <code>string dstype = 1;</code>
+   * @return The bytes for dstype.
    */
   com.google.protobuf.ByteString
       getDstypeBytes();
@@ -31,6 +33,7 @@ public interface CounterInfoOrBuilder extends
    * </pre>
    *
    * <code>int32 step = 2;</code>
+   * @return The step.
    */
   int getStep();
 
@@ -40,6 +43,7 @@ public interface CounterInfoOrBuilder extends
    * </pre>
    *
    * <code>string monitorTags = 3;</code>
+   * @return The monitorTags.
    */
   java.lang.String getMonitorTags();
   /**
@@ -48,6 +52,7 @@ public interface CounterInfoOrBuilder extends
    * </pre>
    *
    * <code>string monitorTags = 3;</code>
+   * @return The bytes for monitorTags.
    */
   com.google.protobuf.ByteString
       getMonitorTagsBytes();

@@ -24,6 +24,13 @@ private static final long serialVersionUID = 0L;
   }
 
   @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new ListEipResponse();
+  }
+
+  @java.lang.Override
   public final com.google.protobuf.UnknownFieldSet
   getUnknownFields() {
     return this.unknownFields;
@@ -61,16 +68,16 @@ private static final long serialVersionUID = 0L;
             break;
           }
           case 18: {
-            if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
               data_ = new java.util.ArrayList<com.didiyun.compute.v1.EipInfo>();
-              mutable_bitField0_ |= 0x00000002;
+              mutable_bitField0_ |= 0x00000001;
             }
             data_.add(
                 input.readMessage(com.didiyun.compute.v1.EipInfo.parser(), extensionRegistry));
             break;
           }
           default: {
-            if (!parseUnknownFieldProto3(
+            if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
               done = true;
             }
@@ -84,7 +91,7 @@ private static final long serialVersionUID = 0L;
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
     } finally {
-      if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+      if (((mutable_bitField0_ & 0x00000001) != 0)) {
         data_ = java.util.Collections.unmodifiableList(data_);
       }
       this.unknownFields = unknownFields.build();
@@ -104,17 +111,18 @@ private static final long serialVersionUID = 0L;
             com.didiyun.compute.v1.ListEipResponse.class, com.didiyun.compute.v1.ListEipResponse.Builder.class);
   }
 
-  private int bitField0_;
   public static final int ERROR_FIELD_NUMBER = 1;
   private com.didiyun.base.v1.Error error_;
   /**
    * <code>.didi.cloud.base.v1.Error error = 1;</code>
+   * @return Whether the error field is set.
    */
   public boolean hasError() {
     return error_ != null;
   }
   /**
    * <code>.didi.cloud.base.v1.Error error = 1;</code>
+   * @return The error.
    */
   public com.didiyun.base.v1.Error getError() {
     return error_ == null ? com.didiyun.base.v1.Error.getDefaultInstance() : error_;
@@ -233,16 +241,15 @@ private static final long serialVersionUID = 0L;
     }
     com.didiyun.compute.v1.ListEipResponse other = (com.didiyun.compute.v1.ListEipResponse) obj;
 
-    boolean result = true;
-    result = result && (hasError() == other.hasError());
+    if (hasError() != other.hasError()) return false;
     if (hasError()) {
-      result = result && getError()
-          .equals(other.getError());
+      if (!getError()
+          .equals(other.getError())) return false;
     }
-    result = result && getDataList()
-        .equals(other.getDataList());
-    result = result && unknownFields.equals(other.unknownFields);
-    return result;
+    if (!getDataList()
+        .equals(other.getDataList())) return false;
+    if (!unknownFields.equals(other.unknownFields)) return false;
+    return true;
   }
 
   @java.lang.Override
@@ -406,7 +413,7 @@ private static final long serialVersionUID = 0L;
       }
       if (dataBuilder_ == null) {
         data_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000001);
       } else {
         dataBuilder_.clear();
       }
@@ -437,57 +444,55 @@ private static final long serialVersionUID = 0L;
     public com.didiyun.compute.v1.ListEipResponse buildPartial() {
       com.didiyun.compute.v1.ListEipResponse result = new com.didiyun.compute.v1.ListEipResponse(this);
       int from_bitField0_ = bitField0_;
-      int to_bitField0_ = 0;
       if (errorBuilder_ == null) {
         result.error_ = error_;
       } else {
         result.error_ = errorBuilder_.build();
       }
       if (dataBuilder_ == null) {
-        if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        if (((bitField0_ & 0x00000001) != 0)) {
           data_ = java.util.Collections.unmodifiableList(data_);
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00000001);
         }
         result.data_ = data_;
       } else {
         result.data_ = dataBuilder_.build();
       }
-      result.bitField0_ = to_bitField0_;
       onBuilt();
       return result;
     }
 
     @java.lang.Override
     public Builder clone() {
-      return (Builder) super.clone();
+      return super.clone();
     }
     @java.lang.Override
     public Builder setField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return (Builder) super.setField(field, value);
+      return super.setField(field, value);
     }
     @java.lang.Override
     public Builder clearField(
         com.google.protobuf.Descriptors.FieldDescriptor field) {
-      return (Builder) super.clearField(field);
+      return super.clearField(field);
     }
     @java.lang.Override
     public Builder clearOneof(
         com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-      return (Builder) super.clearOneof(oneof);
+      return super.clearOneof(oneof);
     }
     @java.lang.Override
     public Builder setRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         int index, java.lang.Object value) {
-      return (Builder) super.setRepeatedField(field, index, value);
+      return super.setRepeatedField(field, index, value);
     }
     @java.lang.Override
     public Builder addRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return (Builder) super.addRepeatedField(field, value);
+      return super.addRepeatedField(field, value);
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -508,7 +513,7 @@ private static final long serialVersionUID = 0L;
         if (!other.data_.isEmpty()) {
           if (data_.isEmpty()) {
             data_ = other.data_;
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000001);
           } else {
             ensureDataIsMutable();
             data_.addAll(other.data_);
@@ -521,7 +526,7 @@ private static final long serialVersionUID = 0L;
             dataBuilder_.dispose();
             dataBuilder_ = null;
             data_ = other.data_;
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000001);
             dataBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getDataFieldBuilder() : null;
@@ -560,17 +565,19 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
-    private com.didiyun.base.v1.Error error_ = null;
+    private com.didiyun.base.v1.Error error_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.didiyun.base.v1.Error, com.didiyun.base.v1.Error.Builder, com.didiyun.base.v1.ErrorOrBuilder> errorBuilder_;
     /**
      * <code>.didi.cloud.base.v1.Error error = 1;</code>
+     * @return Whether the error field is set.
      */
     public boolean hasError() {
       return errorBuilder_ != null || error_ != null;
     }
     /**
      * <code>.didi.cloud.base.v1.Error error = 1;</code>
+     * @return The error.
      */
     public com.didiyun.base.v1.Error getError() {
       if (errorBuilder_ == null) {
@@ -680,9 +687,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.didiyun.compute.v1.EipInfo> data_ =
       java.util.Collections.emptyList();
     private void ensureDataIsMutable() {
-      if (!((bitField0_ & 0x00000002) == 0x00000002)) {
+      if (!((bitField0_ & 0x00000001) != 0)) {
         data_ = new java.util.ArrayList<com.didiyun.compute.v1.EipInfo>(data_);
-        bitField0_ |= 0x00000002;
+        bitField0_ |= 0x00000001;
        }
     }
 
@@ -876,7 +883,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearData() {
       if (dataBuilder_ == null) {
         data_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
       } else {
         dataBuilder_.clear();
@@ -981,7 +988,7 @@ private static final long serialVersionUID = 0L;
         dataBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.didiyun.compute.v1.EipInfo, com.didiyun.compute.v1.EipInfo.Builder, com.didiyun.compute.v1.EipInfoOrBuilder>(
                 data_,
-                ((bitField0_ & 0x00000002) == 0x00000002),
+                ((bitField0_ & 0x00000001) != 0),
                 getParentForChildren(),
                 isClean());
         data_ = null;
@@ -991,7 +998,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
-      return super.setUnknownFieldsProto3(unknownFields);
+      return super.setUnknownFields(unknownFields);
     }
 
     @java.lang.Override

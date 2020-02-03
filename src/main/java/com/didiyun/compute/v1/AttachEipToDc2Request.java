@@ -20,6 +20,13 @@ private static final long serialVersionUID = 0L;
   }
 
   @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new AttachEipToDc2Request();
+  }
+
+  @java.lang.Override
   public final com.google.protobuf.UnknownFieldSet
   getUnknownFields() {
     return this.unknownFields;
@@ -57,16 +64,16 @@ private static final long serialVersionUID = 0L;
             break;
           }
           case 18: {
-            if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
               eip_ = new java.util.ArrayList<com.didiyun.compute.v1.AttachEipToDc2Request.Input>();
-              mutable_bitField0_ |= 0x00000002;
+              mutable_bitField0_ |= 0x00000001;
             }
             eip_.add(
                 input.readMessage(com.didiyun.compute.v1.AttachEipToDc2Request.Input.parser(), extensionRegistry));
             break;
           }
           default: {
-            if (!parseUnknownFieldProto3(
+            if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
               done = true;
             }
@@ -80,7 +87,7 @@ private static final long serialVersionUID = 0L;
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
     } finally {
-      if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+      if (((mutable_bitField0_ & 0x00000001) != 0)) {
         eip_ = java.util.Collections.unmodifiableList(eip_);
       }
       this.unknownFields = unknownFields.build();
@@ -106,10 +113,12 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <code>string eipUuid = 1;</code>
+     * @return The eipUuid.
      */
     java.lang.String getEipUuid();
     /**
      * <code>string eipUuid = 1;</code>
+     * @return The bytes for eipUuid.
      */
     com.google.protobuf.ByteString
         getEipUuidBytes();
@@ -120,6 +129,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string bindingUuid = 2;</code>
+     * @return The bindingUuid.
      */
     java.lang.String getBindingUuid();
     /**
@@ -128,9 +138,30 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string bindingUuid = 2;</code>
+     * @return The bytes for bindingUuid.
      */
     com.google.protobuf.ByteString
         getBindingUuidBytes();
+
+    /**
+     * <pre>
+     *要绑定的资源的类型
+     * </pre>
+     *
+     * <code>string bindingType = 3;</code>
+     * @return The bindingType.
+     */
+    java.lang.String getBindingType();
+    /**
+     * <pre>
+     *要绑定的资源的类型
+     * </pre>
+     *
+     * <code>string bindingType = 3;</code>
+     * @return The bytes for bindingType.
+     */
+    com.google.protobuf.ByteString
+        getBindingTypeBytes();
   }
   /**
    * Protobuf type {@code didi.cloud.compute.v1.AttachEipToDc2Request.Input}
@@ -147,6 +178,14 @@ private static final long serialVersionUID = 0L;
     private Input() {
       eipUuid_ = "";
       bindingUuid_ = "";
+      bindingType_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Input();
     }
 
     @java.lang.Override
@@ -162,7 +201,6 @@ private static final long serialVersionUID = 0L;
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -185,8 +223,14 @@ private static final long serialVersionUID = 0L;
               bindingUuid_ = s;
               break;
             }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              bindingType_ = s;
+              break;
+            }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -221,6 +265,7 @@ private static final long serialVersionUID = 0L;
     private volatile java.lang.Object eipUuid_;
     /**
      * <code>string eipUuid = 1;</code>
+     * @return The eipUuid.
      */
     public java.lang.String getEipUuid() {
       java.lang.Object ref = eipUuid_;
@@ -236,6 +281,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <code>string eipUuid = 1;</code>
+     * @return The bytes for eipUuid.
      */
     public com.google.protobuf.ByteString
         getEipUuidBytes() {
@@ -259,6 +305,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string bindingUuid = 2;</code>
+     * @return The bindingUuid.
      */
     public java.lang.String getBindingUuid() {
       java.lang.Object ref = bindingUuid_;
@@ -278,6 +325,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string bindingUuid = 2;</code>
+     * @return The bytes for bindingUuid.
      */
     public com.google.protobuf.ByteString
         getBindingUuidBytes() {
@@ -287,6 +335,50 @@ private static final long serialVersionUID = 0L;
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         bindingUuid_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int BINDINGTYPE_FIELD_NUMBER = 3;
+    private volatile java.lang.Object bindingType_;
+    /**
+     * <pre>
+     *要绑定的资源的类型
+     * </pre>
+     *
+     * <code>string bindingType = 3;</code>
+     * @return The bindingType.
+     */
+    public java.lang.String getBindingType() {
+      java.lang.Object ref = bindingType_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        bindingType_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     *要绑定的资源的类型
+     * </pre>
+     *
+     * <code>string bindingType = 3;</code>
+     * @return The bytes for bindingType.
+     */
+    public com.google.protobuf.ByteString
+        getBindingTypeBytes() {
+      java.lang.Object ref = bindingType_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        bindingType_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -313,6 +405,9 @@ private static final long serialVersionUID = 0L;
       if (!getBindingUuidBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, bindingUuid_);
       }
+      if (!getBindingTypeBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, bindingType_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -327,6 +422,9 @@ private static final long serialVersionUID = 0L;
       }
       if (!getBindingUuidBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, bindingUuid_);
+      }
+      if (!getBindingTypeBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, bindingType_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -343,13 +441,14 @@ private static final long serialVersionUID = 0L;
       }
       com.didiyun.compute.v1.AttachEipToDc2Request.Input other = (com.didiyun.compute.v1.AttachEipToDc2Request.Input) obj;
 
-      boolean result = true;
-      result = result && getEipUuid()
-          .equals(other.getEipUuid());
-      result = result && getBindingUuid()
-          .equals(other.getBindingUuid());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getEipUuid()
+          .equals(other.getEipUuid())) return false;
+      if (!getBindingUuid()
+          .equals(other.getBindingUuid())) return false;
+      if (!getBindingType()
+          .equals(other.getBindingType())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -363,6 +462,8 @@ private static final long serialVersionUID = 0L;
       hash = (53 * hash) + getEipUuid().hashCode();
       hash = (37 * hash) + BINDINGUUID_FIELD_NUMBER;
       hash = (53 * hash) + getBindingUuid().hashCode();
+      hash = (37 * hash) + BINDINGTYPE_FIELD_NUMBER;
+      hash = (53 * hash) + getBindingType().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -500,6 +601,8 @@ private static final long serialVersionUID = 0L;
 
         bindingUuid_ = "";
 
+        bindingType_ = "";
+
         return this;
       }
 
@@ -528,41 +631,42 @@ private static final long serialVersionUID = 0L;
         com.didiyun.compute.v1.AttachEipToDc2Request.Input result = new com.didiyun.compute.v1.AttachEipToDc2Request.Input(this);
         result.eipUuid_ = eipUuid_;
         result.bindingUuid_ = bindingUuid_;
+        result.bindingType_ = bindingType_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -582,6 +686,10 @@ private static final long serialVersionUID = 0L;
         }
         if (!other.getBindingUuid().isEmpty()) {
           bindingUuid_ = other.bindingUuid_;
+          onChanged();
+        }
+        if (!other.getBindingType().isEmpty()) {
+          bindingType_ = other.bindingType_;
           onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
@@ -616,6 +724,7 @@ private static final long serialVersionUID = 0L;
       private java.lang.Object eipUuid_ = "";
       /**
        * <code>string eipUuid = 1;</code>
+       * @return The eipUuid.
        */
       public java.lang.String getEipUuid() {
         java.lang.Object ref = eipUuid_;
@@ -631,6 +740,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <code>string eipUuid = 1;</code>
+       * @return The bytes for eipUuid.
        */
       public com.google.protobuf.ByteString
           getEipUuidBytes() {
@@ -647,6 +757,8 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <code>string eipUuid = 1;</code>
+       * @param value The eipUuid to set.
+       * @return This builder for chaining.
        */
       public Builder setEipUuid(
           java.lang.String value) {
@@ -660,6 +772,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <code>string eipUuid = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearEipUuid() {
         
@@ -669,6 +782,8 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <code>string eipUuid = 1;</code>
+       * @param value The bytes for eipUuid to set.
+       * @return This builder for chaining.
        */
       public Builder setEipUuidBytes(
           com.google.protobuf.ByteString value) {
@@ -689,6 +804,7 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>string bindingUuid = 2;</code>
+       * @return The bindingUuid.
        */
       public java.lang.String getBindingUuid() {
         java.lang.Object ref = bindingUuid_;
@@ -708,6 +824,7 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>string bindingUuid = 2;</code>
+       * @return The bytes for bindingUuid.
        */
       public com.google.protobuf.ByteString
           getBindingUuidBytes() {
@@ -728,6 +845,8 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>string bindingUuid = 2;</code>
+       * @param value The bindingUuid to set.
+       * @return This builder for chaining.
        */
       public Builder setBindingUuid(
           java.lang.String value) {
@@ -745,6 +864,7 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>string bindingUuid = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearBindingUuid() {
         
@@ -758,6 +878,8 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>string bindingUuid = 2;</code>
+       * @param value The bytes for bindingUuid to set.
+       * @return This builder for chaining.
        */
       public Builder setBindingUuidBytes(
           com.google.protobuf.ByteString value) {
@@ -770,10 +892,106 @@ private static final long serialVersionUID = 0L;
         onChanged();
         return this;
       }
+
+      private java.lang.Object bindingType_ = "";
+      /**
+       * <pre>
+       *要绑定的资源的类型
+       * </pre>
+       *
+       * <code>string bindingType = 3;</code>
+       * @return The bindingType.
+       */
+      public java.lang.String getBindingType() {
+        java.lang.Object ref = bindingType_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          bindingType_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       *要绑定的资源的类型
+       * </pre>
+       *
+       * <code>string bindingType = 3;</code>
+       * @return The bytes for bindingType.
+       */
+      public com.google.protobuf.ByteString
+          getBindingTypeBytes() {
+        java.lang.Object ref = bindingType_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          bindingType_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       *要绑定的资源的类型
+       * </pre>
+       *
+       * <code>string bindingType = 3;</code>
+       * @param value The bindingType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBindingType(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        bindingType_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       *要绑定的资源的类型
+       * </pre>
+       *
+       * <code>string bindingType = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBindingType() {
+        
+        bindingType_ = getDefaultInstance().getBindingType();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       *要绑定的资源的类型
+       * </pre>
+       *
+       * <code>string bindingType = 3;</code>
+       * @param value The bytes for bindingType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBindingTypeBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        bindingType_ = value;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -823,7 +1041,6 @@ private static final long serialVersionUID = 0L;
 
   }
 
-  private int bitField0_;
   public static final int HEADER_FIELD_NUMBER = 1;
   private com.didiyun.base.v1.Header header_;
   /**
@@ -832,6 +1049,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.didi.cloud.base.v1.Header header = 1;</code>
+   * @return Whether the header field is set.
    */
   public boolean hasHeader() {
     return header_ != null;
@@ -842,6 +1060,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.didi.cloud.base.v1.Header header = 1;</code>
+   * @return The header.
    */
   public com.didiyun.base.v1.Header getHeader() {
     return header_ == null ? com.didiyun.base.v1.Header.getDefaultInstance() : header_;
@@ -944,16 +1163,15 @@ private static final long serialVersionUID = 0L;
     }
     com.didiyun.compute.v1.AttachEipToDc2Request other = (com.didiyun.compute.v1.AttachEipToDc2Request) obj;
 
-    boolean result = true;
-    result = result && (hasHeader() == other.hasHeader());
+    if (hasHeader() != other.hasHeader()) return false;
     if (hasHeader()) {
-      result = result && getHeader()
-          .equals(other.getHeader());
+      if (!getHeader()
+          .equals(other.getHeader())) return false;
     }
-    result = result && getEipList()
-        .equals(other.getEipList());
-    result = result && unknownFields.equals(other.unknownFields);
-    return result;
+    if (!getEipList()
+        .equals(other.getEipList())) return false;
+    if (!unknownFields.equals(other.unknownFields)) return false;
+    return true;
   }
 
   @java.lang.Override
@@ -1113,7 +1331,7 @@ private static final long serialVersionUID = 0L;
       }
       if (eipBuilder_ == null) {
         eip_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000001);
       } else {
         eipBuilder_.clear();
       }
@@ -1144,57 +1362,55 @@ private static final long serialVersionUID = 0L;
     public com.didiyun.compute.v1.AttachEipToDc2Request buildPartial() {
       com.didiyun.compute.v1.AttachEipToDc2Request result = new com.didiyun.compute.v1.AttachEipToDc2Request(this);
       int from_bitField0_ = bitField0_;
-      int to_bitField0_ = 0;
       if (headerBuilder_ == null) {
         result.header_ = header_;
       } else {
         result.header_ = headerBuilder_.build();
       }
       if (eipBuilder_ == null) {
-        if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        if (((bitField0_ & 0x00000001) != 0)) {
           eip_ = java.util.Collections.unmodifiableList(eip_);
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00000001);
         }
         result.eip_ = eip_;
       } else {
         result.eip_ = eipBuilder_.build();
       }
-      result.bitField0_ = to_bitField0_;
       onBuilt();
       return result;
     }
 
     @java.lang.Override
     public Builder clone() {
-      return (Builder) super.clone();
+      return super.clone();
     }
     @java.lang.Override
     public Builder setField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return (Builder) super.setField(field, value);
+      return super.setField(field, value);
     }
     @java.lang.Override
     public Builder clearField(
         com.google.protobuf.Descriptors.FieldDescriptor field) {
-      return (Builder) super.clearField(field);
+      return super.clearField(field);
     }
     @java.lang.Override
     public Builder clearOneof(
         com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-      return (Builder) super.clearOneof(oneof);
+      return super.clearOneof(oneof);
     }
     @java.lang.Override
     public Builder setRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         int index, java.lang.Object value) {
-      return (Builder) super.setRepeatedField(field, index, value);
+      return super.setRepeatedField(field, index, value);
     }
     @java.lang.Override
     public Builder addRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return (Builder) super.addRepeatedField(field, value);
+      return super.addRepeatedField(field, value);
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1215,7 +1431,7 @@ private static final long serialVersionUID = 0L;
         if (!other.eip_.isEmpty()) {
           if (eip_.isEmpty()) {
             eip_ = other.eip_;
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000001);
           } else {
             ensureEipIsMutable();
             eip_.addAll(other.eip_);
@@ -1228,7 +1444,7 @@ private static final long serialVersionUID = 0L;
             eipBuilder_.dispose();
             eipBuilder_ = null;
             eip_ = other.eip_;
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000001);
             eipBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getEipFieldBuilder() : null;
@@ -1267,7 +1483,7 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
-    private com.didiyun.base.v1.Header header_ = null;
+    private com.didiyun.base.v1.Header header_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.didiyun.base.v1.Header, com.didiyun.base.v1.Header.Builder, com.didiyun.base.v1.HeaderOrBuilder> headerBuilder_;
     /**
@@ -1276,6 +1492,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.didi.cloud.base.v1.Header header = 1;</code>
+     * @return Whether the header field is set.
      */
     public boolean hasHeader() {
       return headerBuilder_ != null || header_ != null;
@@ -1286,6 +1503,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.didi.cloud.base.v1.Header header = 1;</code>
+     * @return The header.
      */
     public com.didiyun.base.v1.Header getHeader() {
       if (headerBuilder_ == null) {
@@ -1423,9 +1641,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.didiyun.compute.v1.AttachEipToDc2Request.Input> eip_ =
       java.util.Collections.emptyList();
     private void ensureEipIsMutable() {
-      if (!((bitField0_ & 0x00000002) == 0x00000002)) {
+      if (!((bitField0_ & 0x00000001) != 0)) {
         eip_ = new java.util.ArrayList<com.didiyun.compute.v1.AttachEipToDc2Request.Input>(eip_);
-        bitField0_ |= 0x00000002;
+        bitField0_ |= 0x00000001;
        }
     }
 
@@ -1575,7 +1793,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearEip() {
       if (eipBuilder_ == null) {
         eip_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
       } else {
         eipBuilder_.clear();
@@ -1652,7 +1870,7 @@ private static final long serialVersionUID = 0L;
         eipBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.didiyun.compute.v1.AttachEipToDc2Request.Input, com.didiyun.compute.v1.AttachEipToDc2Request.Input.Builder, com.didiyun.compute.v1.AttachEipToDc2Request.InputOrBuilder>(
                 eip_,
-                ((bitField0_ & 0x00000002) == 0x00000002),
+                ((bitField0_ & 0x00000001) != 0),
                 getParentForChildren(),
                 isClean());
         eip_ = null;
@@ -1662,7 +1880,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
-      return super.setUnknownFieldsProto3(unknownFields);
+      return super.setUnknownFields(unknownFields);
     }
 
     @java.lang.Override

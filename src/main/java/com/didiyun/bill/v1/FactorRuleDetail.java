@@ -16,9 +16,14 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private FactorRuleDetail() {
-    autoRenewCnt_ = 0L;
-    autoSwitch_ = false;
     payType_ = "";
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new FactorRuleDetail();
   }
 
   @java.lang.Override
@@ -34,7 +39,6 @@ private static final long serialVersionUID = 0L;
     if (extensionRegistry == null) {
       throw new java.lang.NullPointerException();
     }
-    int mutable_bitField0_ = 0;
     com.google.protobuf.UnknownFieldSet.Builder unknownFields =
         com.google.protobuf.UnknownFieldSet.newBuilder();
     try {
@@ -62,7 +66,7 @@ private static final long serialVersionUID = 0L;
             break;
           }
           default: {
-            if (!parseUnknownFieldProto3(
+            if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
               done = true;
             }
@@ -103,6 +107,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>int64 autoRenewCnt = 4;</code>
+   * @return The autoRenewCnt.
    */
   public long getAutoRenewCnt() {
     return autoRenewCnt_;
@@ -116,6 +121,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>bool autoSwitch = 5;</code>
+   * @return The autoSwitch.
    */
   public boolean getAutoSwitch() {
     return autoSwitch_;
@@ -129,6 +135,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string payType = 6;</code>
+   * @return The payType.
    */
   public java.lang.String getPayType() {
     java.lang.Object ref = payType_;
@@ -148,6 +155,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string payType = 6;</code>
+   * @return The bytes for payType.
    */
   public com.google.protobuf.ByteString
       getPayTypeBytes() {
@@ -221,15 +229,14 @@ private static final long serialVersionUID = 0L;
     }
     com.didiyun.bill.v1.FactorRuleDetail other = (com.didiyun.bill.v1.FactorRuleDetail) obj;
 
-    boolean result = true;
-    result = result && (getAutoRenewCnt()
-        == other.getAutoRenewCnt());
-    result = result && (getAutoSwitch()
-        == other.getAutoSwitch());
-    result = result && getPayType()
-        .equals(other.getPayType());
-    result = result && unknownFields.equals(other.unknownFields);
-    return result;
+    if (getAutoRenewCnt()
+        != other.getAutoRenewCnt()) return false;
+    if (getAutoSwitch()
+        != other.getAutoSwitch()) return false;
+    if (!getPayType()
+        .equals(other.getPayType())) return false;
+    if (!unknownFields.equals(other.unknownFields)) return false;
+    return true;
   }
 
   @java.lang.Override
@@ -421,35 +428,35 @@ private static final long serialVersionUID = 0L;
 
     @java.lang.Override
     public Builder clone() {
-      return (Builder) super.clone();
+      return super.clone();
     }
     @java.lang.Override
     public Builder setField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return (Builder) super.setField(field, value);
+      return super.setField(field, value);
     }
     @java.lang.Override
     public Builder clearField(
         com.google.protobuf.Descriptors.FieldDescriptor field) {
-      return (Builder) super.clearField(field);
+      return super.clearField(field);
     }
     @java.lang.Override
     public Builder clearOneof(
         com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-      return (Builder) super.clearOneof(oneof);
+      return super.clearOneof(oneof);
     }
     @java.lang.Override
     public Builder setRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         int index, java.lang.Object value) {
-      return (Builder) super.setRepeatedField(field, index, value);
+      return super.setRepeatedField(field, index, value);
     }
     @java.lang.Override
     public Builder addRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return (Builder) super.addRepeatedField(field, value);
+      return super.addRepeatedField(field, value);
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -511,6 +518,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>int64 autoRenewCnt = 4;</code>
+     * @return The autoRenewCnt.
      */
     public long getAutoRenewCnt() {
       return autoRenewCnt_;
@@ -523,6 +531,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>int64 autoRenewCnt = 4;</code>
+     * @param value The autoRenewCnt to set.
+     * @return This builder for chaining.
      */
     public Builder setAutoRenewCnt(long value) {
       
@@ -538,6 +548,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>int64 autoRenewCnt = 4;</code>
+     * @return This builder for chaining.
      */
     public Builder clearAutoRenewCnt() {
       
@@ -553,6 +564,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>bool autoSwitch = 5;</code>
+     * @return The autoSwitch.
      */
     public boolean getAutoSwitch() {
       return autoSwitch_;
@@ -563,6 +575,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>bool autoSwitch = 5;</code>
+     * @param value The autoSwitch to set.
+     * @return This builder for chaining.
      */
     public Builder setAutoSwitch(boolean value) {
       
@@ -576,6 +590,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>bool autoSwitch = 5;</code>
+     * @return This builder for chaining.
      */
     public Builder clearAutoSwitch() {
       
@@ -591,6 +606,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string payType = 6;</code>
+     * @return The payType.
      */
     public java.lang.String getPayType() {
       java.lang.Object ref = payType_;
@@ -610,6 +626,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string payType = 6;</code>
+     * @return The bytes for payType.
      */
     public com.google.protobuf.ByteString
         getPayTypeBytes() {
@@ -630,6 +647,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string payType = 6;</code>
+     * @param value The payType to set.
+     * @return This builder for chaining.
      */
     public Builder setPayType(
         java.lang.String value) {
@@ -647,6 +666,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string payType = 6;</code>
+     * @return This builder for chaining.
      */
     public Builder clearPayType() {
       
@@ -660,6 +680,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string payType = 6;</code>
+     * @param value The bytes for payType to set.
+     * @return This builder for chaining.
      */
     public Builder setPayTypeBytes(
         com.google.protobuf.ByteString value) {
@@ -675,7 +697,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
-      return super.setUnknownFieldsProto3(unknownFields);
+      return super.setUnknownFields(unknownFields);
     }
 
     @java.lang.Override

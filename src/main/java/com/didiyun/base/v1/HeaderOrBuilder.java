@@ -9,20 +9,24 @@ public interface HeaderOrBuilder extends
 
   /**
    * <code>string regionId = 1;</code>
+   * @return The regionId.
    */
   java.lang.String getRegionId();
   /**
    * <code>string regionId = 1;</code>
+   * @return The bytes for regionId.
    */
   com.google.protobuf.ByteString
       getRegionIdBytes();
 
   /**
    * <code>string zoneId = 2;</code>
+   * @return The zoneId.
    */
   java.lang.String getZoneId();
   /**
    * <code>string zoneId = 2;</code>
+   * @return The bytes for zoneId.
    */
   com.google.protobuf.ByteString
       getZoneIdBytes();

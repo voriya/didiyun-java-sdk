@@ -22,6 +22,13 @@ private static final long serialVersionUID = 0L;
   }
 
   @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new RegionAndZoneInfo();
+  }
+
+  @java.lang.Override
   public final com.google.protobuf.UnknownFieldSet
   getUnknownFields() {
     return this.unknownFields;
@@ -34,7 +41,6 @@ private static final long serialVersionUID = 0L;
     if (extensionRegistry == null) {
       throw new java.lang.NullPointerException();
     }
-    int mutable_bitField0_ = 0;
     com.google.protobuf.UnknownFieldSet.Builder unknownFields =
         com.google.protobuf.UnknownFieldSet.newBuilder();
     try {
@@ -77,7 +83,7 @@ private static final long serialVersionUID = 0L;
             break;
           }
           default: {
-            if (!parseUnknownFieldProto3(
+            if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
               done = true;
             }
@@ -112,6 +118,7 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object id_;
   /**
    * <code>string id = 1;</code>
+   * @return The id.
    */
   public java.lang.String getId() {
     java.lang.Object ref = id_;
@@ -127,6 +134,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <code>string id = 1;</code>
+   * @return The bytes for id.
    */
   public com.google.protobuf.ByteString
       getIdBytes() {
@@ -146,6 +154,7 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object name_;
   /**
    * <code>string name = 2;</code>
+   * @return The name.
    */
   public java.lang.String getName() {
     java.lang.Object ref = name_;
@@ -161,6 +170,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <code>string name = 2;</code>
+   * @return The bytes for name.
    */
   public com.google.protobuf.ByteString
       getNameBytes() {
@@ -180,6 +190,7 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object areaName_;
   /**
    * <code>string areaName = 3;</code>
+   * @return The areaName.
    */
   public java.lang.String getAreaName() {
     java.lang.Object ref = areaName_;
@@ -195,6 +206,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <code>string areaName = 3;</code>
+   * @return The bytes for areaName.
    */
   public com.google.protobuf.ByteString
       getAreaNameBytes() {
@@ -214,12 +226,14 @@ private static final long serialVersionUID = 0L;
   private com.didiyun.base.v1.ZoneInfo zone_;
   /**
    * <code>.didi.cloud.base.v1.ZoneInfo zone = 5;</code>
+   * @return Whether the zone field is set.
    */
   public boolean hasZone() {
     return zone_ != null;
   }
   /**
    * <code>.didi.cloud.base.v1.ZoneInfo zone = 5;</code>
+   * @return The zone.
    */
   public com.didiyun.base.v1.ZoneInfo getZone() {
     return zone_ == null ? com.didiyun.base.v1.ZoneInfo.getDefaultInstance() : zone_;
@@ -294,20 +308,19 @@ private static final long serialVersionUID = 0L;
     }
     com.didiyun.base.v1.RegionAndZoneInfo other = (com.didiyun.base.v1.RegionAndZoneInfo) obj;
 
-    boolean result = true;
-    result = result && getId()
-        .equals(other.getId());
-    result = result && getName()
-        .equals(other.getName());
-    result = result && getAreaName()
-        .equals(other.getAreaName());
-    result = result && (hasZone() == other.hasZone());
+    if (!getId()
+        .equals(other.getId())) return false;
+    if (!getName()
+        .equals(other.getName())) return false;
+    if (!getAreaName()
+        .equals(other.getAreaName())) return false;
+    if (hasZone() != other.hasZone()) return false;
     if (hasZone()) {
-      result = result && getZone()
-          .equals(other.getZone());
+      if (!getZone()
+          .equals(other.getZone())) return false;
     }
-    result = result && unknownFields.equals(other.unknownFields);
-    return result;
+    if (!unknownFields.equals(other.unknownFields)) return false;
+    return true;
   }
 
   @java.lang.Override
@@ -512,35 +525,35 @@ private static final long serialVersionUID = 0L;
 
     @java.lang.Override
     public Builder clone() {
-      return (Builder) super.clone();
+      return super.clone();
     }
     @java.lang.Override
     public Builder setField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return (Builder) super.setField(field, value);
+      return super.setField(field, value);
     }
     @java.lang.Override
     public Builder clearField(
         com.google.protobuf.Descriptors.FieldDescriptor field) {
-      return (Builder) super.clearField(field);
+      return super.clearField(field);
     }
     @java.lang.Override
     public Builder clearOneof(
         com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-      return (Builder) super.clearOneof(oneof);
+      return super.clearOneof(oneof);
     }
     @java.lang.Override
     public Builder setRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         int index, java.lang.Object value) {
-      return (Builder) super.setRepeatedField(field, index, value);
+      return super.setRepeatedField(field, index, value);
     }
     @java.lang.Override
     public Builder addRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return (Builder) super.addRepeatedField(field, value);
+      return super.addRepeatedField(field, value);
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -601,6 +614,7 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object id_ = "";
     /**
      * <code>string id = 1;</code>
+     * @return The id.
      */
     public java.lang.String getId() {
       java.lang.Object ref = id_;
@@ -616,6 +630,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <code>string id = 1;</code>
+     * @return The bytes for id.
      */
     public com.google.protobuf.ByteString
         getIdBytes() {
@@ -632,6 +647,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <code>string id = 1;</code>
+     * @param value The id to set.
+     * @return This builder for chaining.
      */
     public Builder setId(
         java.lang.String value) {
@@ -645,6 +662,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <code>string id = 1;</code>
+     * @return This builder for chaining.
      */
     public Builder clearId() {
       
@@ -654,6 +672,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <code>string id = 1;</code>
+     * @param value The bytes for id to set.
+     * @return This builder for chaining.
      */
     public Builder setIdBytes(
         com.google.protobuf.ByteString value) {
@@ -670,6 +690,7 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object name_ = "";
     /**
      * <code>string name = 2;</code>
+     * @return The name.
      */
     public java.lang.String getName() {
       java.lang.Object ref = name_;
@@ -685,6 +706,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <code>string name = 2;</code>
+     * @return The bytes for name.
      */
     public com.google.protobuf.ByteString
         getNameBytes() {
@@ -701,6 +723,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <code>string name = 2;</code>
+     * @param value The name to set.
+     * @return This builder for chaining.
      */
     public Builder setName(
         java.lang.String value) {
@@ -714,6 +738,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <code>string name = 2;</code>
+     * @return This builder for chaining.
      */
     public Builder clearName() {
       
@@ -723,6 +748,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <code>string name = 2;</code>
+     * @param value The bytes for name to set.
+     * @return This builder for chaining.
      */
     public Builder setNameBytes(
         com.google.protobuf.ByteString value) {
@@ -739,6 +766,7 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object areaName_ = "";
     /**
      * <code>string areaName = 3;</code>
+     * @return The areaName.
      */
     public java.lang.String getAreaName() {
       java.lang.Object ref = areaName_;
@@ -754,6 +782,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <code>string areaName = 3;</code>
+     * @return The bytes for areaName.
      */
     public com.google.protobuf.ByteString
         getAreaNameBytes() {
@@ -770,6 +799,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <code>string areaName = 3;</code>
+     * @param value The areaName to set.
+     * @return This builder for chaining.
      */
     public Builder setAreaName(
         java.lang.String value) {
@@ -783,6 +814,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <code>string areaName = 3;</code>
+     * @return This builder for chaining.
      */
     public Builder clearAreaName() {
       
@@ -792,6 +824,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <code>string areaName = 3;</code>
+     * @param value The bytes for areaName to set.
+     * @return This builder for chaining.
      */
     public Builder setAreaNameBytes(
         com.google.protobuf.ByteString value) {
@@ -805,17 +839,19 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private com.didiyun.base.v1.ZoneInfo zone_ = null;
+    private com.didiyun.base.v1.ZoneInfo zone_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.didiyun.base.v1.ZoneInfo, com.didiyun.base.v1.ZoneInfo.Builder, com.didiyun.base.v1.ZoneInfoOrBuilder> zoneBuilder_;
     /**
      * <code>.didi.cloud.base.v1.ZoneInfo zone = 5;</code>
+     * @return Whether the zone field is set.
      */
     public boolean hasZone() {
       return zoneBuilder_ != null || zone_ != null;
     }
     /**
      * <code>.didi.cloud.base.v1.ZoneInfo zone = 5;</code>
+     * @return The zone.
      */
     public com.didiyun.base.v1.ZoneInfo getZone() {
       if (zoneBuilder_ == null) {
@@ -924,7 +960,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
-      return super.setUnknownFieldsProto3(unknownFields);
+      return super.setUnknownFields(unknownFields);
     }
 
     @java.lang.Override

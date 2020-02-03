@@ -9,10 +9,12 @@ public interface ResourceSpecOrBuilder extends
 
   /**
    * <code>.didi.cloud.bill.v1.Dc2Spec dc2Spec = 1;</code>
+   * @return Whether the dc2Spec field is set.
    */
   boolean hasDc2Spec();
   /**
    * <code>.didi.cloud.bill.v1.Dc2Spec dc2Spec = 1;</code>
+   * @return The dc2Spec.
    */
   com.didiyun.bill.v1.Dc2Spec getDc2Spec();
   /**
@@ -22,10 +24,12 @@ public interface ResourceSpecOrBuilder extends
 
   /**
    * <code>.didi.cloud.bill.v1.EipSpec eipSpec = 2;</code>
+   * @return Whether the eipSpec field is set.
    */
   boolean hasEipSpec();
   /**
    * <code>.didi.cloud.bill.v1.EipSpec eipSpec = 2;</code>
+   * @return The eipSpec.
    */
   com.didiyun.bill.v1.EipSpec getEipSpec();
   /**
@@ -35,10 +39,12 @@ public interface ResourceSpecOrBuilder extends
 
   /**
    * <code>.didi.cloud.bill.v1.EbsSpec ebsSpec = 3;</code>
+   * @return Whether the ebsSpec field is set.
    */
   boolean hasEbsSpec();
   /**
    * <code>.didi.cloud.bill.v1.EbsSpec ebsSpec = 3;</code>
+   * @return The ebsSpec.
    */
   com.didiyun.bill.v1.EbsSpec getEbsSpec();
   /**

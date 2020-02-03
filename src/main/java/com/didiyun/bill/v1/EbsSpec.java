@@ -16,8 +16,14 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private EbsSpec() {
-    size_ = 0L;
     diskType_ = "";
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new EbsSpec();
   }
 
   @java.lang.Override
@@ -33,7 +39,6 @@ private static final long serialVersionUID = 0L;
     if (extensionRegistry == null) {
       throw new java.lang.NullPointerException();
     }
-    int mutable_bitField0_ = 0;
     com.google.protobuf.UnknownFieldSet.Builder unknownFields =
         com.google.protobuf.UnknownFieldSet.newBuilder();
     try {
@@ -56,7 +61,7 @@ private static final long serialVersionUID = 0L;
             break;
           }
           default: {
-            if (!parseUnknownFieldProto3(
+            if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
               done = true;
             }
@@ -95,6 +100,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>int64 size = 1;</code>
+   * @return The size.
    */
   public long getSize() {
     return size_;
@@ -108,6 +114,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string diskType = 2;</code>
+   * @return The diskType.
    */
   public java.lang.String getDiskType() {
     java.lang.Object ref = diskType_;
@@ -127,6 +134,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string diskType = 2;</code>
+   * @return The bytes for diskType.
    */
   public com.google.protobuf.ByteString
       getDiskTypeBytes() {
@@ -193,13 +201,12 @@ private static final long serialVersionUID = 0L;
     }
     com.didiyun.bill.v1.EbsSpec other = (com.didiyun.bill.v1.EbsSpec) obj;
 
-    boolean result = true;
-    result = result && (getSize()
-        == other.getSize());
-    result = result && getDiskType()
-        .equals(other.getDiskType());
-    result = result && unknownFields.equals(other.unknownFields);
-    return result;
+    if (getSize()
+        != other.getSize()) return false;
+    if (!getDiskType()
+        .equals(other.getDiskType())) return false;
+    if (!unknownFields.equals(other.unknownFields)) return false;
+    return true;
   }
 
   @java.lang.Override
@@ -385,35 +392,35 @@ private static final long serialVersionUID = 0L;
 
     @java.lang.Override
     public Builder clone() {
-      return (Builder) super.clone();
+      return super.clone();
     }
     @java.lang.Override
     public Builder setField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return (Builder) super.setField(field, value);
+      return super.setField(field, value);
     }
     @java.lang.Override
     public Builder clearField(
         com.google.protobuf.Descriptors.FieldDescriptor field) {
-      return (Builder) super.clearField(field);
+      return super.clearField(field);
     }
     @java.lang.Override
     public Builder clearOneof(
         com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-      return (Builder) super.clearOneof(oneof);
+      return super.clearOneof(oneof);
     }
     @java.lang.Override
     public Builder setRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         int index, java.lang.Object value) {
-      return (Builder) super.setRepeatedField(field, index, value);
+      return super.setRepeatedField(field, index, value);
     }
     @java.lang.Override
     public Builder addRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return (Builder) super.addRepeatedField(field, value);
+      return super.addRepeatedField(field, value);
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -470,6 +477,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>int64 size = 1;</code>
+     * @return The size.
      */
     public long getSize() {
       return size_;
@@ -480,6 +488,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>int64 size = 1;</code>
+     * @param value The size to set.
+     * @return This builder for chaining.
      */
     public Builder setSize(long value) {
       
@@ -493,6 +503,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>int64 size = 1;</code>
+     * @return This builder for chaining.
      */
     public Builder clearSize() {
       
@@ -508,6 +519,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string diskType = 2;</code>
+     * @return The diskType.
      */
     public java.lang.String getDiskType() {
       java.lang.Object ref = diskType_;
@@ -527,6 +539,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string diskType = 2;</code>
+     * @return The bytes for diskType.
      */
     public com.google.protobuf.ByteString
         getDiskTypeBytes() {
@@ -547,6 +560,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string diskType = 2;</code>
+     * @param value The diskType to set.
+     * @return This builder for chaining.
      */
     public Builder setDiskType(
         java.lang.String value) {
@@ -564,6 +579,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string diskType = 2;</code>
+     * @return This builder for chaining.
      */
     public Builder clearDiskType() {
       
@@ -577,6 +593,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string diskType = 2;</code>
+     * @param value The bytes for diskType to set.
+     * @return This builder for chaining.
      */
     public Builder setDiskTypeBytes(
         com.google.protobuf.ByteString value) {
@@ -592,7 +610,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
-      return super.setUnknownFieldsProto3(unknownFields);
+      return super.setUnknownFields(unknownFields);
     }
 
     @java.lang.Override

@@ -13,6 +13,7 @@ public interface CreateSgRuleInputOrBuilder extends
    * </pre>
    *
    * <code>string type = 1;</code>
+   * @return The type.
    */
   java.lang.String getType();
   /**
@@ -21,6 +22,7 @@ public interface CreateSgRuleInputOrBuilder extends
    * </pre>
    *
    * <code>string type = 1;</code>
+   * @return The bytes for type.
    */
   com.google.protobuf.ByteString
       getTypeBytes();
@@ -31,6 +33,7 @@ public interface CreateSgRuleInputOrBuilder extends
    * </pre>
    *
    * <code>string protocol = 2;</code>
+   * @return The protocol.
    */
   java.lang.String getProtocol();
   /**
@@ -39,6 +42,7 @@ public interface CreateSgRuleInputOrBuilder extends
    * </pre>
    *
    * <code>string protocol = 2;</code>
+   * @return The bytes for protocol.
    */
   com.google.protobuf.ByteString
       getProtocolBytes();
@@ -49,6 +53,7 @@ public interface CreateSgRuleInputOrBuilder extends
    * </pre>
    *
    * <code>int64 startPort = 3;</code>
+   * @return The startPort.
    */
   long getStartPort();
 
@@ -58,6 +63,7 @@ public interface CreateSgRuleInputOrBuilder extends
    * </pre>
    *
    * <code>int64 endPort = 4;</code>
+   * @return The endPort.
    */
   long getEndPort();
 
@@ -67,6 +73,7 @@ public interface CreateSgRuleInputOrBuilder extends
    * </pre>
    *
    * <code>string allowedCidr = 5;</code>
+   * @return The allowedCidr.
    */
   java.lang.String getAllowedCidr();
   /**
@@ -75,6 +82,7 @@ public interface CreateSgRuleInputOrBuilder extends
    * </pre>
    *
    * <code>string allowedCidr = 5;</code>
+   * @return The bytes for allowedCidr.
    */
   com.google.protobuf.ByteString
       getAllowedCidrBytes();

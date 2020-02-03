@@ -13,6 +13,7 @@ public interface CreateEbsRequestOrBuilder extends
    * </pre>
    *
    * <code>.didi.cloud.base.v1.Header header = 1;</code>
+   * @return Whether the header field is set.
    */
   boolean hasHeader();
   /**
@@ -21,6 +22,7 @@ public interface CreateEbsRequestOrBuilder extends
    * </pre>
    *
    * <code>.didi.cloud.base.v1.Header header = 1;</code>
+   * @return The header.
    */
   com.didiyun.base.v1.Header getHeader();
   /**
@@ -38,6 +40,7 @@ public interface CreateEbsRequestOrBuilder extends
    * </pre>
    *
    * <code>int32 count = 2;</code>
+   * @return The count.
    */
   int getCount();
 
@@ -47,6 +50,7 @@ public interface CreateEbsRequestOrBuilder extends
    * </pre>
    *
    * <code>bool autoContinue = 3;</code>
+   * @return The autoContinue.
    */
   boolean getAutoContinue();
 
@@ -56,6 +60,7 @@ public interface CreateEbsRequestOrBuilder extends
    * </pre>
    *
    * <code>int32 payPeriod = 4;</code>
+   * @return The payPeriod.
    */
   int getPayPeriod();
 
@@ -65,6 +70,7 @@ public interface CreateEbsRequestOrBuilder extends
    * </pre>
    *
    * <code>string couponId = 5;</code>
+   * @return The couponId.
    */
   java.lang.String getCouponId();
   /**
@@ -73,6 +79,7 @@ public interface CreateEbsRequestOrBuilder extends
    * </pre>
    *
    * <code>string couponId = 5;</code>
+   * @return The bytes for couponId.
    */
   com.google.protobuf.ByteString
       getCouponIdBytes();
@@ -83,6 +90,7 @@ public interface CreateEbsRequestOrBuilder extends
    * </pre>
    *
    * <code>string name = 6;</code>
+   * @return The name.
    */
   java.lang.String getName();
   /**
@@ -91,6 +99,7 @@ public interface CreateEbsRequestOrBuilder extends
    * </pre>
    *
    * <code>string name = 6;</code>
+   * @return The bytes for name.
    */
   com.google.protobuf.ByteString
       getNameBytes();
@@ -101,6 +110,7 @@ public interface CreateEbsRequestOrBuilder extends
    * </pre>
    *
    * <code>int64 size = 7;</code>
+   * @return The size.
    */
   long getSize();
 
@@ -110,6 +120,7 @@ public interface CreateEbsRequestOrBuilder extends
    * </pre>
    *
    * <code>string diskType = 8;</code>
+   * @return The diskType.
    */
   java.lang.String getDiskType();
   /**
@@ -118,6 +129,7 @@ public interface CreateEbsRequestOrBuilder extends
    * </pre>
    *
    * <code>string diskType = 8;</code>
+   * @return The bytes for diskType.
    */
   com.google.protobuf.ByteString
       getDiskTypeBytes();
@@ -128,6 +140,7 @@ public interface CreateEbsRequestOrBuilder extends
    * </pre>
    *
    * <code>string snapUuid = 9;</code>
+   * @return The snapUuid.
    */
   java.lang.String getSnapUuid();
   /**
@@ -136,6 +149,7 @@ public interface CreateEbsRequestOrBuilder extends
    * </pre>
    *
    * <code>string snapUuid = 9;</code>
+   * @return The bytes for snapUuid.
    */
   com.google.protobuf.ByteString
       getSnapUuidBytes();
@@ -146,6 +160,7 @@ public interface CreateEbsRequestOrBuilder extends
    * </pre>
    *
    * <code>string dc2Uuid = 10;</code>
+   * @return The dc2Uuid.
    */
   java.lang.String getDc2Uuid();
   /**
@@ -154,6 +169,7 @@ public interface CreateEbsRequestOrBuilder extends
    * </pre>
    *
    * <code>string dc2Uuid = 10;</code>
+   * @return The bytes for dc2Uuid.
    */
   com.google.protobuf.ByteString
       getDc2UuidBytes();
@@ -164,6 +180,7 @@ public interface CreateEbsRequestOrBuilder extends
    * </pre>
    *
    * <code>repeated string tags = 11;</code>
+   * @return A list containing the tags.
    */
   java.util.List<java.lang.String>
       getTagsList();
@@ -173,6 +190,7 @@ public interface CreateEbsRequestOrBuilder extends
    * </pre>
    *
    * <code>repeated string tags = 11;</code>
+   * @return The count of tags.
    */
   int getTagsCount();
   /**
@@ -181,6 +199,8 @@ public interface CreateEbsRequestOrBuilder extends
    * </pre>
    *
    * <code>repeated string tags = 11;</code>
+   * @param index The index of the element to return.
+   * @return The tags at the given index.
    */
   java.lang.String getTags(int index);
   /**
@@ -189,6 +209,8 @@ public interface CreateEbsRequestOrBuilder extends
    * </pre>
    *
    * <code>repeated string tags = 11;</code>
+   * @param index The index of the value to return.
+   * @return The bytes of the tags at the given index.
    */
   com.google.protobuf.ByteString
       getTagsBytes(int index);

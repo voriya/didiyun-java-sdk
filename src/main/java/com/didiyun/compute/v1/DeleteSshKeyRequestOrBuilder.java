@@ -13,6 +13,7 @@ public interface DeleteSshKeyRequestOrBuilder extends
    * </pre>
    *
    * <code>.didi.cloud.base.v1.Header header = 1;</code>
+   * @return Whether the header field is set.
    */
   boolean hasHeader();
   /**
@@ -21,6 +22,7 @@ public interface DeleteSshKeyRequestOrBuilder extends
    * </pre>
    *
    * <code>.didi.cloud.base.v1.Header header = 1;</code>
+   * @return The header.
    */
   com.didiyun.base.v1.Header getHeader();
   /**
@@ -34,10 +36,12 @@ public interface DeleteSshKeyRequestOrBuilder extends
 
   /**
    * <code>string pubKeyUuid = 2;</code>
+   * @return The pubKeyUuid.
    */
   java.lang.String getPubKeyUuid();
   /**
    * <code>string pubKeyUuid = 2;</code>
+   * @return The bytes for pubKeyUuid.
    */
   com.google.protobuf.ByteString
       getPubKeyUuidBytes();

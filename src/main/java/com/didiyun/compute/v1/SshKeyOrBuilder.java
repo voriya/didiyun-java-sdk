@@ -13,6 +13,7 @@ public interface SshKeyOrBuilder extends
    * </pre>
    *
    * <code>string pubKeyUuid = 2;</code>
+   * @return The pubKeyUuid.
    */
   java.lang.String getPubKeyUuid();
   /**
@@ -21,6 +22,7 @@ public interface SshKeyOrBuilder extends
    * </pre>
    *
    * <code>string pubKeyUuid = 2;</code>
+   * @return The bytes for pubKeyUuid.
    */
   com.google.protobuf.ByteString
       getPubKeyUuidBytes();
@@ -31,6 +33,7 @@ public interface SshKeyOrBuilder extends
    * </pre>
    *
    * <code>string name = 3;</code>
+   * @return The name.
    */
   java.lang.String getName();
   /**
@@ -39,6 +42,7 @@ public interface SshKeyOrBuilder extends
    * </pre>
    *
    * <code>string name = 3;</code>
+   * @return The bytes for name.
    */
   com.google.protobuf.ByteString
       getNameBytes();
@@ -49,6 +53,7 @@ public interface SshKeyOrBuilder extends
    * </pre>
    *
    * <code>string key = 4;</code>
+   * @return The key.
    */
   java.lang.String getKey();
   /**
@@ -57,6 +62,7 @@ public interface SshKeyOrBuilder extends
    * </pre>
    *
    * <code>string key = 4;</code>
+   * @return The bytes for key.
    */
   com.google.protobuf.ByteString
       getKeyBytes();
@@ -67,6 +73,7 @@ public interface SshKeyOrBuilder extends
    * </pre>
    *
    * <code>string fingerprint = 5;</code>
+   * @return The fingerprint.
    */
   java.lang.String getFingerprint();
   /**
@@ -75,6 +82,7 @@ public interface SshKeyOrBuilder extends
    * </pre>
    *
    * <code>string fingerprint = 5;</code>
+   * @return The bytes for fingerprint.
    */
   com.google.protobuf.ByteString
       getFingerprintBytes();
@@ -85,6 +93,7 @@ public interface SshKeyOrBuilder extends
    * </pre>
    *
    * <code>int64 createTime = 6;</code>
+   * @return The createTime.
    */
   long getCreateTime();
 }

@@ -13,6 +13,7 @@ public interface ListDc2ConditionOrBuilder extends
    * </pre>
    *
    * <code>string ip = 1;</code>
+   * @return The ip.
    */
   java.lang.String getIp();
   /**
@@ -21,6 +22,7 @@ public interface ListDc2ConditionOrBuilder extends
    * </pre>
    *
    * <code>string ip = 1;</code>
+   * @return The bytes for ip.
    */
   com.google.protobuf.ByteString
       getIpBytes();
@@ -31,6 +33,7 @@ public interface ListDc2ConditionOrBuilder extends
    * </pre>
    *
    * <code>string eip = 2;</code>
+   * @return The eip.
    */
   java.lang.String getEip();
   /**
@@ -39,6 +42,7 @@ public interface ListDc2ConditionOrBuilder extends
    * </pre>
    *
    * <code>string eip = 2;</code>
+   * @return The bytes for eip.
    */
   com.google.protobuf.ByteString
       getEipBytes();
@@ -49,6 +53,7 @@ public interface ListDc2ConditionOrBuilder extends
    * </pre>
    *
    * <code>string dc2name = 3;</code>
+   * @return The dc2name.
    */
   java.lang.String getDc2Name();
   /**
@@ -57,6 +62,7 @@ public interface ListDc2ConditionOrBuilder extends
    * </pre>
    *
    * <code>string dc2name = 3;</code>
+   * @return The bytes for dc2name.
    */
   com.google.protobuf.ByteString
       getDc2NameBytes();
@@ -67,6 +73,7 @@ public interface ListDc2ConditionOrBuilder extends
    * </pre>
    *
    * <code>repeated string vpcUuids = 4;</code>
+   * @return A list containing the vpcUuids.
    */
   java.util.List<java.lang.String>
       getVpcUuidsList();
@@ -76,6 +83,7 @@ public interface ListDc2ConditionOrBuilder extends
    * </pre>
    *
    * <code>repeated string vpcUuids = 4;</code>
+   * @return The count of vpcUuids.
    */
   int getVpcUuidsCount();
   /**
@@ -84,6 +92,8 @@ public interface ListDc2ConditionOrBuilder extends
    * </pre>
    *
    * <code>repeated string vpcUuids = 4;</code>
+   * @param index The index of the element to return.
+   * @return The vpcUuids at the given index.
    */
   java.lang.String getVpcUuids(int index);
   /**
@@ -92,6 +102,8 @@ public interface ListDc2ConditionOrBuilder extends
    * </pre>
    *
    * <code>repeated string vpcUuids = 4;</code>
+   * @param index The index of the value to return.
+   * @return The bytes of the vpcUuids at the given index.
    */
   com.google.protobuf.ByteString
       getVpcUuidsBytes(int index);
@@ -102,6 +114,7 @@ public interface ListDc2ConditionOrBuilder extends
    * </pre>
    *
    * <code>string vpcUuid = 5;</code>
+   * @return The vpcUuid.
    */
   java.lang.String getVpcUuid();
   /**
@@ -110,6 +123,7 @@ public interface ListDc2ConditionOrBuilder extends
    * </pre>
    *
    * <code>string vpcUuid = 5;</code>
+   * @return The bytes for vpcUuid.
    */
   com.google.protobuf.ByteString
       getVpcUuidBytes();
@@ -120,6 +134,7 @@ public interface ListDc2ConditionOrBuilder extends
    * </pre>
    *
    * <code>string sgUuid = 6;</code>
+   * @return The sgUuid.
    */
   java.lang.String getSgUuid();
   /**
@@ -128,6 +143,7 @@ public interface ListDc2ConditionOrBuilder extends
    * </pre>
    *
    * <code>string sgUuid = 6;</code>
+   * @return The bytes for sgUuid.
    */
   com.google.protobuf.ByteString
       getSgUuidBytes();
@@ -138,6 +154,7 @@ public interface ListDc2ConditionOrBuilder extends
    * </pre>
    *
    * <code>bool sgExclude = 7;</code>
+   * @return The sgExclude.
    */
   boolean getSgExclude();
 
@@ -147,6 +164,7 @@ public interface ListDc2ConditionOrBuilder extends
    * </pre>
    *
    * <code>repeated string dc2Uuids = 8;</code>
+   * @return A list containing the dc2Uuids.
    */
   java.util.List<java.lang.String>
       getDc2UuidsList();
@@ -156,6 +174,7 @@ public interface ListDc2ConditionOrBuilder extends
    * </pre>
    *
    * <code>repeated string dc2Uuids = 8;</code>
+   * @return The count of dc2Uuids.
    */
   int getDc2UuidsCount();
   /**
@@ -164,6 +183,8 @@ public interface ListDc2ConditionOrBuilder extends
    * </pre>
    *
    * <code>repeated string dc2Uuids = 8;</code>
+   * @param index The index of the element to return.
+   * @return The dc2Uuids at the given index.
    */
   java.lang.String getDc2Uuids(int index);
   /**
@@ -172,6 +193,8 @@ public interface ListDc2ConditionOrBuilder extends
    * </pre>
    *
    * <code>repeated string dc2Uuids = 8;</code>
+   * @param index The index of the value to return.
+   * @return The bytes of the dc2Uuids at the given index.
    */
   com.google.protobuf.ByteString
       getDc2UuidsBytes(int index);

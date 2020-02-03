@@ -23,6 +23,13 @@ private static final long serialVersionUID = 0L;
   }
 
   @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new CreateSgRequest();
+  }
+
+  @java.lang.Override
   public final com.google.protobuf.UnknownFieldSet
   getUnknownFields() {
     return this.unknownFields;
@@ -72,25 +79,25 @@ private static final long serialVersionUID = 0L;
             break;
           }
           case 34: {
-            if (!((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
               sgRule_ = new java.util.ArrayList<com.didiyun.compute.v1.CreateSgRuleInput>();
-              mutable_bitField0_ |= 0x00000008;
+              mutable_bitField0_ |= 0x00000001;
             }
             sgRule_.add(
                 input.readMessage(com.didiyun.compute.v1.CreateSgRuleInput.parser(), extensionRegistry));
             break;
           }
           case 42: {
-            if (!((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
+            if (!((mutable_bitField0_ & 0x00000002) != 0)) {
               dc2_ = new java.util.ArrayList<com.didiyun.compute.v1.CreateSgRequest.DC2>();
-              mutable_bitField0_ |= 0x00000010;
+              mutable_bitField0_ |= 0x00000002;
             }
             dc2_.add(
                 input.readMessage(com.didiyun.compute.v1.CreateSgRequest.DC2.parser(), extensionRegistry));
             break;
           }
           default: {
-            if (!parseUnknownFieldProto3(
+            if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
               done = true;
             }
@@ -104,10 +111,10 @@ private static final long serialVersionUID = 0L;
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
     } finally {
-      if (((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+      if (((mutable_bitField0_ & 0x00000001) != 0)) {
         sgRule_ = java.util.Collections.unmodifiableList(sgRule_);
       }
-      if (((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
+      if (((mutable_bitField0_ & 0x00000002) != 0)) {
         dc2_ = java.util.Collections.unmodifiableList(dc2_);
       }
       this.unknownFields = unknownFields.build();
@@ -137,6 +144,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string dc2Uuid = 1;</code>
+     * @return The dc2Uuid.
      */
     java.lang.String getDc2Uuid();
     /**
@@ -145,6 +153,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string dc2Uuid = 1;</code>
+     * @return The bytes for dc2Uuid.
      */
     com.google.protobuf.ByteString
         getDc2UuidBytes();
@@ -166,6 +175,13 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DC2();
+    }
+
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
@@ -178,7 +194,6 @@ private static final long serialVersionUID = 0L;
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -196,7 +211,7 @@ private static final long serialVersionUID = 0L;
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -235,6 +250,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string dc2Uuid = 1;</code>
+     * @return The dc2Uuid.
      */
     public java.lang.String getDc2Uuid() {
       java.lang.Object ref = dc2Uuid_;
@@ -254,6 +270,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string dc2Uuid = 1;</code>
+     * @return The bytes for dc2Uuid.
      */
     public com.google.protobuf.ByteString
         getDc2UuidBytes() {
@@ -313,11 +330,10 @@ private static final long serialVersionUID = 0L;
       }
       com.didiyun.compute.v1.CreateSgRequest.DC2 other = (com.didiyun.compute.v1.CreateSgRequest.DC2) obj;
 
-      boolean result = true;
-      result = result && getDc2Uuid()
-          .equals(other.getDc2Uuid());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getDc2Uuid()
+          .equals(other.getDc2Uuid())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -497,35 +513,35 @@ private static final long serialVersionUID = 0L;
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -579,6 +595,7 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>string dc2Uuid = 1;</code>
+       * @return The dc2Uuid.
        */
       public java.lang.String getDc2Uuid() {
         java.lang.Object ref = dc2Uuid_;
@@ -598,6 +615,7 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>string dc2Uuid = 1;</code>
+       * @return The bytes for dc2Uuid.
        */
       public com.google.protobuf.ByteString
           getDc2UuidBytes() {
@@ -618,6 +636,8 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>string dc2Uuid = 1;</code>
+       * @param value The dc2Uuid to set.
+       * @return This builder for chaining.
        */
       public Builder setDc2Uuid(
           java.lang.String value) {
@@ -635,6 +655,7 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>string dc2Uuid = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearDc2Uuid() {
         
@@ -648,6 +669,8 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>string dc2Uuid = 1;</code>
+       * @param value The bytes for dc2Uuid to set.
+       * @return This builder for chaining.
        */
       public Builder setDc2UuidBytes(
           com.google.protobuf.ByteString value) {
@@ -663,7 +686,7 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -713,7 +736,6 @@ private static final long serialVersionUID = 0L;
 
   }
 
-  private int bitField0_;
   public static final int HEADER_FIELD_NUMBER = 1;
   private com.didiyun.base.v1.Header header_;
   /**
@@ -722,6 +744,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.didi.cloud.base.v1.Header header = 1;</code>
+   * @return Whether the header field is set.
    */
   public boolean hasHeader() {
     return header_ != null;
@@ -732,6 +755,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.didi.cloud.base.v1.Header header = 1;</code>
+   * @return The header.
    */
   public com.didiyun.base.v1.Header getHeader() {
     return header_ == null ? com.didiyun.base.v1.Header.getDefaultInstance() : header_;
@@ -755,6 +779,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string name = 2;</code>
+   * @return The name.
    */
   public java.lang.String getName() {
     java.lang.Object ref = name_;
@@ -774,6 +799,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string name = 2;</code>
+   * @return The bytes for name.
    */
   public com.google.protobuf.ByteString
       getNameBytes() {
@@ -797,6 +823,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string vpcUuid = 3;</code>
+   * @return The vpcUuid.
    */
   public java.lang.String getVpcUuid() {
     java.lang.Object ref = vpcUuid_;
@@ -816,6 +843,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string vpcUuid = 3;</code>
+   * @return The bytes for vpcUuid.
    */
   public com.google.protobuf.ByteString
       getVpcUuidBytes() {
@@ -1012,22 +1040,21 @@ private static final long serialVersionUID = 0L;
     }
     com.didiyun.compute.v1.CreateSgRequest other = (com.didiyun.compute.v1.CreateSgRequest) obj;
 
-    boolean result = true;
-    result = result && (hasHeader() == other.hasHeader());
+    if (hasHeader() != other.hasHeader()) return false;
     if (hasHeader()) {
-      result = result && getHeader()
-          .equals(other.getHeader());
+      if (!getHeader()
+          .equals(other.getHeader())) return false;
     }
-    result = result && getName()
-        .equals(other.getName());
-    result = result && getVpcUuid()
-        .equals(other.getVpcUuid());
-    result = result && getSgRuleList()
-        .equals(other.getSgRuleList());
-    result = result && getDc2List()
-        .equals(other.getDc2List());
-    result = result && unknownFields.equals(other.unknownFields);
-    return result;
+    if (!getName()
+        .equals(other.getName())) return false;
+    if (!getVpcUuid()
+        .equals(other.getVpcUuid())) return false;
+    if (!getSgRuleList()
+        .equals(other.getSgRuleList())) return false;
+    if (!getDc2List()
+        .equals(other.getDc2List())) return false;
+    if (!unknownFields.equals(other.unknownFields)) return false;
+    return true;
   }
 
   @java.lang.Override
@@ -1200,13 +1227,13 @@ private static final long serialVersionUID = 0L;
 
       if (sgRuleBuilder_ == null) {
         sgRule_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000008);
+        bitField0_ = (bitField0_ & ~0x00000001);
       } else {
         sgRuleBuilder_.clear();
       }
       if (dc2Builder_ == null) {
         dc2_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000010);
+        bitField0_ = (bitField0_ & ~0x00000002);
       } else {
         dc2Builder_.clear();
       }
@@ -1237,7 +1264,6 @@ private static final long serialVersionUID = 0L;
     public com.didiyun.compute.v1.CreateSgRequest buildPartial() {
       com.didiyun.compute.v1.CreateSgRequest result = new com.didiyun.compute.v1.CreateSgRequest(this);
       int from_bitField0_ = bitField0_;
-      int to_bitField0_ = 0;
       if (headerBuilder_ == null) {
         result.header_ = header_;
       } else {
@@ -1246,59 +1272,58 @@ private static final long serialVersionUID = 0L;
       result.name_ = name_;
       result.vpcUuid_ = vpcUuid_;
       if (sgRuleBuilder_ == null) {
-        if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        if (((bitField0_ & 0x00000001) != 0)) {
           sgRule_ = java.util.Collections.unmodifiableList(sgRule_);
-          bitField0_ = (bitField0_ & ~0x00000008);
+          bitField0_ = (bitField0_ & ~0x00000001);
         }
         result.sgRule_ = sgRule_;
       } else {
         result.sgRule_ = sgRuleBuilder_.build();
       }
       if (dc2Builder_ == null) {
-        if (((bitField0_ & 0x00000010) == 0x00000010)) {
+        if (((bitField0_ & 0x00000002) != 0)) {
           dc2_ = java.util.Collections.unmodifiableList(dc2_);
-          bitField0_ = (bitField0_ & ~0x00000010);
+          bitField0_ = (bitField0_ & ~0x00000002);
         }
         result.dc2_ = dc2_;
       } else {
         result.dc2_ = dc2Builder_.build();
       }
-      result.bitField0_ = to_bitField0_;
       onBuilt();
       return result;
     }
 
     @java.lang.Override
     public Builder clone() {
-      return (Builder) super.clone();
+      return super.clone();
     }
     @java.lang.Override
     public Builder setField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return (Builder) super.setField(field, value);
+      return super.setField(field, value);
     }
     @java.lang.Override
     public Builder clearField(
         com.google.protobuf.Descriptors.FieldDescriptor field) {
-      return (Builder) super.clearField(field);
+      return super.clearField(field);
     }
     @java.lang.Override
     public Builder clearOneof(
         com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-      return (Builder) super.clearOneof(oneof);
+      return super.clearOneof(oneof);
     }
     @java.lang.Override
     public Builder setRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         int index, java.lang.Object value) {
-      return (Builder) super.setRepeatedField(field, index, value);
+      return super.setRepeatedField(field, index, value);
     }
     @java.lang.Override
     public Builder addRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return (Builder) super.addRepeatedField(field, value);
+      return super.addRepeatedField(field, value);
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1327,7 +1352,7 @@ private static final long serialVersionUID = 0L;
         if (!other.sgRule_.isEmpty()) {
           if (sgRule_.isEmpty()) {
             sgRule_ = other.sgRule_;
-            bitField0_ = (bitField0_ & ~0x00000008);
+            bitField0_ = (bitField0_ & ~0x00000001);
           } else {
             ensureSgRuleIsMutable();
             sgRule_.addAll(other.sgRule_);
@@ -1340,7 +1365,7 @@ private static final long serialVersionUID = 0L;
             sgRuleBuilder_.dispose();
             sgRuleBuilder_ = null;
             sgRule_ = other.sgRule_;
-            bitField0_ = (bitField0_ & ~0x00000008);
+            bitField0_ = (bitField0_ & ~0x00000001);
             sgRuleBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getSgRuleFieldBuilder() : null;
@@ -1353,7 +1378,7 @@ private static final long serialVersionUID = 0L;
         if (!other.dc2_.isEmpty()) {
           if (dc2_.isEmpty()) {
             dc2_ = other.dc2_;
-            bitField0_ = (bitField0_ & ~0x00000010);
+            bitField0_ = (bitField0_ & ~0x00000002);
           } else {
             ensureDc2IsMutable();
             dc2_.addAll(other.dc2_);
@@ -1366,7 +1391,7 @@ private static final long serialVersionUID = 0L;
             dc2Builder_.dispose();
             dc2Builder_ = null;
             dc2_ = other.dc2_;
-            bitField0_ = (bitField0_ & ~0x00000010);
+            bitField0_ = (bitField0_ & ~0x00000002);
             dc2Builder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getDc2FieldBuilder() : null;
@@ -1405,7 +1430,7 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
-    private com.didiyun.base.v1.Header header_ = null;
+    private com.didiyun.base.v1.Header header_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.didiyun.base.v1.Header, com.didiyun.base.v1.Header.Builder, com.didiyun.base.v1.HeaderOrBuilder> headerBuilder_;
     /**
@@ -1414,6 +1439,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.didi.cloud.base.v1.Header header = 1;</code>
+     * @return Whether the header field is set.
      */
     public boolean hasHeader() {
       return headerBuilder_ != null || header_ != null;
@@ -1424,6 +1450,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.didi.cloud.base.v1.Header header = 1;</code>
+     * @return The header.
      */
     public com.didiyun.base.v1.Header getHeader() {
       if (headerBuilder_ == null) {
@@ -1565,6 +1592,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string name = 2;</code>
+     * @return The name.
      */
     public java.lang.String getName() {
       java.lang.Object ref = name_;
@@ -1584,6 +1612,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string name = 2;</code>
+     * @return The bytes for name.
      */
     public com.google.protobuf.ByteString
         getNameBytes() {
@@ -1604,6 +1633,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string name = 2;</code>
+     * @param value The name to set.
+     * @return This builder for chaining.
      */
     public Builder setName(
         java.lang.String value) {
@@ -1621,6 +1652,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string name = 2;</code>
+     * @return This builder for chaining.
      */
     public Builder clearName() {
       
@@ -1634,6 +1666,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string name = 2;</code>
+     * @param value The bytes for name to set.
+     * @return This builder for chaining.
      */
     public Builder setNameBytes(
         com.google.protobuf.ByteString value) {
@@ -1654,6 +1688,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string vpcUuid = 3;</code>
+     * @return The vpcUuid.
      */
     public java.lang.String getVpcUuid() {
       java.lang.Object ref = vpcUuid_;
@@ -1673,6 +1708,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string vpcUuid = 3;</code>
+     * @return The bytes for vpcUuid.
      */
     public com.google.protobuf.ByteString
         getVpcUuidBytes() {
@@ -1693,6 +1729,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string vpcUuid = 3;</code>
+     * @param value The vpcUuid to set.
+     * @return This builder for chaining.
      */
     public Builder setVpcUuid(
         java.lang.String value) {
@@ -1710,6 +1748,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string vpcUuid = 3;</code>
+     * @return This builder for chaining.
      */
     public Builder clearVpcUuid() {
       
@@ -1723,6 +1762,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string vpcUuid = 3;</code>
+     * @param value The bytes for vpcUuid to set.
+     * @return This builder for chaining.
      */
     public Builder setVpcUuidBytes(
         com.google.protobuf.ByteString value) {
@@ -1739,9 +1780,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.didiyun.compute.v1.CreateSgRuleInput> sgRule_ =
       java.util.Collections.emptyList();
     private void ensureSgRuleIsMutable() {
-      if (!((bitField0_ & 0x00000008) == 0x00000008)) {
+      if (!((bitField0_ & 0x00000001) != 0)) {
         sgRule_ = new java.util.ArrayList<com.didiyun.compute.v1.CreateSgRuleInput>(sgRule_);
-        bitField0_ |= 0x00000008;
+        bitField0_ |= 0x00000001;
        }
     }
 
@@ -1935,7 +1976,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearSgRule() {
       if (sgRuleBuilder_ == null) {
         sgRule_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000008);
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
       } else {
         sgRuleBuilder_.clear();
@@ -2040,7 +2081,7 @@ private static final long serialVersionUID = 0L;
         sgRuleBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.didiyun.compute.v1.CreateSgRuleInput, com.didiyun.compute.v1.CreateSgRuleInput.Builder, com.didiyun.compute.v1.CreateSgRuleInputOrBuilder>(
                 sgRule_,
-                ((bitField0_ & 0x00000008) == 0x00000008),
+                ((bitField0_ & 0x00000001) != 0),
                 getParentForChildren(),
                 isClean());
         sgRule_ = null;
@@ -2051,9 +2092,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.didiyun.compute.v1.CreateSgRequest.DC2> dc2_ =
       java.util.Collections.emptyList();
     private void ensureDc2IsMutable() {
-      if (!((bitField0_ & 0x00000010) == 0x00000010)) {
+      if (!((bitField0_ & 0x00000002) != 0)) {
         dc2_ = new java.util.ArrayList<com.didiyun.compute.v1.CreateSgRequest.DC2>(dc2_);
-        bitField0_ |= 0x00000010;
+        bitField0_ |= 0x00000002;
        }
     }
 
@@ -2247,7 +2288,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearDc2() {
       if (dc2Builder_ == null) {
         dc2_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000010);
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
       } else {
         dc2Builder_.clear();
@@ -2352,7 +2393,7 @@ private static final long serialVersionUID = 0L;
         dc2Builder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.didiyun.compute.v1.CreateSgRequest.DC2, com.didiyun.compute.v1.CreateSgRequest.DC2.Builder, com.didiyun.compute.v1.CreateSgRequest.DC2OrBuilder>(
                 dc2_,
-                ((bitField0_ & 0x00000010) == 0x00000010),
+                ((bitField0_ & 0x00000002) != 0),
                 getParentForChildren(),
                 isClean());
         dc2_ = null;
@@ -2362,7 +2403,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
-      return super.setUnknownFieldsProto3(unknownFields);
+      return super.setUnknownFields(unknownFields);
     }
 
     @java.lang.Override

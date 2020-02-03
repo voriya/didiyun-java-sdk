@@ -13,6 +13,7 @@ public interface ContinueListItemOrBuilder extends
    * </pre>
    *
    * <code>string resourceUuid = 1;</code>
+   * @return The resourceUuid.
    */
   java.lang.String getResourceUuid();
   /**
@@ -21,6 +22,7 @@ public interface ContinueListItemOrBuilder extends
    * </pre>
    *
    * <code>string resourceUuid = 1;</code>
+   * @return The bytes for resourceUuid.
    */
   com.google.protobuf.ByteString
       getResourceUuidBytes();
@@ -31,6 +33,7 @@ public interface ContinueListItemOrBuilder extends
    * </pre>
    *
    * <code>string resourceType = 2;</code>
+   * @return The resourceType.
    */
   java.lang.String getResourceType();
   /**
@@ -39,6 +42,7 @@ public interface ContinueListItemOrBuilder extends
    * </pre>
    *
    * <code>string resourceType = 2;</code>
+   * @return The bytes for resourceType.
    */
   com.google.protobuf.ByteString
       getResourceTypeBytes();
@@ -49,6 +53,7 @@ public interface ContinueListItemOrBuilder extends
    * </pre>
    *
    * <code>string name = 3;</code>
+   * @return The name.
    */
   java.lang.String getName();
   /**
@@ -57,6 +62,7 @@ public interface ContinueListItemOrBuilder extends
    * </pre>
    *
    * <code>string name = 3;</code>
+   * @return The bytes for name.
    */
   com.google.protobuf.ByteString
       getNameBytes();
@@ -67,6 +73,7 @@ public interface ContinueListItemOrBuilder extends
    * </pre>
    *
    * <code>string regionId = 4;</code>
+   * @return The regionId.
    */
   java.lang.String getRegionId();
   /**
@@ -75,6 +82,7 @@ public interface ContinueListItemOrBuilder extends
    * </pre>
    *
    * <code>string regionId = 4;</code>
+   * @return The bytes for regionId.
    */
   com.google.protobuf.ByteString
       getRegionIdBytes();
@@ -85,6 +93,7 @@ public interface ContinueListItemOrBuilder extends
    * </pre>
    *
    * <code>int64 endTime = 5;</code>
+   * @return The endTime.
    */
   long getEndTime();
 
@@ -94,6 +103,7 @@ public interface ContinueListItemOrBuilder extends
    * </pre>
    *
    * <code>int32 autoRenewCnt = 6;</code>
+   * @return The autoRenewCnt.
    */
   int getAutoRenewCnt();
 
@@ -103,6 +113,7 @@ public interface ContinueListItemOrBuilder extends
    * </pre>
    *
    * <code>bool autoSwitch = 7;</code>
+   * @return The autoSwitch.
    */
   boolean getAutoSwitch();
 
@@ -112,6 +123,7 @@ public interface ContinueListItemOrBuilder extends
    * </pre>
    *
    * <code>.didi.cloud.bill.v1.ResourceSpec resourceSpec = 8;</code>
+   * @return Whether the resourceSpec field is set.
    */
   boolean hasResourceSpec();
   /**
@@ -120,6 +132,7 @@ public interface ContinueListItemOrBuilder extends
    * </pre>
    *
    * <code>.didi.cloud.bill.v1.ResourceSpec resourceSpec = 8;</code>
+   * @return The resourceSpec.
    */
   com.didiyun.bill.v1.ResourceSpec getResourceSpec();
   /**

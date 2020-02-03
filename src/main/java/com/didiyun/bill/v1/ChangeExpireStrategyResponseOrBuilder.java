@@ -13,6 +13,7 @@ public interface ChangeExpireStrategyResponseOrBuilder extends
    * </pre>
    *
    * <code>.didi.cloud.base.v1.Error error = 1;</code>
+   * @return Whether the error field is set.
    */
   boolean hasError();
   /**
@@ -21,6 +22,7 @@ public interface ChangeExpireStrategyResponseOrBuilder extends
    * </pre>
    *
    * <code>.didi.cloud.base.v1.Error error = 1;</code>
+   * @return The error.
    */
   com.didiyun.base.v1.Error getError();
   /**

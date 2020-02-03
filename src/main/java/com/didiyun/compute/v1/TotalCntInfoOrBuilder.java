@@ -13,6 +13,7 @@ public interface TotalCntInfoOrBuilder extends
    * </pre>
    *
    * <code>int32 totalCnt = 1;</code>
+   * @return The totalCnt.
    */
   int getTotalCnt();
 }

@@ -13,6 +13,7 @@ public interface CounterOutputOrBuilder extends
    * </pre>
    *
    * <code>string resourceUuid = 1;</code>
+   * @return The resourceUuid.
    */
   java.lang.String getResourceUuid();
   /**
@@ -21,6 +22,7 @@ public interface CounterOutputOrBuilder extends
    * </pre>
    *
    * <code>string resourceUuid = 1;</code>
+   * @return The bytes for resourceUuid.
    */
   com.google.protobuf.ByteString
       getResourceUuidBytes();
@@ -31,6 +33,7 @@ public interface CounterOutputOrBuilder extends
    * </pre>
    *
    * <code>string resourceType = 2;</code>
+   * @return The resourceType.
    */
   java.lang.String getResourceType();
   /**
@@ -39,6 +42,7 @@ public interface CounterOutputOrBuilder extends
    * </pre>
    *
    * <code>string resourceType = 2;</code>
+   * @return The bytes for resourceType.
    */
   com.google.protobuf.ByteString
       getResourceTypeBytes();
@@ -49,6 +53,7 @@ public interface CounterOutputOrBuilder extends
    * </pre>
    *
    * <code>string alias = 3;</code>
+   * @return The alias.
    */
   java.lang.String getAlias();
   /**
@@ -57,6 +62,7 @@ public interface CounterOutputOrBuilder extends
    * </pre>
    *
    * <code>string alias = 3;</code>
+   * @return The bytes for alias.
    */
   com.google.protobuf.ByteString
       getAliasBytes();
@@ -111,6 +117,7 @@ public interface CounterOutputOrBuilder extends
    * </pre>
    *
    * <code>string metric = 5;</code>
+   * @return The metric.
    */
   java.lang.String getMetric();
   /**
@@ -119,6 +126,7 @@ public interface CounterOutputOrBuilder extends
    * </pre>
    *
    * <code>string metric = 5;</code>
+   * @return The bytes for metric.
    */
   com.google.protobuf.ByteString
       getMetricBytes();
@@ -129,6 +137,7 @@ public interface CounterOutputOrBuilder extends
    * </pre>
    *
    * <code>string metricAlias = 6;</code>
+   * @return The metricAlias.
    */
   java.lang.String getMetricAlias();
   /**
@@ -137,6 +146,7 @@ public interface CounterOutputOrBuilder extends
    * </pre>
    *
    * <code>string metricAlias = 6;</code>
+   * @return The bytes for metricAlias.
    */
   com.google.protobuf.ByteString
       getMetricAliasBytes();

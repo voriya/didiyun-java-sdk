@@ -13,6 +13,7 @@ public interface GetSgTotalCntRequestOrBuilder extends
    * </pre>
    *
    * <code>.didi.cloud.base.v1.Header header = 1;</code>
+   * @return Whether the header field is set.
    */
   boolean hasHeader();
   /**
@@ -21,6 +22,7 @@ public interface GetSgTotalCntRequestOrBuilder extends
    * </pre>
    *
    * <code>.didi.cloud.base.v1.Header header = 1;</code>
+   * @return The header.
    */
   com.didiyun.base.v1.Header getHeader();
   /**
@@ -38,6 +40,7 @@ public interface GetSgTotalCntRequestOrBuilder extends
    * </pre>
    *
    * <code>repeated string sgUuids = 2;</code>
+   * @return A list containing the sgUuids.
    */
   java.util.List<java.lang.String>
       getSgUuidsList();
@@ -47,6 +50,7 @@ public interface GetSgTotalCntRequestOrBuilder extends
    * </pre>
    *
    * <code>repeated string sgUuids = 2;</code>
+   * @return The count of sgUuids.
    */
   int getSgUuidsCount();
   /**
@@ -55,6 +59,8 @@ public interface GetSgTotalCntRequestOrBuilder extends
    * </pre>
    *
    * <code>repeated string sgUuids = 2;</code>
+   * @param index The index of the element to return.
+   * @return The sgUuids at the given index.
    */
   java.lang.String getSgUuids(int index);
   /**
@@ -63,6 +69,8 @@ public interface GetSgTotalCntRequestOrBuilder extends
    * </pre>
    *
    * <code>repeated string sgUuids = 2;</code>
+   * @param index The index of the value to return.
+   * @return The bytes of the sgUuids at the given index.
    */
   com.google.protobuf.ByteString
       getSgUuidsBytes(int index);
@@ -73,6 +81,7 @@ public interface GetSgTotalCntRequestOrBuilder extends
    * </pre>
    *
    * <code>string vpcUuid = 3;</code>
+   * @return The vpcUuid.
    */
   java.lang.String getVpcUuid();
   /**
@@ -81,6 +90,7 @@ public interface GetSgTotalCntRequestOrBuilder extends
    * </pre>
    *
    * <code>string vpcUuid = 3;</code>
+   * @return The bytes for vpcUuid.
    */
   com.google.protobuf.ByteString
       getVpcUuidBytes();
@@ -91,6 +101,7 @@ public interface GetSgTotalCntRequestOrBuilder extends
    * </pre>
    *
    * <code>string dc2Uuid = 4;</code>
+   * @return The dc2Uuid.
    */
   java.lang.String getDc2Uuid();
   /**
@@ -99,6 +110,7 @@ public interface GetSgTotalCntRequestOrBuilder extends
    * </pre>
    *
    * <code>string dc2Uuid = 4;</code>
+   * @return The bytes for dc2Uuid.
    */
   com.google.protobuf.ByteString
       getDc2UuidBytes();
@@ -109,6 +121,7 @@ public interface GetSgTotalCntRequestOrBuilder extends
    * </pre>
    *
    * <code>bool dc2Exclude = 5;</code>
+   * @return The dc2Exclude.
    */
   boolean getDc2Exclude();
 }

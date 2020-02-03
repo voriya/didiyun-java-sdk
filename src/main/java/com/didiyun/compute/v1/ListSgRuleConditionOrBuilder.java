@@ -13,6 +13,7 @@ public interface ListSgRuleConditionOrBuilder extends
    * </pre>
    *
    * <code>string sgUuid = 1;</code>
+   * @return The sgUuid.
    */
   java.lang.String getSgUuid();
   /**
@@ -21,6 +22,7 @@ public interface ListSgRuleConditionOrBuilder extends
    * </pre>
    *
    * <code>string sgUuid = 1;</code>
+   * @return The bytes for sgUuid.
    */
   com.google.protobuf.ByteString
       getSgUuidBytes();
@@ -31,6 +33,7 @@ public interface ListSgRuleConditionOrBuilder extends
    * </pre>
    *
    * <code>string dc2Uuid = 2;</code>
+   * @return The dc2Uuid.
    */
   java.lang.String getDc2Uuid();
   /**
@@ -39,6 +42,7 @@ public interface ListSgRuleConditionOrBuilder extends
    * </pre>
    *
    * <code>string dc2Uuid = 2;</code>
+   * @return The bytes for dc2Uuid.
    */
   com.google.protobuf.ByteString
       getDc2UuidBytes();
@@ -49,6 +53,7 @@ public interface ListSgRuleConditionOrBuilder extends
    * </pre>
    *
    * <code>string type = 3;</code>
+   * @return The type.
    */
   java.lang.String getType();
   /**
@@ -57,6 +62,7 @@ public interface ListSgRuleConditionOrBuilder extends
    * </pre>
    *
    * <code>string type = 3;</code>
+   * @return The bytes for type.
    */
   com.google.protobuf.ByteString
       getTypeBytes();

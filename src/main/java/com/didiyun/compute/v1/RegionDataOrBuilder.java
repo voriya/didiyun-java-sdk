@@ -13,6 +13,7 @@ public interface RegionDataOrBuilder extends
    * </pre>
    *
    * <code>string areaName = 1;</code>
+   * @return The areaName.
    */
   java.lang.String getAreaName();
   /**
@@ -21,6 +22,7 @@ public interface RegionDataOrBuilder extends
    * </pre>
    *
    * <code>string areaName = 1;</code>
+   * @return The bytes for areaName.
    */
   com.google.protobuf.ByteString
       getAreaNameBytes();
@@ -31,6 +33,7 @@ public interface RegionDataOrBuilder extends
    * </pre>
    *
    * <code>string id = 2;</code>
+   * @return The id.
    */
   java.lang.String getId();
   /**
@@ -39,6 +42,7 @@ public interface RegionDataOrBuilder extends
    * </pre>
    *
    * <code>string id = 2;</code>
+   * @return The bytes for id.
    */
   com.google.protobuf.ByteString
       getIdBytes();
@@ -49,6 +53,7 @@ public interface RegionDataOrBuilder extends
    * </pre>
    *
    * <code>string name = 3;</code>
+   * @return The name.
    */
   java.lang.String getName();
   /**
@@ -57,6 +62,7 @@ public interface RegionDataOrBuilder extends
    * </pre>
    *
    * <code>string name = 3;</code>
+   * @return The bytes for name.
    */
   com.google.protobuf.ByteString
       getNameBytes();

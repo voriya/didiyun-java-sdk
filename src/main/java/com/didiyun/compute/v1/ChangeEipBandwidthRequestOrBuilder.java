@@ -13,6 +13,7 @@ public interface ChangeEipBandwidthRequestOrBuilder extends
    * </pre>
    *
    * <code>.didi.cloud.base.v1.Header header = 1;</code>
+   * @return Whether the header field is set.
    */
   boolean hasHeader();
   /**
@@ -21,6 +22,7 @@ public interface ChangeEipBandwidthRequestOrBuilder extends
    * </pre>
    *
    * <code>.didi.cloud.base.v1.Header header = 1;</code>
+   * @return The header.
    */
   com.didiyun.base.v1.Header getHeader();
   /**
@@ -34,10 +36,12 @@ public interface ChangeEipBandwidthRequestOrBuilder extends
 
   /**
    * <code>string couponId = 2;</code>
+   * @return The couponId.
    */
   java.lang.String getCouponId();
   /**
    * <code>string couponId = 2;</code>
+   * @return The bytes for couponId.
    */
   com.google.protobuf.ByteString
       getCouponIdBytes();

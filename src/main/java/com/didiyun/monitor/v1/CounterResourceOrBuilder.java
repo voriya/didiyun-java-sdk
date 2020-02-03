@@ -13,6 +13,7 @@ public interface CounterResourceOrBuilder extends
    * </pre>
    *
    * <code>repeated string resourceUuids = 1;</code>
+   * @return A list containing the resourceUuids.
    */
   java.util.List<java.lang.String>
       getResourceUuidsList();
@@ -22,6 +23,7 @@ public interface CounterResourceOrBuilder extends
    * </pre>
    *
    * <code>repeated string resourceUuids = 1;</code>
+   * @return The count of resourceUuids.
    */
   int getResourceUuidsCount();
   /**
@@ -30,6 +32,8 @@ public interface CounterResourceOrBuilder extends
    * </pre>
    *
    * <code>repeated string resourceUuids = 1;</code>
+   * @param index The index of the element to return.
+   * @return The resourceUuids at the given index.
    */
   java.lang.String getResourceUuids(int index);
   /**
@@ -38,6 +42,8 @@ public interface CounterResourceOrBuilder extends
    * </pre>
    *
    * <code>repeated string resourceUuids = 1;</code>
+   * @param index The index of the value to return.
+   * @return The bytes of the resourceUuids at the given index.
    */
   com.google.protobuf.ByteString
       getResourceUuidsBytes(int index);
@@ -48,6 +54,7 @@ public interface CounterResourceOrBuilder extends
    * </pre>
    *
    * <code>string resourceType = 2;</code>
+   * @return The resourceType.
    */
   java.lang.String getResourceType();
   /**
@@ -56,6 +63,7 @@ public interface CounterResourceOrBuilder extends
    * </pre>
    *
    * <code>string resourceType = 2;</code>
+   * @return The bytes for resourceType.
    */
   com.google.protobuf.ByteString
       getResourceTypeBytes();
@@ -66,6 +74,7 @@ public interface CounterResourceOrBuilder extends
    * </pre>
    *
    * <code>repeated string metric = 3;</code>
+   * @return A list containing the metric.
    */
   java.util.List<java.lang.String>
       getMetricList();
@@ -75,6 +84,7 @@ public interface CounterResourceOrBuilder extends
    * </pre>
    *
    * <code>repeated string metric = 3;</code>
+   * @return The count of metric.
    */
   int getMetricCount();
   /**
@@ -83,6 +93,8 @@ public interface CounterResourceOrBuilder extends
    * </pre>
    *
    * <code>repeated string metric = 3;</code>
+   * @param index The index of the element to return.
+   * @return The metric at the given index.
    */
   java.lang.String getMetric(int index);
   /**
@@ -91,6 +103,8 @@ public interface CounterResourceOrBuilder extends
    * </pre>
    *
    * <code>repeated string metric = 3;</code>
+   * @param index The index of the value to return.
+   * @return The bytes of the metric at the given index.
    */
   com.google.protobuf.ByteString
       getMetricBytes(int index);

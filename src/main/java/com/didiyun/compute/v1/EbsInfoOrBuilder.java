@@ -9,20 +9,24 @@ public interface EbsInfoOrBuilder extends
 
   /**
    * <code>string name = 1;</code>
+   * @return The name.
    */
   java.lang.String getName();
   /**
    * <code>string name = 1;</code>
+   * @return The bytes for name.
    */
   com.google.protobuf.ByteString
       getNameBytes();
 
   /**
    * <code>string ebsUuid = 2;</code>
+   * @return The ebsUuid.
    */
   java.lang.String getEbsUuid();
   /**
    * <code>string ebsUuid = 2;</code>
+   * @return The bytes for ebsUuid.
    */
   com.google.protobuf.ByteString
       getEbsUuidBytes();
@@ -33,6 +37,7 @@ public interface EbsInfoOrBuilder extends
    * </pre>
    *
    * <code>string type = 3;</code>
+   * @return The type.
    */
   java.lang.String getType();
   /**
@@ -41,6 +46,7 @@ public interface EbsInfoOrBuilder extends
    * </pre>
    *
    * <code>string type = 3;</code>
+   * @return The bytes for type.
    */
   com.google.protobuf.ByteString
       getTypeBytes();
@@ -51,6 +57,7 @@ public interface EbsInfoOrBuilder extends
    * </pre>
    *
    * <code>string attr = 4;</code>
+   * @return The attr.
    */
   java.lang.String getAttr();
   /**
@@ -59,6 +66,7 @@ public interface EbsInfoOrBuilder extends
    * </pre>
    *
    * <code>string attr = 4;</code>
+   * @return The bytes for attr.
    */
   com.google.protobuf.ByteString
       getAttrBytes();
@@ -69,6 +77,7 @@ public interface EbsInfoOrBuilder extends
    * </pre>
    *
    * <code>repeated string ebsTags = 5;</code>
+   * @return A list containing the ebsTags.
    */
   java.util.List<java.lang.String>
       getEbsTagsList();
@@ -78,6 +87,7 @@ public interface EbsInfoOrBuilder extends
    * </pre>
    *
    * <code>repeated string ebsTags = 5;</code>
+   * @return The count of ebsTags.
    */
   int getEbsTagsCount();
   /**
@@ -86,6 +96,8 @@ public interface EbsInfoOrBuilder extends
    * </pre>
    *
    * <code>repeated string ebsTags = 5;</code>
+   * @param index The index of the element to return.
+   * @return The ebsTags at the given index.
    */
   java.lang.String getEbsTags(int index);
   /**
@@ -94,6 +106,8 @@ public interface EbsInfoOrBuilder extends
    * </pre>
    *
    * <code>repeated string ebsTags = 5;</code>
+   * @param index The index of the value to return.
+   * @return The bytes of the ebsTags at the given index.
    */
   com.google.protobuf.ByteString
       getEbsTagsBytes(int index);
@@ -104,6 +118,7 @@ public interface EbsInfoOrBuilder extends
    * </pre>
    *
    * <code>.didi.cloud.base.v1.RegionAndZoneInfo region = 6;</code>
+   * @return Whether the region field is set.
    */
   boolean hasRegion();
   /**
@@ -112,6 +127,7 @@ public interface EbsInfoOrBuilder extends
    * </pre>
    *
    * <code>.didi.cloud.base.v1.RegionAndZoneInfo region = 6;</code>
+   * @return The region.
    */
   com.didiyun.base.v1.RegionAndZoneInfo getRegion();
   /**
@@ -129,6 +145,7 @@ public interface EbsInfoOrBuilder extends
    * </pre>
    *
    * <code>string deviceName = 7;</code>
+   * @return The deviceName.
    */
   java.lang.String getDeviceName();
   /**
@@ -137,6 +154,7 @@ public interface EbsInfoOrBuilder extends
    * </pre>
    *
    * <code>string deviceName = 7;</code>
+   * @return The bytes for deviceName.
    */
   com.google.protobuf.ByteString
       getDeviceNameBytes();
@@ -147,6 +165,7 @@ public interface EbsInfoOrBuilder extends
    * </pre>
    *
    * <code>int64 createTime = 8;</code>
+   * @return The createTime.
    */
   long getCreateTime();
 
@@ -156,6 +175,7 @@ public interface EbsInfoOrBuilder extends
    * </pre>
    *
    * <code>int64 updateTime = 9;</code>
+   * @return The updateTime.
    */
   long getUpdateTime();
 
@@ -165,6 +185,7 @@ public interface EbsInfoOrBuilder extends
    * </pre>
    *
    * <code>.didi.cloud.base.v1.JobInfo job = 10;</code>
+   * @return Whether the job field is set.
    */
   boolean hasJob();
   /**
@@ -173,6 +194,7 @@ public interface EbsInfoOrBuilder extends
    * </pre>
    *
    * <code>.didi.cloud.base.v1.JobInfo job = 10;</code>
+   * @return The job.
    */
   com.didiyun.base.v1.JobInfo getJob();
   /**
@@ -190,6 +212,7 @@ public interface EbsInfoOrBuilder extends
    * </pre>
    *
    * <code>.didi.cloud.compute.v1.Dc2Info dc2 = 11;</code>
+   * @return Whether the dc2 field is set.
    */
   boolean hasDc2();
   /**
@@ -198,6 +221,7 @@ public interface EbsInfoOrBuilder extends
    * </pre>
    *
    * <code>.didi.cloud.compute.v1.Dc2Info dc2 = 11;</code>
+   * @return The dc2.
    */
   com.didiyun.compute.v1.Dc2Info getDc2();
   /**

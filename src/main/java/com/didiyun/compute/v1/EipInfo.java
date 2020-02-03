@@ -20,8 +20,13 @@ private static final long serialVersionUID = 0L;
     eipUuid_ = "";
     eipTags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
     status_ = "";
-    createTime_ = 0L;
-    updateTime_ = 0L;
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new EipInfo();
   }
 
   @java.lang.Override
@@ -62,9 +67,9 @@ private static final long serialVersionUID = 0L;
           }
           case 26: {
             java.lang.String s = input.readStringRequireUtf8();
-            if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
               eipTags_ = new com.google.protobuf.LazyStringArrayList();
-              mutable_bitField0_ |= 0x00000004;
+              mutable_bitField0_ |= 0x00000001;
             }
             eipTags_.add(s);
             break;
@@ -125,7 +130,7 @@ private static final long serialVersionUID = 0L;
             break;
           }
           default: {
-            if (!parseUnknownFieldProto3(
+            if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
               done = true;
             }
@@ -139,7 +144,7 @@ private static final long serialVersionUID = 0L;
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
     } finally {
-      if (((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+      if (((mutable_bitField0_ & 0x00000001) != 0)) {
         eipTags_ = eipTags_.getUnmodifiableView();
       }
       this.unknownFields = unknownFields.build();
@@ -159,7 +164,6 @@ private static final long serialVersionUID = 0L;
             com.didiyun.compute.v1.EipInfo.class, com.didiyun.compute.v1.EipInfo.Builder.class);
   }
 
-  private int bitField0_;
   public static final int IP_FIELD_NUMBER = 1;
   private volatile java.lang.Object ip_;
   /**
@@ -168,6 +172,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string ip = 1;</code>
+   * @return The ip.
    */
   public java.lang.String getIp() {
     java.lang.Object ref = ip_;
@@ -187,6 +192,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string ip = 1;</code>
+   * @return The bytes for ip.
    */
   public com.google.protobuf.ByteString
       getIpBytes() {
@@ -210,6 +216,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string eipUuid = 2;</code>
+   * @return The eipUuid.
    */
   public java.lang.String getEipUuid() {
     java.lang.Object ref = eipUuid_;
@@ -229,6 +236,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string eipUuid = 2;</code>
+   * @return The bytes for eipUuid.
    */
   public com.google.protobuf.ByteString
       getEipUuidBytes() {
@@ -252,6 +260,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>repeated string eipTags = 3;</code>
+   * @return A list containing the eipTags.
    */
   public com.google.protobuf.ProtocolStringList
       getEipTagsList() {
@@ -263,6 +272,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>repeated string eipTags = 3;</code>
+   * @return The count of eipTags.
    */
   public int getEipTagsCount() {
     return eipTags_.size();
@@ -273,6 +283,8 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>repeated string eipTags = 3;</code>
+   * @param index The index of the element to return.
+   * @return The eipTags at the given index.
    */
   public java.lang.String getEipTags(int index) {
     return eipTags_.get(index);
@@ -283,6 +295,8 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>repeated string eipTags = 3;</code>
+   * @param index The index of the value to return.
+   * @return The bytes of the eipTags at the given index.
    */
   public com.google.protobuf.ByteString
       getEipTagsBytes(int index) {
@@ -297,6 +311,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string status = 4;</code>
+   * @return The status.
    */
   public java.lang.String getStatus() {
     java.lang.Object ref = status_;
@@ -316,6 +331,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string status = 4;</code>
+   * @return The bytes for status.
    */
   public com.google.protobuf.ByteString
       getStatusBytes() {
@@ -339,6 +355,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.didi.cloud.base.v1.RegionInfo region = 5;</code>
+   * @return Whether the region field is set.
    */
   public boolean hasRegion() {
     return region_ != null;
@@ -349,6 +366,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.didi.cloud.base.v1.RegionInfo region = 5;</code>
+   * @return The region.
    */
   public com.didiyun.base.v1.RegionInfo getRegion() {
     return region_ == null ? com.didiyun.base.v1.RegionInfo.getDefaultInstance() : region_;
@@ -372,6 +390,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>int64 createTime = 6;</code>
+   * @return The createTime.
    */
   public long getCreateTime() {
     return createTime_;
@@ -385,6 +404,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>int64 updateTime = 7;</code>
+   * @return The updateTime.
    */
   public long getUpdateTime() {
     return updateTime_;
@@ -398,6 +418,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.didi.cloud.compute.v1.Dc2Info dc2 = 8;</code>
+   * @return Whether the dc2 field is set.
    */
   public boolean hasDc2() {
     return dc2_ != null;
@@ -408,6 +429,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.didi.cloud.compute.v1.Dc2Info dc2 = 8;</code>
+   * @return The dc2.
    */
   public com.didiyun.compute.v1.Dc2Info getDc2() {
     return dc2_ == null ? com.didiyun.compute.v1.Dc2Info.getDefaultInstance() : dc2_;
@@ -431,6 +453,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.didi.cloud.base.v1.JobInfo job = 9;</code>
+   * @return Whether the job field is set.
    */
   public boolean hasJob() {
     return job_ != null;
@@ -441,6 +464,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.didi.cloud.base.v1.JobInfo job = 9;</code>
+   * @return The job.
    */
   public com.didiyun.base.v1.JobInfo getJob() {
     return job_ == null ? com.didiyun.base.v1.JobInfo.getDefaultInstance() : job_;
@@ -558,36 +582,35 @@ private static final long serialVersionUID = 0L;
     }
     com.didiyun.compute.v1.EipInfo other = (com.didiyun.compute.v1.EipInfo) obj;
 
-    boolean result = true;
-    result = result && getIp()
-        .equals(other.getIp());
-    result = result && getEipUuid()
-        .equals(other.getEipUuid());
-    result = result && getEipTagsList()
-        .equals(other.getEipTagsList());
-    result = result && getStatus()
-        .equals(other.getStatus());
-    result = result && (hasRegion() == other.hasRegion());
+    if (!getIp()
+        .equals(other.getIp())) return false;
+    if (!getEipUuid()
+        .equals(other.getEipUuid())) return false;
+    if (!getEipTagsList()
+        .equals(other.getEipTagsList())) return false;
+    if (!getStatus()
+        .equals(other.getStatus())) return false;
+    if (hasRegion() != other.hasRegion()) return false;
     if (hasRegion()) {
-      result = result && getRegion()
-          .equals(other.getRegion());
+      if (!getRegion()
+          .equals(other.getRegion())) return false;
     }
-    result = result && (getCreateTime()
-        == other.getCreateTime());
-    result = result && (getUpdateTime()
-        == other.getUpdateTime());
-    result = result && (hasDc2() == other.hasDc2());
+    if (getCreateTime()
+        != other.getCreateTime()) return false;
+    if (getUpdateTime()
+        != other.getUpdateTime()) return false;
+    if (hasDc2() != other.hasDc2()) return false;
     if (hasDc2()) {
-      result = result && getDc2()
-          .equals(other.getDc2());
+      if (!getDc2()
+          .equals(other.getDc2())) return false;
     }
-    result = result && (hasJob() == other.hasJob());
+    if (hasJob() != other.hasJob()) return false;
     if (hasJob()) {
-      result = result && getJob()
-          .equals(other.getJob());
+      if (!getJob()
+          .equals(other.getJob())) return false;
     }
-    result = result && unknownFields.equals(other.unknownFields);
-    return result;
+    if (!unknownFields.equals(other.unknownFields)) return false;
+    return true;
   }
 
   @java.lang.Override
@@ -763,7 +786,7 @@ private static final long serialVersionUID = 0L;
       eipUuid_ = "";
 
       eipTags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000004);
+      bitField0_ = (bitField0_ & ~0x00000001);
       status_ = "";
 
       if (regionBuilder_ == null) {
@@ -815,12 +838,11 @@ private static final long serialVersionUID = 0L;
     public com.didiyun.compute.v1.EipInfo buildPartial() {
       com.didiyun.compute.v1.EipInfo result = new com.didiyun.compute.v1.EipInfo(this);
       int from_bitField0_ = bitField0_;
-      int to_bitField0_ = 0;
       result.ip_ = ip_;
       result.eipUuid_ = eipUuid_;
-      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         eipTags_ = eipTags_.getUnmodifiableView();
-        bitField0_ = (bitField0_ & ~0x00000004);
+        bitField0_ = (bitField0_ & ~0x00000001);
       }
       result.eipTags_ = eipTags_;
       result.status_ = status_;
@@ -841,42 +863,41 @@ private static final long serialVersionUID = 0L;
       } else {
         result.job_ = jobBuilder_.build();
       }
-      result.bitField0_ = to_bitField0_;
       onBuilt();
       return result;
     }
 
     @java.lang.Override
     public Builder clone() {
-      return (Builder) super.clone();
+      return super.clone();
     }
     @java.lang.Override
     public Builder setField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return (Builder) super.setField(field, value);
+      return super.setField(field, value);
     }
     @java.lang.Override
     public Builder clearField(
         com.google.protobuf.Descriptors.FieldDescriptor field) {
-      return (Builder) super.clearField(field);
+      return super.clearField(field);
     }
     @java.lang.Override
     public Builder clearOneof(
         com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-      return (Builder) super.clearOneof(oneof);
+      return super.clearOneof(oneof);
     }
     @java.lang.Override
     public Builder setRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         int index, java.lang.Object value) {
-      return (Builder) super.setRepeatedField(field, index, value);
+      return super.setRepeatedField(field, index, value);
     }
     @java.lang.Override
     public Builder addRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return (Builder) super.addRepeatedField(field, value);
+      return super.addRepeatedField(field, value);
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -901,7 +922,7 @@ private static final long serialVersionUID = 0L;
       if (!other.eipTags_.isEmpty()) {
         if (eipTags_.isEmpty()) {
           eipTags_ = other.eipTags_;
-          bitField0_ = (bitField0_ & ~0x00000004);
+          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
           ensureEipTagsIsMutable();
           eipTags_.addAll(other.eipTags_);
@@ -964,6 +985,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string ip = 1;</code>
+     * @return The ip.
      */
     public java.lang.String getIp() {
       java.lang.Object ref = ip_;
@@ -983,6 +1005,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string ip = 1;</code>
+     * @return The bytes for ip.
      */
     public com.google.protobuf.ByteString
         getIpBytes() {
@@ -1003,6 +1026,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string ip = 1;</code>
+     * @param value The ip to set.
+     * @return This builder for chaining.
      */
     public Builder setIp(
         java.lang.String value) {
@@ -1020,6 +1045,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string ip = 1;</code>
+     * @return This builder for chaining.
      */
     public Builder clearIp() {
       
@@ -1033,6 +1059,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string ip = 1;</code>
+     * @param value The bytes for ip to set.
+     * @return This builder for chaining.
      */
     public Builder setIpBytes(
         com.google.protobuf.ByteString value) {
@@ -1053,6 +1081,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string eipUuid = 2;</code>
+     * @return The eipUuid.
      */
     public java.lang.String getEipUuid() {
       java.lang.Object ref = eipUuid_;
@@ -1072,6 +1101,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string eipUuid = 2;</code>
+     * @return The bytes for eipUuid.
      */
     public com.google.protobuf.ByteString
         getEipUuidBytes() {
@@ -1092,6 +1122,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string eipUuid = 2;</code>
+     * @param value The eipUuid to set.
+     * @return This builder for chaining.
      */
     public Builder setEipUuid(
         java.lang.String value) {
@@ -1109,6 +1141,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string eipUuid = 2;</code>
+     * @return This builder for chaining.
      */
     public Builder clearEipUuid() {
       
@@ -1122,6 +1155,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string eipUuid = 2;</code>
+     * @param value The bytes for eipUuid to set.
+     * @return This builder for chaining.
      */
     public Builder setEipUuidBytes(
         com.google.protobuf.ByteString value) {
@@ -1137,9 +1172,9 @@ private static final long serialVersionUID = 0L;
 
     private com.google.protobuf.LazyStringList eipTags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
     private void ensureEipTagsIsMutable() {
-      if (!((bitField0_ & 0x00000004) == 0x00000004)) {
+      if (!((bitField0_ & 0x00000001) != 0)) {
         eipTags_ = new com.google.protobuf.LazyStringArrayList(eipTags_);
-        bitField0_ |= 0x00000004;
+        bitField0_ |= 0x00000001;
        }
     }
     /**
@@ -1148,6 +1183,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated string eipTags = 3;</code>
+     * @return A list containing the eipTags.
      */
     public com.google.protobuf.ProtocolStringList
         getEipTagsList() {
@@ -1159,6 +1195,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated string eipTags = 3;</code>
+     * @return The count of eipTags.
      */
     public int getEipTagsCount() {
       return eipTags_.size();
@@ -1169,6 +1206,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated string eipTags = 3;</code>
+     * @param index The index of the element to return.
+     * @return The eipTags at the given index.
      */
     public java.lang.String getEipTags(int index) {
       return eipTags_.get(index);
@@ -1179,6 +1218,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated string eipTags = 3;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the eipTags at the given index.
      */
     public com.google.protobuf.ByteString
         getEipTagsBytes(int index) {
@@ -1190,6 +1231,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated string eipTags = 3;</code>
+     * @param index The index to set the value at.
+     * @param value The eipTags to set.
+     * @return This builder for chaining.
      */
     public Builder setEipTags(
         int index, java.lang.String value) {
@@ -1207,6 +1251,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated string eipTags = 3;</code>
+     * @param value The eipTags to add.
+     * @return This builder for chaining.
      */
     public Builder addEipTags(
         java.lang.String value) {
@@ -1224,6 +1270,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated string eipTags = 3;</code>
+     * @param values The eipTags to add.
+     * @return This builder for chaining.
      */
     public Builder addAllEipTags(
         java.lang.Iterable<java.lang.String> values) {
@@ -1239,10 +1287,11 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated string eipTags = 3;</code>
+     * @return This builder for chaining.
      */
     public Builder clearEipTags() {
       eipTags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000004);
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -1252,6 +1301,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated string eipTags = 3;</code>
+     * @param value The bytes of the eipTags to add.
+     * @return This builder for chaining.
      */
     public Builder addEipTagsBytes(
         com.google.protobuf.ByteString value) {
@@ -1272,6 +1323,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string status = 4;</code>
+     * @return The status.
      */
     public java.lang.String getStatus() {
       java.lang.Object ref = status_;
@@ -1291,6 +1343,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string status = 4;</code>
+     * @return The bytes for status.
      */
     public com.google.protobuf.ByteString
         getStatusBytes() {
@@ -1311,6 +1364,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string status = 4;</code>
+     * @param value The status to set.
+     * @return This builder for chaining.
      */
     public Builder setStatus(
         java.lang.String value) {
@@ -1328,6 +1383,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string status = 4;</code>
+     * @return This builder for chaining.
      */
     public Builder clearStatus() {
       
@@ -1341,6 +1397,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string status = 4;</code>
+     * @param value The bytes for status to set.
+     * @return This builder for chaining.
      */
     public Builder setStatusBytes(
         com.google.protobuf.ByteString value) {
@@ -1354,7 +1412,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private com.didiyun.base.v1.RegionInfo region_ = null;
+    private com.didiyun.base.v1.RegionInfo region_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.didiyun.base.v1.RegionInfo, com.didiyun.base.v1.RegionInfo.Builder, com.didiyun.base.v1.RegionInfoOrBuilder> regionBuilder_;
     /**
@@ -1363,6 +1421,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.didi.cloud.base.v1.RegionInfo region = 5;</code>
+     * @return Whether the region field is set.
      */
     public boolean hasRegion() {
       return regionBuilder_ != null || region_ != null;
@@ -1373,6 +1432,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.didi.cloud.base.v1.RegionInfo region = 5;</code>
+     * @return The region.
      */
     public com.didiyun.base.v1.RegionInfo getRegion() {
       if (regionBuilder_ == null) {
@@ -1514,6 +1574,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>int64 createTime = 6;</code>
+     * @return The createTime.
      */
     public long getCreateTime() {
       return createTime_;
@@ -1524,6 +1585,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>int64 createTime = 6;</code>
+     * @param value The createTime to set.
+     * @return This builder for chaining.
      */
     public Builder setCreateTime(long value) {
       
@@ -1537,6 +1600,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>int64 createTime = 6;</code>
+     * @return This builder for chaining.
      */
     public Builder clearCreateTime() {
       
@@ -1552,6 +1616,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>int64 updateTime = 7;</code>
+     * @return The updateTime.
      */
     public long getUpdateTime() {
       return updateTime_;
@@ -1562,6 +1627,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>int64 updateTime = 7;</code>
+     * @param value The updateTime to set.
+     * @return This builder for chaining.
      */
     public Builder setUpdateTime(long value) {
       
@@ -1575,6 +1642,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>int64 updateTime = 7;</code>
+     * @return This builder for chaining.
      */
     public Builder clearUpdateTime() {
       
@@ -1583,7 +1651,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private com.didiyun.compute.v1.Dc2Info dc2_ = null;
+    private com.didiyun.compute.v1.Dc2Info dc2_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.didiyun.compute.v1.Dc2Info, com.didiyun.compute.v1.Dc2Info.Builder, com.didiyun.compute.v1.Dc2InfoOrBuilder> dc2Builder_;
     /**
@@ -1592,6 +1660,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.didi.cloud.compute.v1.Dc2Info dc2 = 8;</code>
+     * @return Whether the dc2 field is set.
      */
     public boolean hasDc2() {
       return dc2Builder_ != null || dc2_ != null;
@@ -1602,6 +1671,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.didi.cloud.compute.v1.Dc2Info dc2 = 8;</code>
+     * @return The dc2.
      */
     public com.didiyun.compute.v1.Dc2Info getDc2() {
       if (dc2Builder_ == null) {
@@ -1736,7 +1806,7 @@ private static final long serialVersionUID = 0L;
       return dc2Builder_;
     }
 
-    private com.didiyun.base.v1.JobInfo job_ = null;
+    private com.didiyun.base.v1.JobInfo job_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.didiyun.base.v1.JobInfo, com.didiyun.base.v1.JobInfo.Builder, com.didiyun.base.v1.JobInfoOrBuilder> jobBuilder_;
     /**
@@ -1745,6 +1815,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.didi.cloud.base.v1.JobInfo job = 9;</code>
+     * @return Whether the job field is set.
      */
     public boolean hasJob() {
       return jobBuilder_ != null || job_ != null;
@@ -1755,6 +1826,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.didi.cloud.base.v1.JobInfo job = 9;</code>
+     * @return The job.
      */
     public com.didiyun.base.v1.JobInfo getJob() {
       if (jobBuilder_ == null) {
@@ -1891,7 +1963,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
-      return super.setUnknownFieldsProto3(unknownFields);
+      return super.setUnknownFields(unknownFields);
     }
 
     @java.lang.Override

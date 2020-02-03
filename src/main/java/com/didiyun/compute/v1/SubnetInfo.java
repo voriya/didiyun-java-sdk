@@ -18,10 +18,14 @@ private static final long serialVersionUID = 0L;
   private SubnetInfo() {
     subnetUuid_ = "";
     name_ = "";
-    createTime_ = 0L;
-    updateTime_ = 0L;
-    isDefault_ = false;
     cidr_ = "";
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new SubnetInfo();
   }
 
   @java.lang.Override
@@ -37,7 +41,6 @@ private static final long serialVersionUID = 0L;
     if (extensionRegistry == null) {
       throw new java.lang.NullPointerException();
     }
-    int mutable_bitField0_ = 0;
     com.google.protobuf.UnknownFieldSet.Builder unknownFields =
         com.google.protobuf.UnknownFieldSet.newBuilder();
     try {
@@ -95,7 +98,7 @@ private static final long serialVersionUID = 0L;
             break;
           }
           default: {
-            if (!parseUnknownFieldProto3(
+            if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
               done = true;
             }
@@ -134,6 +137,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string subnetUuid = 1;</code>
+   * @return The subnetUuid.
    */
   public java.lang.String getSubnetUuid() {
     java.lang.Object ref = subnetUuid_;
@@ -153,6 +157,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string subnetUuid = 1;</code>
+   * @return The bytes for subnetUuid.
    */
   public com.google.protobuf.ByteString
       getSubnetUuidBytes() {
@@ -176,6 +181,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string name = 2;</code>
+   * @return The name.
    */
   public java.lang.String getName() {
     java.lang.Object ref = name_;
@@ -195,6 +201,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string name = 2;</code>
+   * @return The bytes for name.
    */
   public com.google.protobuf.ByteString
       getNameBytes() {
@@ -218,6 +225,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>int64 createTime = 3;</code>
+   * @return The createTime.
    */
   public long getCreateTime() {
     return createTime_;
@@ -231,6 +239,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>int64 updateTime = 4;</code>
+   * @return The updateTime.
    */
   public long getUpdateTime() {
     return updateTime_;
@@ -244,6 +253,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>bool isDefault = 5;</code>
+   * @return The isDefault.
    */
   public boolean getIsDefault() {
     return isDefault_;
@@ -257,6 +267,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string cidr = 6;</code>
+   * @return The cidr.
    */
   public java.lang.String getCidr() {
     java.lang.Object ref = cidr_;
@@ -276,6 +287,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string cidr = 6;</code>
+   * @return The bytes for cidr.
    */
   public com.google.protobuf.ByteString
       getCidrBytes() {
@@ -299,6 +311,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.didi.cloud.base.v1.ZoneInfo zone = 7;</code>
+   * @return Whether the zone field is set.
    */
   public boolean hasZone() {
     return zone_ != null;
@@ -309,6 +322,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.didi.cloud.base.v1.ZoneInfo zone = 7;</code>
+   * @return The zone.
    */
   public com.didiyun.base.v1.ZoneInfo getZone() {
     return zone_ == null ? com.didiyun.base.v1.ZoneInfo.getDefaultInstance() : zone_;
@@ -408,26 +422,25 @@ private static final long serialVersionUID = 0L;
     }
     com.didiyun.compute.v1.SubnetInfo other = (com.didiyun.compute.v1.SubnetInfo) obj;
 
-    boolean result = true;
-    result = result && getSubnetUuid()
-        .equals(other.getSubnetUuid());
-    result = result && getName()
-        .equals(other.getName());
-    result = result && (getCreateTime()
-        == other.getCreateTime());
-    result = result && (getUpdateTime()
-        == other.getUpdateTime());
-    result = result && (getIsDefault()
-        == other.getIsDefault());
-    result = result && getCidr()
-        .equals(other.getCidr());
-    result = result && (hasZone() == other.hasZone());
+    if (!getSubnetUuid()
+        .equals(other.getSubnetUuid())) return false;
+    if (!getName()
+        .equals(other.getName())) return false;
+    if (getCreateTime()
+        != other.getCreateTime()) return false;
+    if (getUpdateTime()
+        != other.getUpdateTime()) return false;
+    if (getIsDefault()
+        != other.getIsDefault()) return false;
+    if (!getCidr()
+        .equals(other.getCidr())) return false;
+    if (hasZone() != other.hasZone()) return false;
     if (hasZone()) {
-      result = result && getZone()
-          .equals(other.getZone());
+      if (!getZone()
+          .equals(other.getZone())) return false;
     }
-    result = result && unknownFields.equals(other.unknownFields);
-    return result;
+    if (!unknownFields.equals(other.unknownFields)) return false;
+    return true;
   }
 
   @java.lang.Override
@@ -650,35 +663,35 @@ private static final long serialVersionUID = 0L;
 
     @java.lang.Override
     public Builder clone() {
-      return (Builder) super.clone();
+      return super.clone();
     }
     @java.lang.Override
     public Builder setField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return (Builder) super.setField(field, value);
+      return super.setField(field, value);
     }
     @java.lang.Override
     public Builder clearField(
         com.google.protobuf.Descriptors.FieldDescriptor field) {
-      return (Builder) super.clearField(field);
+      return super.clearField(field);
     }
     @java.lang.Override
     public Builder clearOneof(
         com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-      return (Builder) super.clearOneof(oneof);
+      return super.clearOneof(oneof);
     }
     @java.lang.Override
     public Builder setRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         int index, java.lang.Object value) {
-      return (Builder) super.setRepeatedField(field, index, value);
+      return super.setRepeatedField(field, index, value);
     }
     @java.lang.Override
     public Builder addRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return (Builder) super.addRepeatedField(field, value);
+      return super.addRepeatedField(field, value);
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -752,6 +765,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string subnetUuid = 1;</code>
+     * @return The subnetUuid.
      */
     public java.lang.String getSubnetUuid() {
       java.lang.Object ref = subnetUuid_;
@@ -771,6 +785,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string subnetUuid = 1;</code>
+     * @return The bytes for subnetUuid.
      */
     public com.google.protobuf.ByteString
         getSubnetUuidBytes() {
@@ -791,6 +806,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string subnetUuid = 1;</code>
+     * @param value The subnetUuid to set.
+     * @return This builder for chaining.
      */
     public Builder setSubnetUuid(
         java.lang.String value) {
@@ -808,6 +825,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string subnetUuid = 1;</code>
+     * @return This builder for chaining.
      */
     public Builder clearSubnetUuid() {
       
@@ -821,6 +839,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string subnetUuid = 1;</code>
+     * @param value The bytes for subnetUuid to set.
+     * @return This builder for chaining.
      */
     public Builder setSubnetUuidBytes(
         com.google.protobuf.ByteString value) {
@@ -841,6 +861,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string name = 2;</code>
+     * @return The name.
      */
     public java.lang.String getName() {
       java.lang.Object ref = name_;
@@ -860,6 +881,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string name = 2;</code>
+     * @return The bytes for name.
      */
     public com.google.protobuf.ByteString
         getNameBytes() {
@@ -880,6 +902,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string name = 2;</code>
+     * @param value The name to set.
+     * @return This builder for chaining.
      */
     public Builder setName(
         java.lang.String value) {
@@ -897,6 +921,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string name = 2;</code>
+     * @return This builder for chaining.
      */
     public Builder clearName() {
       
@@ -910,6 +935,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string name = 2;</code>
+     * @param value The bytes for name to set.
+     * @return This builder for chaining.
      */
     public Builder setNameBytes(
         com.google.protobuf.ByteString value) {
@@ -930,6 +957,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>int64 createTime = 3;</code>
+     * @return The createTime.
      */
     public long getCreateTime() {
       return createTime_;
@@ -940,6 +968,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>int64 createTime = 3;</code>
+     * @param value The createTime to set.
+     * @return This builder for chaining.
      */
     public Builder setCreateTime(long value) {
       
@@ -953,6 +983,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>int64 createTime = 3;</code>
+     * @return This builder for chaining.
      */
     public Builder clearCreateTime() {
       
@@ -968,6 +999,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>int64 updateTime = 4;</code>
+     * @return The updateTime.
      */
     public long getUpdateTime() {
       return updateTime_;
@@ -978,6 +1010,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>int64 updateTime = 4;</code>
+     * @param value The updateTime to set.
+     * @return This builder for chaining.
      */
     public Builder setUpdateTime(long value) {
       
@@ -991,6 +1025,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>int64 updateTime = 4;</code>
+     * @return This builder for chaining.
      */
     public Builder clearUpdateTime() {
       
@@ -1006,6 +1041,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>bool isDefault = 5;</code>
+     * @return The isDefault.
      */
     public boolean getIsDefault() {
       return isDefault_;
@@ -1016,6 +1052,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>bool isDefault = 5;</code>
+     * @param value The isDefault to set.
+     * @return This builder for chaining.
      */
     public Builder setIsDefault(boolean value) {
       
@@ -1029,6 +1067,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>bool isDefault = 5;</code>
+     * @return This builder for chaining.
      */
     public Builder clearIsDefault() {
       
@@ -1044,6 +1083,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string cidr = 6;</code>
+     * @return The cidr.
      */
     public java.lang.String getCidr() {
       java.lang.Object ref = cidr_;
@@ -1063,6 +1103,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string cidr = 6;</code>
+     * @return The bytes for cidr.
      */
     public com.google.protobuf.ByteString
         getCidrBytes() {
@@ -1083,6 +1124,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string cidr = 6;</code>
+     * @param value The cidr to set.
+     * @return This builder for chaining.
      */
     public Builder setCidr(
         java.lang.String value) {
@@ -1100,6 +1143,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string cidr = 6;</code>
+     * @return This builder for chaining.
      */
     public Builder clearCidr() {
       
@@ -1113,6 +1157,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string cidr = 6;</code>
+     * @param value The bytes for cidr to set.
+     * @return This builder for chaining.
      */
     public Builder setCidrBytes(
         com.google.protobuf.ByteString value) {
@@ -1126,7 +1172,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private com.didiyun.base.v1.ZoneInfo zone_ = null;
+    private com.didiyun.base.v1.ZoneInfo zone_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.didiyun.base.v1.ZoneInfo, com.didiyun.base.v1.ZoneInfo.Builder, com.didiyun.base.v1.ZoneInfoOrBuilder> zoneBuilder_;
     /**
@@ -1135,6 +1181,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.didi.cloud.base.v1.ZoneInfo zone = 7;</code>
+     * @return Whether the zone field is set.
      */
     public boolean hasZone() {
       return zoneBuilder_ != null || zone_ != null;
@@ -1145,6 +1192,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.didi.cloud.base.v1.ZoneInfo zone = 7;</code>
+     * @return The zone.
      */
     public com.didiyun.base.v1.ZoneInfo getZone() {
       if (zoneBuilder_ == null) {
@@ -1281,7 +1329,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
-      return super.setUnknownFieldsProto3(unknownFields);
+      return super.setUnknownFields(unknownFields);
     }
 
     @java.lang.Override

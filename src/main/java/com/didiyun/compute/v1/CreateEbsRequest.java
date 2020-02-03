@@ -16,16 +16,19 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private CreateEbsRequest() {
-    count_ = 0;
-    autoContinue_ = false;
-    payPeriod_ = 0;
     couponId_ = "";
     name_ = "";
-    size_ = 0L;
     diskType_ = "";
     snapUuid_ = "";
     dc2Uuid_ = "";
     tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+  }
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected java.lang.Object newInstance(
+      UnusedPrivateParameter unused) {
+    return new CreateEbsRequest();
   }
 
   @java.lang.Override
@@ -117,15 +120,15 @@ private static final long serialVersionUID = 0L;
           }
           case 90: {
             java.lang.String s = input.readStringRequireUtf8();
-            if (!((mutable_bitField0_ & 0x00000400) == 0x00000400)) {
+            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
               tags_ = new com.google.protobuf.LazyStringArrayList();
-              mutable_bitField0_ |= 0x00000400;
+              mutable_bitField0_ |= 0x00000001;
             }
             tags_.add(s);
             break;
           }
           default: {
-            if (!parseUnknownFieldProto3(
+            if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
               done = true;
             }
@@ -139,7 +142,7 @@ private static final long serialVersionUID = 0L;
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
     } finally {
-      if (((mutable_bitField0_ & 0x00000400) == 0x00000400)) {
+      if (((mutable_bitField0_ & 0x00000001) != 0)) {
         tags_ = tags_.getUnmodifiableView();
       }
       this.unknownFields = unknownFields.build();
@@ -159,7 +162,6 @@ private static final long serialVersionUID = 0L;
             com.didiyun.compute.v1.CreateEbsRequest.class, com.didiyun.compute.v1.CreateEbsRequest.Builder.class);
   }
 
-  private int bitField0_;
   public static final int HEADER_FIELD_NUMBER = 1;
   private com.didiyun.base.v1.Header header_;
   /**
@@ -168,6 +170,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.didi.cloud.base.v1.Header header = 1;</code>
+   * @return Whether the header field is set.
    */
   public boolean hasHeader() {
     return header_ != null;
@@ -178,6 +181,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.didi.cloud.base.v1.Header header = 1;</code>
+   * @return The header.
    */
   public com.didiyun.base.v1.Header getHeader() {
     return header_ == null ? com.didiyun.base.v1.Header.getDefaultInstance() : header_;
@@ -201,6 +205,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>int32 count = 2;</code>
+   * @return The count.
    */
   public int getCount() {
     return count_;
@@ -214,6 +219,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>bool autoContinue = 3;</code>
+   * @return The autoContinue.
    */
   public boolean getAutoContinue() {
     return autoContinue_;
@@ -227,6 +233,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>int32 payPeriod = 4;</code>
+   * @return The payPeriod.
    */
   public int getPayPeriod() {
     return payPeriod_;
@@ -240,6 +247,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string couponId = 5;</code>
+   * @return The couponId.
    */
   public java.lang.String getCouponId() {
     java.lang.Object ref = couponId_;
@@ -259,6 +267,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string couponId = 5;</code>
+   * @return The bytes for couponId.
    */
   public com.google.protobuf.ByteString
       getCouponIdBytes() {
@@ -282,6 +291,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string name = 6;</code>
+   * @return The name.
    */
   public java.lang.String getName() {
     java.lang.Object ref = name_;
@@ -301,6 +311,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string name = 6;</code>
+   * @return The bytes for name.
    */
   public com.google.protobuf.ByteString
       getNameBytes() {
@@ -324,6 +335,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>int64 size = 7;</code>
+   * @return The size.
    */
   public long getSize() {
     return size_;
@@ -337,6 +349,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string diskType = 8;</code>
+   * @return The diskType.
    */
   public java.lang.String getDiskType() {
     java.lang.Object ref = diskType_;
@@ -356,6 +369,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string diskType = 8;</code>
+   * @return The bytes for diskType.
    */
   public com.google.protobuf.ByteString
       getDiskTypeBytes() {
@@ -379,6 +393,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string snapUuid = 9;</code>
+   * @return The snapUuid.
    */
   public java.lang.String getSnapUuid() {
     java.lang.Object ref = snapUuid_;
@@ -398,6 +413,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string snapUuid = 9;</code>
+   * @return The bytes for snapUuid.
    */
   public com.google.protobuf.ByteString
       getSnapUuidBytes() {
@@ -421,6 +437,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string dc2Uuid = 10;</code>
+   * @return The dc2Uuid.
    */
   public java.lang.String getDc2Uuid() {
     java.lang.Object ref = dc2Uuid_;
@@ -440,6 +457,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string dc2Uuid = 10;</code>
+   * @return The bytes for dc2Uuid.
    */
   public com.google.protobuf.ByteString
       getDc2UuidBytes() {
@@ -463,6 +481,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>repeated string tags = 11;</code>
+   * @return A list containing the tags.
    */
   public com.google.protobuf.ProtocolStringList
       getTagsList() {
@@ -474,6 +493,7 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>repeated string tags = 11;</code>
+   * @return The count of tags.
    */
   public int getTagsCount() {
     return tags_.size();
@@ -484,6 +504,8 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>repeated string tags = 11;</code>
+   * @param index The index of the element to return.
+   * @return The tags at the given index.
    */
   public java.lang.String getTags(int index) {
     return tags_.get(index);
@@ -494,6 +516,8 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>repeated string tags = 11;</code>
+   * @param index The index of the value to return.
+   * @return The bytes of the tags at the given index.
    */
   public com.google.protobuf.ByteString
       getTagsBytes(int index) {
@@ -614,34 +638,33 @@ private static final long serialVersionUID = 0L;
     }
     com.didiyun.compute.v1.CreateEbsRequest other = (com.didiyun.compute.v1.CreateEbsRequest) obj;
 
-    boolean result = true;
-    result = result && (hasHeader() == other.hasHeader());
+    if (hasHeader() != other.hasHeader()) return false;
     if (hasHeader()) {
-      result = result && getHeader()
-          .equals(other.getHeader());
+      if (!getHeader()
+          .equals(other.getHeader())) return false;
     }
-    result = result && (getCount()
-        == other.getCount());
-    result = result && (getAutoContinue()
-        == other.getAutoContinue());
-    result = result && (getPayPeriod()
-        == other.getPayPeriod());
-    result = result && getCouponId()
-        .equals(other.getCouponId());
-    result = result && getName()
-        .equals(other.getName());
-    result = result && (getSize()
-        == other.getSize());
-    result = result && getDiskType()
-        .equals(other.getDiskType());
-    result = result && getSnapUuid()
-        .equals(other.getSnapUuid());
-    result = result && getDc2Uuid()
-        .equals(other.getDc2Uuid());
-    result = result && getTagsList()
-        .equals(other.getTagsList());
-    result = result && unknownFields.equals(other.unknownFields);
-    return result;
+    if (getCount()
+        != other.getCount()) return false;
+    if (getAutoContinue()
+        != other.getAutoContinue()) return false;
+    if (getPayPeriod()
+        != other.getPayPeriod()) return false;
+    if (!getCouponId()
+        .equals(other.getCouponId())) return false;
+    if (!getName()
+        .equals(other.getName())) return false;
+    if (getSize()
+        != other.getSize()) return false;
+    if (!getDiskType()
+        .equals(other.getDiskType())) return false;
+    if (!getSnapUuid()
+        .equals(other.getSnapUuid())) return false;
+    if (!getDc2Uuid()
+        .equals(other.getDc2Uuid())) return false;
+    if (!getTagsList()
+        .equals(other.getTagsList())) return false;
+    if (!unknownFields.equals(other.unknownFields)) return false;
+    return true;
   }
 
   @java.lang.Override
@@ -837,7 +860,7 @@ private static final long serialVersionUID = 0L;
       dc2Uuid_ = "";
 
       tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000400);
+      bitField0_ = (bitField0_ & ~0x00000001);
       return this;
     }
 
@@ -865,7 +888,6 @@ private static final long serialVersionUID = 0L;
     public com.didiyun.compute.v1.CreateEbsRequest buildPartial() {
       com.didiyun.compute.v1.CreateEbsRequest result = new com.didiyun.compute.v1.CreateEbsRequest(this);
       int from_bitField0_ = bitField0_;
-      int to_bitField0_ = 0;
       if (headerBuilder_ == null) {
         result.header_ = header_;
       } else {
@@ -880,47 +902,46 @@ private static final long serialVersionUID = 0L;
       result.diskType_ = diskType_;
       result.snapUuid_ = snapUuid_;
       result.dc2Uuid_ = dc2Uuid_;
-      if (((bitField0_ & 0x00000400) == 0x00000400)) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         tags_ = tags_.getUnmodifiableView();
-        bitField0_ = (bitField0_ & ~0x00000400);
+        bitField0_ = (bitField0_ & ~0x00000001);
       }
       result.tags_ = tags_;
-      result.bitField0_ = to_bitField0_;
       onBuilt();
       return result;
     }
 
     @java.lang.Override
     public Builder clone() {
-      return (Builder) super.clone();
+      return super.clone();
     }
     @java.lang.Override
     public Builder setField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return (Builder) super.setField(field, value);
+      return super.setField(field, value);
     }
     @java.lang.Override
     public Builder clearField(
         com.google.protobuf.Descriptors.FieldDescriptor field) {
-      return (Builder) super.clearField(field);
+      return super.clearField(field);
     }
     @java.lang.Override
     public Builder clearOneof(
         com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-      return (Builder) super.clearOneof(oneof);
+      return super.clearOneof(oneof);
     }
     @java.lang.Override
     public Builder setRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         int index, java.lang.Object value) {
-      return (Builder) super.setRepeatedField(field, index, value);
+      return super.setRepeatedField(field, index, value);
     }
     @java.lang.Override
     public Builder addRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
         java.lang.Object value) {
-      return (Builder) super.addRepeatedField(field, value);
+      return super.addRepeatedField(field, value);
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -972,7 +993,7 @@ private static final long serialVersionUID = 0L;
       if (!other.tags_.isEmpty()) {
         if (tags_.isEmpty()) {
           tags_ = other.tags_;
-          bitField0_ = (bitField0_ & ~0x00000400);
+          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
           ensureTagsIsMutable();
           tags_.addAll(other.tags_);
@@ -1009,7 +1030,7 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
-    private com.didiyun.base.v1.Header header_ = null;
+    private com.didiyun.base.v1.Header header_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.didiyun.base.v1.Header, com.didiyun.base.v1.Header.Builder, com.didiyun.base.v1.HeaderOrBuilder> headerBuilder_;
     /**
@@ -1018,6 +1039,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.didi.cloud.base.v1.Header header = 1;</code>
+     * @return Whether the header field is set.
      */
     public boolean hasHeader() {
       return headerBuilder_ != null || header_ != null;
@@ -1028,6 +1050,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.didi.cloud.base.v1.Header header = 1;</code>
+     * @return The header.
      */
     public com.didiyun.base.v1.Header getHeader() {
       if (headerBuilder_ == null) {
@@ -1169,6 +1192,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>int32 count = 2;</code>
+     * @return The count.
      */
     public int getCount() {
       return count_;
@@ -1179,6 +1203,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>int32 count = 2;</code>
+     * @param value The count to set.
+     * @return This builder for chaining.
      */
     public Builder setCount(int value) {
       
@@ -1192,6 +1218,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>int32 count = 2;</code>
+     * @return This builder for chaining.
      */
     public Builder clearCount() {
       
@@ -1207,6 +1234,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>bool autoContinue = 3;</code>
+     * @return The autoContinue.
      */
     public boolean getAutoContinue() {
       return autoContinue_;
@@ -1217,6 +1245,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>bool autoContinue = 3;</code>
+     * @param value The autoContinue to set.
+     * @return This builder for chaining.
      */
     public Builder setAutoContinue(boolean value) {
       
@@ -1230,6 +1260,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>bool autoContinue = 3;</code>
+     * @return This builder for chaining.
      */
     public Builder clearAutoContinue() {
       
@@ -1245,6 +1276,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>int32 payPeriod = 4;</code>
+     * @return The payPeriod.
      */
     public int getPayPeriod() {
       return payPeriod_;
@@ -1255,6 +1287,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>int32 payPeriod = 4;</code>
+     * @param value The payPeriod to set.
+     * @return This builder for chaining.
      */
     public Builder setPayPeriod(int value) {
       
@@ -1268,6 +1302,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>int32 payPeriod = 4;</code>
+     * @return This builder for chaining.
      */
     public Builder clearPayPeriod() {
       
@@ -1283,6 +1318,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string couponId = 5;</code>
+     * @return The couponId.
      */
     public java.lang.String getCouponId() {
       java.lang.Object ref = couponId_;
@@ -1302,6 +1338,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string couponId = 5;</code>
+     * @return The bytes for couponId.
      */
     public com.google.protobuf.ByteString
         getCouponIdBytes() {
@@ -1322,6 +1359,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string couponId = 5;</code>
+     * @param value The couponId to set.
+     * @return This builder for chaining.
      */
     public Builder setCouponId(
         java.lang.String value) {
@@ -1339,6 +1378,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string couponId = 5;</code>
+     * @return This builder for chaining.
      */
     public Builder clearCouponId() {
       
@@ -1352,6 +1392,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string couponId = 5;</code>
+     * @param value The bytes for couponId to set.
+     * @return This builder for chaining.
      */
     public Builder setCouponIdBytes(
         com.google.protobuf.ByteString value) {
@@ -1372,6 +1414,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string name = 6;</code>
+     * @return The name.
      */
     public java.lang.String getName() {
       java.lang.Object ref = name_;
@@ -1391,6 +1434,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string name = 6;</code>
+     * @return The bytes for name.
      */
     public com.google.protobuf.ByteString
         getNameBytes() {
@@ -1411,6 +1455,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string name = 6;</code>
+     * @param value The name to set.
+     * @return This builder for chaining.
      */
     public Builder setName(
         java.lang.String value) {
@@ -1428,6 +1474,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string name = 6;</code>
+     * @return This builder for chaining.
      */
     public Builder clearName() {
       
@@ -1441,6 +1488,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string name = 6;</code>
+     * @param value The bytes for name to set.
+     * @return This builder for chaining.
      */
     public Builder setNameBytes(
         com.google.protobuf.ByteString value) {
@@ -1461,6 +1510,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>int64 size = 7;</code>
+     * @return The size.
      */
     public long getSize() {
       return size_;
@@ -1471,6 +1521,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>int64 size = 7;</code>
+     * @param value The size to set.
+     * @return This builder for chaining.
      */
     public Builder setSize(long value) {
       
@@ -1484,6 +1536,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>int64 size = 7;</code>
+     * @return This builder for chaining.
      */
     public Builder clearSize() {
       
@@ -1499,6 +1552,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string diskType = 8;</code>
+     * @return The diskType.
      */
     public java.lang.String getDiskType() {
       java.lang.Object ref = diskType_;
@@ -1518,6 +1572,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string diskType = 8;</code>
+     * @return The bytes for diskType.
      */
     public com.google.protobuf.ByteString
         getDiskTypeBytes() {
@@ -1538,6 +1593,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string diskType = 8;</code>
+     * @param value The diskType to set.
+     * @return This builder for chaining.
      */
     public Builder setDiskType(
         java.lang.String value) {
@@ -1555,6 +1612,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string diskType = 8;</code>
+     * @return This builder for chaining.
      */
     public Builder clearDiskType() {
       
@@ -1568,6 +1626,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string diskType = 8;</code>
+     * @param value The bytes for diskType to set.
+     * @return This builder for chaining.
      */
     public Builder setDiskTypeBytes(
         com.google.protobuf.ByteString value) {
@@ -1588,6 +1648,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string snapUuid = 9;</code>
+     * @return The snapUuid.
      */
     public java.lang.String getSnapUuid() {
       java.lang.Object ref = snapUuid_;
@@ -1607,6 +1668,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string snapUuid = 9;</code>
+     * @return The bytes for snapUuid.
      */
     public com.google.protobuf.ByteString
         getSnapUuidBytes() {
@@ -1627,6 +1689,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string snapUuid = 9;</code>
+     * @param value The snapUuid to set.
+     * @return This builder for chaining.
      */
     public Builder setSnapUuid(
         java.lang.String value) {
@@ -1644,6 +1708,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string snapUuid = 9;</code>
+     * @return This builder for chaining.
      */
     public Builder clearSnapUuid() {
       
@@ -1657,6 +1722,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string snapUuid = 9;</code>
+     * @param value The bytes for snapUuid to set.
+     * @return This builder for chaining.
      */
     public Builder setSnapUuidBytes(
         com.google.protobuf.ByteString value) {
@@ -1677,6 +1744,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string dc2Uuid = 10;</code>
+     * @return The dc2Uuid.
      */
     public java.lang.String getDc2Uuid() {
       java.lang.Object ref = dc2Uuid_;
@@ -1696,6 +1764,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string dc2Uuid = 10;</code>
+     * @return The bytes for dc2Uuid.
      */
     public com.google.protobuf.ByteString
         getDc2UuidBytes() {
@@ -1716,6 +1785,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string dc2Uuid = 10;</code>
+     * @param value The dc2Uuid to set.
+     * @return This builder for chaining.
      */
     public Builder setDc2Uuid(
         java.lang.String value) {
@@ -1733,6 +1804,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string dc2Uuid = 10;</code>
+     * @return This builder for chaining.
      */
     public Builder clearDc2Uuid() {
       
@@ -1746,6 +1818,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string dc2Uuid = 10;</code>
+     * @param value The bytes for dc2Uuid to set.
+     * @return This builder for chaining.
      */
     public Builder setDc2UuidBytes(
         com.google.protobuf.ByteString value) {
@@ -1761,9 +1835,9 @@ private static final long serialVersionUID = 0L;
 
     private com.google.protobuf.LazyStringList tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
     private void ensureTagsIsMutable() {
-      if (!((bitField0_ & 0x00000400) == 0x00000400)) {
+      if (!((bitField0_ & 0x00000001) != 0)) {
         tags_ = new com.google.protobuf.LazyStringArrayList(tags_);
-        bitField0_ |= 0x00000400;
+        bitField0_ |= 0x00000001;
        }
     }
     /**
@@ -1772,6 +1846,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated string tags = 11;</code>
+     * @return A list containing the tags.
      */
     public com.google.protobuf.ProtocolStringList
         getTagsList() {
@@ -1783,6 +1858,7 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated string tags = 11;</code>
+     * @return The count of tags.
      */
     public int getTagsCount() {
       return tags_.size();
@@ -1793,6 +1869,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated string tags = 11;</code>
+     * @param index The index of the element to return.
+     * @return The tags at the given index.
      */
     public java.lang.String getTags(int index) {
       return tags_.get(index);
@@ -1803,6 +1881,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated string tags = 11;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the tags at the given index.
      */
     public com.google.protobuf.ByteString
         getTagsBytes(int index) {
@@ -1814,6 +1894,9 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated string tags = 11;</code>
+     * @param index The index to set the value at.
+     * @param value The tags to set.
+     * @return This builder for chaining.
      */
     public Builder setTags(
         int index, java.lang.String value) {
@@ -1831,6 +1914,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated string tags = 11;</code>
+     * @param value The tags to add.
+     * @return This builder for chaining.
      */
     public Builder addTags(
         java.lang.String value) {
@@ -1848,6 +1933,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated string tags = 11;</code>
+     * @param values The tags to add.
+     * @return This builder for chaining.
      */
     public Builder addAllTags(
         java.lang.Iterable<java.lang.String> values) {
@@ -1863,10 +1950,11 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated string tags = 11;</code>
+     * @return This builder for chaining.
      */
     public Builder clearTags() {
       tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000400);
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -1876,6 +1964,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated string tags = 11;</code>
+     * @param value The bytes of the tags to add.
+     * @return This builder for chaining.
      */
     public Builder addTagsBytes(
         com.google.protobuf.ByteString value) {
@@ -1891,7 +1981,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
-      return super.setUnknownFieldsProto3(unknownFields);
+      return super.setUnknownFields(unknownFields);
     }
 
     @java.lang.Override
